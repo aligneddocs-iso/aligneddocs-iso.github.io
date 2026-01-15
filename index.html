@@ -1,55 +1,728 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>AlignedDocs – ISO 9001 Dokumentation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AlignedDocs – ISO 9001:2015 Grunddokumentation für KMU</title>
+  <meta name="description" content="AlignedDocs erstellt eine individuelle ISO 9001:2015 Grunddokumentation auf Basis Ihrer Unternehmensangaben – verständlich, schlank, praxisnah. Für KMU." />
+  <meta name="robots" content="index,follow" />
+
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+    :root{
+      --bg:#0b0d10;
+      --card:#11151b;
+      --muted:#a9b3c1;
+      --text:#eef2f7;
+      --line:#1e2632;
+      --accent:#ffffff;
+      --accent2:#cfd6e2;
+      --good:#19c37d;
+      --warn:#ffcc00;
+      --bad:#ff4d4f;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 12px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(900px 600px at 85% 20%, rgba(255,255,255,.05), transparent 60%),
+        linear-gradient(180deg, #07090c 0%, #0b0d10 60%, #07090c 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px;}
+    .topbar{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter: blur(12px);
+      background: rgba(7,9,12,.55);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      display:grid; place-items:center;
+      font-size:14px;
+      user-select:none;
+    }
+    nav{
+      display:flex; align-items:center; gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    .cta:hover{background: rgba(255,255,255,.12)}
+    .cta.primary{
+      background: #fff;
+      color:#0b0d10;
+      border-color:#fff;
+    }
+    .cta.primary:hover{filter: brightness(.96)}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      color:var(--muted);
+      background: rgba(255,255,255,.06);
+      font-size:13px;
+    }
+    .dot{width:8px; height:8px; border-radius:50%; background: rgba(255,255,255,.45)}
+
+    header.hero{
+      padding:56px 0 20px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr; gap:18px;}
+    }
+    h1{
+      font-size: clamp(30px, 3.6vw, 48px);
+      margin:12px 0 10px;
+      letter-spacing:-.6px;
+      line-height:1.12;
+    }
+    .lead{
+      color: var(--accent2);
+      font-size: 16.5px;
+      max-width: 62ch;
+      margin: 0 0 18px;
+    }
+    .hero-actions{
+      display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+      margin-top: 18px;
+    }
+    .mini{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+    }
+    .card{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card{
+      padding:18px;
+    }
+    .hero-card h3{
+      margin: 0 0 8px;
+      font-size:16px;
+      letter-spacing:-.2px;
+    }
+    .hero-card p{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .hero-card ul{
       margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #000;
+      padding-left: 18px;
+      color: var(--accent2);
+      font-size: 14px;
     }
-    .container {
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 0 20px;
+    .hero-card li{margin:6px 0}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
     }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    section{
+      padding: 28px 0;
     }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 16px;
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px;
+      margin-bottom: 14px;
     }
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
+    h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing:-.3px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+      max-width: 70ch;
+    }
+    .box{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    .col-7{grid-column: span 7;}
+    .col-5{grid-column: span 5;}
+    .col-6{grid-column: span 6;}
+    .col-4{grid-column: span 4;}
+    .col-12{grid-column: span 12;}
+    @media (max-width: 920px){
+      .col-7,.col-5,.col-6,.col-4{grid-column: span 12;}
+    }
+    .bullets{
+      margin:10px 0 0;
+      padding-left: 18px;
+      color: var(--accent2);
+    }
+    .bullets li{margin:7px 0}
+    .kpi{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px;
+    }
+    .pill{
+      padding:8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      font-size: 13px;
+      color: var(--accent2);
+      white-space:nowrap;
+    }
+    .steps{
+      display:grid;
+      gap:12px;
+    }
+    .step{
+      display:grid;
+      grid-template-columns: 36px 1fr;
+      gap:12px;
+      padding:14px;
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .num{
+      width:36px; height:36px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:700;
+    }
+    .step h4{margin:0 0 4px; font-size:15px;}
+    .step p{margin:0; color:var(--muted); font-size:14px;}
+    .price{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:12px; flex-wrap:wrap;
+      margin-top: 8px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,.10);
+    }
+    .price strong{font-size:22px; letter-spacing:-.4px;}
+    .small{color:var(--muted); font-size:13px;}
+    details{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius2);
+      padding: 12px 14px;
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      font-weight:600;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:8px 0 0; color:var(--muted); font-size:14px;}
+    footer{
+      padding: 34px 0 46px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      align-items:start;
+    }
+    @media (max-width: 920px){
+      .footer-grid{grid-template-columns:1fr;}
+    }
+    .legal{
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .mutedlink{color:var(--accent2); text-decoration:none}
+    .mutedlink:hover{text-decoration:underline}
+    .divider{
+      height:1px;
+      background: rgba(255,255,255,.08);
+      margin: 10px 0 0;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>AlignedDocs</h1>
-    <p>
-      Individuelle ISO-9001-Grunddokumentation für kleine und mittlere Unternehmen.
-    </p>
-    <p>
-      Automatisiert erstellt auf Basis Ihrer Unternehmensangaben.
-      Keine Beratung. Keine Zertifizierungsgarantie.
-    </p>
-    <a class="button" href="mailto:info@aligneddocs.com">
-      Kontakt aufnehmen
-    </a>
+  <div class="topbar">
+    <div class="wrap inner">
+      <a class="brand" href="#top">
+        <span class="logo">AD</span>
+        <span>AlignedDocs</span>
+      </a>
+
+      <nav aria-label="Navigation">
+        <a href="#produkt">Produkt</a>
+        <a href="#iso">ISO 9001 erklärt</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#preise">Preis</a>
+        <a href="#faq">FAQ</a>
+        <a class="cta" href="#kontakt">Kontakt</a>
+        <!-- OPTIONAL: Wenn du später einen Bezahl-Link hast, ersetze href -->
+        <a class="cta primary" href="#kontakt">Angebot anfragen</a>
+      </nav>
+    </div>
   </div>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap">
+        <div class="badge"><span class="dot"></span> ISO 9001:2015 Grunddokumentation für KMU</div>
+        <div class="hero-grid">
+          <div>
+            <h1>Individuelle ISO&nbsp;9001-Dokumentation – verständlich, schlank, praxisnah.</h1>
+            <p class="lead">
+              AlignedDocs erstellt eine <strong>unternehmensspezifische Grunddokumentation</strong> (QM-Handbuch &amp; Kerntexte)
+              auf Basis Ihrer Angaben. Ideal, wenn Sie schnell eine solide Basis brauchen – ohne Textwüsten.
+            </p>
+
+            <div class="hero-actions">
+              <!-- WICHTIG: Setze hier deine echte E-Mail oder ein Formular/Checkout -->
+              <a class="cta primary" href="mailto:info@aligneddocs.com?subject=Anfrage%20ISO%209001%20Grunddokumentation&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20eine%20ISO%209001%3A2015%20Grunddokumentation%20anfragen.%0A%0AFirma%3A%20%0ABranche%3A%20%0AMitarbeiter%3A%20%0AGeltungsbereich%20(Scope)%3A%20%0A%0AGew%C3%BCnschte%20Sprache%3A%20Deutsch%2FEnglisch%0A%0AVielen%20Dank!">Angebot anfragen</a>
+
+              <!-- Sample: Lege später z.B. docs/sample.pdf ins Repo und setze href="docs/sample.pdf" -->
+              <a class="cta" href="#" title="Füge später einen PDF-Auszug hinzu (z.B. docs/sample.pdf)">Beispielauszug ansehen (PDF)</a>
+
+              <a class="cta" href="#iso">Was ist ISO 9001?</a>
+            </div>
+
+            <p class="mini">
+              <strong>Lieferung:</strong> typischerweise innerhalb von <strong>48–72&nbsp;Stunden</strong> (nach Eingang Ihrer Angaben).<br>
+              <strong>Hinweis:</strong> Grunddokumentation – keine Beratung, keine Zertifizierungsgarantie.
+            </p>
+          </div>
+
+          <aside class="card hero-card" aria-label="Kurzüberblick">
+            <h3>Was Sie erhalten</h3>
+            <p>Eine saubere Basis, die Sie intern nutzen und bei Bedarf weiter ausbauen können.</p>
+            <ul>
+              <li>QM-Handbuch (Scope, Kontext, Rollen, Prozesse, Normbezug)</li>
+              <li>Dokumentenlenkung &amp; Nachweislogik (verständlich formuliert)</li>
+              <li>Grundtexte zu Risiken/Chancen, Ziele, KVP, interne Audits</li>
+              <li>Versioniert &amp; strukturiert, bereit zur Anpassung</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <section id="produkt">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Produkt in 60 Sekunden</h2>
+          <p class="sub">Für KMU, die ISO 9001 praktisch umsetzen möchten – ohne komplizierte Einführung.</p>
+        </div>
+
+        <div class="grid">
+          <div class="box col-7">
+            <p style="margin:0;color:var(--accent2);">
+              <strong>AlignedDocs</strong> ist eine Dienstleistung zur Erstellung einer
+              <strong>unternehmensspezifischen ISO&nbsp;9001:2015-Grunddokumentation</strong>.
+              Sie liefern die wichtigsten Eckdaten (Branche, Scope, Prozesse, Verantwortlichkeiten) – wir liefern eine konsistente Dokumentbasis.
+            </p>
+
+            <ul class="bullets">
+              <li><strong>Schlank</strong>: keine unnötigen Seiten, klare Struktur.</li>
+              <li><strong>Verständlich</strong>: so geschrieben, dass auch Nicht-QMler mitkommen.</li>
+              <li><strong>Praktisch</strong>: als Ausgangspunkt für Auditvorbereitung &amp; interne Ordnung.</li>
+            </ul>
+
+            <div class="kpi" aria-label="Kernnutzen">
+              <span class="pill">Zeit sparen</span>
+              <span class="pill">Konsistenter Aufbau</span>
+              <span class="pill">KMU-geeignet</span>
+              <span class="pill">Deutsch / Englisch möglich</span>
+            </div>
+          </div>
+
+          <div class="box col-5">
+            <h3 style="margin:0 0 8px;font-size:16px;">Wichtig: Was es <u>nicht</u> ist</h3>
+            <ul class="bullets" style="margin-top:8px;">
+              <li>Keine Rechts- oder ISO-Beratung.</li>
+              <li>Keine Garantie auf Zertifizierung oder Audit-Erfolg.</li>
+              <li>Kein Ersatz für interne Umsetzung (Prozesse müssen gelebt werden).</li>
+            </ul>
+            <div class="divider"></div>
+            <p class="small" style="margin:10px 0 0;">
+              Sie bekommen eine fundierte Dokumentbasis – die finale Abstimmung auf Ihre Organisation
+              (z. B. Verantwortlichkeiten, Nachweise, Prozessdetails) erfolgt idealerweise intern.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iso">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>ISO 9001:2015 – kurz und verständlich</h2>
+          <p class="sub">Was die Norm bedeutet – ohne Norm-Deutsch.</p>
+        </div>
+
+        <div class="grid">
+          <div class="box col-6">
+            <h3 style="margin:0 0 8px;font-size:16px;">Was ist ISO 9001?</h3>
+            <p style="margin:0;color:var(--muted);">
+              ISO&nbsp;9001 ist eine internationale Norm für Qualitätsmanagement. Vereinfacht:
+              Sie hilft Unternehmen, <strong>verlässliche Abläufe</strong> zu definieren und nachweisbar zu machen –
+              damit Qualität planbar wird (für Kunden, Behörden, Partner und intern).
+            </p>
+          </div>
+
+          <div class="box col-6">
+            <h3 style="margin:0 0 8px;font-size:16px;">Warum lohnt sich das für KMU?</h3>
+            <ul class="bullets" style="margin-top:8px;">
+              <li>Weniger Chaos: klare Verantwortlichkeiten &amp; Prozesse.</li>
+              <li>Mehr Vertrauen: Ausschreibungen / Kundenanforderungen besser erfüllen.</li>
+              <li>Stabileres Wachstum: Fehlerquellen erkennen, Risiken steuern, kontinuierlich verbessern.</li>
+            </ul>
+          </div>
+
+          <div class="box col-12">
+            <h3 style="margin:0 0 8px;font-size:16px;">Was fordert die Norm grob?</h3>
+            <div class="grid">
+              <div class="box col-4" style="background:rgba(255,255,255,.03);">
+                <strong>Kontext &amp; Scope</strong>
+                <p class="small" style="margin:6px 0 0;">
+                  Was macht das Unternehmen? Für welche Leistungen gilt das QMS?
+                </p>
+              </div>
+              <div class="box col-4" style="background:rgba(255,255,255,.03);">
+                <strong>Prozesse &amp; Nachweise</strong>
+                <p class="small" style="margin:6px 0 0;">
+                  Wie laufen Kernprozesse? Welche Dokumente/Protokolle belegen das?
+                </p>
+              </div>
+              <div class="box col-4" style="background:rgba(255,255,255,.03);">
+                <strong>Verbesserung</strong>
+                <p class="small" style="margin:6px 0 0;">
+                  Interne Audits, Managementbewertung, Korrekturmaßnahmen, KVP.
+                </p>
+              </div>
+            </div>
+            <p class="small" style="margin:12px 0 0;">
+              Gute ISO-Dokumentation ist nicht „viel Text“, sondern ein <strong>klarer, nachvollziehbarer Rahmen</strong>, der zur Firma passt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Ablauf</h2>
+          <p class="sub">Einfacher Prozess – ohne Tool-Overkill.</p>
+        </div>
+
+        <div class="grid">
+          <div class="box col-6">
+            <div class="steps">
+              <div class="step">
+                <div class="num">1</div>
+                <div>
+                  <h4>Kurze Anfrage</h4>
+                  <p>Sie senden die Basisdaten (Branche, Mitarbeiter, Scope, Prozesse, Sprache).</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="num">2</div>
+                <div>
+                  <h4>Erstellung</h4>
+                  <p>Wir erstellen eine konsistente Grunddokumentation anhand Ihrer Angaben.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="num">3</div>
+                <div>
+                  <h4>Lieferung</h4>
+                  <p>Sie erhalten das Dokument als Datei (z. B. PDF/Word – je nach Vereinbarung) zur internen Nutzung und Anpassung.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box col-6">
+            <h3 style="margin:0 0 8px;font-size:16px;">Was wir typischerweise abfragen</h3>
+            <ul class="bullets">
+              <li>Unternehmensname, Standort(e), Sprache (DE/EN)</li>
+              <li>Geltungsbereich (Produkte/Dienstleistungen, Grenzen)</li>
+              <li>Kernprozesse (z. B. Vertrieb, Leistungserbringung, Einkauf)</li>
+              <li>Unterstützende Prozesse (z. B. HR, IT, Instandhaltung)</li>
+              <li>Rollen/Verantwortlichkeiten (z. B. QMB, GF, Prozessverantwortliche)</li>
+            </ul>
+            <div class="divider"></div>
+            <p class="small" style="margin:10px 0 0;">
+              Tipp: Je klarer Ihre Angaben, desto passgenauer wird die Dokumentation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preise">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Preis</h2>
+          <p class="sub">Transparent, ohne Abo. (Anpassbar, sobald du final bist.)</p>
+        </div>
+
+        <div class="grid">
+          <div class="box col-7 card">
+            <h3 style="margin:0 0 6px;font-size:18px;">ISO 9001:2015 Grunddokumentation</h3>
+            <p class="small" style="margin:0 0 10px;">
+              Für KMU, die eine solide Dokumentbasis möchten (unternehmensspezifisch, konsistent, verständlich).
+            </p>
+
+            <ul class="bullets">
+              <li>Individuelles QM-Handbuch (Grundstruktur)</li>
+              <li>Grundtexte zu Normkapiteln (kontextbezogen)</li>
+              <li>Saubere Formatierung &amp; klare Gliederung</li>
+              <li>Lieferung i. d. R. innerhalb 48–72h</li>
+            </ul>
+
+            <div class="price">
+              <!-- Passe Preis an, wenn du final bist -->
+              <div>
+                <strong>ab 249&nbsp;€</strong>
+                <div class="small">einmalig · keine laufenden Kosten</div>
+              </div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="cta primary" href="mailto:info@aligneddocs.com?subject=Anfrage%20ISO%209001%20Grunddokumentation&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20eine%20ISO%209001%3A2015%20Grunddokumentation%20anfragen.%0A%0AFirma%3A%20%0ABranche%3A%20%0AMitarbeiter%3A%20%0AGeltungsbereich%20(Scope)%3A%20%0A%0AGew%C3%BCnschte%20Sprache%3A%20Deutsch%2FEnglisch%0A%0AVielen%20Dank!">Jetzt anfragen</a>
+                <a class="cta" href="#" title="Füge später einen PDF-Auszug hinzu (z.B. docs/sample.pdf)">Sample ansehen</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="box col-5">
+            <h3 style="margin:0 0 8px;font-size:16px;">Was kostet das nicht?</h3>
+            <p class="small" style="margin:0 0 10px;">
+              Viele KMU unterschätzen den Aufwand, alles „von Null“ zu schreiben. Mit einer soliden Basis sparen Sie Zeit
+              und reduzieren Leerlauf – ohne langfristige Bindung.
+            </p>
+
+            <div class="divider"></div>
+
+            <h3 style="margin:12px 0 8px;font-size:16px;">Optional (später)</h3>
+            <ul class="bullets">
+              <li>Zusätzliche Vorlagen (z. B. Audit-Checkliste, Protokollvorlagen)</li>
+              <li>Englische Version</li>
+              <li>Erweiterungen für weitere Normen/Module</li>
+            </ul>
+
+            <p class="small" style="margin:10px 0 0;">
+              Hinweis: Du kannst diese Optional-Liste jederzeit ausbauen – aber für den Start reicht das hier.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>FAQ</h2>
+          <p class="sub">Die häufigsten Fragen, die KMU wirklich stellen.</p>
+        </div>
+
+        <div class="grid">
+          <div class="col-7">
+            <details>
+              <summary>Ist das „auditfähig“?</summary>
+              <p>
+                Sie erhalten eine strukturierte, konsistente Grunddokumentation. Ob sie für Ihr konkretes Audit ausreicht,
+                hängt davon ab, ob Prozesse intern gelebt werden und passende Nachweise/Protokolle geführt werden.
+                Wir geben keine Zertifizierungsgarantie.
+              </p>
+            </details>
+
+            <details>
+              <summary>Wie individuell ist das Dokument?</summary>
+              <p>
+                Die Inhalte werden anhand Ihrer Angaben (Scope, Prozesse, Rollen, Kontext) erstellt. Je klarer Ihre Inputs,
+                desto passgenauer wird die Ausgabe.
+              </p>
+            </details>
+
+            <details>
+              <summary>In welchem Format bekomme ich die Dokumente?</summary>
+              <p>
+                Typisch sind PDF (für Ausgabe) und/oder bearbeitbare Formate (z. B. Word) – je nach Vereinbarung.
+                Schreiben Sie kurz, was Sie bevorzugen.
+              </p>
+            </details>
+
+            <details>
+              <summary>Wie schnell wird geliefert?</summary>
+              <p>
+                In der Regel innerhalb von 48–72 Stunden nach Eingang Ihrer Angaben. Bei sehr komplexen Unternehmen
+                kann es länger dauern – das klären wir vorab.
+              </p>
+            </details>
+          </div>
+
+          <div class="box col-5">
+            <h3 style="margin:0 0 8px;font-size:16px;">Schnellcheck: Passt das zu mir?</h3>
+            <ul class="bullets">
+              <li>Sie sind KMU und wollen eine klare Dokumentbasis.</li>
+              <li>Sie wollen keine Textwüste, sondern Struktur.</li>
+              <li>Sie akzeptieren, dass Umsetzung &amp; Nachweise intern passieren müssen.</li>
+            </ul>
+            <div class="divider"></div>
+            <p class="small" style="margin:10px 0 0;">
+              Wenn Sie eine 1:1-Beratung oder Vollbegleitung bis zur Zertifizierung suchen, ist eine klassische Beratung oft der bessere Weg.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Kontakt</h2>
+          <p class="sub">Kurze Anfrage reicht – Sie bekommen eine klare Rückmeldung zum Vorgehen.</p>
+        </div>
+
+        <div class="grid">
+          <div class="box col-7 card">
+            <h3 style="margin:0 0 8px;font-size:16px;">E-Mail</h3>
+            <p style="margin:0;color:var(--muted);">
+              Senden Sie uns kurz die Basisdaten (Firma, Branche, Mitarbeiterzahl, Scope, Prozesse, Sprache).
+            </p>
+            <div class="hero-actions" style="margin-top:14px;">
+              <a class="cta primary" href="mailto:info@aligneddocs.com?subject=Anfrage%20ISO%209001%20Grunddokumentation&body=Hallo%2C%0A%0Aich%20m%C3%B6chte%20eine%20ISO%209001%3A2015%20Grunddokumentation%20anfragen.%0A%0AFirma%3A%20%0ABranche%3A%20%0AMitarbeiter%3A%20%0AGeltungsbereich%20(Scope)%3A%20%0AKernprozesse%3A%20%0AUnterst%C3%BCtzungsprozesse%3A%20%0ARollen%2FVerantwortliche%3A%20%0ASprache%3A%20Deutsch%2FEnglisch%0A%0AVielen%20Dank!">E-Mail öffnen</a>
+              <a class="cta" href="#preise">Preis ansehen</a>
+            </div>
+
+            <p class="small" style="margin:12px 0 0;">
+              <!-- Optional: Wenn du eine echte Adresse/Impressum hast, ergänze sie unten im Footer. -->
+              Antwortzeit: typischerweise innerhalb von 24 Stunden (werktags).
+            </p>
+          </div>
+
+          <div class="box col-5">
+            <h3 style="margin:0 0 8px;font-size:16px;">Beispielauszug</h3>
+            <p class="small" style="margin:0 0 10px;">
+              Samples sind marktüblich und erhöhen Vertrauen. Lege eine PDF-Datei ins Repo (z. B. <code>docs/sample.pdf</code>)
+              und verlinke sie hier.
+            </p>
+            <a class="cta" href="#" title="Setze später href='docs/sample.pdf'">Beispielauszug (PDF) – Link setzen</a>
+
+            <div class="divider"></div>
+
+            <h3 style="margin:12px 0 8px;font-size:16px;">Nächster Schritt (für dich)</h3>
+            <ul class="bullets">
+              <li>PDF-Sample (2–4 Seiten) hinzufügen</li>
+              <li>Preis final setzen (z. B. 200–300 €)</li>
+              <li>aligneddocs.com auf diese Seite verbinden</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span class="logo" aria-hidden="true">AD</span>
+            <strong style="color:var(--text);">AlignedDocs</strong>
+          </div>
+          <div class="legal">
+            <strong>Transparenz-Hinweis</strong>
+            <div class="small" style="margin-top:6px;">
+              AlignedDocs erstellt Dokumente auf Basis Ihrer Angaben als <strong>Grunddokumentation</strong>.
+              Es handelt sich nicht um Rechts- oder ISO-Beratung. Keine Zertifizierungsgarantie.
+            </div>
+          </div>
+          <div class="small" style="margin-top:10px;">
+            © <span id="y"></span> AlignedDocs. ·
+            <a class="mutedlink" href="#" title="Hier später Impressum verlinken">Impressum</a> ·
+            <a class="mutedlink" href="#" title="Hier später Datenschutz verlinken">Datenschutz</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="small">
+            <strong style="color:var(--text);">Kontakt</strong><br>
+            E-Mail: <a class="mutedlink" href="mailto:info@aligneddocs.com">info@aligneddocs.com</a><br>
+            <!-- Optional: Telefon / Standort / Handelsregister später ergänzen -->
+          </div>
+
+          <div class="small" style="margin-top:12px;">
+            <strong style="color:var(--text);">Hinweis für dich (Betreiber)</strong><br>
+            Wenn du aligneddocs.com verbinden willst, setzen wir später im GitHub Pages Menü „Custom domain“ und im Domain-Provider DNS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nur für das Jahr im Footer (harmlos, kein Tracking)
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

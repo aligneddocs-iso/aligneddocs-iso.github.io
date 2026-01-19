@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Datenerfassung – ISO 9001 | AlignedDocs</title>
+  <title>ISO 9001 – Datenerfassung | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <link rel="stylesheet" href="style.css">
@@ -10,38 +10,69 @@
 </head>
 
 <body>
-<main class="container">
+<a class="skip" href="#content">Zum Inhalt springen</a>
 
-<h1>ISO 9001 – Datenerfassung</h1>
-<p class="lead">
-  Bitte beantworten Sie die folgenden Fragen Schritt für Schritt.
-  Ihre Angaben werden lokal gespeichert.
+<header class="site-header">
+  <div class="container header-inner">
+    <strong>AlignedDocs</strong>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="produkt.html">Produkt</a>
+      <a href="faq.html">FAQ</a>
+      <a href="formular.html" class="active">Formular</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+
+    <div class="lang">
+      <button data-lang-btn="de" class="is-active">DE</button>
+      <button data-lang-btn="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="content" class="container">
+
+<h1 data-lang="de">ISO 9001 – Datenerfassung</h1>
+<h1 data-lang="en">ISO 9001 – Data collection</h1>
+
+<p class="lead" data-lang="de">
+Bitte beantworten Sie die folgenden Fragen Schritt für Schritt.
+</p>
+<p class="lead" data-lang="en">
+Please answer the following questions step by step.
 </p>
 
 <form id="wizard">
 
   <!-- STEP 1 -->
   <section class="step active" data-step="1">
-    <h3>Schritt 1: Unternehmen</h3>
+    <h3 data-lang="de">Schritt 1: Unternehmen</h3>
+    <h3 data-lang="en">Step 1: Company</h3>
 
-    <label>Unternehmensname</label>
-    <input type="text" name="company">
+    <label data-lang="de">Unternehmensname</label>
+    <label data-lang="en">Company name</label>
+    <input type="text" data-field="company">
 
-    <label>Mitarbeiteranzahl</label>
-    <input type="number" name="employees">
+    <label data-lang="de">Anzahl Mitarbeitende</label>
+    <label data-lang="en">Number of employees</label>
+    <input type="number" data-field="employees">
 
-    <label>Branche</label>
-    <input type="text" name="industry">
+    <label data-lang="de">Branche</label>
+    <label data-lang="en">Industry</label>
+    <input type="text" data-field="industry">
 
     <button type="button" class="next">Weiter</button>
   </section>
 
   <!-- STEP 2 -->
   <section class="step" data-step="2">
-    <h3>Schritt 2: Geltungsbereich</h3>
+    <h3 data-lang="de">Schritt 2: Geltungsbereich</h3>
+    <h3 data-lang="en">Step 2: Scope</h3>
 
-    <label>Was umfasst Ihr Qualitätsmanagement?</label>
-    <textarea name="scope"></textarea>
+    <label data-lang="de">Geltungsbereich des QM-Systems</label>
+    <label data-lang="en">Scope of the QMS</label>
+    <textarea data-field="scope"></textarea>
 
     <button type="button" class="back">Zurück</button>
     <button type="button" class="next">Weiter</button>
@@ -49,52 +80,56 @@
 
   <!-- STEP 3 -->
   <section class="step" data-step="3">
-    <h3>Schritt 3: Prozesse</h3>
+    <h3 data-lang="de">Schritt 3: Prozesse</h3>
+    <h3 data-lang="en">Step 3: Processes</h3>
 
-    <label>Kernprozesse</label>
-    <textarea name="core_processes"></textarea>
+    <label data-lang="de">Kernprozesse</label>
+    <label data-lang="en">Core processes</label>
+    <textarea data-field="processes"></textarea>
 
-    <label>QM-Verantwortung</label>
-    <input type="text" name="qm_responsible">
+    <label data-lang="de">QM-Verantwortung</label>
+    <label data-lang="en">QMS responsibility</label>
+    <input type="text" data-field="qm">
 
     <button type="button" class="back">Zurück</button>
     <button type="button" class="next">Weiter</button>
   </section>
 
-  <!-- STEP 4 SUMMARY -->
+  <!-- STEP 4 -->
   <section class="step" data-step="4">
-    <h3>Zusammenfassung & Bestätigung</h3>
+    <h3 data-lang="de">Zusammenfassung & Bestätigung</h3>
+    <h3 data-lang="en">Summary & confirmation</h3>
 
-    <p>Bitte prüfen und ggf. korrigieren Sie Ihre Angaben.</p>
+    <div class="summary">
+      <label>Unternehmen</label>
+      <input type="text" data-field="company">
 
-    <label>Unternehmensname</label>
-    <input type="text" name="company">
+      <label>Mitarbeitende</label>
+      <input type="number" data-field="employees">
 
-    <label>Mitarbeiteranzahl</label>
-    <input type="number" name="employees">
+      <label>Branche</label>
+      <input type="text" data-field="industry">
 
-    <label>Branche</label>
-    <input type="text" name="industry">
+      <label>Geltungsbereich</label>
+      <textarea data-field="scope"></textarea>
 
-    <label>Geltungsbereich</label>
-    <textarea name="scope"></textarea>
+      <label>Kernprozesse</label>
+      <textarea data-field="processes"></textarea>
 
-    <label>Kernprozesse</label>
-    <textarea name="core_processes"></textarea>
-
-    <label>QM-Verantwortung</label>
-    <input type="text" name="qm_responsible">
-
-    <hr>
-
-    <label>
-      <input type="checkbox" id="confirm_truth">
-      Ich bestätige, dass meine Angaben nach bestem Wissen korrekt sind.
-    </label><br>
+      <label>QM-Verantwortung</label>
+      <input type="text" data-field="qm">
+    </div>
 
     <label>
-      <input type="checkbox" id="confirm_living">
-      Mir ist bewusst, dass die beschriebenen Prozesse im Unternehmen gelebt werden müssen.
+      <input type="checkbox" id="confirm1">
+      <span data-lang="de">Ich bestätige die Richtigkeit meiner Angaben.</span>
+      <span data-lang="en">I confirm that my information is correct.</span>
+    </label>
+
+    <label>
+      <input type="checkbox" id="confirm2">
+      <span data-lang="de">Mir ist bewusst, dass die Prozesse gelebt werden müssen.</span>
+      <span data-lang="en">I understand that processes must be implemented.</span>
     </label>
 
     <button type="button" class="back">Zurück</button>
@@ -104,5 +139,12 @@
 </form>
 
 </main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+  </div>
+</footer>
+
 </body>
 </html>

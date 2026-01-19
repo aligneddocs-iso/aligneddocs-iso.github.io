@@ -1,72 +1,34 @@
-/* 
-  AlignedDocs – main.js
-  Zweck:
-  - Sprachumschaltung DE / EN
-  - Initial nur eine Sprache sichtbar
-  - Aktiven Navigationspunkt markieren
-  - Minimal, stabil, frameworkfrei
-*/
+(function(){
 
-(function () {
-
-  /* ===============================
-     SPRACHE
-     =============================== */
-
-  // Standard-Sprache bestimmen
-  const DEFAULT_LANG = (
-    (navigator.language || navigator.userLanguage || "de")
-      .toLowerCase()
-      .startsWith("de")
-  ) ? "de" : "en";
-
-  // Sprache setzen
-  function setLanguage(lang) {
-    document.documentElement.setAttribute("lang", lang);
-    localStorage.setItem("ad_lang", lang);
-
-    // Texte ein-/ausblenden
-    document.querySelectorAll("[data-lang]").forEach(el => {
-      const targetLang = el.getAttribute("data-lang");
-      el.style.display = (targetLang === lang) ? "block" : "none";
+  /* Sprache */
+  function setLanguage(lang){
+    document.documentElement.lang = lang;
+    localStorage.setItem("lang", lang);
+    document.querySelectorAll("[data-lang]").forEach(el=>{
+      el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
     });
-
-    // Sprach-Buttons aktiv markieren
-    document.querySelectorAll("[data-setlang]").forEach(btn => {
-      const btnLang = btn.getAttribute("data-setlang");
-      btn.classList.toggle("is-active", btnLang === lang);
+    document.querySelectorAll("[data-setlang]").forEach(btn=>{
+      btn.classList.toggle("is-active", btn.dataset.setlang === lang);
     });
   }
 
-  // Initiale Sprache setzen
-  const savedLang = localStorage.getItem("ad_lang");
-  setLanguage(savedLang || DEFAULT_LANG);
+  const saved = localStorage.getItem("lang") || "de";
+  setLanguage(saved);
 
-  // Klick auf Sprach-Buttons
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", e=>{
     const btn = e.target.closest("[data-setlang]");
-    if (!btn) return;
-
-    e.preventDefault();
-    const lang = btn.getAttribute("data-setlang");
-    setLanguage(lang);
+    if(btn) setLanguage(btn.dataset.setlang);
   });
 
-
-  /* ===============================
-     AKTIVE NAVIGATION
-     =============================== */
-
-  const currentPage = (
-    window.location.pathname.split("/").pop() || "index.html"
-  ).toLowerCase();
-
-  document.querySelectorAll(".nav a").forEach(link => {
-    const href = (link.getAttribute("href") || "").toLowerCase();
-    if (href === currentPage) {
-      link.classList.add("active");
-    }
+  /* Accordion */
+  document.querySelectorAll(".accordion-item").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector(".accordion-icon");
+      const open = content.style.display === "block";
+      content.style.display = open ? "none" : "block";
+      icon.textContent = open ? "+" : "–";
+    });
   });
 
 })();
-

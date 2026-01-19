@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Review – ISO 9001 | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<a class="skip" href="#content">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="content" class="container">
+
+  <section class="hero small">
+    <h1 id="title"></h1>
+    <p class="lead" id="subtitle"></p>
+  </section>
+
+  <section class="section card" id="summary"></section>
+
+  <div class="actions">
+    <a id="backBtn" class="btn btn-ghost"></a>
+    <button class="btn btn-primary" id="confirmBtn"></button>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+  </div>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang") || "de";
+
+  const i18n = {
+    de: {
+      title: "Zusammenfassung Ihrer Angaben",
+      subtitle: "Bitte prüfen Sie Ihre Angaben sorgfältig.",
+      back: "Zurück & bearbeiten",
+      confirm: "Angaben bestätigen",
+      backLink: "de.formular.html"
+    },
+    en: {
+      title: "Review your information",
+      subtitle: "Please carefully review your inputs.",
+      back: "Back & edit",
+      confirm: "Confirm information",
+      backLink: "en.formular.html"
+    }
+  };
+
+  const t = i18n[lang] || i18n.de;
+  document.documentElement.lang = lang;
+
+  document.getElementById("title").textContent = t.title;
+  document.getElementById("subtitle").textContent = t.subtitle;
+  document.getElementById("backBtn").textContent = t.back;
+  document.getElementById("backBtn").href = t.backLink;
+  document.getElementById("confirmBtn").textContent = t.confirm;
+
+  const summaryEl = document.getElementById("summary");
+  const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
+
+  if (!Object.keys(data).length) {
+    summaryEl.innerHTML = "<p>No data found.</p>";
+  } else {
+    Object.entries(data).forEach(([key, value]) => {
+      if (!value) return;
+      const row = document.createElement("div");
+      row.style.marginBottom = "14px";
+      row.innerHTML = `<strong>${key}</strong><br><span style="opacity:.9">${value}</span>`;
+      summaryEl.appendChild(row);
+    });
+  }
+
+  document.getElementById("confirmBtn").onclick = () => {
+    alert("Hier wird später an n8n / KI-1 gesendet.");
+  };
+</script>
+
+</body>
+</html>

@@ -48,7 +48,7 @@
     </p>
   </section>
 
-  <form class="form">
+  <form class="form" id="isoForm">
 
     <!-- 1. UNTERNEHMEN -->
     <section class="form-section">
@@ -189,32 +189,65 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <small>© 2026 AlignedDocs</small>
-    <div class="footer-links">
-      <a href="de.datenschutz.html">Datenschutz</a>
-    </div>
   </div>
 </footer>
 
 <script>
-  document.querySelectorAll(".toggle").forEach(toggle => {
-    const name = toggle.dataset.name;
+/* ---------- TOGGLE HANDLING ---------- */
+document.querySelectorAll(".toggle").forEach(toggle => {
+  const name = toggle.dataset.name;
 
-    toggle.querySelectorAll("button").forEach(btn => {
-      btn.addEventListener("click", () => {
-        toggle.querySelectorAll("button").forEach(b => b.classList.remove("is-active"));
-        btn.classList.add("is-active");
+  toggle.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      toggle.querySelectorAll("button").forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
 
-        let hidden = toggle.querySelector("input[type=hidden]");
-        if (!hidden) {
-          hidden = document.createElement("input");
-          hidden.type = "hidden";
-          hidden.name = name;
-          toggle.appendChild(hidden);
-        }
-        hidden.value = btn.dataset.value;
-      });
+      let hidden = toggle.querySelector("input[type=hidden]");
+      if (!hidden) {
+        hidden = document.createElement("input");
+        hidden.type = "hidden";
+        hidden.name = name;
+        toggle.appendChild(hidden);
+      }
+      hidden.value = btn.dataset.value;
     });
   });
+});
+
+/* ---------- PREFILL FROM SESSION ---------- */
+const stored = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
+
+Object.entries(stored).forEach(([key, value]) => {
+  const field = document.querySelector(`[name="${key}"]`);
+  if (field) field.value = value;
+
+  const toggle = document.querySelector(`.toggle[data-name="${key}"]`);
+  if (toggle) {
+    toggle.querySelectorAll("button").forEach(b => {
+      b.classList.toggle("is-active", b.dataset.value === value);
+    });
+
+    let hidden = toggle.querySelector("input[type=hidden]");
+    if (!hidden) {
+      hidden = document.createElement("input");
+      hidden.type = "hidden";
+      hidden.name = key;
+      toggle.appendChild(hidden);
+    }
+    hidden.value = value;
+  }
+});
+
+/* ---------- SUBMIT → REVIEW ---------- */
+document.getElementById("isoForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const data = {};
+  new FormData(e.target).forEach((v, k) => data[k] = v);
+
+  sessionStorage.setItem("isoFormData", JSON.stringify(data));
+  window.location.href = "formular-review.html?lang=de";
+});
 </script>
 
 </body>

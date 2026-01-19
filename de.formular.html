@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Datenerfassung – ISO 9001 Handbuch | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Datenerfassung für ein individuelles ISO 9001:2015 Handbuch.">
+  <meta name="description" content="Datenerfassung für ein individuelles ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -50,9 +50,7 @@
 
   <form class="form">
 
-    <!-- =========================
-         1. UNTERNEHMEN
-         ========================= -->
+    <!-- 1. UNTERNEHMEN -->
     <section class="form-section">
       <h2>1. Unternehmensgrundlagen</h2>
 
@@ -77,9 +75,7 @@
       </label>
     </section>
 
-    <!-- =========================
-         2. QUALITÄTSVERSTÄNDNIS
-         ========================= -->
+    <!-- 2. QUALITÄT -->
     <section class="form-section">
       <h2>2. Qualitätsverständnis</h2>
 
@@ -88,9 +84,7 @@
         <textarea name="quality_understanding"></textarea>
       </label>
 
-      <label>
-        Gibt es aktuell festgelegte Qualitätsziele?
-      </label>
+      <label>Gibt es aktuell festgelegte Qualitätsziele?</label>
       <div class="toggle" data-name="quality_goals">
         <button type="button" data-value="yes">Ja</button>
         <button type="button" data-value="no" class="is-active">Nein</button>
@@ -102,9 +96,7 @@
       </label>
     </section>
 
-    <!-- =========================
-         3. GELTUNGSBEREICH
-         ========================= -->
+    <!-- 3. SCOPE -->
     <section class="form-section">
       <h2>3. Geltungsbereich (Scope)</h2>
 
@@ -113,9 +105,7 @@
         <textarea name="scope_included"></textarea>
       </label>
 
-      <label>
-        Gibt es Tätigkeiten, die ausdrücklich ausgeschlossen sind?
-      </label>
+      <label>Gibt es ausdrücklich ausgeschlossene Tätigkeiten?</label>
       <div class="toggle" data-name="scope_exclusions">
         <button type="button" data-value="yes">Ja</button>
         <button type="button" data-value="no" class="is-active">Nein</button>
@@ -127,9 +117,7 @@
       </label>
     </section>
 
-    <!-- =========================
-         4. PROZESSE
-         ========================= -->
+    <!-- 4. PROZESSE -->
     <section class="form-section">
       <h2>4. Zentrale Abläufe & Prozesse</h2>
 
@@ -144,24 +132,18 @@
         <textarea name="critical_steps"></textarea>
       </label>
 
-      <label>
-        Arbeiten Sie mit externen Dienstleistern oder Lieferanten?
-      </label>
+      <label>Arbeiten Sie mit externen Dienstleistern oder Lieferanten?</label>
       <div class="toggle" data-name="external_partners">
         <button type="button" data-value="yes">Ja</button>
         <button type="button" data-value="no" class="is-active">Nein</button>
       </div>
     </section>
 
-    <!-- =========================
-         5. DOKUMENTATION
-         ========================= -->
+    <!-- 5. DOKUMENTATION -->
     <section class="form-section">
       <h2>5. Dokumentation</h2>
 
-      <label>
-        Gibt es bereits dokumentierte Abläufe oder Vorlagen?
-      </label>
+      <label>Gibt es bereits dokumentierte Abläufe oder Vorlagen?</label>
       <div class="toggle" data-name="existing_docs">
         <button type="button" data-value="yes">Ja</button>
         <button type="button" data-value="no" class="is-active">Nein</button>
@@ -173,9 +155,7 @@
       </label>
     </section>
 
-    <!-- =========================
-         6. ÜBERWACHUNG & VERBESSERUNG
-         ========================= -->
+    <!-- 6. ÜBERWACHUNG -->
     <section class="form-section">
       <h2>6. Überwachung & Verbesserung</h2>
 
@@ -190,9 +170,7 @@
       </label>
     </section>
 
-    <!-- =========================
-         ABSCHLUSS
-         ========================= -->
+    <!-- ABSCHLUSS -->
     <section class="form-section">
       <label class="checkbox">
         <input type="checkbox" required>
@@ -220,6 +198,7 @@
 <script>
   document.querySelectorAll(".toggle").forEach(toggle => {
     const name = toggle.dataset.name;
+
     toggle.querySelectorAll("button").forEach(btn => {
       btn.addEventListener("click", () => {
         toggle.querySelectorAll("button").forEach(b => b.classList.remove("is-active"));

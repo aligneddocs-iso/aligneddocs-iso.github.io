@@ -2,54 +2,26 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>ISO 9001 Datenerfassung | AlignedDocs</title>
+  <title>Datenerfassung – ISO 9001 Handbuch | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
+  <meta name="description" content="Datenerfassung für ein individuelles ISO 9001:2015 Handbuch.">
   <link rel="stylesheet" href="style.css">
-  <script defer>
-    let step = 1;
-    const data = {};
-
-    function showStep(n) {
-      document.querySelectorAll(".step").forEach(s => s.style.display = "none");
-      document.getElementById("step" + n).style.display = "block";
-      step = n;
-    }
-
-    function nextStep() {
-      saveStep();
-      showStep(step + 1);
-      if (step === 4) fillSummary();
-    }
-
-    function prevStep() {
-      showStep(step - 1);
-    }
-
-    function saveStep() {
-      document.querySelectorAll(`#step${step} input, #step${step} textarea`)
-        .forEach(el => data[el.name] = el.value);
-    }
-
-    function fillSummary() {
-      for (const key in data) {
-        const el = document.getElementById("sum_" + key);
-        if (el) el.textContent = data[key] || "–";
-      }
-    }
-
-    function finish() {
-      alert("Datenerfassung abgeschlossen.\nIhre Angaben werden gespeichert.");
-    }
-
-    window.onload = () => showStep(1);
-  </script>
 </head>
 
 <body>
+<a class="skip" href="#content">Zum Inhalt springen</a>
+
 <header class="site-header">
   <div class="container header-inner">
-    <strong>AlignedDocs</strong>
+
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      </div>
+    </div>
+
     <nav class="nav">
       <a href="de.index.html">Home</a>
       <a href="de.produkt.html">Produkt</a>
@@ -57,82 +29,214 @@
       <a href="de.formular.html" class="active">Formular</a>
       <a href="de.datenschutz.html">Datenschutz</a>
     </nav>
+
+    <div class="lang">
+      <a href="de.formular.html" class="is-active">DE</a>
+      <a href="en.formular.html">EN</a>
+    </div>
+
   </div>
 </header>
 
-<main class="container">
+<main id="content" class="container">
 
-<h1>ISO 9001 – Datenerfassung</h1>
-<p>Bitte beantworten Sie die folgenden Fragen Schritt für Schritt.</p>
+  <section class="hero small">
+    <h1>Datenerfassung für Ihr ISO-9001-Handbuch</h1>
+    <p class="lead">
+      Bitte beantworten Sie die folgenden Fragen so realistisch wie möglich.
+      Es geht nicht um Perfektion, sondern um Ihre tatsächliche Arbeitsweise.
+    </p>
+  </section>
 
-<!-- STEP 1 -->
-<section id="step1" class="step card">
-  <h2>Schritt 1: Unternehmen</h2>
-  <label>Unternehmensname</label>
-  <input name="company" type="text" required>
+  <form class="form">
 
-  <label>Mitarbeiteranzahl</label>
-  <input name="employees" type="number">
+    <!-- =========================
+         1. UNTERNEHMEN
+         ========================= -->
+    <section class="form-section">
+      <h2>1. Unternehmensgrundlagen</h2>
 
-  <label>Branche</label>
-  <input name="industry" type="text">
+      <label>
+        Offizieller Unternehmensname
+        <input type="text" name="company_name" required>
+      </label>
 
-  <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-</section>
+      <label>
+        Branche / Geschäftstätigkeit
+        <input type="text" name="industry">
+      </label>
 
-<!-- STEP 2 -->
-<section id="step2" class="step card">
-  <h2>Schritt 2: Geltungsbereich</h2>
-  <label>Was umfasst Ihr Qualitätsmanagement?</label>
-  <textarea name="scope" rows="4"></textarea>
+      <label>
+        Anzahl der Mitarbeitenden
+        <input type="number" name="employees">
+      </label>
 
-  <button class="btn" onclick="prevStep()">Zurück</button>
-  <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-</section>
+      <label>
+        Land / Region der Tätigkeit
+        <input type="text" name="region">
+      </label>
+    </section>
 
-<!-- STEP 3 -->
-<section id="step3" class="step card">
-  <h2>Schritt 3: Prozesse</h2>
-  <label>Kernprozesse Ihres Unternehmens</label>
-  <textarea name="processes" rows="4"></textarea>
+    <!-- =========================
+         2. QUALITÄTSVERSTÄNDNIS
+         ========================= -->
+    <section class="form-section">
+      <h2>2. Qualitätsverständnis</h2>
 
-  <label>QM-Verantwortliche Person</label>
-  <input name="qm_owner" type="text">
+      <label>
+        Was bedeutet Qualität für Ihr Unternehmen?
+        <textarea name="quality_understanding"></textarea>
+      </label>
 
-  <button class="btn" onclick="prevStep()">Zurück</button>
-  <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-</section>
+      <label>
+        Gibt es aktuell festgelegte Qualitätsziele?
+      </label>
+      <div class="toggle" data-name="quality_goals">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
 
-<!-- STEP 4 -->
-<section id="step4" class="step card">
-  <h2>Zusammenfassung & Bestätigung</h2>
+      <label>
+        Falls ja: Bitte beschreiben Sie diese kurz
+        <textarea name="quality_goals_description"></textarea>
+      </label>
+    </section>
 
-  <p><b>Unternehmen:</b> <span id="sum_company"></span></p>
-  <p><b>Mitarbeiter:</b> <span id="sum_employees"></span></p>
-  <p><b>Branche:</b> <span id="sum_industry"></span></p>
-  <p><b>Geltungsbereich:</b> <span id="sum_scope"></span></p>
-  <p><b>Kernprozesse:</b> <span id="sum_processes"></span></p>
-  <p><b>QM-Verantwortung:</b> <span id="sum_qm_owner"></span></p>
+    <!-- =========================
+         3. GELTUNGSBEREICH
+         ========================= -->
+    <section class="form-section">
+      <h2>3. Geltungsbereich (Scope)</h2>
 
-  <label>
-    <input type="checkbox" required>
-    Ich bestätige, dass meine Angaben korrekt sind.
-  </label><br>
-  <label>
-    <input type="checkbox" required>
-    Mir ist bewusst, dass die beschriebenen Prozesse im Unternehmen gelebt werden müssen.
-  </label>
+      <label>
+        Welche Tätigkeiten oder Leistungen sollen vom QM-System abgedeckt sein?
+        <textarea name="scope_included"></textarea>
+      </label>
 
-  <br><br>
-  <button class="btn" onclick="prevStep()">Zurück</button>
-  <button class="btn btn-primary" onclick="finish()">Datenerfassung abschließen</button>
-</section>
+      <label>
+        Gibt es Tätigkeiten, die ausdrücklich ausgeschlossen sind?
+      </label>
+      <div class="toggle" data-name="scope_exclusions">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+
+      <label>
+        Falls ja: Bitte beschreiben
+        <textarea name="scope_exclusions_description"></textarea>
+      </label>
+    </section>
+
+    <!-- =========================
+         4. PROZESSE
+         ========================= -->
+    <section class="form-section">
+      <h2>4. Zentrale Abläufe & Prozesse</h2>
+
+      <label>
+        Beschreiben Sie bitte vereinfacht, wie ein typischer Auftrag abläuft
+        (vom ersten Kundenkontakt bis zur Leistungserbringung).
+        <textarea name="core_process"></textarea>
+      </label>
+
+      <label>
+        Gibt es dabei besonders kritische Schritte?
+        <textarea name="critical_steps"></textarea>
+      </label>
+
+      <label>
+        Arbeiten Sie mit externen Dienstleistern oder Lieferanten?
+      </label>
+      <div class="toggle" data-name="external_partners">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+    </section>
+
+    <!-- =========================
+         5. DOKUMENTATION
+         ========================= -->
+    <section class="form-section">
+      <h2>5. Dokumentation</h2>
+
+      <label>
+        Gibt es bereits dokumentierte Abläufe oder Vorlagen?
+      </label>
+      <div class="toggle" data-name="existing_docs">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+
+      <label>
+        Wo werden Dokumente aktuell gespeichert?
+        <input type="text" name="doc_storage">
+      </label>
+    </section>
+
+    <!-- =========================
+         6. ÜBERWACHUNG & VERBESSERUNG
+         ========================= -->
+    <section class="form-section">
+      <h2>6. Überwachung & Verbesserung</h2>
+
+      <label>
+        Wie erkennen Sie, ob Prozesse funktionieren?
+        <textarea name="monitoring"></textarea>
+      </label>
+
+      <label>
+        Wie gehen Sie mit Fehlern oder Beschwerden um?
+        <textarea name="complaints"></textarea>
+      </label>
+    </section>
+
+    <!-- =========================
+         ABSCHLUSS
+         ========================= -->
+    <section class="form-section">
+      <label class="checkbox">
+        <input type="checkbox" required>
+        Ich bestätige, dass meine Angaben nach bestem Wissen korrekt sind.
+      </label>
+
+      <button type="submit" class="btn btn-primary">
+        Datenerfassung abschließen
+      </button>
+    </section>
+
+  </form>
 
 </main>
 
 <footer class="site-footer">
-  <small>© 2026 AlignedDocs</small>
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+    <div class="footer-links">
+      <a href="de.datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+  document.querySelectorAll(".toggle").forEach(toggle => {
+    const name = toggle.dataset.name;
+    toggle.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        toggle.querySelectorAll("button").forEach(b => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+
+        let hidden = toggle.querySelector("input[type=hidden]");
+        if (!hidden) {
+          hidden = document.createElement("input");
+          hidden.type = "hidden";
+          hidden.name = name;
+          toggle.appendChild(hidden);
+        }
+        hidden.value = btn.dataset.value;
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
-

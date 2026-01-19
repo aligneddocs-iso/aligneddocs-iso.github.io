@@ -1,6 +1,6 @@
 /* ==================================================
    AlignedDocs – Enterprise / Compliance Design
-   FINAL STABLE VERSION
+   FINAL – STABLE – COPY & PASTE
    ================================================== */
 
 /* ---------- Reset ---------- */
@@ -60,6 +60,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
+  gap: 20px;
 }
 
 .brand {
@@ -114,7 +115,7 @@ a {
   opacity: 1;
 }
 
-/* ---------- Language Toggle ---------- */
+/* ---------- Language Toggle (DE / EN) ---------- */
 
 .lang {
   display: flex;
@@ -127,9 +128,9 @@ a {
 
 .lang a {
   font-size: 12px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 999px;
-  opacity: .7;
+  opacity: .6;
 }
 
 .lang a.is-active {
@@ -193,6 +194,7 @@ h1 {
   padding: 12px 18px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,.2);
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -314,7 +316,6 @@ h1 {
 
 .faq-card p {
   opacity: .95;
-  line-height: 1.6;
 }
 
 .faq-card.is-active {
@@ -323,6 +324,91 @@ h1 {
 
 .faq-card.is-active h3 {
   color: #d6c27a;
+}
+
+/* ==================================================
+   FORM
+   ================================================== */
+
+.form {
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+.form-section {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.form-section h2 {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ---------- Checkbox ---------- */
+
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ==================================================
+   TOGGLE (Ja / Nein – wie DE/EN)
+   ================================================== */
+
+.toggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.toggle button {
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  opacity: .6;
+  cursor: pointer;
+}
+
+.toggle button.is-active {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+  opacity: 1;
 }
 
 /* ==================================================
@@ -339,8 +425,8 @@ h1 {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* ==================================================
@@ -354,5 +440,9 @@ h1 {
 
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
   }
 }

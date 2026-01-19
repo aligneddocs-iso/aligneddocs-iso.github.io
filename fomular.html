@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Formular – ISO 9001 Datenerfassung | AlignedDocs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Strukturierte Datenerfassung zur Erstellung eines individuellen ISO 9001:2015 Handbuchs als PDF.">
-  <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Strukturierte Datenerfassung zur Erstellung eines individuellen ISO 9001:2015 Handbuchs als PDF." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="style.css" />
   <script src="main.js" defer></script>
 </head>
 
@@ -32,8 +32,8 @@
     </nav>
 
     <div class="lang">
-      <button data-setlang="de" class="is-active">DE</button>
-      <button data-setlang="en">EN</button>
+      <button type="button" data-setlang="de" class="is-active">DE</button>
+      <button type="button" data-setlang="en">EN</button>
     </div>
   </div>
 </header>
@@ -45,19 +45,19 @@
     <span class="kicker"><b>ISO 9001</b> Datenerfassung</span>
 
     <h1 data-lang="de">Ihre Angaben für das ISO-9001-Handbuch</h1>
-    <h1 data-lang="en" style="display:none">Your input for the ISO 9001 handbook</h1>
+    <h1 data-lang="en" hidden>Your input for the ISO 9001 handbook</h1>
 
     <p class="lead" data-lang="de">
       In wenigen, klaren Schritten erfassen Sie die Informationen,
       die für die Erstellung Ihres individuellen ISO-9001-Handbuchs benötigt werden.
     </p>
-    <p class="lead" data-lang="en" style="display:none">
+    <p class="lead" data-lang="en" hidden>
       In a few clear steps, you provide the information required
       to generate your individual ISO 9001 handbook.
     </p>
   </section>
 
-  <!-- Trust strip -->
+  <!-- Trust -->
   <section class="section">
     <div class="grid grid-3">
       <div class="card">
@@ -75,63 +75,52 @@
     </div>
   </section>
 
-  <!-- Form -->
+  <!-- Form (Preview) -->
   <section class="section">
     <div class="card">
 
-      <form>
+      <form action="#" method="post" novalidate>
 
         <h3 data-lang="de">1. Grunddaten</h3>
-        <h3 data-lang="en" style="display:none">1. Basic information</h3>
+        <h3 data-lang="en" hidden>1. Basic information</h3>
 
         <div class="grid grid-2">
           <div>
-            <label data-lang="de">Unternehmensname</label>
-            <label data-lang="en" style="display:none">Company name</label><br>
-            <input type="text" placeholder="z. B. Muster GmbH" disabled>
+            <label>Unternehmensname</label><br />
+            <input type="text" placeholder="z. B. Muster GmbH" disabled />
           </div>
 
           <div>
-            <label data-lang="de">Anzahl der Mitarbeitenden</label>
-            <label data-lang="en" style="display:none">Number of employees</label><br>
-            <input type="number" placeholder="z. B. 8" disabled>
+            <label>Anzahl der Mitarbeitenden</label><br />
+            <input type="number" placeholder="z. B. 8" disabled />
           </div>
         </div>
 
-        <br>
+        <br />
 
         <h3 data-lang="de">2. Geltungsbereich</h3>
-        <h3 data-lang="en" style="display:none">2. Scope</h3>
+        <h3 data-lang="en" hidden>2. Scope</h3>
 
-        <label data-lang="de">Geltungsbereich des QM-Systems</label>
-        <label data-lang="en" style="display:none">Scope of the QMS</label><br>
+        <label>Geltungsbereich des QM-Systems</label><br />
         <textarea rows="4" placeholder="z. B. Entwicklung und Vertrieb von …" disabled></textarea>
 
-        <br>
+        <br />
 
         <h3 data-lang="de">3. Zentrale Prozesse</h3>
-        <h3 data-lang="en" style="display:none">3. Core processes</h3>
+        <h3 data-lang="en" hidden>3. Core processes</h3>
 
-        <label data-lang="de">Kernprozesse Ihres Unternehmens</label>
-        <label data-lang="en" style="display:none">Core business processes</label><br>
+        <label>Kernprozesse Ihres Unternehmens</label><br />
         <textarea rows="4" placeholder="z. B. Vertrieb, Auftragsabwicklung, Support …" disabled></textarea>
 
-        <br>
+        <br />
 
-        <button type="button" class="btn btn-primary" disabled data-lang="de">
-          Weiter zur nächsten Phase (in Vorbereitung)
-        </button>
-        <button type="button" class="btn btn-primary" disabled data-lang="en" style="display:none">
-          Continue to next phase (coming soon)
+        <button type="button" class="btn btn-primary" disabled>
+          Datenerfassung starten (in Vorbereitung)
         </button>
 
-        <p class="lead" style="margin-top:14px;font-size:14px;opacity:.85" data-lang="de">
-          Hinweis: Aktuell wird dieser Schritt technisch vorbereitet.
+        <p class="lead" style="margin-top:14px;font-size:14px;opacity:.85">
+          Hinweis: Dieses Formular dient aktuell als Vorschau.
           Die finale Datenerfassung erfolgt über einen geführten Assistenten.
-        </p>
-        <p class="lead" style="margin-top:14px;font-size:14px;opacity:.85" data-lang="en" style="display:none">
-          Note: This step is currently being prepared.
-          Final data entry will be handled via a guided assistant.
         </p>
 
       </form>

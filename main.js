@@ -1,56 +1,50 @@
 (function () {
-  const DEFAULT_LANG = "de";
+  const steps = document.querySelectorAll(".step");
+  let current = 0;
 
-  /* =========================
-     Sprache (DE / EN)
-     ========================= */
-  function setLanguage(lang) {
-    document.documentElement.lang = lang;
+  const data = JSON.parse(localStorage.getItem("iso_form")) || {};
 
-    document.querySelectorAll("[data-lang]").forEach(el => {
-      el.hidden = el.getAttribute("data-lang") !== lang;
-    });
-
-    document.querySelectorAll("[data-setlang]").forEach(btn => {
-      btn.classList.toggle("is-active", btn.dataset.setlang === lang);
-    });
-
-    localStorage.setItem("lang", lang);
+  function showStep(index) {
+    steps.forEach((s, i) => s.classList.toggle("active", i === index));
+    current = index;
   }
 
-  const savedLang = localStorage.getItem("lang") || DEFAULT_LANG;
-  setLanguage(savedLang);
+  function saveInputs() {
+    document.querySelectorAll("input, textarea").forEach(el => {
+      if (el.name) data[el.name] = el.value;
+    });
+    localStorage.setItem("iso_form", JSON.stringify(data));
+  }
 
-  document.addEventListener("click", function (e) {
-    const langBtn = e.target.closest("[data-setlang]");
-    if (langBtn) {
-      setLanguage(langBtn.dataset.setlang);
-      return;
+  function loadInputs() {
+    document.querySelectorAll("input, textarea").forEach(el => {
+      if (el.name && data[el.name]) el.value = data[el.name];
+    });
+  }
+
+  document.addEventListener("click", e => {
+    if (e.target.classList.contains("next")) {
+      saveInputs();
+      showStep(current + 1);
+      loadInputs();
     }
 
-    /* =========================
-       FAQ / Accordion
-       ========================= */
-    const accBtn = e.target.closest(".accordion-item");
-    if (!accBtn) return;
-
-    const content = accBtn.nextElementSibling;
-    const icon = accBtn.querySelector(".accordion-icon");
-
-    const isOpen = content.style.display === "block";
-
-    // Alle schließen (optional, sorgt für Ordnung)
-    document.querySelectorAll(".accordion-content").forEach(c => {
-      c.style.display = "none";
-    });
-    document.querySelectorAll(".accordion-icon").forEach(i => {
-      i.textContent = "+";
-    });
-
-    // Aktuelles öffnen
-    if (!isOpen) {
-      content.style.display = "block";
-      icon.textContent = "–";
+    if (e.target.classList.contains("back")) {
+      saveInputs();
+      showStep(current - 1);
+      loadInputs();
     }
   });
+
+  document.getElementById("confirm_truth")?.addEventListener("change", checkConfirm);
+  document.getElementById("confirm_living")?.addEventListener("change", checkConfirm);
+
+  function checkConfirm() {
+    const ok =
+      document.getElementById("confirm_truth").checked &&
+      document.getElementById("confirm_living").checked;
+    document.getElementById("finish").disabled = !ok;
+  }
+
+  loadInputs();
 })();

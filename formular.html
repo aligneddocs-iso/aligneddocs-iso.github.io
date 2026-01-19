@@ -1,144 +1,108 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <title>Formular – ISO 9001 Datenerfassung | AlignedDocs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Strukturierte Datenerfassung zur Erstellung eines individuellen ISO 9001:2015 Handbuchs als PDF." />
-  <meta name="robots" content="noindex,nofollow" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>Datenerfassung – ISO 9001 | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
 
 <body>
-<a class="skip" href="#content">Zum Inhalt springen</a>
+<main class="container">
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="brand-mark"><span></span></div>
-      <div class="brand-text">
-        <strong>AlignedDocs</strong>
-        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
-      </div>
-    </div>
+<h1>ISO 9001 – Datenerfassung</h1>
+<p class="lead">
+  Bitte beantworten Sie die folgenden Fragen Schritt für Schritt.
+  Ihre Angaben werden lokal gespeichert.
+</p>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="produkt.html">Produkt</a>
-      <a href="faq.html">FAQ</a>
-      <a href="formular.html" class="active">Formular</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
+<form id="wizard">
 
-    <div class="lang">
-      <button type="button" data-setlang="de" class="is-active">DE</button>
-      <button type="button" data-setlang="en">EN</button>
-    </div>
-  </div>
-</header>
+  <!-- STEP 1 -->
+  <section class="step active" data-step="1">
+    <h3>Schritt 1: Unternehmen</h3>
 
-<main id="content" class="container">
+    <label>Unternehmensname</label>
+    <input type="text" name="company">
 
-  <!-- Intro -->
-  <section class="hero">
-    <span class="kicker"><b>ISO 9001</b> Datenerfassung</span>
+    <label>Mitarbeiteranzahl</label>
+    <input type="number" name="employees">
 
-    <h1 data-lang="de">Ihre Angaben für das ISO-9001-Handbuch</h1>
-    <h1 data-lang="en" hidden>Your input for the ISO 9001 handbook</h1>
+    <label>Branche</label>
+    <input type="text" name="industry">
 
-    <p class="lead" data-lang="de">
-      In wenigen, klaren Schritten erfassen Sie die Informationen,
-      die für die Erstellung Ihres individuellen ISO-9001-Handbuchs benötigt werden.
-    </p>
-    <p class="lead" data-lang="en" hidden>
-      In a few clear steps, you provide the information required
-      to generate your individual ISO 9001 handbook.
-    </p>
+    <button type="button" class="next">Weiter</button>
   </section>
 
-  <!-- Trust -->
-  <section class="section">
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Strukturiert</h3>
-        <p>Geführte Abfrage entlang der ISO-9001-Struktur.</p>
-      </div>
-      <div class="card">
-        <h3>Vertraulich</h3>
-        <p>Ihre Angaben dienen ausschließlich der Dokumentenerstellung.</p>
-      </div>
-      <div class="card">
-        <h3>Kein Risiko</h3>
-        <p>Kein Abo. Keine Zertifizierungsversprechen.</p>
-      </div>
-    </div>
+  <!-- STEP 2 -->
+  <section class="step" data-step="2">
+    <h3>Schritt 2: Geltungsbereich</h3>
+
+    <label>Was umfasst Ihr Qualitätsmanagement?</label>
+    <textarea name="scope"></textarea>
+
+    <button type="button" class="back">Zurück</button>
+    <button type="button" class="next">Weiter</button>
   </section>
 
-  <!-- Form (Preview) -->
-  <section class="section">
-    <div class="card">
+  <!-- STEP 3 -->
+  <section class="step" data-step="3">
+    <h3>Schritt 3: Prozesse</h3>
 
-      <form action="#" method="post" novalidate>
+    <label>Kernprozesse</label>
+    <textarea name="core_processes"></textarea>
 
-        <h3 data-lang="de">1. Grunddaten</h3>
-        <h3 data-lang="en" hidden>1. Basic information</h3>
+    <label>QM-Verantwortung</label>
+    <input type="text" name="qm_responsible">
 
-        <div class="grid grid-2">
-          <div>
-            <label>Unternehmensname</label><br />
-            <input type="text" placeholder="z. B. Muster GmbH" disabled />
-          </div>
-
-          <div>
-            <label>Anzahl der Mitarbeitenden</label><br />
-            <input type="number" placeholder="z. B. 8" disabled />
-          </div>
-        </div>
-
-        <br />
-
-        <h3 data-lang="de">2. Geltungsbereich</h3>
-        <h3 data-lang="en" hidden>2. Scope</h3>
-
-        <label>Geltungsbereich des QM-Systems</label><br />
-        <textarea rows="4" placeholder="z. B. Entwicklung und Vertrieb von …" disabled></textarea>
-
-        <br />
-
-        <h3 data-lang="de">3. Zentrale Prozesse</h3>
-        <h3 data-lang="en" hidden>3. Core processes</h3>
-
-        <label>Kernprozesse Ihres Unternehmens</label><br />
-        <textarea rows="4" placeholder="z. B. Vertrieb, Auftragsabwicklung, Support …" disabled></textarea>
-
-        <br />
-
-        <button type="button" class="btn btn-primary" disabled>
-          Datenerfassung starten (in Vorbereitung)
-        </button>
-
-        <p class="lead" style="margin-top:14px;font-size:14px;opacity:.85">
-          Hinweis: Dieses Formular dient aktuell als Vorschau.
-          Die finale Datenerfassung erfolgt über einen geführten Assistenten.
-        </p>
-
-      </form>
-
-    </div>
+    <button type="button" class="back">Zurück</button>
+    <button type="button" class="next">Weiter</button>
   </section>
+
+  <!-- STEP 4 SUMMARY -->
+  <section class="step" data-step="4">
+    <h3>Zusammenfassung & Bestätigung</h3>
+
+    <p>Bitte prüfen und ggf. korrigieren Sie Ihre Angaben.</p>
+
+    <label>Unternehmensname</label>
+    <input type="text" name="company">
+
+    <label>Mitarbeiteranzahl</label>
+    <input type="number" name="employees">
+
+    <label>Branche</label>
+    <input type="text" name="industry">
+
+    <label>Geltungsbereich</label>
+    <textarea name="scope"></textarea>
+
+    <label>Kernprozesse</label>
+    <textarea name="core_processes"></textarea>
+
+    <label>QM-Verantwortung</label>
+    <input type="text" name="qm_responsible">
+
+    <hr>
+
+    <label>
+      <input type="checkbox" id="confirm_truth">
+      Ich bestätige, dass meine Angaben nach bestem Wissen korrekt sind.
+    </label><br>
+
+    <label>
+      <input type="checkbox" id="confirm_living">
+      Mir ist bewusst, dass die beschriebenen Prozesse im Unternehmen gelebt werden müssen.
+    </label>
+
+    <button type="button" class="back">Zurück</button>
+    <button type="button" id="finish" disabled>Datenerfassung abschließen</button>
+  </section>
+
+</form>
 
 </main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <small>© 2026 AlignedDocs</small>
-    <div class="footer-links">
-      <a href="faq.html">FAQ</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </div>
-  </div>
-</footer>
-
 </body>
 </html>

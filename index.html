@@ -1,486 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlignedDocs – ISO 9001:2015 Documentation</title>
-  <style>
-    /* Base styles */
-    body {
-      background-color: #0B0D10;
-      color: #F5F5F5;
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 2em;
-      background-color: #0B0D10;
-      border-bottom: 2px solid #d4af37; /* subtle gold accent line */
-      position: relative;
-      z-index: 100;
-    }
-    header .logo {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #F5F5F5;
-    }
-    header .logo img {
-      vertical-align: middle;
-      height: 40px;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      display: inline;
-      margin-right: 1.5em;
-    }
-    nav a {
-      text-decoration: none;
-      color: #F5F5F5;
-    }
-    nav a:hover {
-      color: #d4af37;
-    }
-    #lang-toggle {
-      background: none;
-      border: none;
-      color: #F5F5F5;
-      font-size: 1em;
-      cursor: pointer;
-    }
-    #lang-toggle:hover {
-      color: #d4af37;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2em 1em;
-    }
-    main h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
-    }
-    main h2 {
-      font-size: 1.4em;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-    main p {
-      margin-bottom: 1em;
-    }
-    /* Form styles */
-    form {
-      margin-top: 1.5em;
-    }
-    fieldset {
-      border: none;
-      padding: 0;
-      margin: 1.5em 0;
-    }
-    fieldset legend {
-      font-weight: bold;
-      margin-bottom: 0.5em;
-      font-size: 1.1em;
-    }
-    .form-group {
-      margin-bottom: 1em;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.3em;
-    }
-    label.radio-option {
-      display: inline-block;
-      margin-bottom: 0;
-    }
-    label.radio-option + label.radio-option {
-      margin-left: 1em;
-    }
-    input, textarea, select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0.5em;
-      background-color: #1A1A1A;
-      border: 1px solid #555;
-      color: #F5F5F5;
-      font: inherit;
-    }
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: #d4af37;
-      box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
-    }
-    /* Two-column layout for certain fields */
-    .two-col {
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-    .two-col > div {
-      flex: 1;
-      min-width: 200px;
-    }
-    /* Placeholder text color */
-    ::placeholder {
-      color: #999;
-    }
-    :-ms-input-placeholder {
-      color: #999;
-    }
-    ::-ms-input-placeholder {
-      color: #999;
-    }
-    /* Footer styles */
-    footer {
-      background-color: #0B0D10;
-      border-top: 1px solid #555;
-      padding: 1em 2em;
-      text-align: center;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-    footer a {
-      color: #aaa;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #d4af37;
-    }
-  </style>
-  <script>
-    // Language detection and initial setting (before content load to avoid flash)
-    (function() {
-      var userLang = navigator.language || navigator.userLanguage;
-      if(userLang && userLang.substr(0,2).toLowerCase() === 'de') {
-        document.documentElement.lang = 'de';
-        document.documentElement.classList.add('de');
-      } else {
-        document.documentElement.lang = 'en';
-      }
-    })();
-  </script>
+  <meta charset="utf-8">
+  <title>AlignedDocs – ISO 9001:2015 Handbuch (automatisiert)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Automatisierte Erstellung eines individuellen ISO 9001:2015 Handbuchs als PDF – normnah, strukturiert, für kleine Unternehmen.">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <div class="logo">
-      <!-- Logo Placeholder -->
-      <img src="logo-placeholder.png" alt="AlignedDocs Logo (Platzhalter)">
+<a class="skip" href="#content">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong>
+        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#product"><span class="lang-de">Produkt</span><span class="lang-en">Product</span></a></li>
-        <li><a href="#explain"><span class="lang-de">ISO 9001 erklärt</span><span class="lang-en">ISO 9001 Explained</span></a></li>
-        <li><a href="#pricing"><span class="lang-de">Preise</span><span class="lang-en">Pricing</span></a></li>
-        <li><a href="#contact"><span class="lang-de">Kontakt</span><span class="lang-en">Contact</span></a></li>
-      </ul>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="produkt.html">Produkt</a>
+      <a href="faq.html">FAQ</a>
+      <a href="formular.html">Formular</a>
+      <a href="datenschutz.html">Datenschutz</a>
     </nav>
-    <button id="lang-toggle" type="button" aria-label="Sprache wechseln / Switch language">🇩🇪 / 🇬🇧</button>
-  </header>
 
-  <main>
-    <section id="product">
-      <h1>
-        <span class="lang-de">ISO 9001:2015-Dokumentation einfach, schnell und maßgeschneidert</span>
-        <span class="lang-en">ISO 9001:2015 documentation made easy, fast, and tailored</span>
-      </h1>
-      <p>
-        <span class="lang-de">AlignedDocs ermöglicht kleinen und mittleren Unternehmen die schnelle Erstellung einer individuellen QM-Grunddokumentation nach ISO 9001:2015 – ohne aufwändige Beratung.</span>
-        <span class="lang-en">AlignedDocs enables small and medium-sized businesses to quickly create individualized ISO 9001:2015 quality management documentation – without costly consulting.</span>
-      </p>
-      <p>
-        <span class="lang-de">Beantworten Sie einfach die folgenden Fragen. Wir generieren daraus ein maßgeschneidertes Qualitätsmanagement-Handbuch und alle erforderlichen Dokumente, bereit für Ihr Zertifizierungsaudit.</span>
-        <span class="lang-en">Simply answer the questions below. We will generate a tailored quality management manual and all required documents from your answers, ready for your certification audit.</span>
-      </p>
-      <p>
-        <span class="lang-de">So erhalten Sie schnell und unkompliziert die Dokumentationsgrundlage für Ihre ISO-Zertifizierung.</span>
-        <span class="lang-en">This way, you quickly and easily receive the documentation foundation for your ISO certification.</span>
-      </p>
+    <div class="lang">
+      <button type="button" data-setlang="de">DE</button>
+      <button type="button" data-setlang="en">EN</button>
+    </div>
+  </div>
+</header>
 
-      <!-- Intake Form -->
-      <form action="mailto:team@aligneddocs.com" method="post" enctype="text/plain">
-        <!-- Note: Form uses mailto as a placeholder. For production, integrate an email service or backend. -->
-        <input type="hidden" name="subject" value="ISO 9001:2015 Intake Form">
-        <fieldset>
-          <legend>
-            <span class="lang-de">Unternehmensdaten</span>
-            <span class="lang-en">Company Information</span>
-          </legend>
-          <div class="form-group">
-            <label for="companyName">
-              <span class="lang-de">Unternehmensname</span>
-              <span class="lang-en">Company Name</span>
-            </label>
-            <input type="text" id="companyName" name="Company Name" required>
-          </div>
-          <div class="two-col">
-            <div class="form-group">
-              <label for="contactName">
-                <span class="lang-de">Ansprechpartner (Name)</span>
-                <span class="lang-en">Contact Person (Name)</span>
-              </label>
-              <input type="text" id="contactName" name="Contact Person" required>
-            </div>
-            <div class="form-group">
-              <label for="contactEmail">
-                <span class="lang-de">E-Mail-Adresse</span>
-                <span class="lang-en">Email Address</span>
-              </label>
-              <input type="email" id="contactEmail" name="Contact Email" required>
-            </div>
-          </div>
-          <div class="two-col">
-            <div class="form-group">
-              <label for="industry">
-                <span class="lang-de">Branche</span>
-                <span class="lang-en">Industry</span>
-              </label>
-              <input type="text" id="industry" name="Industry" required>
-            </div>
-            <div class="form-group">
-              <label for="employees">
-                <span class="lang-de">Anzahl der Mitarbeiter</span>
-                <span class="lang-en">Number of Employees</span>
-              </label>
-              <input type="text" id="employees" name="Number of Employees" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="country">
-              <span class="lang-de">Land / Region</span>
-              <span class="lang-en">Country / Region</span>
-            </label>
-            <input type="text" id="country" name="Country/Region" required>
-          </div>
-        </fieldset>
+<main id="content" class="container">
 
-        <fieldset>
-          <legend>
-            <span class="lang-de">Unternehmenskontext</span>
-            <span class="lang-en">Context of the Organization</span>
-          </legend>
-          <div class="form-group">
-            <label for="contextInternal">
-              <span class="lang-de">Interne Themen (für das QM-System relevante interne Faktoren)</span>
-              <span class="lang-en">Internal Issues (internal factors relevant to the QMS)</span>
-            </label>
-            <textarea id="contextInternal" name="Internal Issues" rows="3" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="contextExternal">
-              <span class="lang-de">Externe Themen (relevante externe Faktoren)</span>
-              <span class="lang-en">External Issues (relevant external factors)</span>
-            </label>
-            <textarea id="contextExternal" name="External Issues" rows="3" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="contextParties">
-              <span class="lang-de">Interessierte Parteien und deren Anforderungen</span>
-              <span class="lang-en">Interested Parties and their Needs</span>
-            </label>
-            <textarea id="contextParties" name="Interested Parties" rows="3" required></textarea>
-          </div>
-        </fieldset>
+  <section class="hero">
+    <span class="kicker">
+      <b>ISO 9001</b> Struktur statt Marketing
+    </span>
 
-        <fieldset>
-          <legend>
-            <span class="lang-de">Geltungsbereich des QM-Systems</span>
-            <span class="lang-en">Scope of the QMS</span>
-          </legend>
-          <div class="form-group">
-            <label for="scope">
-              <span class="lang-de">Geltungsbereich (welche Standorte/Abteilungen/Produkte umfasst das QM-System?)</span>
-              <span class="lang-en">Scope (which sites/departments/products are covered by the QMS?)</span>
-            </label>
-            <textarea id="scope" name="Scope" rows="3" required></textarea>
-          </div>
-        </fieldset>
+    <h1 data-lang="de">ISO 9001:2015 Handbuch – strukturiert, individuell, als PDF</h1>
+    <h1 data-lang="en">ISO 9001:2015 handbook – structured, individual, delivered as PDF</h1>
 
-        <fieldset>
-          <legend>
-            <span class="lang-de">Prozesse</span>
-            <span class="lang-en">Processes</span>
-          </legend>
-          <div class="form-group">
-            <label for="processLeadership">
-              <span class="lang-de">Führungsprozesse (Leitung)</span>
-              <span class="lang-en">Leadership Processes</span>
-            </label>
-            <textarea id="processLeadership" name="Leadership Processes" rows="3" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="processCore">
-              <span class="lang-de">Kernprozesse (Wertschöpfung)</span>
-              <span class="lang-en">Core Processes (Value Creation)</span>
-            </label>
-            <textarea id="processCore" name="Core Processes" rows="3" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="processSupport">
-              <span class="lang-de">Supportprozesse (Unterstützung)</span>
-              <span class="lang-en">Support Processes (Support Functions)</span>
-            </label>
-            <textarea id="processSupport" name="Support Processes" rows="3" required></textarea>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>
-            <span class="lang-de">Risiken und Chancen</span>
-            <span class="lang-en">Risks and Opportunities</span>
-          </legend>
-          <div class="form-group">
-            <label for="risks">
-              <span class="lang-de">Haupt-Risiken und Chancen (für das Unternehmen / QM-System)</span>
-              <span class="lang-en">Key Risks and Opportunities (for the business/QMS)</span>
-            </label>
-            <textarea id="risks" name="Risks and Opportunities" rows="3" required></textarea>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>
-            <span class="lang-de">Weitere Angaben</span>
-            <span class="lang-en">Additional Information</span>
-          </legend>
-          <div class="form-group">
-            <label>
-              <span class="lang-de">Bereits vorhandene QM-Dokumentation?</span>
-              <span class="lang-en">Existing QM documentation in place?</span>
-            </label>
-            <label class="radio-option"><input type="radio" name="Existing Documentation" value="Yes" required> <span class="lang-de">Ja</span><span class="lang-en">Yes</span></label>
-            <label class="radio-option"><input type="radio" name="Existing Documentation" value="No" required> <span class="lang-de">Nein</span><span class="lang-en">No</span></label>
-          </div>
-          <div class="form-group">
-            <label>
-              <span class="lang-de">Bevorzugte Sprache der Dokumentation</span>
-              <span class="lang-en">Preferred Documentation Language</span>
-            </label>
-            <label class="radio-option"><input type="radio" id="docLang_de" name="Document Language" value="DE" required> <span class="lang-de">Deutsch</span><span class="lang-en">German</span></label>
-            <label class="radio-option"><input type="radio" id="docLang_en" name="Document Language" value="EN" required> <span class="lang-de">Englisch</span><span class="lang-en">English</span></label>
-          </div>
-        </fieldset>
-
-        <button type="submit">
-          <span class="lang-de">Formular absenden</span>
-          <span class="lang-en">Submit Form</span>
-        </button>
-      </form>
-    </section>
-
-    <section id="explain">
-      <h2>
-        <span class="lang-de">ISO 9001:2015 erklärt</span>
-        <span class="lang-en">ISO 9001:2015 Explained</span>
-      </h2>
-      <p>
-        <span class="lang-de">ISO 9001:2015 ist ein weltweit anerkannter Standard für Qualitätsmanagementsysteme. Unternehmen müssen dabei ihre Prozesse und Verantwortlichkeiten definieren, Risiken und Chancen berücksichtigen und eine kontinuierliche Verbesserung verfolgen. Eine vollständige, aktuelle QM-Dokumentation ist die Grundlage für eine erfolgreiche Zertifizierung.</span>
-        <span class="lang-en">ISO 9001:2015 is a globally recognized standard for quality management systems. Companies are required to define their processes and responsibilities, consider risks and opportunities, and pursue continuous improvement. A complete and up-to-date QMS documentation is the foundation for a successful certification.</span>
-      </p>
-    </section>
-
-    <section id="pricing">
-      <h2>
-        <span class="lang-de">Preise</span>
-        <span class="lang-en">Pricing</span>
-      </h2>
-      <p>
-        <span class="lang-de"><strong>Transparent und erschwinglich:</strong> Unsere Preise liegen bei einem Bruchteil der Kosten einer herkömmlichen Beratung. Kontaktieren Sie uns für ein individuelles Angebot, das zu Ihrer Unternehmensgröße und Branche passt.</span>
-        <span class="lang-en"><strong>Transparent and affordable:</strong> Our pricing comes at a fraction of the cost of traditional consulting. Contact us for an individualized quote tailored to your company size and industry.</span>
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>
-        <span class="lang-de">Kontakt</span>
-        <span class="lang-en">Contact</span>
-      </h2>
-      <p>
-        <span class="lang-de">Bei Fragen senden Sie uns gerne eine E-Mail an <a href="mailto:team@aligneddocs.com">team@aligneddocs.com</a> oder füllen Sie das obige Formular aus, um Ihre Dokumentation anzufordern.</span>
-        <span class="lang-en">If you have any questions, feel free to email us at <a href="mailto:team@aligneddocs.com">team@aligneddocs.com</a> or fill out the form above to request your documentation.</span>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>
-      &copy; 2026 AlignedDocs.
-      <span class="lang-de"> Dieses Angebot stellt keine Beratung dar und bietet keine Garantie für eine Zertifizierung.</span>
-      <span class="lang-en"> This offering does not constitute consulting and provides no guarantee of certification.</span>
+    <p class="lead" data-lang="de">
+      Für kleine Unternehmen (1–20 Mitarbeitende). Sie geben Ihre Daten ein – wir erzeugen daraus ein
+      normnah aufgebautes ISO-Handbuch als PDF. Ruhig, professionell, audit-orientiert.
     </p>
-    <p>
-      <!-- Legal links placeholders -->
-      <span class="lang-de"><a href="#">Impressum</a> | <a href="#">Datenschutz</a></span>
-      <span class="lang-en"><a href="#">Imprint</a> | <a href="#">Privacy Policy</a></span>
+    <p class="lead" data-lang="en">
+      For small businesses (1–20 employees). You provide your information – we generate an
+      ISO-structured handbook as a PDF. Calm, professional, audit-oriented.
     </p>
-  </footer>
 
-  <script>
-    // Placeholder text for different languages
-    var placeholders = {
-      companyName: { de: "z.B. Muster GmbH", en: "e.g. ACME Corp" },
-      contactName: { de: "Max Mustermann", en: "John Doe" },
-      contactEmail: { de: "beispiel@firma.de", en: "example@company.com" },
-      industry: { de: "z.B. IT-Dienstleistung", en: "e.g. IT Services" },
-      employees: { de: "z.B. 25", en: "e.g. 25" },
-      country: { de: "z.B. Deutschland", en: "e.g. Germany" },
-      contextInternal: { de: "z.B. Fachkräftemangel, Qualitätsanforderungen, ...", en: "e.g. lack of skilled staff, quality demands, ..." },
-      contextExternal: { de: "z.B. regulatorische Auflagen, Marktwettbewerb, ...", en: "e.g. regulatory requirements, market competition, ..." },
-      contextParties: { de: "z.B. Kunden, Mitarbeiter, Lieferanten, ...", en: "e.g. customers, employees, suppliers, ..." },
-      scope: { de: "z.B. Entwicklung, Vertrieb und Support (Produktion ausgeschlossen)", en: "e.g. development, sales, and support (production excluded)" },
-      processLeadership: { de: "z.B. Strategieplanung, Management Review, ...", en: "e.g. strategic planning, management review, ..." },
-      processCore: { de: "z.B. Vertrieb, Projektabwicklung, Kundenbetreuung, ...", en: "e.g. sales, project execution, customer support, ..." },
-      processSupport: { de: "z.B. Personalwesen, IT-Wartung, Einkauf, ...", en: "e.g. HR, IT maintenance, purchasing, ..." },
-      risks: { de: "z.B. Projektausfälle, Qualitätsmängel, Mitarbeiterfluktuation, ...", en: "e.g. project failures, quality defects, staff turnover, ..." }
-    };
+    <div class="actions">
+      <a class="btn btn-primary" href="formular.html" data-lang="de">Jetzt starten: Daten eingeben</a>
+      <a class="btn btn-primary" href="formular.html" data-lang="en">Start now: enter data</a>
 
-    function setPlaceholders(lang) {
-      for (var id in placeholders) {
-        var el = document.getElementById(id);
-        if (el) {
-          el.placeholder = placeholders[id][lang];
-        }
-      }
-    }
+      <a class="btn btn-ghost" href="produkt.html" data-lang="de">So funktioniert’s</a>
+      <a class="btn btn-ghost" href="produkt.html" data-lang="en">How it works</a>
+    </div>
 
-    // Initial placeholders setup
-    var initialLang = document.documentElement.lang;
-    setPlaceholders(initialLang);
-    // If initial language is German, pre-select German document language
-    if(initialLang === 'de') {
-      var docLangDeRadio = document.getElementById('docLang_de');
-      if(docLangDeRadio) docLangDeRadio.checked = true;
-    } else {
-      var docLangEnRadio = document.getElementById('docLang_en');
-      if(docLangEnRadio) docLangEnRadio.checked = true;
-    }
+    <p class="note" data-lang="de">
+      Wichtig: Kein Zertifizierungsversprechen. Kein Ersatz für Auditoren oder Zertifizierer.
+    </p>
+    <p class="note" data-lang="en">
+      Important: No certification promise. Not a replacement for auditors or certification bodies.
+    </p>
+  </section>
 
-    // Toggle language on button click
-    document.getElementById('lang-toggle').addEventListener('click', function() {
-      var htmlEl = document.documentElement;
-      if (htmlEl.classList.contains('de')) {
-        // switch to English
-        htmlEl.classList.remove('de');
-        htmlEl.lang = 'en';
-        document.title = 'AlignedDocs – ISO 9001:2015 Documentation';
-        setPlaceholders('en');
-      } else {
-        // switch to German
-        htmlEl.classList.add('de');
-        htmlEl.lang = 'de';
-        document.title = 'AlignedDocs – ISO 9001:2015 QM-Dokumentation';
-        setPlaceholders('de');
-      }
-    });
-  </script>
+  <section class="section">
+    <h2 data-lang="de">Wofür ist das geeignet?</h2>
+    <h2 data-lang="en">Who is this for?</h2>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 data-lang="de">Kleinunternehmen</h3>
+        <h3 data-lang="en">Small businesses</h3>
+        <p data-lang="de">Ideal für 1–20 Mitarbeitende (bis 49 mitgedacht), die Struktur und Ordnung brauchen.</p>
+        <p data-lang="en">Ideal for 1–20 employees (up to 49 considered) needing structure and clarity.</p>
+      </div>
+
+      <div class="card">
+        <h3 data-lang="de">Normnaher Aufbau</h3>
+        <h3 data-lang="en">ISO-structured</h3>
+        <p data-lang="de">Dokumente wirken wie „Berater-Output“: klar, konsistent, audit-orientiert.</p>
+        <p data-lang="en">Consultant-like output: clear, consistent, audit-oriented structure.</p>
+      </div>
+
+      <div class="card">
+        <h3 data-lang="de">PDF-Ausgabe</h3>
+        <h3 data-lang="en">PDF delivery</h3>
+        <p data-lang="de">Sie erhalten ein individuelles Handbuch als PDF – basierend auf Ihren Angaben.</p>
+        <p data-lang="en">You receive an individual handbook as a PDF based on your inputs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 data-lang="de">Was Sie bekommen</h2>
+    <h2 data-lang="en">What you receive</h2>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 data-lang="de">Struktur & Ordnung</h3>
+        <h3 data-lang="en">Structure & clarity</h3>
+        <p data-lang="de">Deckblatt, Inhaltsverzeichnis, Prozesse, Rollen, Dokumentenlenkung – sauber gegliedert.</p>
+        <p data-lang="en">Cover, table of contents, processes, roles, document control – cleanly organized.</p>
+      </div>
+
+      <div class="card">
+        <h3 data-lang="de">Klare Abgrenzung</h3>
+        <h3 data-lang="en">Clear boundaries</h3>
+        <p data-lang="de">Keine Rechtsberatung, keine Zertifizierung, kein Audit. Fokus: Dokumentationsgrundlage.</p>
+        <p data-lang="en">No legal advice, no certification, no audit. Focus: documentation foundation.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+    <div class="footer-links">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="faq.html">FAQ</a>
+      <a href="formular.html">Formular</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

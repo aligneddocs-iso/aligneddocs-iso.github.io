@@ -1,1 +1,300 @@
+/* =========================================================
+   AlignedDocs – ISO 9001 Website
+   Stil: Soft Dark | Enterprise | Compliance
+   Keine Effekte, keine Spielereien
+   ========================================================= */
+
+/* ---------- Reset & Basis ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: #0b1220;
+  color: #e7edf7;
+  line-height: 1.6;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: #e7edf7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Skip-Link ---------- */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  left: 20px;
+  top: 20px;
+  background: #101a2d;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- Header / Navigation ---------- */
+.site-header {
+  background: #0e1729;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #101a2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark span {
+  width: 12px;
+  height: 12px;
+  background: #d6c27a;
+  border-radius: 4px;
+}
+
+.brand-text strong {
+  font-size: 14px;
+}
+
+.brand-text small {
+  font-size: 12px;
+  color: #aab6cc;
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  display: flex;
+  gap: 14px;
+}
+
+.nav a {
+  font-size: 13px;
+  padding: 6px 10px;
+  color: #aab6cc;
+  border-radius: 6px;
+}
+
+.nav a:hover {
+  background: rgba(255,255,255,0.05);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav a.active {
+  background: rgba(214,194,122,0.15);
+  color: #ffffff;
+}
+
+/* ---------- Language Switch ---------- */
+.lang {
+  display: flex;
+  gap: 6px;
+}
+
+.lang button {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #aab6cc;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lang button.is-active {
+  color: #ffffff;
+  border-color: #d6c27a;
+}
+
+/* ---------- Main ---------- */
+main {
+  padding: 40px 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  margin-bottom: 40px;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 12px;
+  color: #aab6cc;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.kicker b {
+  color: #d6c27a;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.lead {
+  max-width: 720px;
+  color: #aab6cc;
+}
+
+/* ---------- Actions ---------- */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.btn-primary {
+  background: rgba(214,194,122,0.18);
+  border-color: rgba(214,194,122,0.35);
+}
+
+.btn-ghost {
+  background: rgba(255,255,255,0.04);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Grid ---------- */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #aab6cc;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: #0e1729;
+  padding: 24px 0;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-inner small {
+  font-size: 12px;
+  color: #aab6cc;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: #aab6cc;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+}
 

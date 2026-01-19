@@ -1,6 +1,6 @@
 /* ===============================
    AlignedDocs – ISO 9001 Website
-   Fokus: Lesbarkeit, Vertrauen, Conversion
+   FINAL: Lesbarkeit & Conversion
    =============================== */
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -8,7 +8,7 @@
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:#0b1220;
-  color:#ffffff; /* <-- ALLES WEISS */
+  color:#ffffff;
   line-height:1.6;
 }
 
@@ -77,7 +77,7 @@ a{color:#ffffff;text-decoration:none}
 .lang button{
   background:#101a2d;
   border:1px solid rgba(255,255,255,.15);
-  color:#fff;
+  color:#ffffff;
   padding:6px 10px;
   border-radius:6px;
   cursor:pointer;
@@ -145,12 +145,8 @@ h1{
   margin-bottom:20px;
 }
 
-/* Trust cards */
-.grid{
-  display:grid;
-  gap:20px;
-}
-
+/* Grid / Cards */
+.grid{display:grid;gap:20px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 
 .card{
@@ -169,7 +165,10 @@ h1{
   opacity:.95;
 }
 
-/* Accordion */
+/* ===============================
+   ACCORDION – FINAL FIX
+   =============================== */
+
 .accordion{max-width:820px}
 
 .accordion-item{
@@ -179,22 +178,38 @@ h1{
   border-radius:12px;
   padding:18px 20px;
   margin-bottom:12px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   cursor:pointer;
   font-size:15px;
+
+  /* 🔥 WICHTIGER FIX */
+  color:#ffffff;
+  text-align:left;
+
+  /* Button-Reset */
+  appearance:none;
+  -webkit-appearance:none;
+}
+
+.accordion-item:hover{
+  background:#121e36;
 }
 
 .accordion-icon{
   color:#d6c27a;
   font-size:18px;
+  flex-shrink:0;
 }
 
 .accordion-content{
   display:none;
   padding:16px 20px 22px;
   opacity:.95;
+  color:#ffffff;
 }
 
 /* Footer */

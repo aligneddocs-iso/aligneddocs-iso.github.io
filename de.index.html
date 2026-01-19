@@ -34,6 +34,7 @@
       <a href="de.index.html" class="is-active">DE</a>
       <a href="en.index.html">EN</a>
     </div>
+
   </div>
 </header>
 
@@ -88,17 +89,17 @@
     </div>
   </section>
 
-  <!-- FAQ TEASER -->
+  <!-- FAQ -->
   <section class="section">
     <h2>Kurz & klar beantwortet</h2>
 
     <div class="accordion">
 
       <div class="accordion-item">
-        <button class="accordion-title">
-          Ist das ISO-9001-konform?
+        <div class="accordion-header">
+          <span>Ist das ISO-9001-konform?</span>
           <span class="accordion-icon">+</span>
-        </button>
+        </div>
         <div class="accordion-content">
           <p>
             Die Struktur orientiert sich an ISO 9001:2015.
@@ -109,10 +110,10 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-title">
-          Kann ich mich damit zertifizieren lassen?
+        <div class="accordion-header">
+          <span>Kann ich mich damit zertifizieren lassen?</span>
           <span class="accordion-icon">+</span>
-        </button>
+        </div>
         <div class="accordion-content">
           <p>
             Nein. AlignedDocs gibt kein Zertifizierungsversprechen.
@@ -122,14 +123,14 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-title">
-          Für wen ist das geeignet?
+        <div class="accordion-header">
+          <span>Für wen ist das geeignet?</span>
           <span class="accordion-icon">+</span>
-        </button>
+        </div>
         <div class="accordion-content">
           <p>
             Für kleine Unternehmen, die ISO-Struktur benötigen,
-            aber kein komplettes Beratungsprojekt umsetzen möchten.
+            aber kein vollständiges Beratungsprojekt umsetzen möchten.
           </p>
         </div>
       </div>
@@ -153,18 +154,18 @@
   </div>
 </footer>
 
-<!-- ACCORDION FIX -->
 <script>
-  document.querySelectorAll(".accordion-title").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector(".accordion-icon");
+  document.querySelectorAll(".accordion-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const content = item.querySelector(".accordion-content");
+      const icon = item.querySelector(".accordion-icon");
 
-      const open = content.style.display === "block";
+      const isOpen = content.style.display === "block";
+
       document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
       document.querySelectorAll(".accordion-icon").forEach(i => i.textContent = "+");
 
-      if (!open) {
+      if (!isOpen) {
         content.style.display = "block";
         icon.textContent = "–";
       }

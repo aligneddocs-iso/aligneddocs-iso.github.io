@@ -1,34 +1,38 @@
-(function(){
+(function () {
+  const DEFAULT_LANG = "de";
 
-  /* Sprache */
-  function setLanguage(lang){
+  function setLanguage(lang) {
+    // Sprache am <html>-Tag setzen
     document.documentElement.lang = lang;
-    localStorage.setItem("lang", lang);
-    document.querySelectorAll("[data-lang]").forEach(el=>{
-      el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
+
+    // Alle Sprach-Elemente durchgehen
+    document.querySelectorAll("[data-lang]").forEach(el => {
+      const elLang = el.getAttribute("data-lang");
+      if (elLang === lang) {
+        el.hidden = false;
+      } else {
+        el.hidden = true;
+      }
     });
-    document.querySelectorAll("[data-setlang]").forEach(btn=>{
+
+    // Aktiven Button markieren
+    document.querySelectorAll("[data-setlang]").forEach(btn => {
       btn.classList.toggle("is-active", btn.dataset.setlang === lang);
     });
+
+    // Sprache speichern
+    localStorage.setItem("lang", lang);
   }
 
-  const saved = localStorage.getItem("lang") || "de";
-  setLanguage(saved);
+  // Initiale Sprache
+  const savedLang = localStorage.getItem("lang") || DEFAULT_LANG;
+  setLanguage(savedLang);
 
-  document.addEventListener("click", e=>{
+  // Klick-Handler für Sprachbuttons
+  document.addEventListener("click", function (e) {
     const btn = e.target.closest("[data-setlang]");
-    if(btn) setLanguage(btn.dataset.setlang);
+    if (!btn) return;
+    const lang = btn.dataset.setlang;
+    setLanguage(lang);
   });
-
-  /* Accordion */
-  document.querySelectorAll(".accordion-item").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector(".accordion-icon");
-      const open = content.style.display === "block";
-      content.style.display = open ? "none" : "block";
-      icon.textContent = open ? "+" : "–";
-    });
-  });
-
 })();

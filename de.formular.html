@@ -33,7 +33,6 @@
     </p>
   </section>
 
-  <!-- SUMMARY OUTPUT -->
   <section id="summary"></section>
 
   <div class="actions">
@@ -56,13 +55,25 @@
 
 <script>
 /* ================================
-   LOAD DATA (SESSION)
+   LOAD DATA + GUARD
 ================================ */
-const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
+const raw = sessionStorage.getItem("isoFormData");
+
+if (!raw) {
+  // Kein Formular ausgefüllt → zurück zum Formular
+  window.location.replace("de.formular.html");
+}
+
+const data = JSON.parse(raw);
 const summary = document.getElementById("summary");
 
+// Falls Objekt leer ist (zusätzliche Sicherheit)
+if (Object.keys(data).length === 0) {
+  window.location.replace("de.formular.html");
+}
+
 /* ================================
-   FIELD LABELS (HUMAN READABLE)
+   FIELD LABELS
 ================================ */
 const labels = {
   company_name: "Unternehmensname",
@@ -92,7 +103,7 @@ const labels = {
 };
 
 /* ================================
-   RENDER SUMMARY (STABLE)
+   RENDER SUMMARY
 ================================ */
 Object.entries(data).forEach(([key, value]) => {
   if (!value) return;
@@ -109,11 +120,11 @@ Object.entries(data).forEach(([key, value]) => {
 });
 
 /* ================================
-   CONFIRM ACTION (READY FOR n8n)
+   CONFIRM
 ================================ */
 document.getElementById("confirmBtn").addEventListener("click", () => {
   alert("Angaben bestätigt. Die Verarbeitung startet im nächsten Schritt.");
-  // später hier: fetch() → n8n Webhook
+  // später: fetch() → n8n Webhook
 });
 </script>
 

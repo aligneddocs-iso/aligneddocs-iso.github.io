@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Zusammenfassung – ISO 9001 | AlignedDocs</title>
+  <title>Datenerfassung – ISO 9001 Handbuch | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,28 +19,39 @@
         <small>ISO 9001:2015 – automatisiertes Handbuch</small>
       </div>
     </div>
+
+    <nav class="nav">
+      <a href="de.index.html">Home</a>
+      <a href="de.produkt.html">Produkt</a>
+      <a href="de.faq.html">FAQ</a>
+      <a href="de.formular.html" class="active">Formular</a>
+      <a href="de.datenschutz.html">Datenschutz</a>
+    </nav>
   </div>
 </header>
 
 <main id="content" class="container">
 
-  <section class="hero small">
-    <h1>Zusammenfassung Ihrer Angaben</h1>
-    <p class="lead">
-      Bitte prüfen Sie Ihre Angaben sorgfältig.
-      Die E-Mail-Adresse wird aus Sicherheitsgründen nur teilweise angezeigt.
-    </p>
-  </section>
+<section class="hero small">
+  <h1>Datenerfassung für Ihr ISO-9001-Handbuch</h1>
+  <p class="lead">Bitte beantworten Sie die Fragen realistisch.</p>
+</section>
 
-  <section class="section card" id="summary"></section>
+<form class="form" id="isoForm">
 
-  <div class="actions">
-    <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
-    <button class="btn btn-primary" id="confirmBtn">
-      Angaben bestätigen
-    </button>
-  </div>
+<section class="form-section">
+  <h2>Unternehmensgrundlagen</h2>
+  <label>Unternehmensname<input name="company_name" required></label>
+  <label>E-Mail-Adresse<input type="email" name="email" required></label>
+</section>
 
+<section class="form-section">
+  <button type="submit" class="btn btn-primary">
+    Datenerfassung abschließen
+  </button>
+</section>
+
+</form>
 </main>
 
 <footer class="site-footer">
@@ -50,47 +61,16 @@
 </footer>
 
 <script>
-/* ---------- DATA LOAD ---------- */
-const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
-const summaryEl = document.getElementById("summary");
+/* NUR BEIM SUBMIT REDIRECT */
+document.getElementById("isoForm").addEventListener("submit", e => {
+  e.preventDefault();
 
-/* ---------- EMAIL MASKING ---------- */
-function maskEmail(email) {
-  if (!email || !email.includes("@")) return "—";
-  const [name, domain] = email.split("@");
-  const maskedName =
-    name.length <= 2
-      ? name[0] + "*"
-      : name[0] + "*".repeat(name.length - 2) + name.slice(-1);
-  return maskedName + "@" + domain;
-}
+  const data = {};
+  new FormData(e.target).forEach((v, k) => data[k] = v);
 
-/* ---------- RENDER SUMMARY ---------- */
-Object.entries(data).forEach(([key, value]) => {
-  if (!value) return;
-
-  const row = document.createElement("div");
-  row.style.marginBottom = "14px";
-
-  let displayValue = value;
-
-  if (key === "email") {
-    displayValue = maskEmail(value);
-  }
-
-  row.innerHTML = `
-    <strong>${key}</strong><br>
-    <span style="opacity:.9">${displayValue}</span>
-  `;
-
-  summaryEl.appendChild(row);
+  sessionStorage.setItem("isoFormData", JSON.stringify(data));
+  window.location.href = "formular-review.html";
 });
-
-/* ---------- FINAL CONFIRM ---------- */
-document.getElementById("confirmBtn").onclick = () => {
-  alert("Angaben bestätigt. Im nächsten Schritt erfolgt die Verarbeitung.");
-  // hier später: fetch() → n8n Webhook
-};
 </script>
 
 </body>

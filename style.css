@@ -1,60 +1,218 @@
-/* ==== Base ==== */
+/* ===============================
+   AlignedDocs – ISO 9001 Website
+   Fokus: Lesbarkeit, Vertrauen, Conversion
+   =============================== */
+
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:system-ui,Segoe UI,Arial,sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:#0b1220;
-  color:#e7edf7;
-  line-height:1.6
+  color:#ffffff; /* <-- ALLES WEISS */
+  line-height:1.6;
 }
-a{color:#e7edf7;text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-/* ==== Header ==== */
-.site-header{background:#0e1729;border-bottom:1px solid rgba(255,255,255,.08)}
-.header-inner{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-.brand{display:flex;gap:12px;align-items:center}
-.brand-mark{width:34px;height:34px;background:#101a2d;border-radius:8px;display:flex;align-items:center;justify-content:center}
-.brand-mark span{width:12px;height:12px;background:#d6c27a;border-radius:4px}
+a{color:#ffffff;text-decoration:none}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Header */
+.site-header{
+  background:#0e1729;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-mark{
+  width:34px;
+  height:34px;
+  background:#101a2d;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.brand-mark span{
+  width:12px;
+  height:12px;
+  background:#d6c27a;
+  border-radius:4px;
+}
+
+.brand-text strong{font-size:14px}
+.brand-text small{font-size:12px;opacity:.85}
+
+/* Navigation */
 .nav{display:flex;gap:14px}
-.nav a{font-size:13px;color:#aab6cc;padding:6px 10px;border-radius:6px}
-.nav a.active,.nav a:hover{background:rgba(214,194,122,.15);color:#fff}
+.nav a{
+  font-size:13px;
+  padding:6px 10px;
+  border-radius:6px;
+  opacity:.9;
+}
+.nav a.active,
+.nav a:hover{
+  background:rgba(214,194,122,.2);
+  opacity:1;
+}
 
-/* ==== Hero ==== */
-main{padding:40px 0}
-.hero{margin-bottom:40px}
-.kicker{font-size:12px;border:1px solid rgba(255,255,255,.1);padding:6px 12px;border-radius:999px;display:inline-block;color:#aab6cc}
+/* Language */
+.lang button{
+  background:#101a2d;
+  border:1px solid rgba(255,255,255,.15);
+  color:#fff;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.lang button.is-active{
+  border-color:#d6c27a;
+}
+
+/* Main */
+main{padding:60px 0}
+
+/* Hero */
+.hero{max-width:720px}
+.kicker{
+  display:inline-block;
+  font-size:12px;
+  border:1px solid rgba(255,255,255,.2);
+  padding:6px 12px;
+  border-radius:999px;
+  margin-bottom:16px;
+}
 .kicker b{color:#d6c27a}
-h1{font-size:32px;margin:12px 0}
-.lead{max-width:720px;color:#aab6cc}
-.actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.12);font-size:13px}
-.btn-primary{background:rgba(214,194,122,.18)}
-.btn-ghost{background:rgba(255,255,255,.05)}
 
-/* ==== Accordion ==== */
+h1{
+  font-size:36px;
+  margin-bottom:14px;
+  line-height:1.2;
+}
+
+.lead{
+  font-size:17px;
+  opacity:.95;
+}
+
+/* Actions */
+.actions{
+  margin-top:24px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  font-size:14px;
+  padding:12px 18px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.2);
+}
+
+.btn-primary{
+  background:#d6c27a;
+  color:#0b1220;
+  font-weight:600;
+}
+
+.btn-ghost{
+  background:rgba(255,255,255,.08);
+}
+
+/* Sections */
+.section{margin-top:60px}
+
+.section h2{
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+/* Trust cards */
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+.grid-3{grid-template-columns:repeat(3,1fr)}
+
+.card{
+  background:#101a2d;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  padding:22px;
+}
+
+.card h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.card p{
+  opacity:.95;
+}
+
+/* Accordion */
 .accordion{max-width:820px}
+
 .accordion-item{
   width:100%;
   background:#101a2d;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:10px;
-  padding:16px 18px;
-  margin-bottom:10px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  padding:18px 20px;
+  margin-bottom:12px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   cursor:pointer;
-  font-size:15px
-}
-.accordion-item:hover{background:#121e36}
-.accordion-icon{color:#d6c27a;font-size:18px}
-.accordion-content{
-  display:none;
-  padding:14px 18px 20px;
-  color:#aab6cc
+  font-size:15px;
 }
 
-/* ==== Footer ==== */
-.site-footer{margin-top:60px;padding:24px 0;border-top:1px solid rgba(255,255,255,.08);background:#0e1729}
-.footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap}
-.footer-links{display:flex;gap:12px}
+.accordion-icon{
+  color:#d6c27a;
+  font-size:18px;
+}
+
+.accordion-content{
+  display:none;
+  padding:16px 20px 22px;
+  opacity:.95;
+}
+
+/* Footer */
+.site-footer{
+  margin-top:80px;
+  padding:30px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+  background:#0e1729;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .grid-3{grid-template-columns:1fr}
+  h1{font-size:30px}
+}

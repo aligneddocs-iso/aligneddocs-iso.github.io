@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>ISO 9001 Datenerfassung | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <script defer>
+    let step = 1;
+    const data = {};
+
+    function showStep(n) {
+      document.querySelectorAll(".step").forEach(s => s.style.display = "none");
+      document.getElementById("step" + n).style.display = "block";
+      step = n;
+    }
+
+    function nextStep() {
+      saveStep();
+      showStep(step + 1);
+      if (step === 4) fillSummary();
+    }
+
+    function prevStep() {
+      showStep(step - 1);
+    }
+
+    function saveStep() {
+      document.querySelectorAll(`#step${step} input, #step${step} textarea`)
+        .forEach(el => data[el.name] = el.value);
+    }
+
+    function fillSummary() {
+      for (const key in data) {
+        const el = document.getElementById("sum_" + key);
+        if (el) el.textContent = data[key] || "–";
+      }
+    }
+
+    function finish() {
+      alert("Datenerfassung abgeschlossen.\nIhre Angaben werden gespeichert.");
+    }
+
+    window.onload = () => showStep(1);
+  </script>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <strong>AlignedDocs</strong>
+    <nav class="nav">
+      <a href="de.index.html">Home</a>
+      <a href="de.produkt.html">Produkt</a>
+      <a href="de.faq.html">FAQ</a>
+      <a href="de.formular.html" class="active">Formular</a>
+      <a href="de.datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<h1>ISO 9001 – Datenerfassung</h1>
+<p>Bitte beantworten Sie die folgenden Fragen Schritt für Schritt.</p>
+
+<!-- STEP 1 -->
+<section id="step1" class="step card">
+  <h2>Schritt 1: Unternehmen</h2>
+  <label>Unternehmensname</label>
+  <input name="company" type="text" required>
+
+  <label>Mitarbeiteranzahl</label>
+  <input name="employees" type="number">
+
+  <label>Branche</label>
+  <input name="industry" type="text">
+
+  <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+</section>
+
+<!-- STEP 2 -->
+<section id="step2" class="step card">
+  <h2>Schritt 2: Geltungsbereich</h2>
+  <label>Was umfasst Ihr Qualitätsmanagement?</label>
+  <textarea name="scope" rows="4"></textarea>
+
+  <button class="btn" onclick="prevStep()">Zurück</button>
+  <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+</section>
+
+<!-- STEP 3 -->
+<section id="step3" class="step card">
+  <h2>Schritt 3: Prozesse</h2>
+  <label>Kernprozesse Ihres Unternehmens</label>
+  <textarea name="processes" rows="4"></textarea>
+
+  <label>QM-Verantwortliche Person</label>
+  <input name="qm_owner" type="text">
+
+  <button class="btn" onclick="prevStep()">Zurück</button>
+  <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+</section>
+
+<!-- STEP 4 -->
+<section id="step4" class="step card">
+  <h2>Zusammenfassung & Bestätigung</h2>
+
+  <p><b>Unternehmen:</b> <span id="sum_company"></span></p>
+  <p><b>Mitarbeiter:</b> <span id="sum_employees"></span></p>
+  <p><b>Branche:</b> <span id="sum_industry"></span></p>
+  <p><b>Geltungsbereich:</b> <span id="sum_scope"></span></p>
+  <p><b>Kernprozesse:</b> <span id="sum_processes"></span></p>
+  <p><b>QM-Verantwortung:</b> <span id="sum_qm_owner"></span></p>
+
+  <label>
+    <input type="checkbox" required>
+    Ich bestätige, dass meine Angaben korrekt sind.
+  </label><br>
+  <label>
+    <input type="checkbox" required>
+    Mir ist bewusst, dass die beschriebenen Prozesse im Unternehmen gelebt werden müssen.
+  </label>
+
+  <br><br>
+  <button class="btn" onclick="prevStep()">Zurück</button>
+  <button class="btn btn-primary" onclick="finish()">Datenerfassung abschließen</button>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <small>© 2026 AlignedDocs</small>
+</footer>
+</body>
+</html>
 

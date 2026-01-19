@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Datenerfassung – ISO 9001 Handbuch | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Datenerfassung für ein individuelles ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,6 +13,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
+
     <div class="brand">
       <div class="brand-mark"><span></span></div>
       <div class="brand-text">
@@ -27,31 +29,167 @@
       <a href="de.formular.html" class="active">Formular</a>
       <a href="de.datenschutz.html">Datenschutz</a>
     </nav>
+
+    <div class="lang">
+      <a href="de.formular.html" class="is-active">DE</a>
+      <a href="en.formular.html">EN</a>
+    </div>
+
   </div>
 </header>
 
 <main id="content" class="container">
 
-<section class="hero small">
-  <h1>Datenerfassung für Ihr ISO-9001-Handbuch</h1>
-  <p class="lead">Bitte beantworten Sie die Fragen realistisch.</p>
-</section>
+  <section class="hero small">
+    <h1>Datenerfassung für Ihr ISO-9001-Handbuch</h1>
+    <p class="lead">
+      Bitte beantworten Sie die folgenden Fragen so realistisch wie möglich.
+      Es geht nicht um Perfektion, sondern um Ihre tatsächliche Arbeitsweise.
+    </p>
+  </section>
 
-<form class="form" id="isoForm">
+  <form class="form" id="isoForm" novalidate>
 
-<section class="form-section">
-  <h2>Unternehmensgrundlagen</h2>
-  <label>Unternehmensname<input name="company_name" required></label>
-  <label>E-Mail-Adresse<input type="email" name="email" required></label>
-</section>
+    <!-- 1. UNTERNEHMEN -->
+    <section class="form-section">
+      <h2>1. Unternehmensgrundlagen</h2>
 
-<section class="form-section">
-  <button type="submit" class="btn btn-primary">
-    Datenerfassung abschließen
-  </button>
-</section>
+      <label>
+        Offizieller Unternehmensname
+        <input type="text" name="company_name" required>
+      </label>
 
-</form>
+      <label>
+        Branche / Geschäftstätigkeit
+        <input type="text" name="industry">
+      </label>
+
+      <label>
+        Anzahl der Mitarbeitenden
+        <input type="number" name="employees" min="1">
+      </label>
+
+      <label>
+        Land / Region der Tätigkeit
+        <input type="text" name="region">
+      </label>
+    </section>
+
+    <!-- 2. QUALITÄT -->
+    <section class="form-section">
+      <h2>2. Qualitätsverständnis</h2>
+
+      <label>
+        Was bedeutet Qualität für Ihr Unternehmen?
+        <textarea name="quality_understanding"
+          placeholder="z. B. Kundenzufriedenheit, Fehlervermeidung, Termintreue"></textarea>
+      </label>
+
+      <label>Gibt es aktuell festgelegte Qualitätsziele?</label>
+      <div class="toggle" data-name="quality_goals">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+
+      <label>
+        Falls ja: Bitte beschreiben Sie diese kurz
+        <textarea name="quality_goals_description"></textarea>
+      </label>
+    </section>
+
+    <!-- 3. SCOPE -->
+    <section class="form-section">
+      <h2>3. Geltungsbereich (Scope)</h2>
+
+      <label>
+        Welche Tätigkeiten oder Leistungen sollen vom QM-System abgedeckt sein?
+        <textarea name="scope_included"></textarea>
+      </label>
+
+      <label>Gibt es ausdrücklich ausgeschlossene Tätigkeiten?</label>
+      <div class="toggle" data-name="scope_exclusions">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+
+      <label>
+        Falls ja: Bitte beschreiben
+        <textarea name="scope_exclusions_description"></textarea>
+      </label>
+    </section>
+
+    <!-- 4. PROZESSE -->
+    <section class="form-section">
+      <h2>4. Zentrale Abläufe & Prozesse</h2>
+
+      <label>
+        Typischer Auftragsablauf (vom ersten Kundenkontakt bis zur Leistungserbringung)
+        <textarea name="core_process"></textarea>
+      </label>
+
+      <label>
+        Gibt es dabei besonders kritische Schritte?
+        <textarea name="critical_steps"></textarea>
+      </label>
+
+      <label>Arbeiten Sie mit externen Dienstleistern oder Lieferanten?</label>
+      <div class="toggle" data-name="external_partners">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+    </section>
+
+    <!-- 5. DOKUMENTATION -->
+    <section class="form-section">
+      <h2>5. Dokumentation</h2>
+
+      <label>Gibt es bereits dokumentierte Abläufe oder Vorlagen?</label>
+      <div class="toggle" data-name="existing_docs">
+        <button type="button" data-value="yes">Ja</button>
+        <button type="button" data-value="no" class="is-active">Nein</button>
+      </div>
+
+      <label>
+        Wo werden Dokumente aktuell gespeichert?
+        <input type="text" name="doc_storage"
+          placeholder="z. B. Server, Cloud, lokale Ordner">
+      </label>
+    </section>
+
+    <!-- 6. ÜBERWACHUNG -->
+    <section class="form-section">
+      <h2>6. Überwachung & Verbesserung</h2>
+
+      <label>
+        Wie erkennen Sie, ob Prozesse funktionieren?
+        <textarea name="monitoring"></textarea>
+      </label>
+
+      <label>
+        Wie gehen Sie mit Fehlern oder Beschwerden um?
+        <textarea name="complaints"></textarea>
+      </label>
+    </section>
+
+    <!-- ABSCHLUSS -->
+    <section class="form-section">
+      <label>
+        E-Mail-Adresse für Rückfragen & Zustellung
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" required>
+        Ich bestätige, dass meine Angaben nach bestem Wissen korrekt sind.
+      </label>
+
+      <button type="submit" class="btn btn-primary">
+        Datenerfassung abschließen
+      </button>
+    </section>
+
+  </form>
+
 </main>
 
 <footer class="site-footer">
@@ -61,7 +199,46 @@
 </footer>
 
 <script>
-/* NUR BEIM SUBMIT REDIRECT */
+/* ---------- TOGGLE HANDLING ---------- */
+document.querySelectorAll(".toggle").forEach(toggle => {
+  const name = toggle.dataset.name;
+  let hidden = toggle.querySelector('input[type="hidden"]');
+
+  if (!hidden) {
+    hidden = document.createElement("input");
+    hidden.type = "hidden";
+    hidden.name = name;
+    hidden.value = "no";
+    toggle.appendChild(hidden);
+  }
+
+  toggle.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      toggle.querySelectorAll("button").forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      hidden.value = btn.dataset.value;
+    });
+  });
+});
+
+/* ---------- PREFILL FROM SESSION ---------- */
+const stored = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
+
+Object.entries(stored).forEach(([key, value]) => {
+  const field = document.querySelector(`[name="${key}"]`);
+  if (field) field.value = value;
+
+  const toggle = document.querySelector(`.toggle[data-name="${key}"]`);
+  if (toggle) {
+    const hidden = toggle.querySelector('input[type="hidden"]');
+    toggle.querySelectorAll("button").forEach(b =>
+      b.classList.toggle("is-active", b.dataset.value === value)
+    );
+    hidden.value = value;
+  }
+});
+
+/* ---------- SUBMIT → REVIEW ---------- */
 document.getElementById("isoForm").addEventListener("submit", e => {
   e.preventDefault();
 
@@ -69,7 +246,7 @@ document.getElementById("isoForm").addEventListener("submit", e => {
   new FormData(e.target).forEach((v, k) => data[k] = v);
 
   sessionStorage.setItem("isoFormData", JSON.stringify(data));
-  window.location.href = "formular-review.html";
+  window.location.href = "formular-review.html?lang=de";
 });
 </script>
 

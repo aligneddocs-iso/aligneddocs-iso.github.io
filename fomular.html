@@ -27,13 +27,13 @@
       <a href="index.html">Home</a>
       <a href="produkt.html">Produkt</a>
       <a href="faq.html">FAQ</a>
-      <a href="formular.html">Formular</a>
+      <a href="formular.html" class="active">Formular</a>
       <a href="datenschutz.html">Datenschutz</a>
     </nav>
 
     <div class="lang">
-      <button type="button" data-setlang="de">DE</button>
-      <button type="button" data-setlang="en">EN</button>
+      <button data-setlang="de" class="is-active">DE</button>
+      <button data-setlang="en">EN</button>
     </div>
   </div>
 </header>
@@ -42,30 +42,37 @@
 
   <!-- Intro -->
   <section class="hero">
-    <span class="kicker">
-      <b>ISO 9001</b> Datenerfassung
-    </span>
+    <span class="kicker"><b>ISO 9001</b> Datenerfassung</span>
 
-    <h1 data-lang="de">Unternehmensdaten erfassen</h1>
-    <h1 data-lang="en" style="display:none">Enter company information</h1>
+    <h1 data-lang="de">Ihre Angaben für das ISO-9001-Handbuch</h1>
+    <h1 data-lang="en" style="display:none">Your input for the ISO 9001 handbook</h1>
 
     <p class="lead" data-lang="de">
-      In diesem Schritt erfassen Sie die grundlegenden Informationen,
-      die für die Erstellung Ihres ISO-9001-Handbuchs benötigt werden.
+      In wenigen, klaren Schritten erfassen Sie die Informationen,
+      die für die Erstellung Ihres individuellen ISO-9001-Handbuchs benötigt werden.
     </p>
     <p class="lead" data-lang="en" style="display:none">
-      In this step you provide the basic information required
-      to generate your ISO 9001 handbook.
+      In a few clear steps, you provide the information required
+      to generate your individual ISO 9001 handbook.
     </p>
+  </section>
 
-    <p class="note" data-lang="de">
-      Hinweis: Dieses Formular stellt eine strukturierte Datenerfassung dar.
-      Eine KI-gestützte, dialogbasierte Erfassung ist in Vorbereitung.
-    </p>
-    <p class="note" data-lang="en" style="display:none">
-      Note: This form represents a structured data collection.
-      A guided, AI-based assistant is planned.
-    </p>
+  <!-- Trust strip -->
+  <section class="section">
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Strukturiert</h3>
+        <p>Geführte Abfrage entlang der ISO-9001-Struktur.</p>
+      </div>
+      <div class="card">
+        <h3>Vertraulich</h3>
+        <p>Ihre Angaben dienen ausschließlich der Dokumentenerstellung.</p>
+      </div>
+      <div class="card">
+        <h3>Kein Risiko</h3>
+        <p>Kein Abo. Keine Zertifizierungsversprechen.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Form -->
@@ -74,54 +81,58 @@
 
       <form>
 
-        <!-- Company basics -->
-        <h3 data-lang="de">Grunddaten</h3>
-        <h3 data-lang="en" style="display:none">Basic information</h3>
+        <h3 data-lang="de">1. Grunddaten</h3>
+        <h3 data-lang="en" style="display:none">1. Basic information</h3>
 
         <div class="grid grid-2">
           <div>
             <label data-lang="de">Unternehmensname</label>
             <label data-lang="en" style="display:none">Company name</label><br>
-            <input type="text" disabled>
+            <input type="text" placeholder="z. B. Muster GmbH" disabled>
           </div>
 
           <div>
             <label data-lang="de">Anzahl der Mitarbeitenden</label>
             <label data-lang="en" style="display:none">Number of employees</label><br>
-            <input type="number" disabled>
+            <input type="number" placeholder="z. B. 8" disabled>
           </div>
         </div>
 
-        <!-- Scope -->
         <br>
-        <h3 data-lang="de">Geltungsbereich</h3>
-        <h3 data-lang="en" style="display:none">Scope</h3>
 
-        <div>
-          <label data-lang="de">Geltungsbereich des QM-Systems</label>
-          <label data-lang="en" style="display:none">Scope of the QMS</label><br>
-          <textarea rows="4" disabled></textarea>
-        </div>
+        <h3 data-lang="de">2. Geltungsbereich</h3>
+        <h3 data-lang="en" style="display:none">2. Scope</h3>
 
-        <!-- Processes -->
+        <label data-lang="de">Geltungsbereich des QM-Systems</label>
+        <label data-lang="en" style="display:none">Scope of the QMS</label><br>
+        <textarea rows="4" placeholder="z. B. Entwicklung und Vertrieb von …" disabled></textarea>
+
         <br>
-        <h3 data-lang="de">Prozesse</h3>
-        <h3 data-lang="en" style="display:none">Processes</h3>
 
-        <div>
-          <label data-lang="de">Zentrale Kernprozesse</label>
-          <label data-lang="en" style="display:none">Core processes</label><br>
-          <textarea rows="4" disabled></textarea>
-        </div>
+        <h3 data-lang="de">3. Zentrale Prozesse</h3>
+        <h3 data-lang="en" style="display:none">3. Core processes</h3>
 
-        <!-- Submit placeholder -->
+        <label data-lang="de">Kernprozesse Ihres Unternehmens</label>
+        <label data-lang="en" style="display:none">Core business processes</label><br>
+        <textarea rows="4" placeholder="z. B. Vertrieb, Auftragsabwicklung, Support …" disabled></textarea>
+
         <br>
+
         <button type="button" class="btn btn-primary" disabled data-lang="de">
-          Weiter (in Vorbereitung)
+          Weiter zur nächsten Phase (in Vorbereitung)
         </button>
         <button type="button" class="btn btn-primary" disabled data-lang="en" style="display:none">
-          Continue (coming soon)
+          Continue to next phase (coming soon)
         </button>
+
+        <p class="lead" style="margin-top:14px;font-size:14px;opacity:.85" data-lang="de">
+          Hinweis: Aktuell wird dieser Schritt technisch vorbereitet.
+          Die finale Datenerfassung erfolgt über einen geführten Assistenten.
+        </p>
+        <p class="lead" style="margin-top:14px;font-size:14px;opacity:.85" data-lang="en" style="display:none">
+          Note: This step is currently being prepared.
+          Final data entry will be handled via a guided assistant.
+        </p>
 
       </form>
 
@@ -134,12 +145,11 @@
   <div class="container footer-inner">
     <small>© 2026 AlignedDocs</small>
     <div class="footer-links">
-      <a href="datenschutz.html">Datenschutz</a>
       <a href="faq.html">FAQ</a>
+      <a href="datenschutz.html">Datenschutz</a>
     </div>
   </div>
 </footer>
 
 </body>
 </html>
-

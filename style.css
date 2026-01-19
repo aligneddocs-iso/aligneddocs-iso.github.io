@@ -1,11 +1,300 @@
-/* ===============================
-   FAQ PAGE – STRUCTURED BLOCKS
-   =============================== */
+/* ==================================================
+   AlignedDocs – Enterprise / Compliance Design
+   FINAL STABLE VERSION
+   ================================================== */
 
-.faq-grid {
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b1220;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Skip Link ---------- */
+.skip {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+
+.skip:focus {
+  left: 20px;
+  top: 20px;
+  background: #d6c27a;
+  color: #0b1220;
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+.site-header {
+  background: #0e1729;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  background: #101a2d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark span {
+  width: 12px;
+  height: 12px;
+  background: #d6c27a;
+  border-radius: 4px;
+}
+
+.brand-text strong {
+  font-size: 14px;
+}
+
+.brand-text small {
+  font-size: 12px;
+  opacity: .85;
+}
+
+/* ---------- Navigation ---------- */
+
+.nav {
+  display: flex;
+  gap: 14px;
+}
+
+.nav a {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: .85;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: rgba(214,194,122,.25);
+  opacity: 1;
+}
+
+/* ---------- Language Toggle ---------- */
+
+.lang {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+}
+
+.lang a {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  opacity: .7;
+}
+
+.lang a.is-active {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* ==================================================
+   MAIN / HERO
+   ================================================== */
+
+main {
+  padding: 60px 0;
+}
+
+.hero {
+  max-width: 760px;
+}
+
+.hero.small {
+  max-width: 900px;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 12px;
+  border: 1px solid rgba(214,194,122,.6);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.kicker b {
+  color: #d6c27a;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 17px;
+  opacity: .95;
+}
+
+/* ---------- Buttons ---------- */
+
+.actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.btn-primary {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  background: rgba(255,255,255,.08);
+}
+
+/* ==================================================
+   SECTIONS / GRID / CARDS
+   ================================================== */
+
+.section {
+  margin-top: 70px;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* ==================================================
+   ACCORDION (INDEX)
+   ================================================== */
+
+.accordion {
+  max-width: 860px;
+}
+
+.accordion-item {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.accordion-header {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-question {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.accordion-icon {
+  font-size: 18px;
+  color: #d6c27a;
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 20px 20px;
+  opacity: .95;
+}
+
+.accordion-item.is-open {
+  border-color: rgba(214,194,122,.6);
+}
+
+.accordion-item.is-open .accordion-question {
+  font-weight: 700;
+  color: #d6c27a;
+}
+
+/* ==================================================
+   FAQ PAGE – CARD STYLE
+   ================================================== */
+
+.faq-cards {
   max-width: 900px;
   display: grid;
-  gap: 18px;
+  gap: 16px;
 }
 
 .faq-card {
@@ -14,7 +303,7 @@
   border-radius: 14px;
   padding: 22px 24px;
   cursor: pointer;
-  transition: border-color .2s ease, background .2s ease;
+  transition: border-color .2s ease;
 }
 
 .faq-card h3 {
@@ -25,6 +314,7 @@
 
 .faq-card p {
   opacity: .95;
+  line-height: 1.6;
 }
 
 .faq-card.is-active {
@@ -33,4 +323,36 @@
 
 .faq-card.is-active h3 {
   color: #d6c27a;
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.site-footer {
+  margin-top: 90px;
+  padding: 30px 0;
+  background: #0e1729;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 }

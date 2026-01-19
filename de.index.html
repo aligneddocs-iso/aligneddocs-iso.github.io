@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>ISO 9001 Handbuch automatisch erstellen | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ISO 9001:2015 Handbuch automatisch erstellen. Für kleine Unternehmen – strukturiert, normnah, ohne Zertifizierungsversprechen.">
+  <meta name="description" content="ISO 9001:2015 Handbuch automatisch erstellen – normnah, strukturiert, für kleine Unternehmen.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,9 +13,13 @@
 
 <header class="site-header">
   <div class="container header-inner">
+
     <div class="brand">
-      <strong>AlignedDocs</strong>
-      <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      </div>
     </div>
 
     <nav class="nav">
@@ -37,19 +41,19 @@
 
   <!-- HERO -->
   <section class="hero">
-    <span class="kicker">ISO 9001 strukturierte Dokumentation</span>
+    <span class="kicker"><b>ISO 9001</b> strukturierte Dokumentation</span>
 
     <h1>ISO-9001-Handbuch automatisch erstellen</h1>
 
     <p class="lead">
-      Für kleine Unternehmen, die Ordnung, Struktur und Normnähe brauchen –  
+      Für kleine Unternehmen, die Ordnung, Struktur und Normnähe brauchen –<br>
       ohne teure Berater, ohne Chaos, ohne Zeitverlust.
     </p>
 
-    <div class="cta-group">
+    <div class="actions">
       <a href="de.formular.html" class="btn btn-primary">Jetzt starten</a>
-      <a href="de.produkt.html" class="btn">So funktioniert’s</a>
-      <a href="de.produkt.html#sample" class="btn">Beispiel ansehen</a>
+      <a href="de.produkt.html" class="btn btn-ghost">So funktioniert’s</a>
+      <a href="de.produkt.html#sample" class="btn btn-ghost">Beispiel ansehen</a>
     </div>
   </section>
 
@@ -61,7 +65,7 @@
       <div class="card">
         <h3>Normnah & strukturiert</h3>
         <p>
-          Aufbau orientiert sich an ISO 9001:2015 –  
+          Aufbau orientiert sich an ISO 9001:2015 –<br>
           klar, nachvollziehbar und audit-tauglich.
         </p>
       </div>
@@ -69,7 +73,7 @@
       <div class="card">
         <h3>Für kleine Unternehmen</h3>
         <p>
-          Kein überdimensioniertes QM-System.  
+          Kein überdimensioniertes QM-System.<br>
           Passend für 1–20 Mitarbeitende.
         </p>
       </div>
@@ -77,7 +81,7 @@
       <div class="card">
         <h3>PDF als Grundlage</h3>
         <p>
-          Sie erhalten ein ISO-Handbuch als PDF,  
+          Sie erhalten ein ISO-Handbuch als PDF,<br>
           das intern geprüft und ergänzt werden kann.
         </p>
       </div>
@@ -89,35 +93,47 @@
     <h2>Kurz & klar beantwortet</h2>
 
     <div class="accordion">
+
       <div class="accordion-item">
-        <button class="accordion-title">Ist das ISO-9001-konform?</button>
+        <button class="accordion-title">
+          Ist das ISO-9001-konform?
+          <span class="accordion-icon">+</span>
+        </button>
         <div class="accordion-content">
           <p>
             Die Struktur orientiert sich an ISO 9001:2015.
-            Eine Zertifizierung ist nicht enthalten.
+            Es handelt sich um eine normnahe Dokumentation,
+            nicht um eine Zertifizierung.
           </p>
         </div>
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-title">Kann ich mich damit zertifizieren lassen?</button>
+        <button class="accordion-title">
+          Kann ich mich damit zertifizieren lassen?
+          <span class="accordion-icon">+</span>
+        </button>
         <div class="accordion-content">
           <p>
             Nein. AlignedDocs gibt kein Zertifizierungsversprechen.
-            Das Handbuch dient als Dokumentationsgrundlage.
+            Das Handbuch dient ausschließlich als Dokumentationsgrundlage.
           </p>
         </div>
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-title">Für wen ist das geeignet?</button>
+        <button class="accordion-title">
+          Für wen ist das geeignet?
+          <span class="accordion-icon">+</span>
+        </button>
         <div class="accordion-content">
           <p>
             Für kleine Unternehmen, die ISO-Struktur benötigen,
-            aber kein komplettes Beratungsprojekt wollen.
+            aber kein komplettes Beratungsprojekt umsetzen möchten.
           </p>
         </div>
       </div>
+
     </div>
 
     <p style="margin-top:16px">
@@ -136,6 +152,25 @@
     </div>
   </div>
 </footer>
+
+<!-- ACCORDION FIX -->
+<script>
+  document.querySelectorAll(".accordion-title").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector(".accordion-icon");
+
+      const open = content.style.display === "block";
+      document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+      document.querySelectorAll(".accordion-icon").forEach(i => i.textContent = "+");
+
+      if (!open) {
+        content.style.display = "block";
+        icon.textContent = "–";
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

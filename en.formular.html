@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ISO 9001 Data Collection | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <script defer>
+    let step = 1;
+    const data = {};
+
+    function showStep(n) {
+      document.querySelectorAll(".step").forEach(s => s.style.display = "none");
+      document.getElementById("step" + n).style.display = "block";
+      step = n;
+    }
+
+    function nextStep() {
+      saveStep();
+      showStep(step + 1);
+      if (step === 4) fillSummary();
+    }
+
+    function prevStep() {
+      showStep(step - 1);
+    }
+
+    function saveStep() {
+      document.querySelectorAll(`#step${step} input, #step${step} textarea`)
+        .forEach(el => data[el.name] = el.value);
+    }
+
+    function fillSummary() {
+      for (const key in data) {
+        const el = document.getElementById("sum_" + key);
+        if (el) el.textContent = data[key] || "–";
+      }
+    }
+
+    function finish() {
+      alert("Data collection completed.\nYour information has been saved.");
+    }
+
+    window.onload = () => showStep(1);
+  </script>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <strong>AlignedDocs</strong>
+    <nav class="nav">
+      <a href="en.index.html">Home</a>
+      <a href="en.product.html">Product</a>
+      <a href="en.faq.html">FAQ</a>
+      <a href="en.formular.html" class="active">Form</a>
+      <a href="en.privacy_policy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<h1>ISO 9001 – Data Collection</h1>
+<p>Please answer the following questions step by step.</p>
+
+<section id="step1" class="step card">
+  <h2>Step 1: Company</h2>
+  <label>Company name</label>
+  <input name="company" type="text">
+
+  <label>Number of employees</label>
+  <input name="employees" type="number">
+
+  <label>Industry</label>
+  <input name="industry" type="text">
+
+  <button class="btn btn-primary" onclick="nextStep()">Next</button>
+</section>
+
+<section id="step2" class="step card">
+  <h2>Step 2: Scope</h2>
+  <label>What does your quality management system cover?</label>
+  <textarea name="scope" rows="4"></textarea>
+
+  <button class="btn" onclick="prevStep()">Back</button>
+  <button class="btn btn-primary" onclick="nextStep()">Next</button>
+</section>
+
+<section id="step3" class="step card">
+  <h2>Step 3: Processes</h2>
+  <label>Core business processes</label>
+  <textarea name="processes" rows="4"></textarea>
+
+  <label>Person responsible for QMS</label>
+  <input name="qm_owner" type="text">
+
+  <button class="btn" onclick="prevStep()">Back</button>
+  <button class="btn btn-primary" onclick="nextStep()">Next</button>
+</section>
+
+<section id="step4" class="step card">
+  <h2>Summary & Confirmation</h2>
+
+  <p><b>Company:</b> <span id="sum_company"></span></p>
+  <p><b>Employees:</b> <span id="sum_employees"></span></p>
+  <p><b>Industry:</b> <span id="sum_industry"></span></p>
+  <p><b>Scope:</b> <span id="sum_scope"></span></p>
+  <p><b>Processes:</b> <span id="sum_processes"></span></p>
+  <p><b>QMS responsibility:</b> <span id="sum_qm_owner"></span></p>
+
+  <label>
+    <input type="checkbox">
+    I confirm that the information provided is accurate.
+  </label><br>
+  <label>
+    <input type="checkbox">
+    I understand that the described processes must be implemented in practice.
+  </label>
+
+  <br><br>
+  <button class="btn" onclick="prevStep()">Back</button>
+  <button class="btn btn-primary" onclick="finish()">Complete data collection</button>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <small>© 2026 AlignedDocs</small>
+</footer>
+</body>
+</html>

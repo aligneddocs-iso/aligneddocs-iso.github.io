@@ -13,7 +13,6 @@
 
 <header class="site-header">
   <div class="container header-inner">
-
     <div class="brand">
       <div class="brand-mark"><span></span></div>
       <div class="brand-text">
@@ -21,7 +20,6 @@
         <small>ISO 9001:2015 – automatisiertes Handbuch</small>
       </div>
     </div>
-
   </div>
 </header>
 
@@ -53,15 +51,23 @@
 </footer>
 
 <script>
-/* ================================
-   LOAD DATA
-================================ */
-const data = JSON.parse(sessionStorage.getItem("isoFormData") || {});
+/* ==================================================
+   FLOW GUARD – REVIEW NUR MIT DATEN
+   ================================================== */
+const rawData = sessionStorage.getItem("isoFormData");
+if (!rawData) {
+  window.location.href = "de.formular.html";
+}
+
+/* ==================================================
+   LOAD DATA (SAFE)
+   ================================================== */
+const data = JSON.parse(rawData || "{}");
 const summary = document.getElementById("summary");
 
-/* ================================
-   LABEL MAPPING (PROFESSIONELL)
-================================ */
+/* ==================================================
+   LABEL MAPPING
+   ================================================== */
 const labels = {
   company_name: "Unternehmensname",
   industry: "Branche / Geschäftstätigkeit",
@@ -89,20 +95,20 @@ const labels = {
   email: "E-Mail-Adresse"
 };
 
-/* ================================
-   EMAIL MASKING
-================================ */
+/* ==================================================
+   EMAIL MASKING (ANTI COPY-PASTE)
+   ================================================== */
 function maskEmail(email) {
   if (!email || !email.includes("@")) return "—";
   const [name, domain] = email.split("@");
   return name.charAt(0) + "*****@" + domain;
 }
 
-/* ================================
+/* ==================================================
    RENDER SUMMARY (SCREEN-3 STYLE)
-================================ */
+   ================================================== */
 Object.entries(data).forEach(([key, value]) => {
-  if (!value) return;
+  if (!value || !labels[key]) return;
 
   let displayValue = value;
   if (key === "email") displayValue = maskEmail(value);
@@ -111,19 +117,19 @@ Object.entries(data).forEach(([key, value]) => {
   block.className = "form-section";
 
   block.innerHTML = `
-    <label>${labels[key] || key}</label>
+    <label>${labels[key]}</label>
     <div class="review-box">${displayValue}</div>
   `;
 
   summary.appendChild(block);
 });
 
-/* ================================
+/* ==================================================
    CONFIRM (READY FOR n8n)
-================================ */
+   ================================================== */
 document.getElementById("confirmBtn").addEventListener("click", () => {
   alert("Angaben bestätigt. Die Verarbeitung startet im nächsten Schritt.");
-  // hier später: fetch() → n8n Webhook
+  // TODO: fetch() → n8n Webhook
 });
 </script>
 

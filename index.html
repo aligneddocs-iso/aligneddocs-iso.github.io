@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>AlignedDocs – ISO 9001:2015 Handbuch</title>
+  <title>AlignedDocs – ISO 9001 Handbuch automatisch erstellen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Automatisierte Erstellung eines ISO 9001:2015 Handbuchs als PDF – normnah, strukturiert, professionell.">
+  <meta name="description" content="ISO 9001:2015 Handbuch automatisch erstellen – strukturiert, normnah, als PDF. Für kleine Unternehmen.">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -23,7 +23,7 @@
     </div>
 
     <nav class="nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="produkt.html">Produkt</a>
       <a href="faq.html">FAQ</a>
       <a href="formular.html">Formular</a>
@@ -31,34 +31,59 @@
     </nav>
 
     <div class="lang">
-      <button type="button" data-setlang="de">DE</button>
-      <button type="button" data-setlang="en">EN</button>
+      <button data-setlang="de" class="is-active">DE</button>
+      <button data-setlang="en">EN</button>
     </div>
   </div>
 </header>
 
 <main id="content" class="container">
 
+  <!-- HERO -->
   <section class="hero">
     <span class="kicker"><b>ISO 9001</b> strukturierte Dokumentation</span>
 
     <h1 data-lang="de">ISO-9001-Handbuch automatisch erstellen</h1>
-    <h1 data-lang="en" style="display:none">Generate an ISO 9001 handbook automatically</h1>
+    <h1 data-lang="en" style="display:none">Create an ISO 9001 handbook automatically</h1>
 
     <p class="lead" data-lang="de">
-      Für kleine Unternehmen. Sie erfassen Ihre Daten – wir erstellen ein
-      normnahes ISO-Handbuch als PDF.
+      Für kleine Unternehmen, die Ordnung, Struktur und Normnähe brauchen –  
+      ohne teure Berater, ohne Chaos, ohne Zeitverlust.
     </p>
     <p class="lead" data-lang="en" style="display:none">
-      For small businesses. You enter your data – we generate
-      an ISO-aligned handbook as a PDF.
+      For small businesses that need structure and ISO alignment –
+      without consultants, chaos or wasted time.
     </p>
 
     <div class="actions">
       <a class="btn btn-primary" href="formular.html" data-lang="de">Jetzt starten</a>
-      <a class="btn btn-primary" href="formular.html" data-lang="en" style="display:none">Get started</a>
+      <a class="btn btn-primary" href="formular.html" data-lang="en" style="display:none">Start now</a>
+
       <a class="btn btn-ghost" href="produkt.html" data-lang="de">So funktioniert’s</a>
       <a class="btn btn-ghost" href="produkt.html" data-lang="en" style="display:none">How it works</a>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section">
+    <h2 data-lang="de">Warum AlignedDocs?</h2>
+    <h2 data-lang="en" style="display:none">Why AlignedDocs?</h2>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Normnah & strukturiert</h3>
+        <p>Aufbau orientiert sich an ISO 9001:2015 – klar, nachvollziehbar, audit-tauglich.</p>
+      </div>
+
+      <div class="card">
+        <h3>Für kleine Unternehmen</h3>
+        <p>Keine überdimensionierten QM-Systeme – passend für 1–20 Mitarbeitende.</p>
+      </div>
+
+      <div class="card">
+        <h3>PDF als Grundlage</h3>
+        <p>Sie erhalten ein ISO-Handbuch als PDF, das intern geprüft und ergänzt werden kann.</p>
+      </div>
     </div>
   </section>
 
@@ -70,46 +95,35 @@
     <div class="accordion">
 
       <button class="accordion-item" type="button">
-        <span data-lang="de">Ist das ISO-9001-konform?</span>
-        <span data-lang="en" style="display:none">Is this ISO 9001 compliant?</span>
+        <span>Ist das ISO-9001-konform?</span>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-content">
-        <p data-lang="de">
+        <p>
           Die Struktur orientiert sich an ISO 9001:2015.
-          Eine Zertifizierung ist nicht enthalten.
-        </p>
-        <p data-lang="en" style="display:none">
-          The structure follows ISO 9001:2015.
-          Certification is not included.
+          Eine Zertifizierung oder Konformitätsbewertung ist nicht enthalten.
         </p>
       </div>
 
       <button class="accordion-item" type="button">
-        <span data-lang="de">Kann ich mich damit zertifizieren lassen?</span>
-        <span data-lang="en" style="display:none">Can I get certified?</span>
+        <span>Kann ich mich damit zertifizieren lassen?</span>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-content">
-        <p data-lang="de">
-          Nein. AlignedDocs ersetzt keine Auditoren oder Zertifizierungsstellen.
-        </p>
-        <p data-lang="en" style="display:none">
-          No. AlignedDocs does not replace auditors or certification bodies.
+        <p>
+          Nein. AlignedDocs ersetzt keine Auditoren oder Zertifizierungsstellen
+          und gibt kein Zertifizierungsversprechen.
         </p>
       </div>
 
       <button class="accordion-item" type="button">
-        <span data-lang="de">Für wen ist das geeignet?</span>
-        <span data-lang="en" style="display:none">Who is this for?</span>
+        <span>Für wen ist das geeignet?</span>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-content">
-        <p data-lang="de">
-          Für kleine Unternehmen (1–20 Mitarbeitende, bis ca. 49 mitgedacht).
-        </p>
-        <p data-lang="en" style="display:none">
-          For small businesses (1–20 employees, up to ~49 considered).
+        <p>
+          Für kleine Unternehmen (1–20 Mitarbeitende, bis ca. 49 mitgedacht),
+          die eine saubere Dokumentationsgrundlage benötigen.
         </p>
       </div>
 

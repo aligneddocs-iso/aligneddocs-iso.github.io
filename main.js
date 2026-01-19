@@ -1,18 +1,13 @@
 (() => {
-  // ==========================================
-  // GUARD: nur ausführen, wenn Step-Form existiert
-  // ==========================================
-  if (!document.querySelector(".step")) return;
-
   const steps = document.querySelectorAll(".step");
   const langButtons = document.querySelectorAll("[data-lang-btn]");
   const langBlocks = document.querySelectorAll("[data-lang]");
   const fields = document.querySelectorAll("[data-field]");
-  const finishBtn = document.getElementById("finish") || null;
+  const finishBtn = document.getElementById("finish");
 
   let currentStep = 0;
   let lang = localStorage.getItem("lang") || "de";
-  let data = JSON.parse(localStorage.getItem("iso_data") || "{}");
+  let data = JSON.parse(localStorage.getItem("iso_data")) || {};
 
   function showStep(index) {
     steps.forEach((s, i) => s.classList.toggle("active", i === index));
@@ -63,16 +58,15 @@
     });
   });
 
+  document.getElementById("confirm1").addEventListener("change", checkConfirm);
+  document.getElementById("confirm2").addEventListener("change", checkConfirm);
+
   function checkConfirm() {
-    if (!finishBtn) return;
     finishBtn.disabled = !(
-      document.getElementById("confirm1")?.checked &&
-      document.getElementById("confirm2")?.checked
+      document.getElementById("confirm1").checked &&
+      document.getElementById("confirm2").checked
     );
   }
-
-  document.getElementById("confirm1")?.addEventListener("change", checkConfirm);
-  document.getElementById("confirm2")?.addEventListener("change", checkConfirm);
 
   updateLang();
   loadData();

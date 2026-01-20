@@ -1,65 +1,195 @@
-/* ==================================================
-   ISO FORM – ACCORDION (ISOLIERT, ENTERPRISE)
-   ================================================== */
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>ISO-9001-Datenerfassung | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.iso-accordion {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 16px;
-  margin-bottom: 22px;
-  overflow: hidden;
-}
+<body>
 
-.iso-accordion summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 18px 22px;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0e1729;
-}
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      </div>
+    </div>
 
-.iso-accordion summary::after {
-  content: "+";
-  font-size: 18px;
-  color: #d6c27a;
-}
+    <nav class="nav">
+      <a href="de.index.html">Home</a>
+      <a href="de.produkt.html">Produkt</a>
+      <a href="de.faq.html">FAQ</a>
+      <a href="de.formular.html" class="active">Formular</a>
+      <a href="de.datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</header>
 
-.iso-accordion[open] summary {
-  background: linear-gradient(
-    90deg,
-    rgba(214,194,122,.35),
-    rgba(214,194,122,.15)
-  );
-  color: #ffffff;
-}
+<main class="container">
 
-.iso-accordion[open] summary::after {
-  content: "–";
-}
+  <section class="hero small">
+    <h1>ISO-9001-Datenerfassung</h1>
+    <p class="lead">
+      Bitte beantworten Sie die folgenden Abschnitte realistisch.
+      Ihre Angaben werden <b>unverändert</b> für eine normnahe,
+      auditfähige ISO-9001-Dokumentation verwendet.
+    </p>
+  </section>
 
-.iso-accordion label {
-  display: block;
-  padding: 18px 22px 0;
-  font-size: 14px;
-}
+  <form class="form">
 
-.iso-accordion textarea {
-  width: calc(100% - 44px);
-  margin: 10px 22px 22px;
-  min-height: 120px;
-  background: #0e1729;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 8px;
-  color: #ffffff;
-  padding: 12px 14px;
-  resize: vertical;
-}
+    <div class="accordion">
 
-/* Entfernt Standard-Pfeil */
-.iso-accordion summary::-webkit-details-marker {
-  display: none;
-}
+      <!-- ===================== -->
+      <!-- 1. Kontext -->
+      <!-- ===================== -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-question">1. Kontext der Organisation</div>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content">
+
+          <label>Welche internen und externen Themen beeinflussen Ihr Unternehmen?</label>
+          <textarea name="context_external_internal"></textarea>
+
+          <label>Welche interessierten Parteien sind relevant (z. B. Kunden, Behörden, Lieferanten)?</label>
+          <textarea name="interested_parties"></textarea>
+
+          <label>Wie ist der Geltungsbereich Ihres QM-Systems definiert?</label>
+          <textarea name="scope"></textarea>
+
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- 2. Führung -->
+      <!-- ===================== -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-question">2. Führung & Verantwortung</div>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content">
+
+          <label>Wie übernimmt die Geschäftsleitung Verantwortung für Qualität?</label>
+          <textarea name="leadership_commitment"></textarea>
+
+          <label>Gibt es eine Qualitätspolitik? Wie wird sie kommuniziert?</label>
+          <textarea name="quality_policy"></textarea>
+
+          <label>Wie sind Rollen, Verantwortlichkeiten und Befugnisse geregelt?</label>
+          <textarea name="roles_responsibilities"></textarea>
+
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- 3. Planung -->
+      <!-- ===================== -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-question">3. Planung (Risiken & Ziele)</div>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content">
+
+          <label>Welche Risiken und Chancen wurden identifiziert?</label>
+          <textarea name="risks_opportunities"></textarea>
+
+          <label>Welche Qualitätsziele bestehen aktuell?</label>
+          <textarea name="quality_objectives"></textarea>
+
+          <label>Wie werden Änderungen am QM-System geplant?</label>
+          <textarea name="qms_changes"></textarea>
+
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- 4. Betrieb -->
+      <!-- ===================== -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-question">4. Operative Prozesse</div>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content">
+
+          <label>Beschreiben Sie Ihren typischen Auftrags- / Leistungsprozess.</label>
+          <textarea name="core_process"></textarea>
+
+          <label>Gibt es ausgelagerte Prozesse oder externe Dienstleister?</label>
+          <textarea name="external_providers"></textarea>
+
+          <label>Wie wird mit nichtkonformen Leistungen umgegangen?</label>
+          <textarea name="nonconformity_handling"></textarea>
+
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- 5. Bewertung -->
+      <!-- ===================== -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-question">5. Überwachung & Bewertung</div>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content">
+
+          <label>Wie überwachen Sie Prozesse und Ergebnisse?</label>
+          <textarea name="monitoring"></textarea>
+
+          <label>Wie wird Kundenzufriedenheit erfasst?</label>
+          <textarea name="customer_satisfaction"></textarea>
+
+          <label>Werden interne Audits durchgeführt?</label>
+          <textarea name="internal_audits"></textarea>
+
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- 6. Verbesserung -->
+      <!-- ===================== -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-question">6. Verbesserung</div>
+          <div class="accordion-icon">+</div>
+        </div>
+        <div class="accordion-content">
+
+          <label>Wie werden Korrektur- und Verbesserungsmaßnahmen umgesetzt?</label>
+          <textarea name="improvement"></textarea>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" type="submit">Angaben speichern</button>
+    </div>
+
+  </form>
+
+</main>
+
+<script>
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
+    item.classList.toggle("is-open");
+    const content = item.querySelector(".accordion-content");
+    content.style.display = item.classList.contains("is-open") ? "block" : "none";
+  });
+});
+</script>
+
+</body>
+</html>

@@ -41,77 +41,215 @@
     <h1>ISO-9001-Datenerfassung</h1>
     <p class="lead">
       Bitte beantworten Sie die folgenden Abschnitte möglichst realitätsnah.
-      Ihre Antworten werden unverändert verwendet, um eine normnahe,
-      auditfähige ISO-9001-Dokumentation zu erstellen.
+      Ihre Angaben werden unverändert verwendet, um eine normnahe und auditfähige
+      ISO-9001-Dokumentation zu erstellen.
     </p>
   </section>
 
-  <!-- FORM -->
   <form class="form-iso form" id="isoForm" novalidate>
 
-    <!-- 1 -->
+    <!-- ==================================================
+         0. ANGABEN ZUM UNTERNEHMEN
+         ================================================== -->
+    <details open>
+      <summary>0. Angaben zum Unternehmen</summary>
+      <div>
+        <label>Unternehmensname<textarea name="company_name"></textarea></label>
+
+        <label>Rechtsform<textarea name="legal_form"></textarea></label>
+
+        <label>Sitz des Unternehmens (Adresse)<textarea name="company_address"></textarea></label>
+
+        <label>Branche / Geschäftstätigkeit<textarea name="industry"></textarea></label>
+
+        <label>Anzahl der Mitarbeitenden<textarea name="employees"></textarea></label>
+
+        <label>Geltungsbereich der ISO-9001-Dokumentation (Scope – kurz beschrieben)
+          <textarea name="scope"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ==================================================
+         1. KONTEXT DER ORGANISATION
+         ================================================== -->
     <details>
       <summary>1. Kontext der Organisation</summary>
       <div>
-        <label>Interne & externe Themen<textarea name="context_topics"></textarea></label>
+        <label>
+          Welche internen Themen beeinflussen die Ausrichtung und Leistungsfähigkeit Ihres Unternehmens?
+          <textarea name="context_internal"></textarea>
+        </label>
+
+        <label>
+          Welche externen Themen (z. B. Markt, Wettbewerb, gesetzliche Anforderungen) sind relevant?
+          <textarea name="context_external"></textarea>
+        </label>
+
+        <label>
+          Welche interessierten Parteien sind für das QMS relevant (z. B. Kunden, Lieferanten, Behörden)?
+          <textarea name="interested_parties"></textarea>
+        </label>
+
+        <label>
+          Wie werden diese Themen und Anforderungen regelmäßig überprüft und bewertet?
+          <textarea name="context_evaluation"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- 2 -->
+    <!-- ==================================================
+         2. FÜHRUNG & VERPFLICHTUNG DER LEITUNG
+         ================================================== -->
     <details>
       <summary>2. Führung & Verpflichtung der Leitung</summary>
       <div>
-        <label>Verantwortung der Leitung<textarea name="leadership_responsibility"></textarea></label>
+        <label>
+          Wie übernimmt die oberste Leitung Verantwortung für das Qualitätsmanagementsystem?
+          <textarea name="leadership_responsibility"></textarea>
+        </label>
+
+        <label>
+          Wie wird die Qualitätspolitik festgelegt, kommuniziert und verstanden?
+          <textarea name="quality_policy"></textarea>
+        </label>
+
+        <label>
+          Wie werden Qualitätsziele definiert, überwacht und aktualisiert?
+          <textarea name="quality_objectives"></textarea>
+        </label>
+
+        <label>
+          Wie stellt die Leitung sicher, dass Kunden- und gesetzliche Anforderungen erfüllt werden?
+          <textarea name="leadership_compliance"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- 3 -->
+    <!-- ==================================================
+         3. PLANUNG
+         ================================================== -->
     <details>
       <summary>3. Planung</summary>
       <div>
-        <label>Risiken & Chancen<textarea name="risks_opportunities"></textarea></label>
+        <label>
+          Welche Risiken und Chancen wurden im Zusammenhang mit dem QMS identifiziert?
+          <textarea name="risks_opportunities"></textarea>
+        </label>
+
+        <label>
+          Welche Maßnahmen wurden zur Behandlung dieser Risiken und Chancen festgelegt?
+          <textarea name="risk_actions"></textarea>
+        </label>
+
+        <label>
+          Wie wird mit Änderungen am QMS geplant und umgegangen?
+          <textarea name="qms_changes"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- 4 -->
+    <!-- ==================================================
+         4. UNTERSTÜTZUNG
+         ================================================== -->
     <details>
       <summary>4. Unterstützung</summary>
       <div>
-        <label>Ressourcen<textarea name="resources"></textarea></label>
+        <label>
+          Welche personellen und infrastrukturellen Ressourcen stehen für das QMS zur Verfügung?
+          <textarea name="resources"></textarea>
+        </label>
+
+        <label>
+          Wie wird die Kompetenz der Mitarbeitenden sichergestellt (Schulung, Erfahrung)?
+          <textarea name="competence"></textarea>
+        </label>
+
+        <label>
+          Wie erfolgt die interne und externe Kommunikation zum QMS?
+          <textarea name="communication"></textarea>
+        </label>
+
+        <label>
+          Wie werden dokumentierte Informationen gelenkt und aktuell gehalten?
+          <textarea name="document_control"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- 5 -->
+    <!-- ==================================================
+         5. BETRIEB
+         ================================================== -->
     <details>
       <summary>5. Betrieb</summary>
       <div>
-        <label>Zentrale Prozesse<textarea name="operational_processes"></textarea></label>
+        <label>
+          Beschreiben Sie die zentralen Prozesse zur Leistungserbringung.
+          <textarea name="operational_processes"></textarea>
+        </label>
+
+        <label>
+          Wie werden externe Anbieter oder Lieferanten gesteuert?
+          <textarea name="external_providers"></textarea>
+        </label>
+
+        <label>
+          Wie wird mit nichtkonformen Produkten oder Dienstleistungen umgegangen?
+          <textarea name="nonconformities"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- 6 -->
+    <!-- ==================================================
+         6. BEWERTUNG DER LEISTUNG
+         ================================================== -->
     <details>
       <summary>6. Bewertung der Leistung</summary>
       <div>
-        <label>Überwachung & Kennzahlen<textarea name="performance_metrics"></textarea></label>
+        <label>
+          Welche Kennzahlen oder Methoden werden zur Überwachung der Prozesse genutzt?
+          <textarea name="performance_metrics"></textarea>
+        </label>
+
+        <label>
+          Wie wird die Kundenzufriedenheit erfasst und ausgewertet?
+          <textarea name="customer_satisfaction"></textarea>
+        </label>
+
+        <label>
+          Wie werden interne Audits und Managementbewertungen durchgeführt?
+          <textarea name="internal_audits"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- 7 -->
+    <!-- ==================================================
+         7. VERBESSERUNG
+         ================================================== -->
     <details>
       <summary>7. Verbesserung</summary>
       <div>
-        <label>KVP & Maßnahmen<textarea name="improvement"></textarea></label>
+        <label>
+          Wie werden Verbesserungsmöglichkeiten identifiziert?
+          <textarea name="improvement"></textarea>
+        </label>
+
+        <label>
+          Wie werden Korrekturmaßnahmen bei Abweichungen umgesetzt?
+          <textarea name="corrective_actions"></textarea>
+        </label>
       </div>
     </details>
 
-    <!-- ✅ 8. E-MAIL (NEU, MINIMAL) -->
+    <!-- ==================================================
+         8. KONTAKT
+         ================================================== -->
     <details>
       <summary>8. Kontakt & Zustellung</summary>
       <div>
         <label>
-          E-Mail-Adresse für Rückfragen und Zustellung der Zusammenfassung
-          <input type="email" name="email" placeholder="z. B. name@unternehmen.de" required>
+          E-Mail-Adresse für Rückfragen und Zustellung
+          <input type="email" name="email" required>
         </label>
       </div>
     </details>
@@ -149,7 +287,6 @@
   </div>
 </footer>
 
-<!-- VALIDIERUNG + REDIRECT -->
 <script>
 document.getElementById("isoForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -171,7 +308,6 @@ document.getElementById("isoForm").addEventListener("submit", function (e) {
   });
 
   sessionStorage.setItem("isoFormData", JSON.stringify(data));
-
   window.location.href = "formular-review.html";
 });
 </script>

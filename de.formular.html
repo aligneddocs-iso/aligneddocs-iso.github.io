@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>ISO 9001:2015 – Datenerfassung | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ISO-9001-Datenerfassung für eine normnahe, auditfähige Dokumentation.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,6 +13,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
+
     <div class="brand">
       <div class="brand-mark"><span></span></div>
       <div class="brand-text">
@@ -32,6 +34,7 @@
       <a href="de.formular.html" class="is-active">DE</a>
       <a href="en.formular.html">EN</a>
     </div>
+
   </div>
 </header>
 
@@ -41,33 +44,203 @@
     <h1>ISO-9001-Datenerfassung</h1>
     <p class="lead">
       Bitte beantworten Sie die folgenden Abschnitte möglichst realitätsnah.
-      Ihre Angaben werden unverändert verwendet, um eine normnahe und auditfähige
-      ISO-9001-Dokumentation zu erstellen.
+      Ihre Angaben werden <strong>unverändert</strong> verwendet, um eine
+      normnahe und auditfähige ISO-9001-Dokumentation zu erstellen.
     </p>
   </section>
 
-  <form class="form-iso form" id="isoForm" novalidate>
+  <!-- FORM -->
+  <form class="form form-iso" id="isoForm" novalidate>
 
-    <!-- FORMULARINHALT UNVERÄNDERT -->
+    <!-- 1. UNTERNEHMEN -->
+    <details open>
+      <summary>1. Angaben zum Unternehmen</summary>
+      <div>
 
-    <!-- BESTÄTIGUNG -->
+        <label>
+          Unternehmensname
+          <textarea name="company_name"></textarea>
+        </label>
+
+        <label>
+          Rechtsform
+          <textarea name="legal_form"></textarea>
+        </label>
+
+        <label>
+          Sitz des Unternehmens (Adresse)
+          <textarea name="company_address"></textarea>
+        </label>
+
+        <label>
+          Branche / Geschäftstätigkeit
+          <textarea name="industry"></textarea>
+        </label>
+
+        <label>
+          Anzahl der Mitarbeitenden
+          <textarea name="employees"></textarea>
+        </label>
+
+        <label>
+          Geltungsbereich der ISO-9001-Dokumentation (Scope – kurz beschrieben)
+          <textarea name="scope"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 2. KONTEXT -->
+    <details>
+      <summary>2. Kontext der Organisation</summary>
+      <div>
+
+        <label>
+          Welche internen und externen Themen beeinflussen Ihr Unternehmen?
+          <textarea name="context_topics"></textarea>
+        </label>
+
+        <label>
+          Welche interessierten Parteien sind für Ihr Unternehmen relevant und warum?
+          <textarea name="interested_parties"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 3. FÜHRUNG -->
+    <details>
+      <summary>3. Führung & Verpflichtung der Leitung</summary>
+      <div>
+
+        <label>
+          Wie übernimmt die oberste Leitung Verantwortung für das Qualitätsmanagement?
+          <textarea name="leadership_responsibility"></textarea>
+        </label>
+
+        <label>
+          Wie werden Qualitätspolitik und Qualitätsziele im Unternehmen kommuniziert?
+          <textarea name="quality_policy"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 4. PLANUNG -->
+    <details>
+      <summary>4. Planung</summary>
+      <div>
+
+        <label>
+          Welche Risiken und Chancen wurden identifiziert?
+          <textarea name="risks_opportunities"></textarea>
+        </label>
+
+        <label>
+          Welche Maßnahmen werden daraus abgeleitet?
+          <textarea name="planning_actions"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 5. UNTERSTÜTZUNG -->
+    <details>
+      <summary>5. Unterstützung</summary>
+      <div>
+
+        <label>
+          Welche personellen, infrastrukturellen und organisatorischen Ressourcen stehen zur Verfügung?
+          <textarea name="resources"></textarea>
+        </label>
+
+        <label>
+          Wie wird Wissen im Unternehmen erhalten und weitergegeben?
+          <textarea name="knowledge_management"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 6. BETRIEB -->
+    <details>
+      <summary>6. Betrieb</summary>
+      <div>
+
+        <label>
+          Beschreiben Sie die zentralen Prozesse Ihres Unternehmens.
+          <textarea name="operational_processes"></textarea>
+        </label>
+
+        <label>
+          Gibt es ausgelagerte Prozesse oder externe Dienstleister?
+          <textarea name="external_providers"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 7. LEISTUNGSBEWERTUNG -->
+    <details>
+      <summary>7. Bewertung der Leistung</summary>
+      <div>
+
+        <label>
+          Wie werden Prozesse überwacht und bewertet (Kennzahlen, Reviews, Audits)?
+          <textarea name="performance_evaluation"></textarea>
+        </label>
+
+        <label>
+          Wie werden Abweichungen erkannt und dokumentiert?
+          <textarea name="nonconformities"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 8. VERBESSERUNG -->
+    <details>
+      <summary>8. Verbesserung</summary>
+      <div>
+
+        <label>
+          Wie werden Korrekturmaßnahmen umgesetzt und deren Wirksamkeit überprüft?
+          <textarea name="improvement_actions"></textarea>
+        </label>
+
+        <label>
+          Wie wird kontinuierliche Verbesserung im Alltag gelebt?
+          <textarea name="continuous_improvement"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 9. KONTAKT -->
+    <details>
+      <summary>9. Kontakt & Zustellung</summary>
+      <div>
+
+        <label>
+          E-Mail-Adresse für Rückfragen und Zustellung der Dokumentation
+          <textarea name="email"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- CONFIRMATION -->
     <section class="form-section">
 
-      <div class="checkbox">
+      <label class="checkbox">
         <input type="checkbox" id="confirm1">
-        <label for="confirm1">
-          Ich bestätige, dass die gemachten Angaben nach bestem Wissen vollständig
-          und korrekt sind.
-        </label>
-      </div>
+        Ich bestätige, dass die gemachten Angaben nach bestem Wissen vollständig und korrekt sind.
+      </label>
 
-      <div class="checkbox">
+      <label class="checkbox">
         <input type="checkbox" id="confirm2">
-        <label for="confirm2">
-          Die beschriebenen Prozesse entsprechen der tatsächlichen Arbeitsweise
-          unseres Unternehmens.
-        </label>
-      </div>
+        Die beschriebenen Prozesse entsprechen der tatsächlichen Arbeitsweise unseres Unternehmens.
+      </label>
 
       <p id="confirmError" style="display:none; color:#ff6b6b; margin-top:12px; font-size:14px;">
         Bitte bestätigen Sie beide Punkte, um fortzufahren.
@@ -105,8 +278,8 @@ document.getElementById("isoForm").addEventListener("submit", function (e) {
   err.style.display = "none";
 
   const data = {};
-  this.querySelectorAll("textarea, input[type='email']").forEach(el => {
-    data[el.name] = el.value.trim();
+  this.querySelectorAll("textarea").forEach(t => {
+    data[t.name] = t.value.trim();
   });
 
   sessionStorage.setItem("isoFormData", JSON.stringify(data));

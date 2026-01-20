@@ -46,76 +46,80 @@
     <p class="lead">Klar beantwortet – ohne Marketingversprechen.</p>
   </section>
 
-  <!-- FAQ CARDS -->
-  <section class="section faq-cards">
+  <!-- FAQ ACCORDION (FORMULAR-OPTIK) -->
+  <section class="section">
 
-    <article class="faq-card">
-      <h3>Was ist ISO 9001:2015 – und wofür wird sie verwendet?</h3>
-      <p>
-        ISO 9001:2015 ist eine internationale Norm für Qualitätsmanagementsysteme.
-        Sie beschreibt Anforderungen an strukturierte Abläufe, Verantwortlichkeiten
-        und kontinuierliche Verbesserung in Unternehmen.
-      </p>
-    </article>
+    <div class="form-iso">
 
-    <article class="faq-card">
-      <h3>Ist ISO 9001:2015 aktuell noch gültig?</h3>
-      <p>
-        Ja. ISO 9001:2015 ist aktuell gültig und bleibt die maßgebliche Grundlage,
-        solange keine neue Version offiziell veröffentlicht wird.
-      </p>
-    </article>
+      <details>
+        <summary>Was ist ISO 9001:2015 – und wofür wird sie verwendet?</summary>
+        <div>
+          ISO 9001:2015 ist eine internationale Norm für Qualitätsmanagementsysteme.
+          Sie beschreibt Anforderungen an strukturierte Abläufe, Verantwortlichkeiten
+          und kontinuierliche Verbesserung in Unternehmen.
+        </div>
+      </details>
 
-    <article class="faq-card">
-      <h3>Was passiert bei einer möglichen Revision (z. B. 2026)?</h3>
-      <p>
-        ISO-Normen werden regelmäßig überprüft.
-        Neue Versionen werden üblicherweise mit mehrjährigen Übergangsfristen eingeführt.
-        Eine sofortige Umstellung ist nicht erforderlich.
-      </p>
-    </article>
+      <details>
+        <summary>Ist ISO 9001:2015 aktuell noch gültig?</summary>
+        <div>
+          Ja. ISO 9001:2015 ist aktuell gültig und bleibt die maßgebliche Grundlage,
+          solange keine neue Version offiziell veröffentlicht wird.
+        </div>
+      </details>
 
-    <article class="faq-card">
-      <h3>Erhalte ich mit AlignedDocs eine ISO-Zertifizierung?</h3>
-      <p>
-        Nein. AlignedDocs stellt keine Zertifizierung aus.
-        Es wird eine normnahe Dokumentationsgrundlage erstellt,
-        die intern genutzt oder extern ergänzt werden kann.
-      </p>
-    </article>
+      <details>
+        <summary>Was passiert bei einer möglichen Revision (z. B. 2026)?</summary>
+        <div>
+          ISO-Normen werden regelmäßig überprüft.
+          Neue Versionen werden üblicherweise mit mehrjährigen Übergangsfristen eingeführt.
+          Eine sofortige Umstellung ist nicht erforderlich.
+        </div>
+      </details>
 
-    <article class="faq-card">
-      <h3>Was bekomme ich konkret nach der Datenerfassung?</h3>
-      <p>
-        Sie erhalten ein individuell erstelltes ISO-9001-Handbuch
-        als professionell strukturiertes PDF auf Basis Ihrer Angaben.
-      </p>
-    </article>
+      <details>
+        <summary>Erhalte ich mit AlignedDocs eine ISO-Zertifizierung?</summary>
+        <div>
+          Nein. AlignedDocs stellt keine Zertifizierung aus.
+          Es wird eine normnahe Dokumentationsgrundlage erstellt,
+          die intern genutzt oder extern ergänzt werden kann.
+        </div>
+      </details>
 
-    <article class="faq-card">
-      <h3>Für welche Unternehmen ist AlignedDocs geeignet – und für welche nicht?</h3>
-      <p>
-        AlignedDocs richtet sich an kleine Unternehmen mit überschaubaren Strukturen.
-        Für komplexe Konzern- oder Holdingstrukturen ist es nicht ausgelegt.
-      </p>
-    </article>
+      <details>
+        <summary>Was bekomme ich konkret nach der Datenerfassung?</summary>
+        <div>
+          Sie erhalten ein individuell erstelltes ISO-9001-Handbuch
+          als professionell strukturiertes PDF auf Basis Ihrer Angaben.
+        </div>
+      </details>
 
-    <article class="faq-card">
-      <h3>Wie realistisch und audit-tauglich ist das ISO-Handbuch?</h3>
-      <p>
-        Das Handbuch orientiert sich an realen Abläufen kleiner Unternehmen
-        und ist für eine Stage-1-Dokumentenprüfung geeignet,
-        ersetzt jedoch kein Audit.
-      </p>
-    </article>
+      <details>
+        <summary>Für welche Unternehmen ist AlignedDocs geeignet – und für welche nicht?</summary>
+        <div>
+          AlignedDocs richtet sich an kleine Unternehmen mit überschaubaren Strukturen.
+          Für komplexe Konzern- oder Holdingstrukturen ist es nicht ausgelegt.
+        </div>
+      </details>
 
-    <article class="faq-card">
-      <h3>Ersetzt AlignedDocs einen ISO-Berater oder Auditor?</h3>
-      <p>
-        Nein. AlignedDocs ist ein Dokumentationswerkzeug.
-        Beratung, Audits und Zertifizierungen erfolgen unabhängig davon.
-      </p>
-    </article>
+      <details>
+        <summary>Wie realistisch und audit-tauglich ist das ISO-Handbuch?</summary>
+        <div>
+          Das Handbuch orientiert sich an realen Abläufen kleiner Unternehmen
+          und ist für eine Stage-1-Dokumentenprüfung geeignet,
+          ersetzt jedoch kein Audit.
+        </div>
+      </details>
+
+      <details>
+        <summary>Ersetzt AlignedDocs einen ISO-Berater oder Auditor?</summary>
+        <div>
+          Nein. AlignedDocs ist ein Dokumentationswerkzeug.
+          Beratung, Audits und Zertifizierungen erfolgen unabhängig davon.
+        </div>
+      </details>
+
+    </div>
 
   </section>
 
@@ -129,17 +133,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-  document.querySelectorAll(".faq-card").forEach(card => {
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".faq-card").forEach(c =>
-        c.classList.remove("is-active")
-      );
-      card.classList.add("is-active");
-    });
-  });
-</script>
 
 </body>
 </html>

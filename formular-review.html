@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 
-  <!-- 🔒 HARD GUARD: verhindert Flackern & Direktaufruf -->
+  <!-- 🔒 HARD GUARD: nur aufrufbar mit vorhandenen Formulardaten -->
   <script>
     (function () {
       const raw = sessionStorage.getItem("isoFormData");
@@ -15,6 +15,7 @@
   <meta charset="utf-8">
   <title>Zusammenfassung – ISO 9001 | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zusammenfassung Ihrer Angaben für das ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -43,11 +44,17 @@
     </p>
   </section>
 
+  <!-- SUMMARY -->
   <section class="form-section" id="summary"></section>
 
+  <!-- ACTIONS -->
   <div class="actions">
-    <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
-    <button class="btn btn-primary" id="confirmBtn">Angaben bestätigen</button>
+    <a href="de.formular.html" class="btn btn-ghost">
+      Zurück & bearbeiten
+    </a>
+    <button class="btn btn-primary" id="confirmBtn">
+      Angaben bestätigen
+    </button>
   </div>
 
 </main>
@@ -66,13 +73,13 @@ const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
 const summary = document.getElementById("summary");
 
 /* ================================
-   LABELS (sauber & professionell)
+   FIELD LABELS
 ================================ */
 const labels = {
   company_name: "Unternehmensname",
   industry: "Branche / Geschäftstätigkeit",
   employees: "Anzahl der Mitarbeitenden",
-  region: "Land / Region",
+  region: "Land / Region der Tätigkeit",
 
   quality_understanding: "Qualitätsverständnis",
   quality_goals: "Qualitätsziele vorhanden",
@@ -100,36 +107,36 @@ const labels = {
 ================================ */
 function maskEmail(email) {
   if (!email || !email.includes("@")) return "—";
-  const [n, d] = email.split("@");
-  return n.charAt(0) + "*****@" + d;
+  const [name, domain] = email.split("@");
+  return name.charAt(0) + "*****@" + domain;
 }
 
 /* ================================
-   RENDER SUMMARY
+   RENDER SUMMARY (STABIL)
 ================================ */
 Object.entries(data).forEach(([key, value]) => {
   if (!value) return;
 
-  let display = value;
-  if (key === "email") display = maskEmail(value);
+  let displayValue = value;
+  if (key === "email") displayValue = maskEmail(value);
 
   const block = document.createElement("div");
   block.style.marginBottom = "18px";
 
   block.innerHTML = `
     <label>${labels[key] || key}</label>
-    <div class="review-box">${display}</div>
+    <div class="review-box">${displayValue}</div>
   `;
 
   summary.appendChild(block);
 });
 
 /* ================================
-   CONFIRM (Placeholder)
+   CONFIRM (READY FOR n8n)
 ================================ */
 document.getElementById("confirmBtn").addEventListener("click", () => {
-  alert("Angaben bestätigt. Verarbeitung startet im nächsten Schritt.");
-  // später: fetch → n8n webhook
+  alert("Angaben bestätigt. Die Verarbeitung startet im nächsten Schritt.");
+  // später: fetch("https://n8n-webhook-url", { method: "POST", body: JSON.stringify(data) })
 });
 </script>
 

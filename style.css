@@ -26,6 +26,20 @@ a {
 }
 
 /* ==================================================
+   SKIP LINK – VOLLSTÄNDIG DEAKTIVIERT
+   (verhindert "Zum Inhalt springen" Anzeige)
+   ================================================== */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ==================================================
    HEADER / NAV
    ================================================== */
 
@@ -240,7 +254,7 @@ h1 {
 }
 
 /* ==================================================
-   ✅ CHECKBOX – FINAL FIX
+   CHECKBOX – FINAL, STABIL
    ================================================== */
 
 .form-iso .form-section {

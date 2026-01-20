@@ -46,41 +46,187 @@
     </p>
   </section>
 
-  <!-- FORM -->
   <form class="form-iso form" id="isoForm" novalidate>
 
-    <!-- DETAILS-BLÖCKE (unverändert, gekürzt dargestellt) -->
-    <details><summary>1. Kontext der Organisation</summary><div>
-      <label>Interne & externe Themen<textarea name="context_topics"></textarea></label>
-    </div></details>
+    <!-- 1. Kontext der Organisation -->
+    <details>
+      <summary>1. Kontext der Organisation</summary>
+      <div>
+        <label>
+          Welche internen und externen Themen beeinflussen aktuell Ihr Unternehmen?
+          <textarea name="context_topics"></textarea>
+        </label>
 
-    <details><summary>2. Führung & Verpflichtung der Leitung</summary><div>
-      <label>Verantwortung der Leitung<textarea name="leadership_responsibility"></textarea></label>
-    </div></details>
+        <label>
+          Wie werden diese Themen regelmäßig überwacht und bewertet?
+          <textarea name="context_review"></textarea>
+        </label>
 
-    <details><summary>3. Planung</summary><div>
-      <label>Risiken & Chancen<textarea name="risks_opportunities"></textarea></label>
-    </div></details>
+        <label>
+          Welche interessierten Parteien sind für Ihr Qualitätsmanagementsystem relevant?
+          <textarea name="interested_parties"></textarea>
+        </label>
 
-    <details><summary>4. Unterstützung</summary><div>
-      <label>Ressourcen<textarea name="resources"></textarea></label>
-    </div></details>
+        <label>
+          Welche Anforderungen dieser interessierten Parteien sind relevant?
+          <textarea name="party_requirements"></textarea>
+        </label>
 
-    <details><summary>5. Betrieb</summary><div>
-      <label>Zentrale Prozesse<textarea name="operational_processes"></textarea></label>
-    </div></details>
+        <label>
+          Wie ist der Geltungsbereich Ihres Qualitätsmanagementsystems festgelegt?
+          <textarea name="qms_scope"></textarea>
+        </label>
+      </div>
+    </details>
 
-    <details><summary>6. Bewertung der Leistung</summary><div>
-      <label>Überwachung & Kennzahlen<textarea name="performance_metrics"></textarea></label>
-    </div></details>
+    <!-- 2. Führung & Verpflichtung -->
+    <details>
+      <summary>2. Führung & Verpflichtung der Leitung</summary>
+      <div>
+        <label>
+          Wie übernimmt die oberste Leitung Verantwortung für das QMS?
+          <textarea name="leadership_responsibility"></textarea>
+        </label>
 
-    <details><summary>7. Verbesserung</summary><div>
-      <label>KVP & Maßnahmen<textarea name="improvement"></textarea></label>
-    </div></details>
+        <label>
+          Wie wird die Qualitätspolitik festgelegt und kommuniziert?
+          <textarea name="quality_policy"></textarea>
+        </label>
 
-    <!-- BESTÄTIGUNG -->
+        <label>
+          Wie werden Rollen, Verantwortlichkeiten und Befugnisse definiert?
+          <textarea name="roles_responsibilities"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- 3. Planung -->
+    <details>
+      <summary>3. Planung</summary>
+      <div>
+        <label>
+          Welche Risiken und Chancen wurden identifiziert?
+          <textarea name="risks_opportunities"></textarea>
+        </label>
+
+        <label>
+          Welche Maßnahmen wurden zur Behandlung dieser Risiken und Chancen festgelegt?
+          <textarea name="risk_actions"></textarea>
+        </label>
+
+        <label>
+          Welche Qualitätsziele wurden definiert?
+          <textarea name="quality_objectives"></textarea>
+        </label>
+
+        <label>
+          Wie werden Änderungen am QMS geplant und umgesetzt?
+          <textarea name="qms_changes"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- 4. Unterstützung -->
+    <details>
+      <summary>4. Unterstützung</summary>
+      <div>
+        <label>
+          Welche Ressourcen stehen für das QMS zur Verfügung?
+          <textarea name="resources"></textarea>
+        </label>
+
+        <label>
+          Wie wird die Kompetenz der Mitarbeitenden sichergestellt?
+          <textarea name="competence"></textarea>
+        </label>
+
+        <label>
+          Wie wird Bewusstsein für Qualitätspolitik und -ziele geschaffen?
+          <textarea name="awareness"></textarea>
+        </label>
+
+        <label>
+          Wie erfolgt die interne und externe Kommunikation?
+          <textarea name="communication"></textarea>
+        </label>
+
+        <label>
+          Wie werden dokumentierte Informationen gelenkt?
+          <textarea name="document_control"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- 5. Betrieb -->
+    <details>
+      <summary>5. Betrieb</summary>
+      <div>
+        <label>
+          Wie sind die Prozesse zur Leistungserbringung definiert?
+          <textarea name="operational_processes"></textarea>
+        </label>
+
+        <label>
+          Wie werden Anforderungen an Produkte/Dienstleistungen ermittelt?
+          <textarea name="customer_requirements"></textarea>
+        </label>
+
+        <label>
+          Wie werden externe Anbieter gesteuert?
+          <textarea name="external_providers"></textarea>
+        </label>
+
+        <label>
+          Wie wird mit nichtkonformen Ergebnissen umgegangen?
+          <textarea name="nonconformities"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- 6. Bewertung der Leistung -->
+    <details>
+      <summary>6. Bewertung der Leistung</summary>
+      <div>
+        <label>
+          Welche Kennzahlen werden zur Überwachung genutzt?
+          <textarea name="performance_metrics"></textarea>
+        </label>
+
+        <label>
+          Wie wird Kundenzufriedenheit bewertet?
+          <textarea name="customer_satisfaction"></textarea>
+        </label>
+
+        <label>
+          Wie werden interne Audits durchgeführt?
+          <textarea name="internal_audits"></textarea>
+        </label>
+
+        <label>
+          Wie erfolgt die Managementbewertung?
+          <textarea name="management_review"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- 7. Verbesserung -->
+    <details>
+      <summary>7. Verbesserung</summary>
+      <div>
+        <label>
+          Wie werden Verbesserungen identifiziert?
+          <textarea name="improvement"></textarea>
+        </label>
+
+        <label>
+          Wie werden Korrekturmaßnahmen umgesetzt?
+          <textarea name="corrective_actions"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- Bestätigung -->
     <section class="form-section">
-
       <label class="checkbox">
         <input type="checkbox" id="confirm1">
         Ich bestätige, dass die gemachten Angaben nach bestem Wissen vollständig und korrekt sind.
@@ -98,7 +244,6 @@
       <button type="submit" class="btn btn-primary">
         Angaben prüfen & fortfahren
       </button>
-
     </section>
 
   </form>
@@ -111,7 +256,6 @@
   </div>
 </footer>
 
-<!-- 🔒 VALIDIERUNG + REDIRECT -->
 <script>
 document.getElementById("isoForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -127,15 +271,12 @@ document.getElementById("isoForm").addEventListener("submit", function (e) {
 
   err.style.display = "none";
 
-  // Daten sammeln
   const data = {};
   this.querySelectorAll("textarea").forEach(t => {
     data[t.name] = t.value.trim();
   });
 
   sessionStorage.setItem("isoFormData", JSON.stringify(data));
-
-  // Weiter zur Review-Seite
   window.location.href = "formular-review.html";
 });
 </script>

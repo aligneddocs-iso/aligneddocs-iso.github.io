@@ -2,14 +2,13 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Datenerfassung – ISO 9001:2015 | AlignedDocs</title>
+  <title>ISO-9001 Datenerfassung | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Strukturierter ISO-9001-Fragebogen zur Erstellung eines auditnahen Qualitätsmanagementhandbuchs.">
+  <meta name="description" content="ISO 9001:2015 Datenerfassung für ein normnahes Qualitätsmanagement-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<a class="skip" href="#content">Zum Inhalt springen</a>
 
 <header class="site-header">
   <div class="container header-inner">
@@ -31,229 +30,176 @@
   </div>
 </header>
 
-<main id="content" class="container">
+<main class="container">
 
-<section class="hero small">
-  <h1>ISO-9001-Datenerfassung</h1>
-  <p class="lead">
-    Bitte beantworten Sie die folgenden Abschnitte möglichst realitätsnah.
-    Ihre Antworten werden unverändert verwendet, um eine normnahe,
-    auditfähige Dokumentation zu erstellen.
-  </p>
-</section>
+  <section class="hero small">
+    <h1>ISO-9001 Datenerfassung</h1>
+    <p class="lead">
+      Bitte beantworten Sie die folgenden Abschnitte möglichst realitätsnah.
+      Ihre Angaben werden <strong>1:1</strong> für die normnahe Dokumentation verwendet.
+    </p>
+  </section>
 
-<form class="form" id="isoForm">
+  <form class="form">
 
-<!-- ==================================================
-     KONTEXT DER ORGANISATION
-================================================== -->
-<div class="accordion-item">
-  <div class="accordion-header">
-    <span class="accordion-question">1. Kontext der Organisation</span>
-    <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
+    <!-- =========================
+         1. KONTEXT
+    ========================== -->
+    <details class="iso-accordion" open>
+      <summary>1. Kontext der Organisation</summary>
 
-    <label>
-      Welche internen und externen Themen beeinflussen aktuell Ihr Unternehmen
-      (z. B. Markt, Wettbewerb, rechtliche Rahmenbedingungen, interne Strukturen)?
-      <textarea name="context_internal_external"></textarea>
-    </label>
+      <label>
+        Welche internen und externen Themen beeinflussen aktuell Ihr Unternehmen
+        (z. B. Markt, Wettbewerb, rechtliche Rahmenbedingungen, interne Strukturen)?
+        <textarea name="context_topics"></textarea>
+      </label>
 
-    <label>
-      Welche interessierten Parteien sind für Ihr Unternehmen relevant
-      (z. B. Kunden, Lieferanten, Mitarbeitende, Behörden)?
-      <textarea name="context_stakeholders"></textarea>
-    </label>
+      <label>
+        Welche interessierten Parteien sind für Ihr Unternehmen relevant
+        (z. B. Kunden, Lieferanten, Behörden, Mitarbeitende)?
+        <textarea name="interested_parties"></textarea>
+      </label>
 
-    <label>
-      Welche Erwartungen oder Anforderungen haben diese Parteien an Ihr Unternehmen?
-      <textarea name="context_expectations"></textarea>
-    </label>
+      <label>
+        Wie wird der Geltungsbereich Ihres Qualitätsmanagementsystems abgegrenzt?
+        <textarea name="scope_definition"></textarea>
+      </label>
+    </details>
 
-    <label>
-      Für welche Tätigkeiten, Produkte oder Dienstleistungen soll das QM-System gelten?
-      <textarea name="context_scope"></textarea>
-    </label>
+    <!-- =========================
+         2. FÜHRUNG
+    ========================== -->
+    <details class="iso-accordion">
+      <summary>2. Führung & Verantwortung</summary>
 
-  </div>
-</div>
+      <label>
+        Wie übernimmt die oberste Leitung Verantwortung für das QMS?
+        <textarea name="leadership_responsibility"></textarea>
+      </label>
 
-<!-- ==================================================
-     FÜHRUNG
-================================================== -->
-<div class="accordion-item">
-  <div class="accordion-header">
-    <span class="accordion-question">2. Führung & Verantwortung</span>
-    <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
+      <label>
+        Wie wird die Qualitätspolitik im Unternehmen kommuniziert und gelebt?
+        <textarea name="quality_policy"></textarea>
+      </label>
 
-    <label>
-      Wie übernimmt die Geschäftsleitung Verantwortung für Qualität
-      und Kundenzufriedenheit im Tagesgeschäft?
-      <textarea name="leadership_commitment"></textarea>
-    </label>
+      <label>
+        Welche Rollen, Verantwortlichkeiten und Befugnisse sind festgelegt?
+        <textarea name="roles_responsibilities"></textarea>
+      </label>
+    </details>
 
-    <label>
-      Gibt es eine formulierte Qualitätspolitik oder Leitlinien?
-      Falls ja, bitte beschreiben.
-      <textarea name="leadership_policy"></textarea>
-    </label>
+    <!-- =========================
+         3. PLANUNG
+    ========================== -->
+    <details class="iso-accordion">
+      <summary>3. Planung</summary>
 
-    <label>
-      Wie werden Verantwortlichkeiten und Befugnisse im Unternehmen geregelt?
-      <textarea name="leadership_roles"></textarea>
-    </label>
+      <label>
+        Welche Risiken und Chancen wurden im Zusammenhang mit Ihrem QMS identifiziert?
+        <textarea name="risks_opportunities"></textarea>
+      </label>
 
-  </div>
-</div>
+      <label>
+        Welche Qualitätsziele wurden festgelegt und wie werden diese überwacht?
+        <textarea name="quality_objectives"></textarea>
+      </label>
 
-<!-- ==================================================
-     PLANUNG
-================================================== -->
-<div class="accordion-item">
-  <div class="accordion-header">
-    <span class="accordion-question">3. Planung & Risiken</span>
-    <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
+      <label>
+        Wie werden Änderungen am QMS geplant und gesteuert?
+        <textarea name="change_management"></textarea>
+      </label>
+    </details>
 
-    <label>
-      Welche Risiken könnten die Qualität Ihrer Produkte oder Dienstleistungen beeinträchtigen?
-      <textarea name="planning_risks"></textarea>
-    </label>
+    <!-- =========================
+         4. UNTERSTÜTZUNG
+    ========================== -->
+    <details class="iso-accordion">
+      <summary>4. Unterstützung</summary>
 
-    <label>
-      Welche Chancen sehen Sie zur Verbesserung von Prozessen oder Kundenzufriedenheit?
-      <textarea name="planning_opportunities"></textarea>
-    </label>
+      <label>
+        Welche Ressourcen (Personal, Infrastruktur, Wissen) stehen zur Verfügung?
+        <textarea name="resources"></textarea>
+      </label>
 
-    <label>
-      Gibt es messbare Qualitätsziele?
-      Falls ja, welche?
-      <textarea name="planning_quality_goals"></textarea>
-    </label>
+      <label>
+        Wie wird die Kompetenz der Mitarbeitenden sichergestellt?
+        <textarea name="competence"></textarea>
+      </label>
 
-  </div>
-</div>
+      <label>
+        Wie erfolgt die interne und externe Kommunikation?
+        <textarea name="communication"></textarea>
+      </label>
+    </details>
 
-<!-- ==================================================
-     UNTERSTÜTZUNG
-================================================== -->
-<div class="accordion-item">
-  <div class="accordion-header">
-    <span class="accordion-question">4. Unterstützung & Ressourcen</span>
-    <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
+    <!-- =========================
+         5. BETRIEB
+    ========================== -->
+    <details class="iso-accordion">
+      <summary>5. Betrieb</summary>
 
-    <label>
-      Welche personellen und sachlichen Ressourcen stehen für die Umsetzung der Prozesse zur Verfügung?
-      <textarea name="support_resources"></textarea>
-    </label>
+      <label>
+        Beschreiben Sie den typischen Ablauf Ihrer Leistungserbringung.
+        <textarea name="operations"></textarea>
+      </label>
 
-    <label>
-      Wie wird sichergestellt, dass Mitarbeitende ausreichend qualifiziert sind?
-      <textarea name="support_competence"></textarea>
-    </label>
+      <label>
+        Wie werden externe Anbieter gesteuert und überwacht?
+        <textarea name="external_providers"></textarea>
+      </label>
 
-    <label>
-      Wie werden relevante Informationen intern und extern kommuniziert?
-      <textarea name="support_communication"></textarea>
-    </label>
+      <label>
+        Wie wird mit nichtkonformen Produkten oder Dienstleistungen umgegangen?
+        <textarea name="nonconformity_handling"></textarea>
+      </label>
+    </details>
 
-    <label>
-      Wo und wie werden dokumentierte Informationen gespeichert und gepflegt?
-      <textarea name="support_documentation"></textarea>
-    </label>
+    <!-- =========================
+         6. BEWERTUNG
+    ========================== -->
+    <details class="iso-accordion">
+      <summary>6. Bewertung der Leistung</summary>
 
-  </div>
-</div>
+      <label>
+        Wie werden Prozesse überwacht, gemessen und bewertet?
+        <textarea name="performance_monitoring"></textarea>
+      </label>
 
-<!-- ==================================================
-     BETRIEB
-================================================== -->
-<div class="accordion-item">
-  <div class="accordion-header">
-    <span class="accordion-question">5. Betrieb & Leistungserbringung</span>
-    <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
+      <label>
+        Wie wird die Kundenzufriedenheit ermittelt?
+        <textarea name="customer_satisfaction"></textarea>
+      </label>
 
-    <label>
-      Beschreiben Sie Ihren typischen Auftrags- oder Leistungsablauf.
-      <textarea name="operation_process_flow"></textarea>
-    </label>
+      <label>
+        Wie werden interne Audits und Managementbewertungen durchgeführt?
+        <textarea name="internal_audits"></textarea>
+      </label>
+    </details>
 
-    <label>
-      Welche externen Anbieter oder Dienstleister sind eingebunden?
-      <textarea name="operation_external_providers"></textarea>
-    </label>
+    <!-- =========================
+         7. VERBESSERUNG
+    ========================== -->
+    <details class="iso-accordion">
+      <summary>7. Verbesserung</summary>
 
-    <label>
-      Wie stellen Sie sicher, dass Kundenanforderungen eingehalten werden?
-      <textarea name="operation_customer_requirements"></textarea>
-    </label>
+      <label>
+        Wie werden Abweichungen behandelt und Korrekturmaßnahmen umgesetzt?
+        <textarea name="corrective_actions"></textarea>
+      </label>
 
-  </div>
-</div>
+      <label>
+        Wie stellen Sie die kontinuierliche Verbesserung des QMS sicher?
+        <textarea name="continual_improvement"></textarea>
+      </label>
+    </details>
 
-<!-- ==================================================
-     BEWERTUNG & VERBESSERUNG
-================================================== -->
-<div class="accordion-item">
-  <div class="accordion-header">
-    <span class="accordion-question">6. Bewertung & Verbesserung</span>
-    <span class="accordion-icon">+</span>
-  </div>
-  <div class="accordion-content">
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">
+        Datenerfassung abschließen
+      </button>
+    </div>
 
-    <label>
-      Wie überwachen Sie die Wirksamkeit Ihrer Prozesse?
-      <textarea name="evaluation_monitoring"></textarea>
-    </label>
-
-    <label>
-      Wie gehen Sie mit Fehlern, Abweichungen oder Beschwerden um?
-      <textarea name="evaluation_nonconformities"></textarea>
-    </label>
-
-    <label>
-      Wie werden Verbesserungen identifiziert und umgesetzt?
-      <textarea name="improvement_actions"></textarea>
-    </label>
-
-  </div>
-</div>
-
-<!-- ==================================================
-     ABSCHLUSS
-================================================== -->
-<section class="form-section">
-
-  <label>
-    E-Mail-Adresse für Rückfragen & Zustellung
-    <input type="email" name="email" required>
-  </label>
-
-  <label class="checkbox">
-    <input type="checkbox" required>
-    Ich bestätige, dass die Angaben nach bestem Wissen korrekt und vollständig sind.
-  </label>
-
-  <label class="checkbox">
-    <input type="checkbox" required>
-    Die beschriebenen Prozesse entsprechen unserer tatsächlichen Arbeitsweise.
-  </label>
-
-  <button type="submit" class="btn btn-primary">
-    Datenerfassung abschließen
-  </button>
-
-</section>
-
-</form>
+  </form>
 
 </main>
 
@@ -262,16 +208,6 @@
     <small>© 2026 AlignedDocs</small>
   </div>
 </footer>
-
-<script>
-/* Accordion Toggle – bewusst simpel & stabil */
-document.querySelectorAll(".accordion-header").forEach(header => {
-  header.addEventListener("click", () => {
-    const item = header.parentElement;
-    item.classList.toggle("is-open");
-  });
-});
-</script>
 
 </body>
 </html>

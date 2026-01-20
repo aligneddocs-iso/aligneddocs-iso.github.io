@@ -1,4 +1,11 @@
 (() => {
+
+  /* =========================================
+     GUARD: Script nur ausführen,
+     wenn Multi-Step-Formular existiert
+     ========================================= */
+  if (!document.querySelector(".step")) return;
+
   const steps = document.querySelectorAll(".step");
   const langButtons = document.querySelectorAll("[data-lang-btn]");
   const langBlocks = document.querySelectorAll("[data-lang]");
@@ -70,4 +77,5 @@
 
   updateLang();
   loadData();
+
 })();

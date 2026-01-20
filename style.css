@@ -1,195 +1,323 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>ISO-9001-Datenerfassung | AlignedDocs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
+/* ==================================================
+   AlignedDocs – Enterprise / Compliance Design
+   STABLE BASELINE + ISO FORM SCOPED
+   ================================================== */
 
-<body>
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="brand-mark"><span></span></div>
-      <div class="brand-text">
-        <strong>AlignedDocs</strong><br>
-        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
-      </div>
-    </div>
+/* ---------- Base ---------- */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b1220;
+  color: #ffffff;
+  line-height: 1.6;
+}
 
-    <nav class="nav">
-      <a href="de.index.html">Home</a>
-      <a href="de.produkt.html">Produkt</a>
-      <a href="de.faq.html">FAQ</a>
-      <a href="de.formular.html" class="active">Formular</a>
-      <a href="de.datenschutz.html">Datenschutz</a>
-    </nav>
-  </div>
-</header>
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
-<main class="container">
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  <section class="hero small">
-    <h1>ISO-9001-Datenerfassung</h1>
-    <p class="lead">
-      Bitte beantworten Sie die folgenden Abschnitte realistisch.
-      Ihre Angaben werden <b>unverändert</b> für eine normnahe,
-      auditfähige ISO-9001-Dokumentation verwendet.
-    </p>
-  </section>
+/* ---------- Skip Link ---------- */
+.skip {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
 
-  <form class="form">
+.skip:focus {
+  left: 20px;
+  top: 20px;
+  background: #d6c27a;
+  color: #0b1220;
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 1000;
+}
 
-    <div class="accordion">
+/* ==================================================
+   HEADER
+   ================================================== */
 
-      <!-- ===================== -->
-      <!-- 1. Kontext -->
-      <!-- ===================== -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <div class="accordion-question">1. Kontext der Organisation</div>
-          <div class="accordion-icon">+</div>
-        </div>
-        <div class="accordion-content">
+.site-header {
+  background: #0e1729;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
 
-          <label>Welche internen und externen Themen beeinflussen Ihr Unternehmen?</label>
-          <textarea name="context_external_internal"></textarea>
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  gap: 20px;
+}
 
-          <label>Welche interessierten Parteien sind relevant (z. B. Kunden, Behörden, Lieferanten)?</label>
-          <textarea name="interested_parties"></textarea>
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-          <label>Wie ist der Geltungsbereich Ihres QM-Systems definiert?</label>
-          <textarea name="scope"></textarea>
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  background: #101a2d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        </div>
-      </div>
+.brand-mark span {
+  width: 12px;
+  height: 12px;
+  background: #d6c27a;
+  border-radius: 4px;
+}
 
-      <!-- ===================== -->
-      <!-- 2. Führung -->
-      <!-- ===================== -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <div class="accordion-question">2. Führung & Verantwortung</div>
-          <div class="accordion-icon">+</div>
-        </div>
-        <div class="accordion-content">
+.brand-text strong {
+  font-size: 14px;
+}
 
-          <label>Wie übernimmt die Geschäftsleitung Verantwortung für Qualität?</label>
-          <textarea name="leadership_commitment"></textarea>
+.brand-text small {
+  font-size: 12px;
+  opacity: .85;
+}
 
-          <label>Gibt es eine Qualitätspolitik? Wie wird sie kommuniziert?</label>
-          <textarea name="quality_policy"></textarea>
+/* ---------- Navigation ---------- */
 
-          <label>Wie sind Rollen, Verantwortlichkeiten und Befugnisse geregelt?</label>
-          <textarea name="roles_responsibilities"></textarea>
+.nav {
+  display: flex;
+  gap: 14px;
+}
 
-        </div>
-      </div>
+.nav a {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: .85;
+}
 
-      <!-- ===================== -->
-      <!-- 3. Planung -->
-      <!-- ===================== -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <div class="accordion-question">3. Planung (Risiken & Ziele)</div>
-          <div class="accordion-icon">+</div>
-        </div>
-        <div class="accordion-content">
+.nav a:hover,
+.nav a.active {
+  background: rgba(214,194,122,.25);
+  opacity: 1;
+}
 
-          <label>Welche Risiken und Chancen wurden identifiziert?</label>
-          <textarea name="risks_opportunities"></textarea>
+/* ---------- Language Toggle ---------- */
 
-          <label>Welche Qualitätsziele bestehen aktuell?</label>
-          <textarea name="quality_objectives"></textarea>
+.lang {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+}
 
-          <label>Wie werden Änderungen am QM-System geplant?</label>
-          <textarea name="qms_changes"></textarea>
+.lang a {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  opacity: .6;
+}
 
-        </div>
-      </div>
+.lang a.is-active {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+  opacity: 1;
+}
 
-      <!-- ===================== -->
-      <!-- 4. Betrieb -->
-      <!-- ===================== -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <div class="accordion-question">4. Operative Prozesse</div>
-          <div class="accordion-icon">+</div>
-        </div>
-        <div class="accordion-content">
+/* ==================================================
+   MAIN / HERO
+   ================================================== */
 
-          <label>Beschreiben Sie Ihren typischen Auftrags- / Leistungsprozess.</label>
-          <textarea name="core_process"></textarea>
+main {
+  padding: 60px 0;
+}
 
-          <label>Gibt es ausgelagerte Prozesse oder externe Dienstleister?</label>
-          <textarea name="external_providers"></textarea>
+.hero {
+  max-width: 760px;
+}
 
-          <label>Wie wird mit nichtkonformen Leistungen umgegangen?</label>
-          <textarea name="nonconformity_handling"></textarea>
+.hero.small {
+  max-width: 900px;
+}
 
-        </div>
-      </div>
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
 
-      <!-- ===================== -->
-      <!-- 5. Bewertung -->
-      <!-- ===================== -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <div class="accordion-question">5. Überwachung & Bewertung</div>
-          <div class="accordion-icon">+</div>
-        </div>
-        <div class="accordion-content">
+.lead {
+  font-size: 17px;
+  opacity: .95;
+}
 
-          <label>Wie überwachen Sie Prozesse und Ergebnisse?</label>
-          <textarea name="monitoring"></textarea>
+/* ---------- Buttons ---------- */
 
-          <label>Wie wird Kundenzufriedenheit erfasst?</label>
-          <textarea name="customer_satisfaction"></textarea>
+.actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
-          <label>Werden interne Audits durchgeführt?</label>
-          <textarea name="internal_audits"></textarea>
+.btn {
+  font-size: 14px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.2);
+  cursor: pointer;
+}
 
-        </div>
-      </div>
+.btn-primary {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+}
 
-      <!-- ===================== -->
-      <!-- 6. Verbesserung -->
-      <!-- ===================== -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <div class="accordion-question">6. Verbesserung</div>
-          <div class="accordion-icon">+</div>
-        </div>
-        <div class="accordion-content">
+.btn-ghost {
+  background: rgba(255,255,255,.08);
+}
 
-          <label>Wie werden Korrektur- und Verbesserungsmaßnahmen umgesetzt?</label>
-          <textarea name="improvement"></textarea>
+/* ==================================================
+   FORM – GENERIC (alle normalen Formulare)
+   ================================================== */
 
-        </div>
-      </div>
+.form {
+  max-width: 900px;
+  margin-top: 50px;
+}
 
-    </div>
+.form-section {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
 
-    <div class="actions">
-      <button class="btn btn-primary" type="submit">Angaben speichern</button>
-    </div>
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
 
-  </form>
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  color: #ffffff;
+}
 
-</main>
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
 
-<script>
-document.querySelectorAll(".accordion-header").forEach(header => {
-  header.addEventListener("click", () => {
-    const item = header.parentElement;
-    item.classList.toggle("is-open");
-    const content = item.querySelector(".accordion-content");
-    content.style.display = item.classList.contains("is-open") ? "block" : "none";
-  });
-});
-</script>
+/* ==================================================
+   ISO 9001 FORM – STRICTLY SCOPED
+   ================================================== */
 
-</body>
-</html>
+.form-iso details {
+  margin-bottom: 16px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.form-iso summary {
+  padding: 18px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-iso summary::-webkit-details-marker {
+  display: none;
+}
+
+.form-iso details[open] summary {
+  background: rgba(214,194,122,.18);
+  color: #d6c27a;
+}
+
+.form-iso details > div {
+  padding: 22px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.form-iso textarea {
+  margin-top: 8px;
+}
+
+/* ==================================================
+   REVIEW BOX
+   ================================================== */
+
+.review-box {
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.site-footer {
+  margin-top: 90px;
+  padding: 30px 0;
+  background: #0e1729;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+}

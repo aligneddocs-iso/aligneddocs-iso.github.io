@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
+  <!-- 🔒 HARD GUARD: verhindert Flackern & Direktaufruf -->
+  <script>
+    (function () {
+      const raw = sessionStorage.getItem("isoFormData");
+      if (!raw || raw === "{}") {
+        window.location.replace("de.formular.html");
+      }
+    })();
+  </script>
+
   <meta charset="utf-8">
   <title>Zusammenfassung – ISO 9001 | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Zusammenfassung Ihrer Angaben für das ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,16 +43,11 @@
     </p>
   </section>
 
-  <section id="summary"></section>
+  <section class="form-section" id="summary"></section>
 
   <div class="actions">
-    <a href="de.formular.html" class="btn btn-ghost">
-      Zurück & bearbeiten
-    </a>
-
-    <button class="btn btn-primary" id="confirmBtn">
-      Angaben bestätigen
-    </button>
+    <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
+    <button class="btn btn-primary" id="confirmBtn">Angaben bestätigen</button>
   </div>
 
 </main>
@@ -55,52 +60,49 @@
 
 <script>
 /* ================================
-   LOAD DATA + GUARD
+   LOAD DATA
 ================================ */
-const raw = sessionStorage.getItem("isoFormData");
-
-if (!raw) {
-  // Kein Formular ausgefüllt → zurück zum Formular
-  window.location.replace("de.formular.html");
-}
-
-const data = JSON.parse(raw);
+const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
 const summary = document.getElementById("summary");
 
-// Falls Objekt leer ist (zusätzliche Sicherheit)
-if (Object.keys(data).length === 0) {
-  window.location.replace("de.formular.html");
-}
-
 /* ================================
-   FIELD LABELS
+   LABELS (sauber & professionell)
 ================================ */
 const labels = {
   company_name: "Unternehmensname",
   industry: "Branche / Geschäftstätigkeit",
   employees: "Anzahl der Mitarbeitenden",
-  region: "Land / Region der Tätigkeit",
+  region: "Land / Region",
 
   quality_understanding: "Qualitätsverständnis",
   quality_goals: "Qualitätsziele vorhanden",
   quality_goals_description: "Beschreibung der Qualitätsziele",
 
-  scope_included: "Abgedeckte Tätigkeiten (Scope)",
+  scope_included: "Geltungsbereich (Scope)",
   scope_exclusions: "Ausgeschlossene Tätigkeiten",
   scope_exclusions_description: "Beschreibung der Ausschlüsse",
 
   core_process: "Typischer Auftragsablauf",
-  critical_steps: "Kritische Schritte",
+  critical_steps: "Kritische Prozessschritte",
   external_partners: "Externe Dienstleister / Lieferanten",
 
   existing_docs: "Vorhandene Dokumentation",
   doc_storage: "Dokumentenablage",
 
-  monitoring: "Überwachung der Prozesse",
+  monitoring: "Prozessüberwachung",
   complaints: "Umgang mit Fehlern / Beschwerden",
 
   email: "E-Mail-Adresse"
 };
+
+/* ================================
+   EMAIL MASKING
+================================ */
+function maskEmail(email) {
+  if (!email || !email.includes("@")) return "—";
+  const [n, d] = email.split("@");
+  return n.charAt(0) + "*****@" + d;
+}
 
 /* ================================
    RENDER SUMMARY
@@ -108,23 +110,26 @@ const labels = {
 Object.entries(data).forEach(([key, value]) => {
   if (!value) return;
 
-  const block = document.createElement("section");
-  block.className = "form-section";
+  let display = value;
+  if (key === "email") display = maskEmail(value);
+
+  const block = document.createElement("div");
+  block.style.marginBottom = "18px";
 
   block.innerHTML = `
     <label>${labels[key] || key}</label>
-    <div class="review-box">${value}</div>
+    <div class="review-box">${display}</div>
   `;
 
   summary.appendChild(block);
 });
 
 /* ================================
-   CONFIRM
+   CONFIRM (Placeholder)
 ================================ */
 document.getElementById("confirmBtn").addEventListener("click", () => {
-  alert("Angaben bestätigt. Die Verarbeitung startet im nächsten Schritt.");
-  // später: fetch() → n8n Webhook
+  alert("Angaben bestätigt. Verarbeitung startet im nächsten Schritt.");
+  // später: fetch → n8n webhook
 });
 </script>
 

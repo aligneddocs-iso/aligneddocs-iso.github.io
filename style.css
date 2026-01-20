@@ -1,6 +1,6 @@
 /* ==================================================
    AlignedDocs – Enterprise / Compliance Design
-   STABLE BASELINE + ISO FORM SAFE PATCH
+   SAFE BASELINE (FORM UNTOUCHED)
    ================================================== */
 
 /* ---------- Reset ---------- */
@@ -13,9 +13,9 @@
 /* ---------- Base ---------- */
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #0b1220;
+  background: radial-gradient(1200px 600px at 20% -10%, #122042 0%, #0b1220 55%);
   color: #ffffff;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 a {
@@ -51,7 +51,7 @@ a {
    ================================================== */
 
 .site-header {
-  background: #0e1729;
+  background: linear-gradient(180deg, #0e1729 0%, #0b1220 100%);
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
@@ -106,7 +106,7 @@ a {
   font-size: 13px;
   padding: 6px 10px;
   border-radius: 6px;
-  opacity: .85;
+  opacity: .8;
 }
 
 .nav a:hover,
@@ -141,12 +141,19 @@ a {
 }
 
 /* ==================================================
-   MAIN / HERO
+   MAIN / TYPO (NICHT FORMULAR)
    ================================================== */
 
 main {
-  padding: 60px 0;
+  padding: 70px 0;
 }
+
+/* Text-Seiten angenehmer lesen */
+main:not(:has(.form-iso)) {
+  max-width: 920px;
+}
+
+/* ---------- Hero ---------- */
 
 .hero {
   max-width: 760px;
@@ -157,20 +164,42 @@ main {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 38px;
   line-height: 1.2;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  letter-spacing: -.3px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 32px 0 10px;
 }
 
 .lead {
   font-size: 17px;
+  opacity: .92;
+  max-width: 720px;
+}
+
+/* ---------- Content Text ---------- */
+
+p {
+  margin-bottom: 12px;
   opacity: .95;
+}
+
+ul {
+  margin: 10px 0 18px 18px;
+}
+
+li {
+  margin-bottom: 6px;
 }
 
 /* ---------- Buttons ---------- */
 
 .actions {
-  margin-top: 24px;
+  margin-top: 26px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -195,7 +224,7 @@ h1 {
 }
 
 /* ==================================================
-   FORM – GENERIC (andere Seiten!)
+   FORM – UNVERÄNDERT / GESCHÜTZT
    ================================================== */
 
 .form {
@@ -217,9 +246,7 @@ label {
   margin-bottom: 6px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
+input,
 textarea {
   width: 100%;
   margin-top: 6px;
@@ -235,19 +262,13 @@ textarea {
   resize: vertical;
 }
 
-/* ==================================================
-   ISO 9001 FORM – ISOLIERT & SICHER
-   ================================================== */
+/* ---------- ISO FORM (NICHT ANFASSEN) ---------- */
 
 .form-iso details {
-  background: linear-gradient(
-    180deg,
-    rgba(16,26,45,0.96),
-    rgba(14,23,41,0.96)
-  );
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 16px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px;
   overflow: hidden;
 }
 
@@ -257,9 +278,6 @@ textarea {
   font-weight: 600;
   cursor: pointer;
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .form-iso summary::-webkit-details-marker {
@@ -267,48 +285,17 @@ textarea {
 }
 
 .form-iso details[open] summary {
-  background: linear-gradient(
-    90deg,
-    rgba(214,194,122,0.25),
-    rgba(214,194,122,0.08)
-  );
+  background: rgba(214,194,122,.18);
   color: #d6c27a;
 }
 
 .form-iso details > div {
   padding: 22px;
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-.form-iso textarea,
-.form-iso input[type="email"] {
-  margin-top: 8px;
-  background: #0e1729;
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 10px;
-  padding: 12px 14px;
-}
-
-/* ---------- ISO Bestätigung ---------- */
-
-.form-iso .form-section {
-  background: linear-gradient(
-    180deg,
-    rgba(16,26,45,0.96),
-    rgba(14,23,41,0.96)
-  );
-  border: 1px solid rgba(214,194,122,0.35);
-  border-radius: 18px;
-}
-
-.form-iso .checkbox {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  border-top: 1px solid rgba(255,255,255,.12);
 }
 
 /* ==================================================
-   REVIEW
+   REVIEW BOX
    ================================================== */
 
 .review-box {
@@ -346,6 +333,10 @@ textarea {
 @media (max-width: 900px) {
   h1 {
     font-size: 30px;
+  }
+
+  main {
+    padding: 50px 0;
   }
 
   .header-inner {

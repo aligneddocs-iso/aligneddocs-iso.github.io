@@ -41,42 +41,146 @@
     <h1>ISO-9001-Datenerfassung</h1>
     <p class="lead">
       Bitte beantworten Sie die folgenden Abschnitte möglichst realitätsnah.
-      Ihre Antworten werden unverändert verwendet, um eine normnahe,
-      auditfähige ISO-9001-Dokumentation zu erstellen.
+      Ihre Antworten werden unverändert für eine normnahe,
+      auditfähige ISO-9001-Dokumentation verwendet.
+    </p>
+    <p style="opacity:.8; margin-top:8px; font-size:14px;">
+      ▶ Öffnen Sie die Abschnitte nacheinander und füllen Sie die Felder vollständig aus.
     </p>
   </section>
 
   <!-- ✅ ISO FORM START -->
-  <form class="form-iso form" id="isoForm" novalidate>
-
-    <!-- ===============================
-         DETAILS-BLÖCKE (UNVERÄNDERT)
-         =============================== -->
-
-    <!-- … deine kompletten <details>-Blöcke bleiben exakt wie gesendet … -->
+  <form class="form-iso form" method="post" action="#" novalidate>
 
     <!-- ==================================================
-         BESTÄTIGUNG
+         1. Kontext der Organisation (STANDARDMÄSSIG OFFEN)
+         ================================================== -->
+    <details open>
+      <summary>1. Kontext der Organisation</summary>
+      <div>
+        <label>
+          Welche internen und externen Themen beeinflussen aktuell Ihr Unternehmen?
+          <textarea name="context_topics"></textarea>
+        </label>
+
+        <label>
+          Wie werden diese Themen regelmäßig überprüft und bewertet?
+          <textarea name="context_review"></textarea>
+        </label>
+
+        <label>
+          Welche interessierten Parteien sind für Ihr QMS relevant?
+          <textarea name="interested_parties"></textarea>
+        </label>
+
+        <label>
+          Wie ist der Geltungsbereich Ihres QMS definiert?
+          <textarea name="qms_scope"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ================================================== -->
+    <details>
+      <summary>2. Führung & Verpflichtung der Leitung</summary>
+      <div>
+        <label>
+          Wie übernimmt die oberste Leitung Verantwortung für das QMS?
+          <textarea name="leadership_responsibility"></textarea>
+        </label>
+
+        <label>
+          Wie wird die Qualitätspolitik festgelegt und kommuniziert?
+          <textarea name="quality_policy"></textarea>
+        </label>
+
+        <label>
+          Wie werden Qualitätsziele definiert und überwacht?
+          <textarea name="quality_objectives"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ================================================== -->
+    <details>
+      <summary>3. Planung</summary>
+      <div>
+        <label>
+          Welche Risiken und Chancen wurden identifiziert?
+          <textarea name="risks_opportunities"></textarea>
+        </label>
+
+        <label>
+          Welche Maßnahmen wurden geplant?
+          <textarea name="risk_actions"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ================================================== -->
+    <details>
+      <summary>4. Unterstützung</summary>
+      <div>
+        <label>
+          Welche Ressourcen stehen für das QMS zur Verfügung?
+          <textarea name="resources"></textarea>
+        </label>
+
+        <label>
+          Wie wird die Kompetenz der Mitarbeitenden sichergestellt?
+          <textarea name="competence"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ================================================== -->
+    <details>
+      <summary>5. Betrieb</summary>
+      <div>
+        <label>
+          Beschreiben Sie Ihre zentralen Prozesse.
+          <textarea name="operational_processes"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ================================================== -->
+    <details>
+      <summary>6. Bewertung der Leistung</summary>
+      <div>
+        <label>
+          Wie wird die Wirksamkeit des QMS überwacht?
+          <textarea name="performance_metrics"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ================================================== -->
+    <details>
+      <summary>7. Verbesserung</summary>
+      <div>
+        <label>
+          Wie werden Verbesserungen umgesetzt?
+          <textarea name="improvement"></textarea>
+        </label>
+      </div>
+    </details>
+
+    <!-- ==================================================
+         VERBINDLICHE BESTÄTIGUNG (BLEIBT UNTEN)
          ================================================== -->
     <section class="form-section">
-
       <label class="checkbox">
-        <input type="checkbox" id="confirm1">
+        <input type="checkbox" required>
         Ich bestätige, dass die gemachten Angaben nach bestem Wissen
         vollständig und korrekt sind.
       </label>
 
       <label class="checkbox">
-        <input type="checkbox" id="confirm2">
+        <input type="checkbox" required>
         Die beschriebenen Prozesse entsprechen der tatsächlichen
         Arbeitsweise unseres Unternehmens.
       </label>
-
-      <!-- 🔴 FEHLERMELDUNG (NEU) -->
-      <p id="confirmError"
-         style="display:none; color:#ff6b6b; margin-top:12px; font-size:14px;">
-        Bitte bestätigen Sie beide Hinweise, um fortzufahren.
-      </p>
 
       <button type="submit" class="btn btn-primary">
         Angaben prüfen & fortfahren
@@ -93,31 +197,6 @@
     <small>© 2026 AlignedDocs</small>
   </div>
 </footer>
-
-<!-- ==========================================
-     FORM VALIDATION (MINIMAL, NEU)
-     ========================================== -->
-<script>
-  const form = document.getElementById("isoForm");
-  const c1 = document.getElementById("confirm1");
-  const c2 = document.getElementById("confirm2");
-  const error = document.getElementById("confirmError");
-
-  form.addEventListener("submit", function (e) {
-    if (!c1.checked || !c2.checked) {
-      e.preventDefault();
-      error.style.display = "block";
-      error.scrollIntoView({ behavior: "smooth", block: "center" });
-      return;
-    }
-
-    error.style.display = "none";
-
-    // 👉 NÄCHSTER SCHRITT (wie bisher gedacht)
-    // z.B. sessionStorage + Redirect zur Review-Seite
-    // window.location.href = "formular-review.html";
-  });
-</script>
 
 </body>
 </html>

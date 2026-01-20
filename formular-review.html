@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
-  <!-- 🔒 HARD GUARD: nur aufrufbar mit vorhandenen Formulardaten -->
-  <script>
-    (function () {
-      const raw = sessionStorage.getItem("isoFormData");
-      if (!raw || raw === "{}") {
-        window.location.replace("de.formular.html");
-      }
-    })();
-  </script>
-
   <meta charset="utf-8">
   <title>Zusammenfassung – ISO 9001 | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Zusammenfassung Ihrer Angaben für das ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,26 +24,19 @@
 
 <main id="content" class="container">
 
-  <section class="hero small">
-    <h1>Zusammenfassung Ihrer Angaben</h1>
-    <p class="lead">
-      Bitte prüfen Sie Ihre Angaben sorgfältig.
-      Wenn etwas nicht stimmt, können Sie jederzeit zurückgehen und korrigieren.
-    </p>
-  </section>
+<section class="hero small">
+  <h1>Zusammenfassung Ihrer Angaben</h1>
+  <p class="lead">
+    Bitte prüfen Sie Ihre Angaben sorgfältig.
+  </p>
+</section>
 
-  <!-- SUMMARY -->
-  <section class="form-section" id="summary"></section>
+<section class="form-section" id="summary"></section>
 
-  <!-- ACTIONS -->
-  <div class="actions">
-    <a href="de.formular.html" class="btn btn-ghost">
-      Zurück & bearbeiten
-    </a>
-    <button class="btn btn-primary" id="confirmBtn">
-      Angaben bestätigen
-    </button>
-  </div>
+<div class="actions">
+  <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
+  <button class="btn btn-primary" id="confirmBtn">Angaben bestätigen</button>
+</div>
 
 </main>
 
@@ -66,78 +47,41 @@
 </footer>
 
 <script>
-/* ================================
-   LOAD DATA
-================================ */
 const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
 const summary = document.getElementById("summary");
 
-/* ================================
-   FIELD LABELS
-================================ */
 const labels = {
   company_name: "Unternehmensname",
-  industry: "Branche / Geschäftstätigkeit",
-  employees: "Anzahl der Mitarbeitenden",
-  region: "Land / Region der Tätigkeit",
-
+  industry: "Branche",
+  employees: "Mitarbeitende",
+  region: "Region",
   quality_understanding: "Qualitätsverständnis",
-  quality_goals: "Qualitätsziele vorhanden",
-  quality_goals_description: "Beschreibung der Qualitätsziele",
-
-  scope_included: "Geltungsbereich (Scope)",
-  scope_exclusions: "Ausgeschlossene Tätigkeiten",
-  scope_exclusions_description: "Beschreibung der Ausschlüsse",
-
-  core_process: "Typischer Auftragsablauf",
-  critical_steps: "Kritische Prozessschritte",
-  external_partners: "Externe Dienstleister / Lieferanten",
-
-  existing_docs: "Vorhandene Dokumentation",
-  doc_storage: "Dokumentenablage",
-
-  monitoring: "Prozessüberwachung",
-  complaints: "Umgang mit Fehlern / Beschwerden",
-
+  quality_goals: "Qualitätsziele",
+  quality_goals_description: "Qualitätsziele Beschreibung",
+  scope_included: "Scope",
+  scope_exclusions: "Ausschlüsse",
+  scope_exclusions_description: "Ausschlüsse Beschreibung",
+  core_process: "Auftragsablauf",
+  critical_steps: "Kritische Schritte",
+  external_partners: "Externe Partner",
+  existing_docs: "Dokumentation",
+  doc_storage: "Ablage",
+  monitoring: "Überwachung",
+  complaints: "Fehler / Beschwerden",
   email: "E-Mail-Adresse"
 };
 
-/* ================================
-   EMAIL MASKING
-================================ */
-function maskEmail(email) {
-  if (!email || !email.includes("@")) return "—";
-  const [name, domain] = email.split("@");
-  return name.charAt(0) + "*****@" + domain;
-}
-
-/* ================================
-   RENDER SUMMARY (STABIL)
-================================ */
-Object.entries(data).forEach(([key, value]) => {
-  if (!value) return;
-
-  let displayValue = value;
-  if (key === "email") displayValue = maskEmail(value);
-
+Object.entries(data).forEach(([k,v])=>{
+  if(!v) return;
   const block = document.createElement("div");
-  block.style.marginBottom = "18px";
-
-  block.innerHTML = `
-    <label>${labels[key] || key}</label>
-    <div class="review-box">${displayValue}</div>
-  `;
-
+  block.style.marginBottom = "16px";
+  block.innerHTML = `<label>${labels[k]||k}</label><div class="review-box">${v}</div>`;
   summary.appendChild(block);
 });
 
-/* ================================
-   CONFIRM (READY FOR n8n)
-================================ */
-document.getElementById("confirmBtn").addEventListener("click", () => {
-  alert("Angaben bestätigt. Die Verarbeitung startet im nächsten Schritt.");
-  // später: fetch("https://n8n-webhook-url", { method: "POST", body: JSON.stringify(data) })
-});
+document.getElementById("confirmBtn").onclick = () => {
+  alert("Angaben bestätigt – Verarbeitung startet.");
+};
 </script>
 
 </body>

@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
-  <!-- 🔒 HARD GUARD: verhindert Flackern & Direktaufruf -->
-  <script>
-    (function () {
-      const raw = sessionStorage.getItem("isoFormData");
-      if (!raw || raw === "{}") {
-        window.location.replace("de.formular.html");
-      }
-    })();
-  </script>
-
   <meta charset="utf-8">
-  <title>Zusammenfassung – ISO 9001 | AlignedDocs</title>
+  <title>Datenerfassung – ISO 9001 Handbuch | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Datenerfassung für ein individuelles ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,6 +13,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
+
     <div class="brand">
       <div class="brand-mark"><span></span></div>
       <div class="brand-text">
@@ -30,26 +21,162 @@
         <small>ISO 9001:2015 – automatisiertes Handbuch</small>
       </div>
     </div>
+
+    <nav class="nav">
+      <a href="de.index.html">Home</a>
+      <a href="de.produkt.html">Produkt</a>
+      <a href="de.faq.html">FAQ</a>
+      <a href="de.formular.html" class="active">Formular</a>
+      <a href="de.datenschutz.html">Datenschutz</a>
+    </nav>
+
+    <div class="lang">
+      <a href="de.formular.html" class="is-active">DE</a>
+      <a href="en.formular.html">EN</a>
+    </div>
+
   </div>
 </header>
 
 <main id="content" class="container">
 
-  <section class="hero small">
-    <h1>Zusammenfassung Ihrer Angaben</h1>
-    <p class="lead">
-      Bitte prüfen Sie Ihre Angaben sorgfältig.
-      Wenn etwas nicht stimmt, können Sie jederzeit zurückgehen und korrigieren.
-    </p>
+<section class="hero small">
+  <h1>Datenerfassung für Ihr ISO-9001-Handbuch</h1>
+  <p class="lead">
+    Bitte beantworten Sie die folgenden Fragen so realistisch wie möglich.
+    Es geht nicht um Perfektion, sondern um Ihre tatsächliche Arbeitsweise.
+  </p>
+</section>
+
+<form class="form" id="isoForm" novalidate>
+
+  <!-- 1 -->
+  <section class="form-section">
+    <h2>1. Unternehmensgrundlagen</h2>
+
+    <label>Unternehmensname
+      <input type="text" name="company_name" required>
+    </label>
+
+    <label>Branche / Geschäftstätigkeit
+      <input type="text" name="industry">
+    </label>
+
+    <label>Anzahl der Mitarbeitenden
+      <input type="number" name="employees" min="1">
+    </label>
+
+    <label>Land / Region
+      <input type="text" name="region">
+    </label>
   </section>
 
-  <section class="form-section" id="summary"></section>
+  <!-- 2 -->
+  <section class="form-section">
+    <h2>2. Qualitätsverständnis</h2>
 
-  <div class="actions">
-    <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
-    <button class="btn btn-primary" id="confirmBtn">Angaben bestätigen</button>
-  </div>
+    <label>Was bedeutet Qualität für Ihr Unternehmen?
+      <textarea name="quality_understanding"></textarea>
+    </label>
 
+    <label>Gibt es festgelegte Qualitätsziele?</label>
+    <div class="toggle" data-name="quality_goals">
+      <button type="button" data-value="yes">Ja</button>
+      <button type="button" data-value="no" class="is-active">Nein</button>
+      <input type="hidden" name="quality_goals" value="no">
+    </div>
+
+    <label>Falls ja: bitte kurz beschreiben
+      <textarea name="quality_goals_description"></textarea>
+    </label>
+  </section>
+
+  <!-- 3 -->
+  <section class="form-section">
+    <h2>3. Geltungsbereich (Scope)</h2>
+
+    <label>Abgedeckte Tätigkeiten
+      <textarea name="scope_included"></textarea>
+    </label>
+
+    <label>Ausgeschlossene Tätigkeiten?</label>
+    <div class="toggle" data-name="scope_exclusions">
+      <button type="button" data-value="yes">Ja</button>
+      <button type="button" data-value="no" class="is-active">Nein</button>
+      <input type="hidden" name="scope_exclusions" value="no">
+    </div>
+
+    <label>Falls ja: Beschreibung
+      <textarea name="scope_exclusions_description"></textarea>
+    </label>
+  </section>
+
+  <!-- 4 -->
+  <section class="form-section">
+    <h2>4. Zentrale Prozesse</h2>
+
+    <label>Typischer Auftragsablauf
+      <textarea name="core_process"></textarea>
+    </label>
+
+    <label>Kritische Schritte
+      <textarea name="critical_steps"></textarea>
+    </label>
+
+    <label>Externe Dienstleister?</label>
+    <div class="toggle" data-name="external_partners">
+      <button type="button" data-value="yes">Ja</button>
+      <button type="button" data-value="no" class="is-active">Nein</button>
+      <input type="hidden" name="external_partners" value="no">
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="form-section">
+    <h2>5. Dokumentation</h2>
+
+    <label>Bestehende Dokumentation?</label>
+    <div class="toggle" data-name="existing_docs">
+      <button type="button" data-value="yes">Ja</button>
+      <button type="button" data-value="no" class="is-active">Nein</button>
+      <input type="hidden" name="existing_docs" value="no">
+    </div>
+
+    <label>Dokumentenablage
+      <input type="text" name="doc_storage">
+    </label>
+  </section>
+
+  <!-- 6 -->
+  <section class="form-section">
+    <h2>6. Überwachung & Verbesserung</h2>
+
+    <label>Prozessüberwachung
+      <textarea name="monitoring"></textarea>
+    </label>
+
+    <label>Umgang mit Fehlern / Beschwerden
+      <textarea name="complaints"></textarea>
+    </label>
+  </section>
+
+  <!-- ABSCHLUSS -->
+  <section class="form-section">
+    <label>E-Mail-Adresse
+      <input type="email" name="email" required>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" required>
+      Angaben nach bestem Wissen korrekt
+    </label>
+
+    <button type="submit" class="btn btn-primary">
+      Datenerfassung abschließen
+    </button>
+  </section>
+
+</form>
 </main>
 
 <footer class="site-footer">
@@ -59,77 +186,25 @@
 </footer>
 
 <script>
-/* ================================
-   LOAD DATA
-================================ */
-const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
-const summary = document.getElementById("summary");
-
-/* ================================
-   LABELS (sauber & professionell)
-================================ */
-const labels = {
-  company_name: "Unternehmensname",
-  industry: "Branche / Geschäftstätigkeit",
-  employees: "Anzahl der Mitarbeitenden",
-  region: "Land / Region",
-
-  quality_understanding: "Qualitätsverständnis",
-  quality_goals: "Qualitätsziele vorhanden",
-  quality_goals_description: "Beschreibung der Qualitätsziele",
-
-  scope_included: "Geltungsbereich (Scope)",
-  scope_exclusions: "Ausgeschlossene Tätigkeiten",
-  scope_exclusions_description: "Beschreibung der Ausschlüsse",
-
-  core_process: "Typischer Auftragsablauf",
-  critical_steps: "Kritische Prozessschritte",
-  external_partners: "Externe Dienstleister / Lieferanten",
-
-  existing_docs: "Vorhandene Dokumentation",
-  doc_storage: "Dokumentenablage",
-
-  monitoring: "Prozessüberwachung",
-  complaints: "Umgang mit Fehlern / Beschwerden",
-
-  email: "E-Mail-Adresse"
-};
-
-/* ================================
-   EMAIL MASKING
-================================ */
-function maskEmail(email) {
-  if (!email || !email.includes("@")) return "—";
-  const [n, d] = email.split("@");
-  return n.charAt(0) + "*****@" + d;
-}
-
-/* ================================
-   RENDER SUMMARY
-================================ */
-Object.entries(data).forEach(([key, value]) => {
-  if (!value) return;
-
-  let display = value;
-  if (key === "email") display = maskEmail(value);
-
-  const block = document.createElement("div");
-  block.style.marginBottom = "18px";
-
-  block.innerHTML = `
-    <label>${labels[key] || key}</label>
-    <div class="review-box">${display}</div>
-  `;
-
-  summary.appendChild(block);
+/* ---------- TOGGLES ---------- */
+document.querySelectorAll(".toggle").forEach(t => {
+  const hidden = t.querySelector('input[type="hidden"]');
+  t.querySelectorAll("button").forEach(b => {
+    b.addEventListener("click", () => {
+      t.querySelectorAll("button").forEach(x => x.classList.remove("is-active"));
+      b.classList.add("is-active");
+      hidden.value = b.dataset.value;
+    });
+  });
 });
 
-/* ================================
-   CONFIRM (Placeholder)
-================================ */
-document.getElementById("confirmBtn").addEventListener("click", () => {
-  alert("Angaben bestätigt. Verarbeitung startet im nächsten Schritt.");
-  // später: fetch → n8n webhook
+/* ---------- SUBMIT ---------- */
+document.getElementById("isoForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const data = {};
+  new FormData(e.target).forEach((v,k)=>data[k]=v);
+  sessionStorage.setItem("isoFormData", JSON.stringify(data));
+  window.location.href = "formular-review.html";
 });
 </script>
 

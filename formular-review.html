@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
+  <!-- 🔒 HARD GUARD: verhindert Direktaufruf & Flackern -->
+  <script>
+    (function () {
+      const raw = sessionStorage.getItem("isoFormData");
+      if (!raw || raw === "{}") {
+        window.location.replace("de.formular.html");
+      }
+    })();
+  </script>
+
   <meta charset="utf-8">
   <title>Zusammenfassung – ISO 9001 | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zusammenfassung Ihrer Angaben für das ISO-9001-Handbuch.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,19 +36,38 @@
 
 <main id="content" class="container">
 
-<section class="hero small">
-  <h1>Zusammenfassung Ihrer Angaben</h1>
-  <p class="lead">
-    Bitte prüfen Sie Ihre Angaben sorgfältig.
-  </p>
-</section>
+  <section class="hero small">
+    <h1>Zusammenfassung Ihrer Angaben</h1>
+    <p class="lead">
+      Bitte prüfen Sie Ihre Angaben sorgfältig.
+      Auf Basis dieser Informationen wird Ihr individuelles ISO-9001-Handbuch erstellt.
+    </p>
+  </section>
 
-<section class="form-section" id="summary"></section>
+  <!-- ZUSAMMENFASSUNG -->
+  <section class="form-section" id="summary"></section>
 
-<div class="actions">
-  <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
-  <button class="btn btn-primary" id="confirmBtn">Angaben bestätigen</button>
-</div>
+  <!-- BESTÄTIGUNG -->
+  <section class="form-section">
+
+    <label class="checkbox">
+      <input type="checkbox" id="confirmEmail">
+      Ich bestätige, dass die oben angegebene E-Mail-Adresse korrekt ist und dass ich die Zusammenfassung
+      sowie die weiteren Schritte zur Erstellung meines ISO-9001-Handbuchs per E-Mail erhalte.
+    </label>
+
+    <p id="confirmError" style="display:none; color:#ff6b6b; margin-top:12px; font-size:14px;">
+      Bitte bestätigen Sie die E-Mail-Adresse, um fortzufahren.
+    </p>
+
+    <div class="actions">
+      <a href="de.formular.html" class="btn btn-ghost">Zurück & bearbeiten</a>
+      <button class="btn btn-primary" id="confirmBtn">
+        Angaben verbindlich bestätigen
+      </button>
+    </div>
+
+  </section>
 
 </main>
 
@@ -47,41 +78,78 @@
 </footer>
 
 <script>
+/* ================================
+   LOAD DATA
+================================ */
 const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
 const summary = document.getElementById("summary");
 
+/* ================================
+   LABELS (sauber & professionell)
+================================ */
 const labels = {
   company_name: "Unternehmensname",
-  industry: "Branche",
-  employees: "Mitarbeitende",
-  region: "Region",
+  industry: "Branche / Geschäftstätigkeit",
+  employees: "Anzahl der Mitarbeitenden",
+  region: "Land / Region",
+
   quality_understanding: "Qualitätsverständnis",
-  quality_goals: "Qualitätsziele",
-  quality_goals_description: "Qualitätsziele Beschreibung",
-  scope_included: "Scope",
-  scope_exclusions: "Ausschlüsse",
-  scope_exclusions_description: "Ausschlüsse Beschreibung",
-  core_process: "Auftragsablauf",
-  critical_steps: "Kritische Schritte",
-  external_partners: "Externe Partner",
-  existing_docs: "Dokumentation",
-  doc_storage: "Ablage",
-  monitoring: "Überwachung",
-  complaints: "Fehler / Beschwerden",
-  email: "E-Mail-Adresse"
+  quality_goals: "Qualitätsziele vorhanden",
+  quality_goals_description: "Beschreibung der Qualitätsziele",
+
+  scope_included: "Geltungsbereich (Scope)",
+  scope_exclusions: "Ausgeschlossene Tätigkeiten",
+  scope_exclusions_description: "Beschreibung der Ausschlüsse",
+
+  core_process: "Typischer Auftragsablauf",
+  critical_steps: "Kritische Prozessschritte",
+  external_partners: "Externe Dienstleister / Lieferanten",
+
+  existing_docs: "Vorhandene Dokumentation",
+  doc_storage: "Dokumentenablage",
+
+  monitoring: "Prozessüberwachung",
+  complaints: "Umgang mit Fehlern / Beschwerden",
+
+  email: "E-Mail-Adresse für Rückfragen & Zustellung"
 };
 
-Object.entries(data).forEach(([k,v])=>{
-  if(!v) return;
+/* ================================
+   RENDER SUMMARY (E-Mail sichtbar)
+================================ */
+Object.entries(data).forEach(([key, value]) => {
+  if (!value) return;
+
   const block = document.createElement("div");
-  block.style.marginBottom = "16px";
-  block.innerHTML = `<label>${labels[k]||k}</label><div class="review-box">${v}</div>`;
+  block.style.marginBottom = "18px";
+
+  block.innerHTML = `
+    <label>${labels[key] || key}</label>
+    <div class="review-box">${value}</div>
+  `;
+
   summary.appendChild(block);
 });
 
-document.getElementById("confirmBtn").onclick = () => {
-  alert("Angaben bestätigt – Verarbeitung startet.");
-};
+/* ================================
+   CONFIRM CHECK
+================================ */
+document.getElementById("confirmBtn").addEventListener("click", () => {
+  const ok = document.getElementById("confirmEmail").checked;
+  const err = document.getElementById("confirmError");
+
+  if (!ok) {
+    err.style.display = "block";
+    return;
+  }
+
+  err.style.display = "none";
+
+  alert("Vielen Dank. Ihre Angaben wurden bestätigt. Die nächsten Schritte erhalten Sie per E-Mail.");
+
+  // NÄCHSTER SCHRITT:
+  // fetch("N8N_WEBHOOK_URL", { method: "POST", body: JSON.stringify(data) });
+});
 </script>
 
 </body>

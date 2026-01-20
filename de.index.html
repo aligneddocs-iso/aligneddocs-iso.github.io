@@ -58,7 +58,7 @@
     </div>
   </section>
 
-  <!-- TRUST -->
+  <!-- WARUM -->
   <section class="section">
     <h2>Warum AlignedDocs?</h2>
 
@@ -89,51 +89,41 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ – FORMULAR-OPTIK -->
   <section class="section">
     <h2>Kurz & klar beantwortet</h2>
 
-    <div class="accordion">
+    <!-- WICHTIG:
+         form-iso NUR als Optik-Container
+         kein Formular, keine Inputs -->
+    <div class="form-iso">
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>Ist das ISO-9001-konform?</span>
-          <span class="accordion-icon">+</span>
+      <details>
+        <summary>Ist das ISO-9001-konform?</summary>
+        <div>
+          Die Struktur orientiert sich an ISO 9001:2015.
+          Es handelt sich um eine normnahe Dokumentation,
+          nicht um eine Zertifizierung.
         </div>
-        <div class="accordion-content">
-          <p>
-            Die Struktur orientiert sich an ISO 9001:2015.
-            Es handelt sich um eine normnahe Dokumentation,
-            nicht um eine Zertifizierung.
-          </p>
-        </div>
-      </div>
+      </details>
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>Kann ich mich damit zertifizieren lassen?</span>
-          <span class="accordion-icon">+</span>
+      <details>
+        <summary>Kann ich mich damit zertifizieren lassen?</summary>
+        <div>
+          Nein. AlignedDocs gibt kein Zertifizierungsversprechen.
+          Das Handbuch dient ausschließlich als Dokumentationsgrundlage
+          für interne oder externe Weiterarbeit.
         </div>
-        <div class="accordion-content">
-          <p>
-            Nein. AlignedDocs gibt kein Zertifizierungsversprechen.
-            Das Handbuch dient ausschließlich als Dokumentationsgrundlage.
-          </p>
-        </div>
-      </div>
+      </details>
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>Für wen ist das geeignet?</span>
-          <span class="accordion-icon">+</span>
+      <details>
+        <summary>Für wen ist AlignedDocs geeignet?</summary>
+        <div>
+          Für kleine Unternehmen, die eine ISO-Struktur benötigen,
+          aber kein vollständiges Beratungs- oder Zertifizierungsprojekt
+          umsetzen möchten.
         </div>
-        <div class="accordion-content">
-          <p>
-            Für kleine Unternehmen, die ISO-Struktur benötigen,
-            aber kein vollständiges Beratungsprojekt umsetzen möchten.
-          </p>
-        </div>
-      </div>
+      </details>
 
     </div>
 
@@ -153,25 +143,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-  document.querySelectorAll(".accordion-item").forEach(item => {
-    item.addEventListener("click", () => {
-      const content = item.querySelector(".accordion-content");
-      const icon = item.querySelector(".accordion-icon");
-
-      const isOpen = content.style.display === "block";
-
-      document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
-      document.querySelectorAll(".accordion-icon").forEach(i => i.textContent = "+");
-
-      if (!isOpen) {
-        content.style.display = "block";
-        icon.textContent = "–";
-      }
-    });
-  });
-</script>
 
 </body>
 </html>

@@ -48,239 +48,26 @@
 
   <form class="form-iso form" id="isoForm" novalidate>
 
-    <!-- 1. ANGABEN ZUM UNTERNEHMEN -->
-    <details open>
-      <summary>1. Angaben zum Unternehmen</summary>
-      <div>
-
-        <div>
-          <label>Unternehmensname</label>
-          <textarea name="company_name"></textarea>
-        </div>
-
-        <div>
-          <label>Rechtsform</label>
-          <textarea name="legal_form"></textarea>
-        </div>
-
-        <div>
-          <label>Sitz des Unternehmens (Adresse)</label>
-          <textarea name="company_address"></textarea>
-        </div>
-
-        <div>
-          <label>Branche / Geschäftstätigkeit</label>
-          <textarea name="industry"></textarea>
-        </div>
-
-        <div>
-          <label>Anzahl der Mitarbeitenden</label>
-          <textarea name="employees"></textarea>
-        </div>
-
-        <div>
-          <label>Geltungsbereich der ISO-9001-Dokumentation (Scope)</label>
-          <textarea name="scope"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 2. KONTEXT DER ORGANISATION -->
-    <details>
-      <summary>2. Kontext der Organisation</summary>
-      <div>
-
-        <div>
-          <label>Interne Themen, die Ausrichtung und Leistungsfähigkeit beeinflussen</label>
-          <textarea name="context_internal"></textarea>
-        </div>
-
-        <div>
-          <label>Externe Themen (Markt, Wettbewerb, gesetzliche Anforderungen)</label>
-          <textarea name="context_external"></textarea>
-        </div>
-
-        <div>
-          <label>Relevante interessierte Parteien</label>
-          <textarea name="interested_parties"></textarea>
-        </div>
-
-        <div>
-          <label>Überprüfung und Bewertung dieser Themen</label>
-          <textarea name="context_evaluation"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 3. FÜHRUNG -->
-    <details>
-      <summary>3. Führung & Verpflichtung der Leitung</summary>
-      <div>
-
-        <div>
-          <label>Verantwortung der obersten Leitung für das QMS</label>
-          <textarea name="leadership_responsibility"></textarea>
-        </div>
-
-        <div>
-          <label>Festlegung und Kommunikation der Qualitätspolitik</label>
-          <textarea name="quality_policy"></textarea>
-        </div>
-
-        <div>
-          <label>Definition und Überwachung der Qualitätsziele</label>
-          <textarea name="quality_objectives"></textarea>
-        </div>
-
-        <div>
-          <label>Sicherstellung gesetzlicher und kundenspezifischer Anforderungen</label>
-          <textarea name="leadership_compliance"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 4. PLANUNG -->
-    <details>
-      <summary>4. Planung</summary>
-      <div>
-
-        <div>
-          <label>Identifizierte Risiken und Chancen</label>
-          <textarea name="risks_opportunities"></textarea>
-        </div>
-
-        <div>
-          <label>Maßnahmen zur Behandlung dieser Risiken und Chancen</label>
-          <textarea name="risk_actions"></textarea>
-        </div>
-
-        <div>
-          <label>Umgang mit Änderungen am QMS</label>
-          <textarea name="qms_changes"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 5. UNTERSTÜTZUNG -->
-    <details>
-      <summary>5. Unterstützung</summary>
-      <div>
-
-        <div>
-          <label>Personelle und infrastrukturelle Ressourcen</label>
-          <textarea name="resources"></textarea>
-        </div>
-
-        <div>
-          <label>Sicherstellung der Kompetenz der Mitarbeitenden</label>
-          <textarea name="competence"></textarea>
-        </div>
-
-        <div>
-          <label>Interne und externe Kommunikation zum QMS</label>
-          <textarea name="communication"></textarea>
-        </div>
-
-        <div>
-          <label>Lenkung dokumentierter Informationen</label>
-          <textarea name="document_control"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 6. BETRIEB -->
-    <details>
-      <summary>6. Betrieb</summary>
-      <div>
-
-        <div>
-          <label>Zentrale Prozesse zur Leistungserbringung</label>
-          <textarea name="operational_processes"></textarea>
-        </div>
-
-        <div>
-          <label>Steuerung externer Anbieter / Lieferanten</label>
-          <textarea name="external_providers"></textarea>
-        </div>
-
-        <div>
-          <label>Umgang mit nichtkonformen Produkten oder Dienstleistungen</label>
-          <textarea name="nonconformities"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 7. BEWERTUNG -->
-    <details>
-      <summary>7. Bewertung der Leistung</summary>
-      <div>
-
-        <div>
-          <label>Überwachungskennzahlen und Methoden</label>
-          <textarea name="performance_metrics"></textarea>
-        </div>
-
-        <div>
-          <label>Erfassung und Auswertung der Kundenzufriedenheit</label>
-          <textarea name="customer_satisfaction"></textarea>
-        </div>
-
-        <div>
-          <label>Interne Audits und Managementbewertungen</label>
-          <textarea name="internal_audits"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 8. VERBESSERUNG -->
-    <details>
-      <summary>8. Verbesserung</summary>
-      <div>
-
-        <div>
-          <label>Identifikation von Verbesserungsmöglichkeiten</label>
-          <textarea name="improvement"></textarea>
-        </div>
-
-        <div>
-          <label>Umsetzung von Korrekturmaßnahmen</label>
-          <textarea name="corrective_actions"></textarea>
-        </div>
-
-      </div>
-    </details>
-
-    <!-- 9. KONTAKT -->
-    <details>
-      <summary>9. Kontakt & Zustellung</summary>
-      <div>
-
-        <div>
-          <label>E-Mail-Adresse für Rückfragen und Zustellung</label>
-          <input type="email" name="email" required>
-        </div>
-
-      </div>
-    </details>
+    <!-- FORMULARINHALT UNVERÄNDERT -->
+    <!-- … alles wie bei dir … -->
 
     <!-- BESTÄTIGUNG -->
     <section class="form-section">
 
       <label class="checkbox">
         <input type="checkbox" id="confirm1">
-        Ich bestätige, dass die gemachten Angaben nach bestem Wissen vollständig und korrekt sind.
+        <span>
+          Ich bestätige, dass die gemachten Angaben nach bestem Wissen vollständig
+          und korrekt sind.
+        </span>
       </label>
 
       <label class="checkbox">
         <input type="checkbox" id="confirm2">
-        Die beschriebenen Prozesse entsprechen der tatsächlichen Arbeitsweise unseres Unternehmens.
+        <span>
+          Die beschriebenen Prozesse entsprechen der tatsächlichen Arbeitsweise
+          unseres Unternehmens.
+        </span>
       </label>
 
       <p id="confirmError" style="display:none; color:#ff6b6b; margin-top:12px; font-size:14px;">

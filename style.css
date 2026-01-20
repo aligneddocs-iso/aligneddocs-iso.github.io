@@ -26,33 +26,19 @@ a {
 }
 
 /* ==================================================
-   HEADER / NAV – FIXED GLOBAL (ENTERPRISE)
+   HEADER / NAV
    ================================================== */
 
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  height: 68px;
-
-  background: linear-gradient(
-    180deg,
-    #0e1729 0%,
-    #0b1220 100%
-  );
-
+  background: #0e1729;
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
 .header-inner {
-  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
+  padding: 16px 0;
   gap: 20px;
 }
 
@@ -121,17 +107,12 @@ a {
 }
 
 /* ==================================================
-   CONTENT OFFSET (WICHTIG!)
+   TYPO / SECTIONS (Index, Produkt, FAQ)
    ================================================== */
 
 main {
-  padding-top: 68px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
-
-/* ==================================================
-   TYPO / SECTIONS (Index, Produkt, FAQ)
-   ================================================== */
 
 .hero {
   max-width: 760px;

@@ -1,24 +1,23 @@
 /* ==================================================
-   AlignedDocs – Enterprise / Compliance Design
-   FORM SAFE + ENTERPRISE LOCK
+   BASE – GLOBAL (bleibt für alle Seiten gleich)
    ================================================== */
 
-/* ---------- Reset ---------- */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* ---------- Base ---------- */
 body {
+  margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 20% -10%, #122042 0%, #0b1220 55%);
+  background: #0b1220;
   color: #ffffff;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
-a { color: #fff; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .container {
   max-width: 1100px;
@@ -27,26 +26,55 @@ a { color: #fff; text-decoration: none; }
 }
 
 /* ==================================================
-   HEADER
+   HEADER / NAV (unverändert)
    ================================================== */
 
 .site-header {
-  background: linear-gradient(180deg, #0e1729, #0b1220);
+  background: #0e1729;
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 0;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  background: #101a2d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark span {
+  width: 12px;
+  height: 12px;
+  background: #d6c27a;
+  border-radius: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
 }
 
 .nav a {
   font-size: 13px;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
-  opacity: .75;
+  opacity: .85;
 }
 
 .nav a.active,
@@ -55,140 +83,174 @@ a { color: #fff; text-decoration: none; }
   opacity: 1;
 }
 
+.lang {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+}
+
+.lang a {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  opacity: .6;
+}
+
+.lang a.is-active {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+  opacity: 1;
+}
+
 /* ==================================================
-   MAIN TYPO
+   TYPO / SECTIONS (für Index, Produkt, FAQ)
    ================================================== */
 
 main {
-  padding: 70px 0;
+  padding: 60px 0;
 }
 
-/* Content-Seiten enger lesen */
-main:not(:has(.form-iso)) {
-  max-width: 920px;
+.hero {
+  max-width: 760px;
+}
+
+.hero.small {
+  max-width: 900px;
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 36px;
   line-height: 1.2;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: 22px;
-  margin: 34px 0 14px;
+  margin-bottom: 14px;
 }
 
 .lead {
   font-size: 17px;
-  opacity: .92;
-  max-width: 720px;
-}
-
-/* ==================================================
-   ENTERPRISE LOCK BOXES
-   ================================================== */
-
-.lock-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-  margin: 28px 0 40px;
-}
-
-.lock-box {
-  background: linear-gradient(180deg, #101a2d, #0d1527);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 14px;
-  padding: 20px 22px;
-  position: relative;
-}
-
-.lock-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  box-shadow: inset 0 0 0 1px rgba(214,194,122,.08);
-  pointer-events: none;
-}
-
-.lock-box h3 {
-  font-size: 15px;
-  margin-bottom: 8px;
-  color: #d6c27a;
-}
-
-.lock-box p {
-  font-size: 14px;
-  opacity: .92;
-}
-
-/* ==================================================
-   FAQ – ENTERPRISE ACCORDION
-   ================================================== */
-
-.faq {
-  margin-top: 30px;
-}
-
-.faq details {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 12px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-
-.faq summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 16px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq summary::-webkit-details-marker { display: none; }
-
-.faq summary::after {
-  content: "+";
-  opacity: .6;
-}
-
-.faq details[open] summary {
-  background: rgba(214,194,122,.15);
-  color: #d6c27a;
-}
-
-.faq details[open] summary::after {
-  content: "–";
-  opacity: 1;
-}
-
-.faq details > div {
-  padding: 16px 20px 20px;
-  border-top: 1px solid rgba(255,255,255,.12);
-  font-size: 14px;
   opacity: .95;
 }
 
-/* ==================================================
-   FORM – ABSOLUT UNBERÜHRT
-   ================================================== */
-
-.form,
-.form-iso,
-.form-section,
-.form-iso details,
-.form-iso summary {
-  all: unset;
+.section {
+  margin-top: 80px;
 }
 
-/* ⛔️ FORM STYLES KOMMEN AUS DEINEM FORM-CSS */
-/* (bewusst nichts geändert) */
+.grid {
+  display: grid;
+  gap: 28px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 26px;
+}
+
+/* ==================================================
+   BUTTONS (global)
+   ================================================== */
+
+.actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.2);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  background: rgba(255,255,255,.08);
+}
+
+/* ==================================================
+   🔒 FORMULAR – ISOLIERT & GEFIXT
+   NUR für de.formular.html
+   ================================================== */
+
+.form-iso {
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+/* Accordion-Karten */
+.form-iso details {
+  margin-bottom: 18px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.form-iso summary {
+  padding: 18px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.form-iso details[open] summary {
+  background: rgba(214,194,122,.18);
+  color: #d6c27a;
+}
+
+/* Inhalt */
+.form-iso details > div {
+  padding: 22px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+/* Felder – NUR im Formular */
+.form-iso label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.form-iso input,
+.form-iso textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.form-iso textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Bestätigungsbox */
+.form-iso .form-section {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 40px;
+}
 
 /* ==================================================
    FOOTER

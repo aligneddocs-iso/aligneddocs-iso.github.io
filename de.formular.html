@@ -1,466 +1,277 @@
-/* ==================================================
-   AlignedDocs – Enterprise / Compliance Design
-   FINAL – STABLE – COPY & PASTE
-   ================================================== */
-
-/* ---------- Reset ---------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* ---------- Base ---------- */
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #0b1220;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ---------- Skip Link ---------- */
-.skip {
-  position: absolute;
-  left: -999px;
-  top: -999px;
-}
-
-.skip:focus {
-  left: 20px;
-  top: 20px;
-  background: #d6c27a;
-  color: #0b1220;
-  padding: 6px 10px;
-  border-radius: 6px;
-  z-index: 1000;
-}
-
-/* ==================================================
-   HEADER
-   ================================================== */
-
-.site-header {
-  background: #0e1729;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  gap: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  background: #101a2d;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brand-mark span {
-  width: 12px;
-  height: 12px;
-  background: #d6c27a;
-  border-radius: 4px;
-}
-
-.brand-text strong {
-  font-size: 14px;
-}
-
-.brand-text small {
-  font-size: 12px;
-  opacity: .85;
-}
-
-/* ---------- Navigation ---------- */
-
-.nav {
-  display: flex;
-  gap: 14px;
-}
-
-.nav a {
-  font-size: 13px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  opacity: .85;
-}
-
-.nav a:hover,
-.nav a.active {
-  background: rgba(214,194,122,.25);
-  opacity: 1;
-}
-
-/* ---------- Language Toggle (DE / EN) ---------- */
-
-.lang {
-  display: flex;
-  gap: 4px;
-  padding: 4px;
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 999px;
-}
-
-.lang a {
-  font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  opacity: .6;
-}
-
-.lang a.is-active {
-  background: #d6c27a;
-  color: #0b1220;
-  font-weight: 600;
-  opacity: 1;
-}
-
-/* ==================================================
-   MAIN / HERO
-   ================================================== */
-
-main {
-  padding: 60px 0;
-}
-
-.hero {
-  max-width: 760px;
-}
-
-.hero.small {
-  max-width: 900px;
-}
-
-.kicker {
-  display: inline-block;
-  font-size: 12px;
-  border: 1px solid rgba(214,194,122,.6);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin-bottom: 16px;
-}
-
-.kicker b {
-  color: #d6c27a;
-}
-
-h1 {
-  font-size: 36px;
-  line-height: 1.2;
-  margin-bottom: 14px;
-}
-
-.lead {
-  font-size: 17px;
-  opacity: .95;
-}
-
-/* ---------- Buttons ---------- */
-
-.actions {
-  margin-top: 24px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  font-size: 14px;
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.2);
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: #d6c27a;
-  color: #0b1220;
-  font-weight: 600;
-}
-
-.btn-ghost {
-  background: rgba(255,255,255,.08);
-}
-
-/* ==================================================
-   SECTIONS / GRID / CARDS
-   ================================================== */
-
-.section {
-  margin-top: 70px;
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 22px;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.card {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 16px;
-  padding: 22px;
-}
-
-.card h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-/* ==================================================
-   ACCORDION (INDEX)
-   ================================================== */
-
-.accordion {
-  max-width: 860px;
-}
-
-.accordion-item {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 14px;
-  margin-bottom: 14px;
-  cursor: pointer;
-}
-
-.accordion-header {
-  padding: 18px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion-question {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.accordion-icon {
-  font-size: 18px;
-  color: #d6c27a;
-}
-
-.accordion-content {
-  display: none;
-  padding: 0 20px 20px;
-  opacity: .95;
-}
-
-.accordion-item.is-open {
-  border-color: rgba(214,194,122,.6);
-}
-
-.accordion-item.is-open .accordion-question {
-  font-weight: 700;
-  color: #d6c27a;
-}
-
-/* ==================================================
-   FAQ PAGE – CARD STYLE
-   ================================================== */
-
-.faq-cards {
-  max-width: 900px;
-  display: grid;
-  gap: 16px;
-}
-
-.faq-card {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 14px;
-  padding: 22px 24px;
-  cursor: pointer;
-  transition: border-color .2s ease;
-}
-
-.faq-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.faq-card p {
-  opacity: .95;
-}
-
-.faq-card.is-active {
-  border-color: rgba(214,194,122,.6);
-}
-
-.faq-card.is-active h3 {
-  color: #d6c27a;
-}
-
-/* ==================================================
-   FORM
-   ================================================== */
-
-.form {
-  max-width: 900px;
-  margin-top: 50px;
-}
-
-.form-section {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 16px;
-  padding: 28px;
-  margin-bottom: 28px;
-}
-
-.form-section h2 {
-  font-size: 20px;
-  margin-bottom: 18px;
-}
-
-label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 14px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="email"],
-textarea {
-  width: 100%;
-  margin-top: 6px;
-  padding: 12px 14px;
-  background: #0e1729;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 8px;
-  color: #ffffff;
-}
-
-textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-/* ---------- Checkbox ---------- */
-
-.checkbox {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-/* ==================================================
-   TOGGLE (Ja / Nein – wie DE/EN)
-   ================================================== */
-
-.toggle {
-  display: inline-flex;
-  gap: 4px;
-  padding: 4px;
-  background: #0e1729;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 999px;
-  margin-bottom: 18px;
-}
-
-.toggle button {
-  font-size: 13px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  opacity: .6;
-  cursor: pointer;
-}
-
-.toggle button.is-active {
-  background: #d6c27a;
-  color: #0b1220;
-  font-weight: 600;
-  opacity: 1;
-}
-
-/* ==================================================
-   REVIEW – Anzeige wie Formular (kein Weiß)
-   ================================================== */
-
-.review-box {
-  background: #0e1729;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 8px;
-  padding: 12px 14px;
-  margin-top: 6px;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.6;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* ==================================================
-   FOOTER
-   ================================================== */
-
-.site-footer {
-  margin-top: 90px;
-  padding: 30px 0;
-  background: #0e1729;
-  border-top: 1px solid rgba(255,255,255,.12);
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* ==================================================
-   RESPONSIVE
-   ================================================== */
-
-@media (max-width: 900px) {
-  h1 {
-    font-size: 30px;
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .header-inner {
-    flex-wrap: wrap;
-  }
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Datenerfassung – ISO 9001:2015 | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Strukturierter ISO-9001-Fragebogen zur Erstellung eines auditnahen Qualitätsmanagementhandbuchs.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<a class="skip" href="#content">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automatisiertes Handbuch</small>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="de.index.html">Home</a>
+      <a href="de.produkt.html">Produkt</a>
+      <a href="de.faq.html">FAQ</a>
+      <a href="de.formular.html" class="active">Formular</a>
+      <a href="de.datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="container">
+
+<section class="hero small">
+  <h1>ISO-9001-Datenerfassung</h1>
+  <p class="lead">
+    Bitte beantworten Sie die folgenden Abschnitte möglichst realitätsnah.
+    Ihre Antworten werden unverändert verwendet, um eine normnahe,
+    auditfähige Dokumentation zu erstellen.
+  </p>
+</section>
+
+<form class="form" id="isoForm">
+
+<!-- ==================================================
+     KONTEXT DER ORGANISATION
+================================================== -->
+<div class="accordion-item">
+  <div class="accordion-header">
+    <span class="accordion-question">1. Kontext der Organisation</span>
+    <span class="accordion-icon">+</span>
+  </div>
+  <div class="accordion-content">
+
+    <label>
+      Welche internen und externen Themen beeinflussen aktuell Ihr Unternehmen
+      (z. B. Markt, Wettbewerb, rechtliche Rahmenbedingungen, interne Strukturen)?
+      <textarea name="context_internal_external"></textarea>
+    </label>
+
+    <label>
+      Welche interessierten Parteien sind für Ihr Unternehmen relevant
+      (z. B. Kunden, Lieferanten, Mitarbeitende, Behörden)?
+      <textarea name="context_stakeholders"></textarea>
+    </label>
+
+    <label>
+      Welche Erwartungen oder Anforderungen haben diese Parteien an Ihr Unternehmen?
+      <textarea name="context_expectations"></textarea>
+    </label>
+
+    <label>
+      Für welche Tätigkeiten, Produkte oder Dienstleistungen soll das QM-System gelten?
+      <textarea name="context_scope"></textarea>
+    </label>
+
+  </div>
+</div>
+
+<!-- ==================================================
+     FÜHRUNG
+================================================== -->
+<div class="accordion-item">
+  <div class="accordion-header">
+    <span class="accordion-question">2. Führung & Verantwortung</span>
+    <span class="accordion-icon">+</span>
+  </div>
+  <div class="accordion-content">
+
+    <label>
+      Wie übernimmt die Geschäftsleitung Verantwortung für Qualität
+      und Kundenzufriedenheit im Tagesgeschäft?
+      <textarea name="leadership_commitment"></textarea>
+    </label>
+
+    <label>
+      Gibt es eine formulierte Qualitätspolitik oder Leitlinien?
+      Falls ja, bitte beschreiben.
+      <textarea name="leadership_policy"></textarea>
+    </label>
+
+    <label>
+      Wie werden Verantwortlichkeiten und Befugnisse im Unternehmen geregelt?
+      <textarea name="leadership_roles"></textarea>
+    </label>
+
+  </div>
+</div>
+
+<!-- ==================================================
+     PLANUNG
+================================================== -->
+<div class="accordion-item">
+  <div class="accordion-header">
+    <span class="accordion-question">3. Planung & Risiken</span>
+    <span class="accordion-icon">+</span>
+  </div>
+  <div class="accordion-content">
+
+    <label>
+      Welche Risiken könnten die Qualität Ihrer Produkte oder Dienstleistungen beeinträchtigen?
+      <textarea name="planning_risks"></textarea>
+    </label>
+
+    <label>
+      Welche Chancen sehen Sie zur Verbesserung von Prozessen oder Kundenzufriedenheit?
+      <textarea name="planning_opportunities"></textarea>
+    </label>
+
+    <label>
+      Gibt es messbare Qualitätsziele?
+      Falls ja, welche?
+      <textarea name="planning_quality_goals"></textarea>
+    </label>
+
+  </div>
+</div>
+
+<!-- ==================================================
+     UNTERSTÜTZUNG
+================================================== -->
+<div class="accordion-item">
+  <div class="accordion-header">
+    <span class="accordion-question">4. Unterstützung & Ressourcen</span>
+    <span class="accordion-icon">+</span>
+  </div>
+  <div class="accordion-content">
+
+    <label>
+      Welche personellen und sachlichen Ressourcen stehen für die Umsetzung der Prozesse zur Verfügung?
+      <textarea name="support_resources"></textarea>
+    </label>
+
+    <label>
+      Wie wird sichergestellt, dass Mitarbeitende ausreichend qualifiziert sind?
+      <textarea name="support_competence"></textarea>
+    </label>
+
+    <label>
+      Wie werden relevante Informationen intern und extern kommuniziert?
+      <textarea name="support_communication"></textarea>
+    </label>
+
+    <label>
+      Wo und wie werden dokumentierte Informationen gespeichert und gepflegt?
+      <textarea name="support_documentation"></textarea>
+    </label>
+
+  </div>
+</div>
+
+<!-- ==================================================
+     BETRIEB
+================================================== -->
+<div class="accordion-item">
+  <div class="accordion-header">
+    <span class="accordion-question">5. Betrieb & Leistungserbringung</span>
+    <span class="accordion-icon">+</span>
+  </div>
+  <div class="accordion-content">
+
+    <label>
+      Beschreiben Sie Ihren typischen Auftrags- oder Leistungsablauf.
+      <textarea name="operation_process_flow"></textarea>
+    </label>
+
+    <label>
+      Welche externen Anbieter oder Dienstleister sind eingebunden?
+      <textarea name="operation_external_providers"></textarea>
+    </label>
+
+    <label>
+      Wie stellen Sie sicher, dass Kundenanforderungen eingehalten werden?
+      <textarea name="operation_customer_requirements"></textarea>
+    </label>
+
+  </div>
+</div>
+
+<!-- ==================================================
+     BEWERTUNG & VERBESSERUNG
+================================================== -->
+<div class="accordion-item">
+  <div class="accordion-header">
+    <span class="accordion-question">6. Bewertung & Verbesserung</span>
+    <span class="accordion-icon">+</span>
+  </div>
+  <div class="accordion-content">
+
+    <label>
+      Wie überwachen Sie die Wirksamkeit Ihrer Prozesse?
+      <textarea name="evaluation_monitoring"></textarea>
+    </label>
+
+    <label>
+      Wie gehen Sie mit Fehlern, Abweichungen oder Beschwerden um?
+      <textarea name="evaluation_nonconformities"></textarea>
+    </label>
+
+    <label>
+      Wie werden Verbesserungen identifiziert und umgesetzt?
+      <textarea name="improvement_actions"></textarea>
+    </label>
+
+  </div>
+</div>
+
+<!-- ==================================================
+     ABSCHLUSS
+================================================== -->
+<section class="form-section">
+
+  <label>
+    E-Mail-Adresse für Rückfragen & Zustellung
+    <input type="email" name="email" required>
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" required>
+    Ich bestätige, dass die Angaben nach bestem Wissen korrekt und vollständig sind.
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" required>
+    Die beschriebenen Prozesse entsprechen unserer tatsächlichen Arbeitsweise.
+  </label>
+
+  <button type="submit" class="btn btn-primary">
+    Datenerfassung abschließen
+  </button>
+
+</section>
+
+</form>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+  </div>
+</footer>
+
+<script>
+/* Accordion Toggle – bewusst simpel & stabil */
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
+    item.classList.toggle("is-open");
+  });
+});
+</script>
+
+</body>
+</html>

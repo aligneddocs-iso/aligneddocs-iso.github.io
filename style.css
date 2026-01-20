@@ -86,62 +86,8 @@ a {
   border-radius: 4px;
 }
 
-.brand-text strong {
-  font-size: 14px;
-}
-
-.brand-text small {
-  font-size: 12px;
-  opacity: .85;
-}
-
-/* ---------- Navigation ---------- */
-
-.nav {
-  display: flex;
-  gap: 14px;
-}
-
-.nav a {
-  font-size: 13px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  opacity: .85;
-}
-
-.nav a:hover,
-.nav a.active {
-  background: rgba(214,194,122,.25);
-  opacity: 1;
-}
-
-/* ---------- Language Toggle (DE / EN) ---------- */
-
-.lang {
-  display: flex;
-  gap: 4px;
-  padding: 4px;
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 999px;
-}
-
-.lang a {
-  font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  opacity: .6;
-}
-
-.lang a.is-active {
-  background: #d6c27a;
-  color: #0b1220;
-  font-weight: 600;
-  opacity: 1;
-}
-
 /* ==================================================
-   MAIN / HERO
+   HERO
    ================================================== */
 
 main {
@@ -149,181 +95,17 @@ main {
 }
 
 .hero {
-  max-width: 760px;
-}
-
-.hero.small {
   max-width: 900px;
-}
-
-.kicker {
-  display: inline-block;
-  font-size: 12px;
-  border: 1px solid rgba(214,194,122,.6);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin-bottom: 16px;
-}
-
-.kicker b {
-  color: #d6c27a;
 }
 
 h1 {
   font-size: 36px;
-  line-height: 1.2;
   margin-bottom: 14px;
 }
 
 .lead {
   font-size: 17px;
   opacity: .95;
-}
-
-/* ---------- Buttons ---------- */
-
-.actions {
-  margin-top: 24px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  font-size: 14px;
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.2);
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: #d6c27a;
-  color: #0b1220;
-  font-weight: 600;
-}
-
-.btn-ghost {
-  background: rgba(255,255,255,.08);
-}
-
-/* ==================================================
-   SECTIONS / GRID / CARDS
-   ================================================== */
-
-.section {
-  margin-top: 70px;
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 22px;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.card {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 16px;
-  padding: 22px;
-}
-
-.card h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-/* ==================================================
-   ACCORDION (INDEX)
-   ================================================== */
-
-.accordion {
-  max-width: 860px;
-}
-
-.accordion-item {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 14px;
-  margin-bottom: 14px;
-  cursor: pointer;
-}
-
-.accordion-header {
-  padding: 18px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion-question {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.accordion-icon {
-  font-size: 18px;
-  color: #d6c27a;
-}
-
-.accordion-content {
-  display: none;
-  padding: 0 20px 20px;
-  opacity: .95;
-}
-
-.accordion-item.is-open {
-  border-color: rgba(214,194,122,.6);
-}
-
-.accordion-item.is-open .accordion-question {
-  font-weight: 700;
-  color: #d6c27a;
-}
-
-/* ==================================================
-   FAQ PAGE – CARD STYLE
-   ================================================== */
-
-.faq-cards {
-  max-width: 900px;
-  display: grid;
-  gap: 16px;
-}
-
-.faq-card {
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 14px;
-  padding: 22px 24px;
-  cursor: pointer;
-  transition: border-color .2s ease;
-}
-
-.faq-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.faq-card p {
-  opacity: .95;
-}
-
-.faq-card.is-active {
-  border-color: rgba(214,194,122,.6);
-}
-
-.faq-card.is-active h3 {
-  color: #d6c27a;
 }
 
 /* ==================================================
@@ -343,20 +125,13 @@ h1 {
   margin-bottom: 28px;
 }
 
-.form-section h2 {
-  font-size: 20px;
-  margin-bottom: 18px;
-}
-
 label {
   display: block;
   font-size: 14px;
   margin-bottom: 14px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
+input,
 textarea {
   width: 100%;
   margin-top: 6px;
@@ -369,64 +144,61 @@ textarea {
 
 textarea {
   min-height: 110px;
-  resize: vertical;
-}
-
-/* ---------- Checkbox ---------- */
-
-.checkbox {
-  display: flex;
-  gap: 10px;
-  align-items: center;
 }
 
 /* ==================================================
-   TOGGLE (Ja / Nein – wie DE/EN)
+   ACCORDION – FORM (NEU, MINIMAL)
    ================================================== */
 
-.toggle {
-  display: inline-flex;
-  gap: 4px;
-  padding: 4px;
-  background: #0e1729;
+.accordion-item {
+  background: #101a2d;
   border: 1px solid rgba(255,255,255,.15);
-  border-radius: 999px;
+  border-radius: 16px;
   margin-bottom: 18px;
 }
 
-.toggle button {
-  font-size: 13px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  opacity: .6;
+.accordion-header {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
 }
 
-.toggle button.is-active {
-  background: #d6c27a;
-  color: #0b1220;
+.accordion-question {
   font-weight: 600;
-  opacity: 1;
+}
+
+.accordion-icon {
+  color: #d6c27a;
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 24px 24px;
+}
+
+.accordion-item.is-open .accordion-content {
+  display: block;
+}
+
+.accordion-item.is-open .accordion-header {
+  background: rgba(214,194,122,.15);
 }
 
 /* ==================================================
-   REVIEW – Anzeige wie Formular (kein Weiß)
+   BUTTONS
    ================================================== */
 
-.review-box {
-  background: #0e1729;
-  border: 1px solid rgba(255,255,255,.2);
+.btn {
+  padding: 12px 18px;
   border-radius: 8px;
-  padding: 12px 14px;
-  margin-top: 6px;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.6;
-  user-select: none;
-  -webkit-user-select: none;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.btn-primary {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
 }
 
 /* ==================================================
@@ -438,29 +210,4 @@ textarea {
   padding: 30px 0;
   background: #0e1729;
   border-top: 1px solid rgba(255,255,255,.12);
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* ==================================================
-   RESPONSIVE
-   ================================================== */
-
-@media (max-width: 900px) {
-  h1 {
-    font-size: 30px;
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .header-inner {
-    flex-wrap: wrap;
-  }
 }

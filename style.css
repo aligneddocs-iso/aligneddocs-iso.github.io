@@ -26,8 +26,7 @@ a {
 }
 
 /* ==================================================
-   SKIP LINK – VOLLSTÄNDIG DEAKTIVIERT
-   (verhindert "Zum Inhalt springen" Anzeige)
+   SKIP LINK – DEAKTIVIERT
    ================================================== */
 
 .skip {
@@ -40,21 +39,33 @@ a {
 }
 
 /* ==================================================
-   HEADER / NAV
+   HEADER / NAV – STICKY & GLOBAL
    ================================================== */
 
 .site-header {
-  background: #0e1729;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: linear-gradient(
+    180deg,
+    #0e1729 0%,
+    #0b1220 100%
+  );
+
   border-bottom: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(6px);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  height: 68px;
   gap: 20px;
 }
+
+/* Brand */
 
 .brand {
   display: flex;
@@ -79,6 +90,17 @@ a {
   border-radius: 4px;
 }
 
+.brand-text strong {
+  font-size: 14px;
+}
+
+.brand-text small {
+  font-size: 12px;
+  opacity: .85;
+}
+
+/* Navigation */
+
 .nav {
   display: flex;
   gap: 14px;
@@ -86,16 +108,19 @@ a {
 
 .nav a {
   font-size: 13px;
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
   opacity: .85;
+  transition: background .15s ease, opacity .15s ease;
 }
 
 .nav a.active,
 .nav a:hover {
-  background: rgba(214,194,122,.25);
+  background: rgba(214,194,122,.22);
   opacity: 1;
 }
+
+/* Language Switch */
 
 .lang {
   display: flex;
@@ -121,7 +146,7 @@ a {
 }
 
 /* ==================================================
-   TYPO / SECTIONS (Index, Produkt, FAQ)
+   MAIN / TYPO (Index, Produkt, FAQ)
    ================================================== */
 
 main {
@@ -197,7 +222,7 @@ h1 {
 }
 
 /* ==================================================
-   🔒 FORMULAR – ISOLIERT & STABIL
+   🔒 FORMULAR – ISOLIERT & UNVERÄNDERT
    ================================================== */
 
 .form-iso {
@@ -205,7 +230,6 @@ h1 {
   margin-top: 50px;
 }
 
-/* Accordion */
 .form-iso details {
   margin-bottom: 18px;
   background: #101a2d;
@@ -232,11 +256,6 @@ h1 {
   border-top: 1px solid rgba(255,255,255,.12);
 }
 
-/* Inputs */
-.form-iso label {
-  font-size: 14px;
-}
-
 .form-iso input,
 .form-iso textarea {
   width: 100%;
@@ -253,9 +272,7 @@ h1 {
   resize: vertical;
 }
 
-/* ==================================================
-   CHECKBOX – FINAL, STABIL
-   ================================================== */
+/* Checkbox */
 
 .form-iso .form-section {
   background: #101a2d;
@@ -271,15 +288,6 @@ h1 {
   gap: 14px;
   margin-bottom: 16px;
   font-size: 14px;
-  line-height: 1.5;
-}
-
-.form-iso .checkbox input[type="checkbox"] {
-  margin: 0;
-  margin-top: 3px;
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
 }
 
 /* ==================================================

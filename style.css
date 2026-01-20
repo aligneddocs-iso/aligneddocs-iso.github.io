@@ -107,7 +107,7 @@ a {
 }
 
 /* ==================================================
-   TYPO / SECTIONS (für Index, Produkt, FAQ)
+   TYPO / SECTIONS (Index, Produkt, FAQ)
    ================================================== */
 
 main {
@@ -220,7 +220,7 @@ h1 {
   border-top: 1px solid rgba(255,255,255,.12);
 }
 
-/* Felder – NUR im Formular */
+/* Felder */
 .form-iso label {
   display: block;
   font-size: 14px;
@@ -250,6 +250,24 @@ h1 {
   border-radius: 16px;
   padding: 28px;
   margin-top: 40px;
+}
+
+/* ==================================================
+   ✅ CHECKBOX FIX – ENTERPRISE STABIL
+   ================================================== */
+
+.form-iso .checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-iso .checkbox input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 /* ==================================================

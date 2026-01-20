@@ -1,5 +1,32 @@
 /* ==================================================
-   HEADER – FIXED GLOBAL ENTERPRISE
+   BASE – GLOBAL
+   ================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b1220;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==================================================
+   HEADER / NAV – FIXED GLOBAL (ENTERPRISE)
    ================================================== */
 
 .site-header {
@@ -20,27 +47,253 @@
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
-/* Header Inhalt */
 .header-inner {
   height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
   gap: 20px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  background: #101a2d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark span {
+  width: 12px;
+  height: 12px;
+  background: #d6c27a;
+  border-radius: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+}
+
+.nav a {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: .85;
+}
+
+.nav a.active,
+.nav a:hover {
+  background: rgba(214,194,122,.25);
+  opacity: 1;
+}
+
+.lang {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+}
+
+.lang a {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  opacity: .6;
+}
+
+.lang a.is-active {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+  opacity: 1;
+}
+
 /* ==================================================
-   CONTENT OFFSET (EXTREM WICHTIG)
+   CONTENT OFFSET (WICHTIG!)
    ================================================== */
 
 main {
-  padding-top: 68px;   /* exakt Header-Höhe */
+  padding-top: 68px;
   padding-bottom: 60px;
 }
 
-/* Optional: auf kleinen Screens etwas mehr Luft */
-@media (max-width: 768px) {
-  main {
-    padding-top: 76px;
-  }
+/* ==================================================
+   TYPO / SECTIONS (Index, Produkt, FAQ)
+   ================================================== */
+
+.hero {
+  max-width: 760px;
+}
+
+.hero.small {
+  max-width: 900px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 17px;
+  opacity: .95;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.grid {
+  display: grid;
+  gap: 28px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 26px;
+}
+
+/* ==================================================
+   BUTTONS
+   ================================================== */
+
+.actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.2);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #d6c27a;
+  color: #0b1220;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  background: rgba(255,255,255,.08);
+}
+
+/* ==================================================
+   🔒 FORMULAR – ISOLIERT & STABIL
+   ================================================== */
+
+.form-iso {
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+/* Accordion */
+.form-iso details {
+  margin-bottom: 18px;
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.form-iso summary {
+  padding: 18px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.form-iso details[open] summary {
+  background: rgba(214,194,122,.18);
+  color: #d6c27a;
+}
+
+.form-iso details > div {
+  padding: 22px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+/* Inputs */
+.form-iso label {
+  font-size: 14px;
+}
+
+.form-iso input,
+.form-iso textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.form-iso textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ==================================================
+   ✅ CHECKBOX – FINAL FIX
+   ================================================== */
+
+.form-iso .form-section {
+  background: #101a2d;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 40px;
+}
+
+.form-iso .checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-iso .checkbox input[type="checkbox"] {
+  margin: 0;
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.site-footer {
+  margin-top: 90px;
+  padding: 30px 0;
+  background: #0e1729;
+  border-top: 1px solid rgba(255,255,255,.12);
 }

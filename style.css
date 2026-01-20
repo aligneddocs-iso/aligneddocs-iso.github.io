@@ -1,6 +1,6 @@
 /* ==================================================
    AlignedDocs – Enterprise / Compliance Design
-   STABLE BASELINE + ISO FORM SCOPED
+   STABLE BASELINE + ISO FORM SAFE PATCH
    ================================================== */
 
 /* ---------- Reset ---------- */
@@ -195,7 +195,7 @@ h1 {
 }
 
 /* ==================================================
-   FORM – GENERIC (alle normalen Formulare)
+   FORM – GENERIC (andere Seiten!)
    ================================================== */
 
 .form {
@@ -236,14 +236,18 @@ textarea {
 }
 
 /* ==================================================
-   ISO 9001 FORM – STRICTLY SCOPED
+   ISO 9001 FORM – ISOLIERT & SICHER
    ================================================== */
 
 .form-iso details {
-  margin-bottom: 16px;
-  background: #101a2d;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(16,26,45,0.96),
+    rgba(14,23,41,0.96)
+  );
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px;
+  margin-bottom: 18px;
   overflow: hidden;
 }
 
@@ -254,8 +258,8 @@ textarea {
   cursor: pointer;
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .form-iso summary::-webkit-details-marker {
@@ -263,21 +267,48 @@ textarea {
 }
 
 .form-iso details[open] summary {
-  background: rgba(214,194,122,.18);
+  background: linear-gradient(
+    90deg,
+    rgba(214,194,122,0.25),
+    rgba(214,194,122,0.08)
+  );
   color: #d6c27a;
 }
 
 .form-iso details > div {
   padding: 22px;
-  border-top: 1px solid rgba(255,255,255,.12);
+  border-top: 1px solid rgba(255,255,255,0.12);
 }
 
-.form-iso textarea {
+.form-iso textarea,
+.form-iso input[type="email"] {
   margin-top: 8px;
+  background: #0e1729;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+/* ---------- ISO Bestätigung ---------- */
+
+.form-iso .form-section {
+  background: linear-gradient(
+    180deg,
+    rgba(16,26,45,0.96),
+    rgba(14,23,41,0.96)
+  );
+  border: 1px solid rgba(214,194,122,0.35);
+  border-radius: 18px;
+}
+
+.form-iso .checkbox {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
 }
 
 /* ==================================================
-   REVIEW BOX
+   REVIEW
    ================================================== */
 
 .review-box {

@@ -85,7 +85,7 @@ const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
 const summary = document.getElementById("summary");
 
 /* ================================
-   LABELS (erweitert nach ISO Logik)
+   LABELS
 ================================ */
 const labels = {
   company_name: "Unternehmensname",
@@ -93,7 +93,6 @@ const labels = {
   employees: "Anzahl der Mitarbeitenden",
   region: "Land / Region",
 
-  /* NEU – Organisation / Rollen */
   quality_responsible: "Verantwortlich für Qualität / QM",
   company_structure: "Organisationsstruktur / Rollenverteilung",
 
@@ -101,7 +100,6 @@ const labels = {
   quality_goals: "Qualitätsziele vorhanden",
   quality_goals_description: "Beschreibung der Qualitätsziele",
 
-  /* NEU – Messbarkeit Ziele */
   quality_goals_measurement: "Messung der Qualitätsziele",
 
   scope_included: "Geltungsbereich (Scope)",
@@ -112,14 +110,12 @@ const labels = {
   critical_steps: "Kritische Prozessschritte",
   external_partners: "Externe Dienstleister / Lieferanten",
 
-  /* NEU – Risiko / Chancen */
   risks: "Typische Risiken im Prozess",
   opportunities: "Chancen / Verbesserungsmöglichkeiten",
 
   existing_docs: "Vorhandene Dokumentation",
   doc_storage: "Dokumentenablage",
 
-  /* NEU – Kundenfokus */
   customer_requirements: "Ermittlung von Kundenanforderungen",
   customer_satisfaction: "Messung der Kundenzufriedenheit",
 
@@ -147,9 +143,9 @@ Object.entries(data).forEach(([key, value]) => {
 });
 
 /* ================================
-   CONFIRM CHECK
+   SEND TO N8N
 ================================ */
-document.getElementById("confirmBtn").addEventListener("click", () => {
+document.getElementById("confirmBtn").addEventListener("click", async () => {
   const ok = document.getElementById("confirmEmail").checked;
   const err = document.getElementById("confirmError");
 
@@ -160,10 +156,20 @@ document.getElementById("confirmBtn").addEventListener("click", () => {
 
   err.style.display = "none";
 
-  alert("Vielen Dank. Ihre Angaben wurden bestätigt. Die nächsten Schritte erhalten Sie per E-Mail.");
+  try {
+    await fetch("https://aligneddocs.app.n8n.cloud/webhook-test/ISO9001:2015-Fomular", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-  // NÄCHSTER SCHRITT:
-  // fetch("N8N_WEBHOOK_URL", { method: "POST", body: JSON.stringify(data) });
+    alert("Vielen Dank. Ihre Angaben wurden erfolgreich übermittelt.");
+
+  } catch (e) {
+    alert("Fehler bei der Übertragung. Bitte erneut versuchen.");
+  }
 });
 </script>
 

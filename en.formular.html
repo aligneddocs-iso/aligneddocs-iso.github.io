@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>ISO 9001 Data Collection | AlignedDocs</title>
+  <meta charset="UTF-8">
+  <title>ISO 9001:2015 – Data Collection | AlignedDocs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
+  <meta name="description" content="ISO 9001 data collection for audit-ready documentation.">
   <link rel="stylesheet" href="style.css">
-  <script defer>
-    let step = 1;
-    const data = {};
-
-    function showStep(n) {
-      document.querySelectorAll(".step").forEach(s => s.style.display = "none");
-      document.getElementById("step" + n).style.display = "block";
-      step = n;
-    }
-
-    function nextStep() {
-      saveStep();
-      showStep(step + 1);
-      if (step === 4) fillSummary();
-    }
-
-    function prevStep() {
-      showStep(step - 1);
-    }
-
-    function saveStep() {
-      document.querySelectorAll(`#step${step} input, #step${step} textarea`)
-        .forEach(el => data[el.name] = el.value);
-    }
-
-    function fillSummary() {
-      for (const key in data) {
-        const el = document.getElementById("sum_" + key);
-        if (el) el.textContent = data[key] || "–";
-      }
-    }
-
-    function finish() {
-      alert("Data collection completed.\nYour information has been saved.");
-    }
-
-    window.onload = () => showStep(1);
-  </script>
 </head>
 
 <body>
+<a class="skip" href="#content">Skip to content</a>
+
 <header class="site-header">
   <div class="container header-inner">
-    <strong>AlignedDocs</strong>
+
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automated manual</small>
+      </div>
+    </div>
+
     <nav class="nav">
       <a href="en.index.html">Home</a>
       <a href="en.product.html">Product</a>
@@ -57,77 +29,276 @@
       <a href="en.formular.html" class="active">Form</a>
       <a href="en.privacy_policy.html">Privacy</a>
     </nav>
+
+    <div class="lang">
+      <a href="de.formular.html">DE</a>
+      <a href="en.formular.html" class="is-active">EN</a>
+    </div>
+
   </div>
 </header>
 
-<main class="container">
+<main id="content" class="container">
 
-<h1>ISO 9001 – Data Collection</h1>
-<p>Please answer the following questions step by step.</p>
+  <section class="hero small">
+    <h1>ISO 9001 Data Collection</h1>
+    <p class="lead">
+      Please answer the following sections as realistically as possible.
+      Your inputs will be used <strong>unchanged</strong> to generate audit-ready ISO 9001 documentation.
+    </p>
+  </section>
 
-<section id="step1" class="step card">
-  <h2>Step 1: Company</h2>
-  <label>Company name</label>
-  <input name="company" type="text">
+  <form class="form form-iso" id="isoForm" novalidate>
 
-  <label>Number of employees</label>
-  <input name="employees" type="number">
+    <!-- 1. COMPANY -->
+    <details open>
+      <summary>1. Company Information</summary>
+      <div>
 
-  <label>Industry</label>
-  <input name="industry" type="text">
+        <label>
+          Company name
+          <textarea name="company_name"></textarea>
+        </label>
 
-  <button class="btn btn-primary" onclick="nextStep()">Next</button>
-</section>
+        <label>
+          Legal form
+          <textarea name="legal_form"></textarea>
+        </label>
 
-<section id="step2" class="step card">
-  <h2>Step 2: Scope</h2>
-  <label>What does your quality management system cover?</label>
-  <textarea name="scope" rows="4"></textarea>
+        <label>
+          Company address
+          <textarea name="company_address"></textarea>
+        </label>
 
-  <button class="btn" onclick="prevStep()">Back</button>
-  <button class="btn btn-primary" onclick="nextStep()">Next</button>
-</section>
+        <label>
+          Industry / business activity
+          <textarea name="industry"></textarea>
+        </label>
 
-<section id="step3" class="step card">
-  <h2>Step 3: Processes</h2>
-  <label>Core business processes</label>
-  <textarea name="processes" rows="4"></textarea>
+        <label>
+          Number of employees
+          <textarea name="employees"></textarea>
+        </label>
 
-  <label>Person responsible for QMS</label>
-  <input name="qm_owner" type="text">
+        <label>
+          Scope of the quality management system (short description)
+          <textarea name="scope"></textarea>
+        </label>
 
-  <button class="btn" onclick="prevStep()">Back</button>
-  <button class="btn btn-primary" onclick="nextStep()">Next</button>
-</section>
+      </div>
+    </details>
 
-<section id="step4" class="step card">
-  <h2>Summary & Confirmation</h2>
+    <!-- 2. CONTEXT -->
+    <details>
+      <summary>2. Context of the Organization</summary>
+      <div>
 
-  <p><b>Company:</b> <span id="sum_company"></span></p>
-  <p><b>Employees:</b> <span id="sum_employees"></span></p>
-  <p><b>Industry:</b> <span id="sum_industry"></span></p>
-  <p><b>Scope:</b> <span id="sum_scope"></span></p>
-  <p><b>Processes:</b> <span id="sum_processes"></span></p>
-  <p><b>QMS responsibility:</b> <span id="sum_qm_owner"></span></p>
+        <label>
+          Which internal and external issues influence your company?
+          <textarea name="context_topics"></textarea>
+        </label>
 
-  <label>
-    <input type="checkbox">
-    I confirm that the information provided is accurate.
-  </label><br>
-  <label>
-    <input type="checkbox">
-    I understand that the described processes must be implemented in practice.
-  </label>
+        <label>
+          Which interested parties are relevant and why?
+          <textarea name="interested_parties"></textarea>
+        </label>
 
-  <br><br>
-  <button class="btn" onclick="prevStep()">Back</button>
-  <button class="btn btn-primary" onclick="finish()">Complete data collection</button>
-</section>
+      </div>
+    </details>
+
+    <!-- 3. LEADERSHIP -->
+    <details>
+      <summary>3. Leadership</summary>
+      <div>
+
+        <label>
+          Who is responsible for the quality management system?
+          <textarea name="quality_responsible"></textarea>
+        </label>
+
+        <label>
+          How are quality policy and objectives communicated internally?
+          <textarea name="quality_policy"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 4. PLANNING -->
+    <details>
+      <summary>4. Planning</summary>
+      <div>
+
+        <label>
+          What typical risks exist in your processes?
+          <textarea name="risks"></textarea>
+        </label>
+
+        <label>
+          What opportunities or improvement potentials do you see?
+          <textarea name="opportunities"></textarea>
+        </label>
+
+        <label>
+          How do you typically handle such situations in practice?
+          <textarea name="planning_actions"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 5. SUPPORT -->
+    <details>
+      <summary>5. Support</summary>
+      <div>
+
+        <label>
+          What resources (personnel, infrastructure, organization) are available?
+          <textarea name="resources"></textarea>
+        </label>
+
+        <label>
+          How is knowledge maintained and shared within the company?
+          <textarea name="knowledge_management"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 6. OPERATION -->
+    <details>
+      <summary>6. Operation</summary>
+      <div>
+
+        <label>
+          Describe your core processes
+          <textarea name="operational_processes"></textarea>
+        </label>
+
+        <label>
+          Which process steps are particularly critical or error-prone?
+          <textarea name="critical_steps"></textarea>
+        </label>
+
+        <label>
+          Are there outsourced processes or external providers?
+          <textarea name="external_providers"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 7. PERFORMANCE -->
+    <details>
+      <summary>7. Performance Evaluation</summary>
+      <div>
+
+        <label>
+          How do you measure customer satisfaction?
+          <textarea name="customer_satisfaction"></textarea>
+        </label>
+
+        <label>
+          How are processes monitored and evaluated?
+          <textarea name="performance_evaluation"></textarea>
+        </label>
+
+        <label>
+          How are nonconformities identified and documented?
+          <textarea name="nonconformities"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 8. IMPROVEMENT -->
+    <details>
+      <summary>8. Improvement</summary>
+      <div>
+
+        <label>
+          How are corrective actions implemented and reviewed?
+          <textarea name="improvement_actions"></textarea>
+        </label>
+
+        <label>
+          How is continuous improvement practiced in daily operations?
+          <textarea name="continuous_improvement"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- 9. CONTACT -->
+    <details>
+      <summary>9. Contact & Delivery</summary>
+      <div>
+
+        <label>
+          Email address for delivery
+          <textarea name="email"></textarea>
+        </label>
+
+      </div>
+    </details>
+
+    <!-- CONFIRM -->
+    <section class="form-section">
+
+      <label class="checkbox">
+        <input type="checkbox" id="confirm1">
+        I confirm that the information provided is complete and accurate.
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="confirm2">
+        The described processes reflect the actual operations of our company.
+      </label>
+
+      <p id="confirmError" style="display:none; color:#ff6b6b; margin-top:12px; font-size:14px;">
+        Please confirm both statements to continue.
+      </p>
+
+      <button type="submit" class="btn btn-primary">
+        Review & continue
+      </button>
+
+    </section>
+
+  </form>
 
 </main>
 
 <footer class="site-footer">
-  <small>© 2026 AlignedDocs</small>
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+  </div>
 </footer>
+
+<script>
+document.getElementById("isoForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const c1 = document.getElementById("confirm1").checked;
+  const c2 = document.getElementById("confirm2").checked;
+  const err = document.getElementById("confirmError");
+
+  if (!c1 || !c2) {
+    err.style.display = "block";
+    return;
+  }
+
+  err.style.display = "none";
+
+  const data = {};
+  this.querySelectorAll("textarea").forEach(t => {
+    data[t.name] = t.value.trim();
+  });
+
+  sessionStorage.setItem("isoFormData", JSON.stringify(data));
+  window.location.href = "formular-review.html";
+});
+</script>
+
 </body>
 </html>

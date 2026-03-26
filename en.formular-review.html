@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script>
+    (function () {
+      const raw = sessionStorage.getItem("isoFormData");
+      if (!raw || raw === "{}") {
+        window.location.replace("en.formular.html");
+      }
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <title>Summary – ISO 9001 | AlignedDocs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Review your ISO 9001 data before submission.">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .review-section {
+      margin-bottom: 40px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .review-section h3 {
+      margin-bottom: 16px;
+      color: #d6c27a;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .review-item {
+      margin-bottom: 14px;
+    }
+
+    .review-item label {
+      display: block;
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+
+    .review-box {
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <strong>AlignedDocs</strong><br>
+        <small>ISO 9001:2015 – automated manual</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="content" class="container">
+
+  <section class="hero small">
+    <h1>Review Your Information</h1>
+    <p class="lead">
+      Please review your entries carefully.
+      These inputs will be used to generate your ISO 9001 documentation.
+    </p>
+  </section>
+
+  <section id="summary"></section>
+
+  <section class="form-section">
+
+    <label class="checkbox">
+      <input type="checkbox" id="confirmEmail">
+      I confirm that the provided email address is correct and I will receive the documentation via email.
+    </label>
+
+    <p id="confirmError" style="display:none; color:#ff6b6b; margin-top:12px; font-size:14px;">
+      Please confirm before continuing.
+    </p>
+
+    <div class="actions">
+      <a href="en.formular.html" class="btn btn-ghost">Back & edit</a>
+      <button class="btn btn-primary" id="confirmBtn">
+        Confirm & submit
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© 2026 AlignedDocs</small>
+  </div>
+</footer>
+
+<script>
+const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
+const summary = document.getElementById("summary");
+
+const sections = [
+  {
+    title: "1. Company",
+    fields: ["company_name","legal_form","company_address","industry","employees","scope"]
+  },
+  {
+    title: "2. Context",
+    fields: ["context_topics","interested_parties"]
+  },
+  {
+    title: "3. Leadership",
+    fields: ["quality_responsible","quality_policy"]
+  },
+  {
+    title: "4. Planning",
+    fields: ["risks","opportunities","planning_actions"]
+  },
+  {
+    title: "5. Support",
+    fields: ["resources","knowledge_management"]
+  },
+  {
+    title: "6. Operation",
+    fields: ["operational_processes","critical_steps","external_providers"]
+  },
+  {
+    title: "7. Performance",
+    fields: ["customer_satisfaction","performance_evaluation","nonconformities"]
+  },
+  {
+    title: "8. Improvement",
+    fields: ["improvement_actions","continuous_improvement"]
+  },
+  {
+    title: "9. Contact",
+    fields: ["email"]
+  }
+];
+
+const labels = {
+  company_name: "Company name",
+  legal_form: "Legal form",
+  company_address: "Address",
+  industry: "Business activity",
+  employees: "Employees",
+  scope: "Scope",
+
+  context_topics: "Business context",
+  interested_parties: "Stakeholders",
+
+  quality_responsible: "Responsible person",
+  quality_policy: "Quality communication",
+
+  risks: "Risks",
+  opportunities: "Opportunities",
+  planning_actions: "Handling",
+
+  resources: "Resources",
+  knowledge_management: "Knowledge management",
+
+  operational_processes: "Core processes",
+  critical_steps: "Critical steps",
+  external_providers: "External providers",
+
+  customer_satisfaction: "Customer satisfaction",
+  performance_evaluation: "Process monitoring",
+  nonconformities: "Nonconformities",
+
+  improvement_actions: "Corrective actions",
+  continuous_improvement: "Continuous improvement",
+
+  email: "Email"
+};
+
+sections.forEach(section => {
+  const wrapper = document.createElement("div");
+  wrapper.className = "review-section";
+
+  wrapper.innerHTML = `<h3>${section.title}</h3>`;
+
+  section.fields.forEach(key => {
+    if (!data[key]) return;
+
+    const item = document.createElement("div");
+    item.className = "review-item";
+
+    item.innerHTML = `
+      <label>${labels[key] || key}</label>
+      <div class="review-box">${data[key]}</div>
+    `;
+
+    wrapper.appendChild(item);
+  });
+
+  summary.appendChild(wrapper);
+});
+
+/* SEND */
+document.getElementById("confirmBtn").addEventListener("click", async () => {
+  const ok = document.getElementById("confirmEmail").checked;
+  const err = document.getElementById("confirmError");
+
+  if (!ok) {
+    err.style.display = "block";
+    return;
+  }
+
+  err.style.display = "none";
+
+  try {
+    await fetch("https://aligneddocs.app.n8n.cloud/webhook-test/ISO9001:2015-Fomular", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    alert("Submission successful.");
+
+  } catch {
+    alert("Error sending data.");
+  }
+});
+</script>
+
+</body>
+</html>

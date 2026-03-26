@@ -85,7 +85,7 @@ const data = JSON.parse(sessionStorage.getItem("isoFormData") || "{}");
 const summary = document.getElementById("summary");
 
 /* ================================
-   LABELS (sauber & professionell)
+   LABELS (erweitert nach ISO Logik)
 ================================ */
 const labels = {
   company_name: "Unternehmensname",
@@ -93,9 +93,16 @@ const labels = {
   employees: "Anzahl der Mitarbeitenden",
   region: "Land / Region",
 
+  /* NEU – Organisation / Rollen */
+  quality_responsible: "Verantwortlich für Qualität / QM",
+  company_structure: "Organisationsstruktur / Rollenverteilung",
+
   quality_understanding: "Qualitätsverständnis",
   quality_goals: "Qualitätsziele vorhanden",
   quality_goals_description: "Beschreibung der Qualitätsziele",
+
+  /* NEU – Messbarkeit Ziele */
+  quality_goals_measurement: "Messung der Qualitätsziele",
 
   scope_included: "Geltungsbereich (Scope)",
   scope_exclusions: "Ausgeschlossene Tätigkeiten",
@@ -105,8 +112,16 @@ const labels = {
   critical_steps: "Kritische Prozessschritte",
   external_partners: "Externe Dienstleister / Lieferanten",
 
+  /* NEU – Risiko / Chancen */
+  risks: "Typische Risiken im Prozess",
+  opportunities: "Chancen / Verbesserungsmöglichkeiten",
+
   existing_docs: "Vorhandene Dokumentation",
   doc_storage: "Dokumentenablage",
+
+  /* NEU – Kundenfokus */
+  customer_requirements: "Ermittlung von Kundenanforderungen",
+  customer_satisfaction: "Messung der Kundenzufriedenheit",
 
   monitoring: "Prozessüberwachung",
   complaints: "Umgang mit Fehlern / Beschwerden",
@@ -115,7 +130,7 @@ const labels = {
 };
 
 /* ================================
-   RENDER SUMMARY (E-Mail sichtbar)
+   RENDER SUMMARY
 ================================ */
 Object.entries(data).forEach(([key, value]) => {
   if (!value) return;

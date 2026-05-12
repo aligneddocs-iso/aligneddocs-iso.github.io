@@ -1,1 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080A0F">
 
+<title>AlignedDocs — ISO 9001:2015 Quality Manual for Small Businesses</title>
+<meta name="description" content="Get a tailored ISO 9001:2015 quality manual for your small business. Print-ready PDF, standard-compliant, prepared for Stage 1 audit review. Built for SMEs across Europe.">
+<meta name="keywords" content="ISO 9001 quality manual, ISO 9001:2015 documentation, ISO 9001 manual SME, quality manual template, ISO 9001 small business, ISO 9001 Stage 1 audit, Qualitätshandbuch ISO 9001, ISO 9001 Handbuch erstellen">
+<meta name="author" content="AlignedDocs">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://aligneddocs.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:title" content="AlignedDocs — ISO 9001:2015 Quality Manual for Small Businesses">
+<meta property="og:description" content="A tailored ISO 9001:2015 quality manual for small businesses. Print-ready PDF, audit-ready foundation, prepared for Stage 1 review.">
+<meta property="og:url" content="https://aligneddocs.com/">
+<meta property="og:site_name" content="AlignedDocs">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AlignedDocs — ISO 9001:2015 Quality Manual">
+<meta name="twitter:description" content="Tailored ISO 9001:2015 documentation for small businesses across Europe.">
+
+<!-- Structured Data: Product -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "AlignedDocs ISO 9001:2015 Quality Manual",
+  "description": "A tailored, standard-compliant ISO 9001:2015 quality manual delivered as print-ready PDF for small and medium-sized businesses.",
+  "brand": { "@type": "Brand", "name": "AlignedDocs" },
+  "category": "Business / Quality Management Documentation",
+  "offers": {
+    "@type": "Offer",
+    "price": "149.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://aligneddocs.com/"
+  }
+}
+</script>
+
+<!-- Structured Data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the manual compliant with ISO 9001:2015?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The structure follows ISO 9001:2015. It is a standard-compliant documentation foundation prepared for Stage 1 review — not a certification itself." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I become certified with this manual?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. AlignedDocs provides the documentation foundation. Certification requires an accredited auditor and certification body." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is AlignedDocs designed for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Small and medium-sized businesses across Europe with 1–20 employees who need structured ISO 9001 documentation as a foundation." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:#080A0F;--black-2:#0D1017;--black-3:#131820;--black-4:#1A2232;
+  --slate:#242E40;--slate-l:#2E3B52;
+  --gold:#C9A84C;--gold-l:#E2C46E;--gold-dim:rgba(201,168,76,0.12);--gold-b:rgba(201,168,76,0.22);
+  --plat:#E8EDF5;--silv:#8FA0B8;--silv-d:rgba(143,160,184,0.4);--white:#F4F7FC;
+  --th:#F4F7FC;--tb:#A8BACE;--tm:#5A6B80;
+  --bdr:rgba(143,160,184,0.11);--bdr-g:rgba(201,168,76,0.18);
+  --glow:rgba(201,168,76,0.07);
+  --r8:8px;--r14:14px;--r22:22px;
+  --ease:cubic-bezier(0.4,0,0.2,1);--t:0.28s;
+}
+
+/* LIGHT MODE */
+[data-theme="light"]{
+  --black:#F8F6F1;--black-2:#F2EFE8;--black-3:#E8E4D8;--black-4:#DDD8CC;
+  --gold:#A8782A;--gold-l:#C9A84C;--gold-b:rgba(168,120,42,0.28);
+  --plat:#1A1A1A;--silv:#4A5568;--silv-d:rgba(74,85,104,0.4);
+  --th:#1A1A1A;--tb:#3A4A5C;--tm:#7A8899;
+  --bdr:rgba(74,85,104,0.14);--glow:rgba(168,120,42,0.05);
+}
+[data-theme="light"] .bg-mesh{
+  background:radial-gradient(ellipse 80% 50% at 10% 20%,rgba(168,120,42,.05) 0%,transparent 60%),
+             radial-gradient(ellipse 60% 80% at 90% 80%,rgba(180,160,120,.06) 0%,transparent 60%)}
+[data-theme="light"] .bg-grid{
+  background-image:linear-gradient(rgba(74,85,104,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(74,85,104,.05) 1px,transparent 1px);
+  background-size:60px 60px;mask-image:none}
+[data-theme="light"] .nav{background:rgba(248,246,241,0.95)}
+[data-theme="light"] .btn-gold,[data-theme="light"] .btn-nav{
+  background:linear-gradient(135deg,#A8782A,#8A5E18);color:#FAF9F7}
+[data-theme="light"] .lb.on{background:#A8782A;color:#FAF9F7}
+[data-theme="light"] .doc-frame{box-shadow:0 8px 32px rgba(0,0,0,.10)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--tb);line-height:1.6;overflow-x:hidden}
+
+/* BG */
+.bg-mesh{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 80% 50% at 10% 20%,rgba(201,168,76,0.04) 0%,transparent 60%),
+             radial-gradient(ellipse 60% 80% at 90% 80%,rgba(30,60,100,0.1) 0%,transparent 60%);
+  animation:meshA 25s ease infinite alternate}
+@keyframes meshA{0%{opacity:.8}100%{opacity:1}}
+.bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(143,160,184,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(143,160,184,0.035) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,black 20%,transparent 80%)}
+
+/* PAGES */
+.page{display:none;position:relative;z-index:1}
+.page.active{display:block;animation:pgIn .45s var(--ease)}
+@keyframes pgIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:200;padding:0 1.25rem;
+  background:rgba(8,10,15,0.92);backdrop-filter:blur(24px) saturate(160%);border-bottom:1px solid var(--bdr)}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:.5rem}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;min-width:0}
+.logo-mk{width:32px;height:32px;flex-shrink:0;border:1px solid var(--gold-b);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.02))}
+.logo-mk svg{width:16px;height:16px}
+.logo-wm{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--plat);letter-spacing:.02em;white-space:nowrap}
+.logo-sub{font-size:9px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--tm);display:block;margin-top:1px}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:13px;font-weight:300;color:var(--tm);text-decoration:none;cursor:pointer;transition:color var(--t)}
+.nav-links a:hover{color:var(--plat)}
+.nav-r{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.lang-sw{display:flex;border:1px solid var(--bdr);border-radius:6px;overflow:hidden;flex-shrink:0}
+.lb{padding:5px 9px;font-size:11px;font-weight:400;letter-spacing:.04em;background:transparent;border:none;
+  cursor:pointer;color:var(--tm);font-family:'Outfit',sans-serif;transition:all var(--t)}
+.lb.on{background:var(--gold);color:var(--black);font-weight:500}
+.btn-nav{padding:7px 14px;font-size:12px;font-weight:400;font-family:'Outfit',sans-serif;white-space:nowrap;
+  background:linear-gradient(135deg,var(--gold),#A8782A);color:var(--black);
+  border:none;border-radius:var(--r8);cursor:pointer;letter-spacing:.02em;
+  transition:all var(--t);box-shadow:0 2px 12px rgba(201,168,76,.18)}
+.btn-nav:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.32)}
+
+/* THEME TOGGLE + TOOLTIP */
+.theme-toggle-wrap{position:relative;flex-shrink:0}
+.theme-toggle{width:32px;height:32px;border-radius:7px;border:1px solid var(--bdr);
+  background:transparent;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--tm);transition:all var(--t)}
+.theme-toggle:hover{border-color:var(--gold-b);color:var(--gold)}
+.theme-toggle svg{width:15px;height:15px;transition:all var(--t)}
+.theme-tip{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:var(--black-3);border:1px solid var(--gold-b);border-radius:6px;
+  padding:5px 10px;font-size:11px;font-weight:300;color:var(--gold);white-space:nowrap;
+  pointer-events:none;opacity:0;transition:opacity .2s var(--ease);z-index:300;
+  box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.theme-tip::before{content:'';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);
+  border:4px solid transparent;border-bottom-color:var(--gold-b)}
+.theme-toggle-wrap:hover .theme-tip{opacity:1}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:var(--r8);
+  font-size:14px;font-weight:400;font-family:'Outfit',sans-serif;cursor:pointer;border:none;
+  transition:all var(--t) var(--ease);text-decoration:none;letter-spacing:.02em}
+.btn-gold{background:linear-gradient(135deg,var(--gold) 0%,#A8782A 100%);color:var(--black);font-weight:500;
+  box-shadow:0 4px 20px rgba(201,168,76,.22)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,.38)}
+.btn-ghost{background:rgba(143,160,184,.05);color:var(--silv);border:1px solid var(--bdr)}
+.btn-ghost:hover{background:rgba(143,160,184,.09);border-color:var(--silv-d);color:var(--plat);transform:translateY(-2px)}
+
+/* HERO */
+.hero{max-width:1180px;margin:0 auto;padding:6rem 2.5rem 5rem;
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;position:relative}
+.hero::before{content:'';position:absolute;top:0;left:-20%;right:-20%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-b),transparent)}
+.hero-eye{display:flex;align-items:center;gap:10px;margin-bottom:1.75rem}
+.eye-line{width:32px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.eye-txt{font-size:11px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,66px);font-weight:300;
+  line-height:1.1;letter-spacing:-.025em;color:var(--th);margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:300}
+.hero-desc{font-size:16px;font-weight:300;color:var(--tb);line-height:1.75;margin-bottom:2.25rem;max-width:490px}
+.hero-act{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:3rem}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  border:1px solid var(--bdr);border-radius:var(--r14);overflow:hidden;max-width:400px}
+.stat{padding:1.2rem;background:rgba(143,160,184,.03);text-align:center;border-right:1px solid var(--bdr)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--gold);display:block;line-height:1}
+.stat-l{font-size:11px;font-weight:300;color:var(--tm);letter-spacing:.04em;margin-top:4px;display:block}
+
+/* DOC FRAME */
+.hero-vis{position:relative}
+.doc-frame{background:var(--black-3);border:1px solid var(--bdr);border-radius:var(--r22);overflow:hidden;
+  box-shadow:0 0 0 1px rgba(201,168,76,.04),0 40px 80px rgba(0,0,0,.55),0 0 50px rgba(201,168,76,.03);position:relative}
+.doc-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--gold-l),var(--gold),transparent);opacity:.75}
+.doc-tb{padding:.9rem 1.5rem;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:10px;
+  background:rgba(201,168,76,.025)}
+.dot{width:10px;height:10px;border-radius:50%}
+.dr{background:#FF5F57}.dy{background:#FEBC2E}.dg{background:#28C840}
+.doc-fn{font-size:12px;font-weight:300;color:var(--tm);letter-spacing:.04em;margin-left:4px}
+.doc-bdy{padding:1.75rem}
+.doc-wm{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:400;color:var(--gold);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.25rem;display:flex;align-items:center;gap:10px}
+.doc-wm::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold-b),transparent)}
+.doc-h{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--th);margin-bottom:.25rem}
+.doc-co{font-size:12px;color:var(--tm);margin-bottom:1.5rem;font-weight:300}
+.doc-sr{margin-bottom:1.25rem}
+.doc-sl{font-size:9px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.bars{display:flex;flex-direction:column;gap:5px}
+.bar{height:7px;border-radius:3px;background:rgba(143,160,184,.08);position:relative;overflow:hidden}
+.bar::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(201,168,76,.25),transparent);
+  animation:bsc 3.5s ease infinite}
+@keyframes bsc{0%,100%{opacity:.3;transform:translateX(-100%)}60%{opacity:1;transform:translateX(100%)}}
+.b90{width:90%}.b70{width:70%}.b55{width:55%}.b80{width:80%}
+.doc-st{margin-top:1.25rem;padding:10px 14px;background:rgba(201,168,76,.05);
+  border:1px solid var(--gold-b);border-radius:var(--r8);display:flex;align-items:center;gap:10px;
+  font-size:12px;color:var(--gold);font-weight:300}
+.st-pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;
+  animation:stp 2s ease infinite}
+@keyframes stp{0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.4)}50%{box-shadow:0 0 0 6px rgba(201,168,76,0)}}
+.chip{position:absolute;background:var(--black-3);border:1px solid var(--bdr);border-radius:40px;
+  padding:9px 16px;display:flex;align-items:center;gap:9px;font-size:12px;font-weight:300;
+  color:var(--silv);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.cd{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.cg{background:#22C55E;box-shadow:0 0 8px rgba(34,197,94,.4)}
+.cgold{background:var(--gold);box-shadow:0 0 8px rgba(201,168,76,.4)}
+.c1{top:-18px;right:30px;animation:cf 4s ease-in-out infinite}
+.c2{bottom:40px;left:-30px;animation:cf 4s ease-in-out infinite 2s}
+@keyframes cf{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* SECTIONS */
+.sec{max-width:1180px;margin:0 auto;padding:5rem 2.5rem;position:relative;z-index:1}
+.sec-eye{display:flex;align-items:center;gap:12px;margin-bottom:1rem}
+.sec-eye .eye-line{width:24px}
+.sec-eye span{font-size:11px;font-weight:300;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.sec h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:300;
+  color:var(--th);letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem}
+.sec-intro{font-size:16px;font-weight:300;color:var(--tb);line-height:1.75;max-width:580px;margin-bottom:3rem}
+.sep{max-width:1180px;margin:0 auto;height:1px;
+  background:linear-gradient(90deg,transparent,var(--bdr),transparent)}
+
+/* FEATURE CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--bdr);border:1px solid var(--bdr);border-radius:var(--r22);overflow:hidden}
+.fc{background:var(--black-2);padding:2.5rem 2rem;transition:background var(--t);position:relative;overflow:hidden}
+.fc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-b),transparent);opacity:0;transition:opacity var(--t)}
+.fc:hover{background:var(--black-3)}.fc:hover::before{opacity:1}
+.fc-ico{width:48px;height:48px;border:1px solid var(--gold-b);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;background:var(--glow)}
+.fc h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--th);margin-bottom:.75rem}
+.fc p{font-size:14px;font-weight:300;color:var(--tb);line-height:1.7}
+
+/* PIPELINE */
+.pipeline-wrap{background:var(--black-3);border:1px solid var(--bdr);border-radius:var(--r22);
+  padding:2.5rem;margin-top:3rem;overflow:hidden;position:relative}
+.pipeline-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.pipe-lbl{font-size:10px;font-weight:300;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:2rem;display:flex;align-items:center;gap:10px}
+.pipe-lbl::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold-b),transparent)}
+.pipeline{display:flex;align-items:flex-start;justify-content:center;gap:0}
+.pipe-step{flex:1;text-align:center;display:flex;flex-direction:column;align-items:center}
+.pipe-node{width:54px;height:54px;border:1px solid var(--gold-b);border-radius:14px;
+  background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(201,168,76,.02));
+  display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;
+  position:relative;z-index:2;transition:all var(--t)}
+.pipe-node:hover{border-color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.18);transform:translateY(-3px)}
+.pipe-tit{font-size:12px;font-weight:400;color:var(--th);margin-bottom:4px;text-align:center;width:100%}
+.pipe-sub{font-size:11px;font-weight:300;color:var(--tm);line-height:1.5;text-align:center;width:100%}
+.pipe-con{width:36px;flex-shrink:0;display:flex;align-items:flex-start;padding-top:26px;position:relative;z-index:1}
+.con-line{flex:1;height:1px;background:linear-gradient(90deg,var(--gold-b),rgba(201,168,76,.08));position:relative}
+.con-arrow{font-size:14px;color:var(--gold);position:absolute;right:-5px;top:-8px}
+
+/* PRICING */
+.price-bg{background:var(--black-2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);
+  position:relative;z-index:1;overflow:hidden}
+.price-bg::before{content:'';position:absolute;top:-40%;right:-10%;width:700px;height:700px;
+  background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 70%);pointer-events:none}
+.price-in{max-width:1180px;margin:0 auto;padding:5rem 2.5rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.price-tag{font-family:'Cormorant Garamond',serif;font-size:70px;font-weight:300;color:var(--th);
+  letter-spacing:-.04em;line-height:1;margin:1.5rem 0 .5rem}
+.price-tag span{font-size:24px;color:var(--silv);font-weight:300}
+.price-note{font-size:13px;font-weight:300;color:var(--tm);margin-bottom:2rem;letter-spacing:.04em}
+.price-card{background:var(--black-3);border:1px solid var(--bdr);border-radius:var(--r22);overflow:hidden}
+.pc-head{padding:1.5rem 2rem;border-bottom:1px solid var(--bdr);font-size:11px;font-weight:300;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.pfeats{padding:.5rem 0}
+.pf{display:flex;align-items:center;gap:14px;padding:1rem 2rem;
+  border-bottom:1px solid rgba(143,160,184,.05);font-size:14px;font-weight:300;color:var(--tb);transition:background var(--t)}
+.pf:last-child{border-bottom:none}.pf:hover{background:rgba(201,168,76,.025)}
+.pf-ck{width:22px;height:22px;border-radius:50%;background:var(--glow);border:1px solid var(--gold-b);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:2px}
+.faq-it{background:var(--black-2);border:1px solid var(--bdr);border-radius:var(--r8);
+  overflow:hidden;transition:border-color var(--t)}
+.faq-it:hover{border-color:rgba(201,168,76,.13)}.faq-it.open{border-color:var(--gold-b)}
+.faq-q{padding:1.4rem 1.75rem;display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;user-select:none;font-size:15px;font-weight:300;color:var(--th);transition:color var(--t)}
+.faq-ico{width:28px;height:28px;flex-shrink:0;border:1px solid var(--bdr);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;transition:all var(--t)}
+.faq-it.open .faq-ico{background:var(--gold);border-color:var(--gold);transform:rotate(45deg)}
+.faq-it.open .faq-ico svg path{stroke:var(--black)}
+.faq-a{max-height:0;overflow:hidden;padding:0 1.75rem;font-size:14px;font-weight:300;
+  color:var(--tb);line-height:1.75;transition:max-height .4s var(--ease),padding .4s var(--ease)}
+.faq-it.open .faq-a{max-height:200px;padding:0 1.75rem 1.4rem}
+
+/* FORM */
+.form-wrap{max-width:860px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
+
+/* WIZARD STEPPER */
+.wizard-progress{margin-bottom:2.5rem}
+.wizard-steps-row{display:flex;align-items:center;margin-bottom:1rem}
+.wz-step{display:flex;align-items:center;gap:8px;flex:1;position:relative}
+.wz-step:last-child{flex:0}
+.wz-dot{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:400;
+  color:var(--tm);background:var(--black-2);flex-shrink:0;transition:all var(--t);cursor:pointer}
+.wz-dot.done{background:var(--gold);border-color:var(--gold);color:var(--black)}
+.wz-dot.active{border-color:var(--gold);color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.15)}
+.wz-line{flex:1;height:1px;background:var(--bdr);margin:0 4px;transition:background var(--t)}
+.wz-line.done{background:var(--gold)}
+.wizard-bar-track{height:2px;background:var(--bdr);border-radius:1px;overflow:hidden}
+.wizard-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-l));
+  border-radius:1px;transition:width .4s var(--ease)}
+.wizard-label{font-size:12px;font-weight:300;color:var(--tm);margin-top:.5rem}
+.wizard-label strong{color:var(--gold);font-weight:400}
+
+/* FORM SECTIONS (wizard panels) */
+.form-blk{background:var(--black-2);border:1px solid var(--bdr);border-radius:var(--r22);
+  padding:2.25rem;margin-bottom:1.5rem;transition:border-color var(--t);display:none}
+.form-blk.wz-active{display:block;animation:pgIn .3s var(--ease)}
+.form-blk:hover{border-color:rgba(201,168,76,.11)}
+.form-blk-t{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--th);margin-bottom:.25rem}
+.form-blk-s{font-size:13px;font-weight:300;color:var(--tm);margin-bottom:1.75rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.form-grid.full{grid-template-columns:1fr}
+.form-fld{display:flex;flex-direction:column;gap:7px;position:relative}
+.form-lbl{font-size:12px;font-weight:400;color:var(--silv);letter-spacing:.04em;
+  display:flex;align-items:center;gap:6px}
+.form-lbl em{color:var(--gold);font-style:normal;margin-left:2px}
+
+/* TOOLTIP */
+.tooltip-wrap{position:relative;display:inline-flex}
+.tooltip-btn{width:16px;height:16px;border-radius:50%;border:1px solid var(--bdr);
+  background:transparent;display:inline-flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:10px;color:var(--tm);transition:all var(--t);flex-shrink:0}
+.tooltip-btn:hover{border-color:var(--gold);color:var(--gold)}
+.tooltip-box{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:var(--black-3);border:1px solid var(--gold-b);border-radius:var(--r8);
+  padding:10px 14px;font-size:12px;font-weight:300;color:var(--silv);line-height:1.6;
+  white-space:nowrap;max-width:260px;white-space:normal;
+  box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:50;
+  opacity:0;pointer-events:none;transition:opacity var(--t)}
+.tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:var(--gold-b)}
+.tooltip-wrap:hover .tooltip-box,.tooltip-wrap.show .tooltip-box{opacity:1}
+
+.form-inp,.form-ta{width:100%;padding:11px 16px;background:rgba(143,160,184,.04);
+  border:1px solid var(--bdr);border-radius:var(--r8);font-size:14px;font-weight:300;
+  font-family:'Outfit',sans-serif;color:var(--th);outline:none;
+  transition:border-color var(--t),box-shadow var(--t),background var(--t)}
+.form-inp::placeholder,.form-ta::placeholder{color:var(--tm)}
+.form-inp:focus,.form-ta:focus{border-color:var(--gold-b);background:rgba(201,168,76,.035);
+  box-shadow:0 0 0 3px rgba(201,168,76,.06)}
+.form-ta{resize:vertical;min-height:90px;line-height:1.65}
+
+/* WIZARD NAV BUTTONS */
+.wizard-nav{display:flex;justify-content:space-between;align-items:center;
+  padding:1.5rem 0 0;margin-top:.5rem}
+.form-cta{display:flex;justify-content:center;padding:2rem 0 1rem}
+
+/* EYE TOGGLE on review email */
+.email-masked-wrap{position:relative;display:flex;align-items:center}
+.email-masked-wrap .email-inp{padding-right:44px}
+.eye-btn{position:absolute;right:12px;background:none;border:none;cursor:pointer;
+  color:var(--tm);padding:4px;display:flex;align-items:center;transition:color var(--t)}
+.eye-btn:hover{color:var(--gold)}
+
+/* PROSE */
+.prose{max-width:780px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
+.prose h1{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;
+  color:var(--th);letter-spacing:-.03em;margin-bottom:.5rem}
+.prose .lead{font-size:16px;font-weight:300;color:var(--tb);margin-bottom:3rem;line-height:1.75}
+.prose h2{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;
+  color:var(--th);margin:2.5rem 0 .75rem}
+.prose p{font-size:15px;font-weight:300;color:var(--tb);line-height:1.8;margin-bottom:1rem}
+.notice{background:rgba(201,168,76,.05);border:1px solid var(--gold-b);border-radius:var(--r8);
+  padding:1.25rem 1.5rem;font-size:13px;font-weight:300;color:var(--silv);line-height:1.65;margin-top:2.5rem}
+
+/* FOOTER */
+.footer{background:var(--black-2);border-top:1px solid var(--bdr);padding:2.5rem;position:relative;z-index:1}
+.footer-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--tm)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:13px;font-weight:300;color:var(--tm);text-decoration:none;cursor:pointer;
+  letter-spacing:.02em;transition:color var(--t)}
+.footer-links a:hover{color:var(--silv)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* REVIEW PAGE */
+.review-wrap{max-width:860px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
+.review-blk{background:var(--black-2);border:1px solid var(--bdr);border-radius:var(--r22);
+  padding:2.25rem;margin-bottom:1.5rem}
+.review-blk-t{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;
+  color:var(--th);margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--bdr)}
+.review-row{display:flex;gap:1rem;padding:.65rem 0;border-bottom:1px solid rgba(143,160,184,.05)}
+.review-row:last-child{border-bottom:none}
+.review-label{font-size:12px;font-weight:400;color:var(--tm);min-width:200px;flex-shrink:0;padding-top:1px}
+.review-val{font-size:14px;font-weight:300;color:var(--plat);line-height:1.6;word-break:break-word}
+.review-val.empty{color:var(--tm);font-style:italic}
+.email-confirm-blk{background:var(--black-2);border:1px solid var(--bdr);border-radius:var(--r22);
+  padding:2.25rem;margin-bottom:1.5rem}
+.email-confirm-blk.error{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.04)}
+.email-confirm-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;
+  color:var(--th);margin-bottom:.25rem}
+.email-confirm-sub{font-size:13px;font-weight:300;color:var(--tm);margin-bottom:1.5rem}
+.email-confirm-fields{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.email-field-wrap{display:flex;flex-direction:column;gap:7px}
+.email-field-label{font-size:12px;font-weight:400;color:var(--silv);letter-spacing:.04em}
+.email-field-label em{color:var(--gold);font-style:normal;margin-left:2px}
+.email-inp{width:100%;padding:11px 16px;background:rgba(143,160,184,.04);
+  border:1.5px solid var(--bdr);border-radius:var(--r8);font-size:14px;font-weight:300;
+  font-family:'Outfit',sans-serif;color:var(--th);outline:none;
+  transition:border-color var(--t),box-shadow var(--t),background var(--t)}
+.email-inp::placeholder{color:var(--tm)}
+.email-inp:focus{border-color:var(--gold-b);background:rgba(201,168,76,.035);
+  box-shadow:0 0 0 3px rgba(201,168,76,.06)}
+.email-inp.err{border-color:rgba(239,68,68,.6)!important;background:rgba(239,68,68,.05)!important;
+  box-shadow:0 0 0 3px rgba(239,68,68,.1)!important}
+.email-inp.ok{border-color:rgba(34,197,94,.4)!important;background:rgba(34,197,94,.04)!important}
+.err-msg{font-size:12px;color:#EF4444;margin-top:4px;display:none;align-items:center;gap:6px}
+.err-msg.show{display:flex}
+.err-dot{width:6px;height:6px;border-radius:50%;background:#EF4444;flex-shrink:0}
+.review-actions{display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0 1rem;flex-wrap:wrap;gap:1rem}
+.edit-hint{font-size:13px;font-weight:300;color:var(--tm)}
+.field-error-highlight{border-color:rgba(239,68,68,.6)!important;
+  background:rgba(239,68,68,.04)!important;box-shadow:0 0 0 3px rgba(239,68,68,.09)!important}
+.review-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;
+  background:rgba(201,168,76,.08);border:1px solid var(--gold-b);border-radius:99px;
+  font-size:11px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem}
+
+/* EXIT INTENT POPUP */
+.exit-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);
+  z-index:500;display:none;align-items:center;justify-content:center;padding:1.5rem}
+.exit-overlay.show{display:flex;animation:pgIn .3s var(--ease)}
+.exit-box{background:var(--black-2);border:1px solid var(--gold-b);border-radius:var(--r22);
+  padding:2.5rem;max-width:440px;width:100%;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.exit-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  border-radius:var(--r22) var(--r22) 0 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.exit-close{position:absolute;top:1rem;right:1rem;width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--bdr);background:none;cursor:pointer;color:var(--tm);
+  display:flex;align-items:center;justify-content:center;transition:all var(--t)}
+.exit-close:hover{border-color:var(--gold);color:var(--gold)}
+.exit-eye-lbl{font-size:10px;font-weight:300;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.exit-eye-lbl::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold-b),transparent)}
+.exit-h{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--th);margin-bottom:.5rem}
+.exit-sub{font-size:14px;font-weight:300;color:var(--tb);margin-bottom:1.5rem;line-height:1.6}
+.exit-form-fields{display:flex;flex-direction:column;gap:.85rem}
+.exit-inp{width:100%;padding:11px 16px;background:rgba(143,160,184,.04);
+  border:1px solid var(--bdr);border-radius:var(--r8);font-size:14px;font-weight:300;
+  font-family:'Outfit',sans-serif;color:var(--th);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.exit-inp::placeholder{color:var(--tm)}
+.exit-inp:focus{border-color:var(--gold-b);box-shadow:0 0 0 3px rgba(201,168,76,.06)}
+.exit-ta{resize:none;min-height:80px;line-height:1.6}
+.exit-actions{display:flex;gap:.75rem;padding-top:.25rem}
+.exit-success{display:none;text-align:center;padding:1.5rem 0}
+.exit-success-ico{font-size:32px;margin-bottom:.75rem}
+.exit-success p{font-size:14px;font-weight:300;color:var(--tb);line-height:1.65}
+.exit-success strong{color:var(--gold);font-weight:400}
+
+/* SELF-CHECK */
+.self-check{background:rgba(201,168,76,.04);border:1px solid var(--gold-b);border-radius:var(--r8);
+  padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:flex;gap:12px;align-items:flex-start}
+.self-check-ico{font-size:15px;flex-shrink:0;margin-top:2px}
+.self-check-txt{font-size:13px;font-weight:300;color:var(--silv);line-height:1.65}
+.self-check-txt strong{color:var(--gold);font-weight:400;display:block;margin-bottom:.2rem}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.25rem 2.5rem}
+  .hero-vis .chip{display:none}
+  .cards{grid-template-columns:1fr}
+  .price-in{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.25rem}
+  .form-grid{grid-template-columns:1fr}
+  .pipeline{flex-direction:column;align-items:center;gap:2rem}
+  .pipe-step{width:100%;max-width:260px}
+  .pipe-con{display:none}
+  .nav-links{display:none}
+  .email-confirm-fields{grid-template-columns:1fr}
+  .review-row{flex-direction:column;gap:4px}
+  .review-label{min-width:unset}
+  .sec{padding:3rem 1.25rem}
+  .form-wrap,.review-wrap,.prose{padding:2.5rem 1.25rem}
+  .form-blk,.review-blk,.email-confirm-blk{padding:1.5rem 1.25rem}
+  .nav{padding:0 1rem}
+  .footer{padding:1.75rem 1.25rem}
+  .footer-in{flex-direction:column;align-items:flex-start}
+  .hero h1{font-size:clamp(30px,7vw,44px)}
+  .price-tag{font-size:48px}
+  .prose h1{font-size:34px}
+}
+@media(max-width:520px){
+  .hero-stats{grid-template-columns:1fr;max-width:100%}
+  .stat{border-right:none;border-bottom:1px solid var(--bdr)}
+  .stat:last-child{border-bottom:none}
+  .hero-act{flex-direction:column;align-items:stretch}
+  .hero-act .btn{justify-content:center}
+  .wizard-nav{flex-direction:column-reverse;gap:.75rem;align-items:stretch}
+  .wizard-nav .btn{justify-content:center;width:100%}
+  .review-actions{flex-direction:column-reverse;align-items:stretch}
+  .review-actions .btn{width:100%;justify-content:center}
+  .exit-actions{flex-direction:column}
+  .exit-actions .btn{width:100%;justify-content:center}
+  .btn-nav{padding:7px 10px;font-size:11px}
+}
+</style>
+</head>
+<body>
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <div class="nav-logo" onclick="go('home')">
+      <div class="logo-mk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" width="18" height="18">
+          <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div><div class="logo-wm">AlignedDocs</div><span class="logo-sub" id="ns">ISO 9001:2015</span></div>
+    </div>
+    <div class="nav-links">
+      <a onclick="go('home')" id="nh">Home</a>
+      <a onclick="go('prod')" id="np">Product</a>
+      <a onclick="go('faq')" id="nf">FAQ</a>
+      <a onclick="go('form')" id="nfm">Order</a>
+    </div>
+    <div class="nav-r">
+      <div class="theme-toggle-wrap">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <div class="theme-tip" id="theme-tip">Switch to Light Mode</div>
+      </div>
+      <div class="lang-sw">
+        <button class="lb on" onclick="setL('en')" id="le">EN</button>
+        <button class="lb" onclick="setL('de')" id="ld">DE</button>
+      </div>
+      <button class="btn-nav" onclick="go('form')" id="nc">Get started</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div>
+      <div class="hero-eye"><div class="eye-line"></div><span class="eye-txt" id="he">ISO 9001:2015 · Quality Documentation</span></div>
+      <h1 id="hh">Your tailored<br>ISO 9001 quality manual —<br><em>delivered to your inbox.</em></h1>
+      <p class="hero-desc" id="hd">A structured, standard-compliant ISO 9001:2015 quality manual built for small businesses across Europe. Print-ready PDF, prepared for Stage 1 review — without the consultancy price tag.</p>
+      <div class="hero-act">
+        <button class="btn btn-gold" onclick="go('form')" id="hc1">Get my manual →</button>
+        <button class="btn btn-ghost" onclick="go('prod')" id="hc2">How it works</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n" id="sn1">SME</span><span class="stat-l" id="sl1">Built for</span></div>
+        <div class="stat"><span class="stat-n">15</span><span class="stat-l" id="sl2">Pages PDF</span></div>
+        <div class="stat"><span class="stat-n">100%</span><span class="stat-l" id="sl3">Tailored</span></div>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="chip c1"><div class="cd cg"></div><span id="ch1">Stage 1 ready</span></div>
+      <div class="doc-frame">
+        <div class="doc-tb">
+          <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
+          <span class="doc-fn" id="dfn">ISO9001_QualityManual.pdf</span>
+        </div>
+        <div class="doc-bdy">
+          <div class="doc-wm" id="dwm">AlignedDocs</div>
+          <div class="doc-h" id="dh">ISO 9001 Quality Manual</div>
+          <div class="doc-co" id="dc">Sample Ltd. · 2026</div>
+          <div class="doc-sr"><div class="doc-sl" id="ds1">1. Organizational Context</div><div class="bars"><div class="bar b90"></div><div class="bar b70"></div><div class="bar b55"></div></div></div>
+          <div class="doc-sr"><div class="doc-sl" id="ds2">2. Quality Policy</div><div class="bars"><div class="bar b80"></div><div class="bar b90"></div></div></div>
+          <div class="doc-sr"><div class="doc-sl" id="ds3">3. Process Description</div><div class="bars"><div class="bar b70"></div><div class="bar b55"></div></div></div>
+          <div class="doc-st"><div class="st-pulse"></div><span id="dst">Standard-compliant · Audit-ready foundation</span></div>
+        </div>
+      </div>
+      <div class="chip c2"><div class="cd cgold"></div><span id="ch2">Tailored to your business</span></div>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- FEATURES -->
+  <div class="sec reveal">
+    <div class="sec-eye"><div class="eye-line"></div><span id="fe">Why AlignedDocs</span></div>
+    <h2 id="fh">Documentation that fits your business.</h2>
+    <p class="sec-intro" id="fi">No oversized QM system. No expensive consultant. A clean, standard-compliant manual — built directly from your company information.</p>
+    <div class="cards">
+      <div class="fc"><div class="fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" width="22" height="22"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3 id="f1t">Standard-compliant structure</h3><p id="f1p">Aligned with ISO 9001:2015 — clear, traceable, prepared for Stage 1 audit review.</p></div>
+      <div class="fc"><div class="fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" width="22" height="22"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><h3 id="f2t">Built for small businesses</h3><p id="f2p">Designed specifically for teams with 1–20 employees across Europe. No bloat, no enterprise complexity.</p></div>
+      <div class="fc"><div class="fc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" width="22" height="22"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div><h3 id="f3t">Tailored to your operations</h3><p id="f3p">Reflects your real processes, your team, your industry — not a generic template.</p></div>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- PRICING -->
+  <div class="price-bg">
+    <div class="price-in">
+      <div>
+        <div class="sec-eye"><div class="eye-line"></div><span id="pre">Pricing</span></div>
+        <h2 id="prh" style="color:var(--th)">One-time.<br>No subscription.</h2>
+        <p id="prd" style="font-size:15px;font-weight:300;color:var(--tb);line-height:1.75;margin-bottom:1rem">Pay once and receive your tailored ISO 9001 quality manual as a print-ready PDF.</p>
+        <div class="price-tag">€ 149 <span id="pro">one-time</span></div>
+        <div class="price-note" id="prn">excl. VAT · No recurring costs</div>
+        <button class="btn btn-gold" onclick="go('form')" id="prc">Order now →</button>
+      </div>
+      <div class="price-card">
+        <div class="pc-head" id="pri">What's included</div>
+        <div class="pfeats">
+          <div class="pf"><div class="pf-ck"><svg viewBox="0 0 12 12" fill="none" stroke="#C9A84C" stroke-width="2" width="10" height="10"><polyline points="2,6 5,9 10,3"/></svg></div><span id="pf1">Tailored ISO 9001:2015 quality manual (PDF)</span></div>
+          <div class="pf"><div class="pf-ck"><svg viewBox="0 0 12 12" fill="none" stroke="#C9A84C" stroke-width="2" width="10" height="10"><polyline points="2,6 5,9 10,3"/></svg></div><span id="pf2">10–15 pages, A4, print-ready</span></div>
+          <div class="pf"><div class="pf-ck"><svg viewBox="0 0 12 12" fill="none" stroke="#C9A84C" stroke-width="2" width="10" height="10"><polyline points="2,6 5,9 10,3"/></svg></div><span id="pf3">Implementation guide included</span></div>
+          <div class="pf"><div class="pf-ck"><svg viewBox="0 0 12 12" fill="none" stroke="#C9A84C" stroke-width="2" width="10" height="10"><polyline points="2,6 5,9 10,3"/></svg></div><span id="pf4">Stage 1 audit preparation</span></div>
+          <div class="pf"><div class="pf-ck"><svg viewBox="0 0 12 12" fill="none" stroke="#C9A84C" stroke-width="2" width="10" height="10"><polyline points="2,6 5,9 10,3"/></svg></div><span id="pf5">Delivered to your inbox</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUKT -->
+<div class="page" id="page-prod">
+  <div class="sec">
+    <div class="sec-eye"><div class="eye-line"></div><span id="pde">Our Approach</span></div>
+    <h2 id="pdh">A clear path to<br>your quality manual.</h2>
+    <p class="sec-intro" id="pdi">A simple, structured process designed for small businesses — without the complexity of a full QM consultancy engagement.</p>
+    <div class="pipeline-wrap reveal">
+      <div class="pipe-lbl" id="pdl">How it works</div>
+      <div class="pipeline" id="pipe"></div>
+    </div>
+    <div class="notice" style="margin-top:3rem" id="pdn">⚠ <strong>Important:</strong> The manual is a standard-compliant documentation foundation prepared for Stage 1 review. It does not replace professional ISO consulting and does not guarantee certification.</div>
+  </div>
+  <div class="sep"></div>
+  <div style="text-align:center;padding:4rem 2rem;position:relative;z-index:1">
+    <h2 id="pdch" style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--th);margin-bottom:1.5rem">Ready to begin?</h2>
+    <button class="btn btn-gold" onclick="go('form')" id="pdc">Start the form →</button>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="page" id="page-faq">
+  <div class="sec">
+    <div class="sec-eye"><div class="eye-line"></div><span id="fqe">Frequently asked</span></div>
+    <h2 id="fqh">Everything you should<br>know before ordering.</h2>
+    <p class="sec-intro" id="fqi">Clear answers to the most common questions about AlignedDocs.</p>
+    <div class="faq-list" id="faq-list"></div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="page" id="page-form">
+  <div class="form-wrap">
+    <div class="sec-eye" style="margin-bottom:.75rem"><div class="eye-line"></div><span id="fme">Tell us about your business</span></div>
+    <h2 id="fmh" style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--th);letter-spacing:-.02em;margin-bottom:.5rem">Your ISO 9001 quality manual.</h2>
+    <p id="fms" style="font-size:15px;font-weight:300;color:var(--tb);margin-bottom:2.5rem">The more detail you provide, the more precisely your manual will reflect your business.</p>
+    <div id="form-body"></div>
+    <div class="form-cta"><button class="btn btn-gold" onclick="sub()" id="fmsub" style="padding:15px 36px;font-size:15px">Review & order →</button></div>
+  </div>
+</div>
+
+<!-- REVIEW PAGE -->
+<div class="page" id="page-review">
+  <div class="review-wrap">
+    <div class="review-badge">
+      <svg viewBox="0 0 16 16" fill="none" stroke="#C9A84C" stroke-width="1.5" width="12" height="12"><path d="M13.5 4.5l-7 7L3 8"/></svg>
+      <span id="rv-badge">Please review your information</span>
+    </div>
+    <h2 id="rv-h" style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--th);letter-spacing:-.02em;margin-bottom:.5rem">Summary.</h2>
+    <p id="rv-sub" style="font-size:15px;font-weight:300;color:var(--tb);margin-bottom:2.5rem">Please review your answers carefully before placing your order.</p>
+
+    <!-- DYNAMIC REVIEW SECTIONS -->
+    <div id="review-sections"></div>
+
+    <!-- SELF CHECK -->
+    <div class="self-check">
+      <div class="self-check-ico">ℹ️</div>
+      <div class="self-check-txt">
+        <strong id="sc-title">Self-Check</strong>
+        <span id="sc-body">Please review your entries above. If any field seems incomplete or unclear, we will contact you before creating your manual. You can always go back and edit.</span>
+      </div>
+    </div>
+
+    <!-- EMAIL CONFIRMATION -->
+    <div class="email-confirm-blk" id="email-confirm-blk">
+      <div class="email-confirm-title" id="rv-email-t">Confirm your email address</div>
+      <div class="email-confirm-sub" id="rv-email-sub">Please enter your email address again. We will deliver your manual to this address.</div>
+      <div class="email-confirm-fields">
+        <div class="email-field-wrap">
+          <label class="email-field-label" id="rv-email-l1">Email entered <em>✓</em></label>
+          <div class="email-masked-wrap">
+            <input class="email-inp" id="rv-email-show" type="password" disabled>
+            <button class="eye-btn" type="button" onclick="toggleEmailVis()" id="eye-toggle" title="Show/hide email">
+              <svg id="eye-icon-show" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+                <path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6z"/><circle cx="10" cy="10" r="2.5"/>
+              </svg>
+              <svg id="eye-icon-hide" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16" style="display:none">
+                <path d="M3 3l14 14M10 4c5 0 8 6 8 6s-.8 1.5-2.2 3M6.2 6.2A7.9 7.9 0 002 10s3 6 8 6a7.9 7.9 0 004.8-1.6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="email-field-wrap">
+          <label class="email-field-label" id="rv-email-l2">Confirm email <em>*</em></label>
+          <input class="email-inp" id="rv-email-confirm" type="email" placeholder="Re-enter email" oninput="checkEmail()">
+          <div class="err-msg" id="rv-email-err">
+            <div class="err-dot"></div>
+            <span id="rv-email-err-txt">The email addresses do not match.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="review-actions">
+      <div>
+        <button class="btn btn-ghost" onclick="backToForm()" id="rv-back">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M10 3L5 8l5 5"/></svg>
+          <span id="rv-back-txt">Back & edit</span>
+        </button>
+        <div class="edit-hint" id="rv-hint" style="margin-top:.5rem">Your entries will be preserved.</div>
+      </div>
+      <button class="btn btn-gold" onclick="finalSubmit()" id="rv-submit" style="padding:15px 36px;font-size:15px">
+        <span id="rv-submit-txt">Place paid order →</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY -->
+<div class="page" id="page-ds">
+  <div class="prose">
+    <h1 id="dsh">Privacy Policy</h1>
+    <p class="lead" id="dsl">Your data is treated with confidentiality and used solely to deliver the service you requested. This policy explains what we collect, why, on what legal basis, and your rights under the EU General Data Protection Regulation (GDPR).</p>
+
+    <h2 id="dsh1">1. Controller</h2>
+    <p id="dsp1">Responsible for the processing of personal data within the meaning of Art. 4(7) GDPR is:<br><br>
+    Daniel Fernandes<br>
+    AlignedDocs<br>
+    Contact: team@aligneddocs.com</p>
+
+    <h2 id="dsh2">2. Data we collect</h2>
+    <p id="dsp2">We collect only the information you actively provide through our order form: company details (name, industry, size, location), quality policy and objectives, process descriptions, contact person, and the email address to which we deliver the manual. We do not use tracking cookies, do not maintain user accounts, and do not run third-party analytics on this site.</p>
+
+    <h2 id="dsh3">3. Purpose & legal basis</h2>
+    <p id="dsp3">We process your data exclusively to fulfil your order and deliver the requested ISO 9001 quality manual. The legal basis is Art. 6(1)(b) GDPR — performance of a contract you have entered into with us. The email address is also used to contact you about your order, based on the same legal basis.</p>
+
+    <h2 id="dsh4">4. Service providers & third countries</h2>
+    <p id="dsp4">To produce your manual, your form data is processed by service providers acting on our instructions (Art. 28 GDPR processors). This includes our workflow infrastructure and an AI language model provider used to draft the content of your manual based on your inputs. The AI provider may be located outside the European Economic Area, including the United States. Transfers to third countries are protected by appropriate safeguards under Chapter V GDPR, such as the EU–U.S. Data Privacy Framework and EU Standard Contractual Clauses where applicable. We do not authorise these providers to use your data for their own purposes or for model training.</p>
+
+    <h2 id="dsh5">5. Storage & retention</h2>
+    <p id="dsp5">Your form data is retained for as long as needed to fulfil your order and to meet legal retention obligations (e.g. tax law, typically up to 10 years for invoicing data under German Commercial Code §257 HGB). Free-text content describing your business is deleted shortly after delivery once you have confirmed receipt of your manual, unless you ask us to keep it for revision purposes.</p>
+
+    <h2 id="dsh6">6. Your rights</h2>
+    <p id="dsp6">Under the GDPR, you have the right to access your data (Art. 15), have it corrected (Art. 16) or deleted (Art. 17), restrict its processing (Art. 18), object to processing (Art. 21), and request data portability (Art. 20). To exercise any of these rights, contact us at team@aligneddocs.com. You also have the right to lodge a complaint with a supervisory authority, in particular in the EU Member State where you live, work, or where you believe an infringement occurred.</p>
+
+    <h2 id="dsh7">7. Data security</h2>
+    <p id="dsp7">We use industry-standard technical and organisational measures to protect your data, including TLS encryption in transit and access controls on stored data. Access to your information is limited to what is necessary to deliver your manual.</p>
+
+    <h2 id="dsh8">8. Changes to this policy</h2>
+    <p id="dsp8">We may update this privacy policy to reflect changes in our service, legal requirements, or processor relationships. The current version is always available at this URL. Last updated: May 2026.</p>
+
+    <div class="notice" id="dsn">This is a self-drafted policy intended as a starting point. For productive use in your jurisdiction, a qualified data protection lawyer should review and adapt it to your specific operational details.</div>
+  </div>
+</div>
+
+<!-- IMPRINT -->
+<div class="page" id="page-imp">
+  <div class="prose">
+    <h1 id="imph">Imprint</h1>
+    <p class="lead" id="impl">Information in accordance with § 5 TMG (German Telemedia Act) and Art. 14 ODR Regulation.</p>
+
+    <h2 id="imph1">Provider</h2>
+    <p id="impp1">Daniel Fernandes<br>AlignedDocs<br>Contact: team@aligneddocs.com</p>
+
+    <h2 id="imph2">Responsible for content</h2>
+    <p id="impp2">Daniel Fernandes (address as above), responsible according to § 18 (2) MStV.</p>
+
+    <h2 id="imph3">EU dispute resolution</h2>
+    <p id="impp3">The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" style="color:var(--gold);text-decoration:underline" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. We are not obligated and not willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+    <h2 id="imph4">Liability for content</h2>
+    <p id="impp4">As a service provider, we are responsible for our own content on these pages under general laws (§ 7(1) TMG). Under §§ 8–10 TMG, we are not obligated to monitor transmitted or stored third-party information. Obligations to remove or block the use of information under general laws remain unaffected.</p>
+  </div>
+</div>
+
+<!-- EXIT INTENT POPUP -->
+<div class="exit-overlay" id="exit-overlay">
+  <div class="exit-box">
+    <button class="exit-close" onclick="closeExit()" aria-label="Close">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M2 2l10 10M12 2L2 12"/></svg>
+    </button>
+    <div class="exit-eye-lbl" id="ex-eye">Questions</div>
+    <div class="exit-h" id="ex-h">Have a question before ordering?</div>
+    <div class="exit-sub" id="ex-sub">Send us a message — we'll get back to you.</div>
+    <div id="ex-form-wrap">
+      <div class="exit-form-fields">
+        <input class="exit-inp" id="ex-name" type="text" placeholder="Your name">
+        <input class="exit-inp" id="ex-email" type="email" placeholder="Your email *">
+        <textarea class="exit-inp exit-ta" id="ex-msg" placeholder="Your question *" rows="3"></textarea>
+        <div class="err-msg" id="ex-err"><div class="err-dot"></div><span id="ex-err-txt">Please fill in all required fields.</span></div>
+        <div class="exit-actions">
+          <button class="btn btn-gold" onclick="submitExit()" style="flex:1;justify-content:center"><span id="ex-send-txt">Send message →</span></button>
+          <button class="btn btn-ghost" onclick="closeExit()"><span id="ex-cancel-txt">Not now</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="exit-success" id="ex-success">
+      <div class="exit-success-ico">✓</div>
+      <p><span id="ex-success-txt">Thank you! We'll reply to</span> <strong id="ex-success-email"></strong> <span id="ex-success-txt2">shortly.</span></p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-brand">AlignedDocs © 2026</div>
+    <div class="footer-links">
+      <a onclick="go('faq')" id="ftf">FAQ</a>
+      <a onclick="go('ds')" id="ftd">Privacy</a>
+      <a onclick="go('imp')" id="fti">Imprint</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const T={
+  en:{ns:'ISO 9001:2015',nh:'Home',np:'Product',nf:'FAQ',nfm:'Order',nc:'Get started',
+    he:'ISO 9001:2015 · Quality Documentation',
+    hh:'Your tailored<br>ISO 9001 quality manual —<br><em>delivered to your inbox.</em>',
+    hd:'A structured, standard-compliant ISO 9001:2015 quality manual built for small businesses across Europe. Print-ready PDF, prepared for Stage 1 review — without the consultancy price tag.',
+    hc1:'Get my manual →',hc2:'How it works',
+    sl1:'Built for',sl2:'Pages PDF',sl3:'Tailored',sn1:'SME',
+    ch1:'Stage 1 ready',ch2:'Tailored to your business',
+    dfn:'ISO9001_QualityManual.pdf',dwm:'AlignedDocs',dh:'ISO 9001 Quality Manual',dc:'Sample Ltd. · 2026',
+    ds1:'1. Organizational Context',ds2:'2. Quality Policy',ds3:'3. Process Description',
+    dst:'Standard-compliant · Audit-ready foundation',
+    fe:'Why AlignedDocs',fh:'Documentation that fits your business.',
+    fi:'No oversized QM system. No expensive consultant. A clean, standard-compliant manual — built directly from your company information.',
+    f1t:'Standard-compliant structure',f1p:'Aligned with ISO 9001:2015 — clear, traceable, prepared for Stage 1 audit review.',
+    f2t:'Built for small businesses',f2p:'Designed specifically for teams with 1–20 employees across Europe. No bloat, no enterprise complexity.',
+    f3t:'Tailored to your operations',f3p:'Reflects your real processes, your team, your industry — not a generic template.',
+    pre:'Pricing',prh:'One-time.<br>No subscription.',pro:'one-time',
+    prd:'Pay once and receive your tailored ISO 9001 quality manual as a print-ready PDF.',
+    prn:'excl. VAT · No recurring costs',prc:'Order now →',pri:"What's included",
+    pf1:'Tailored ISO 9001:2015 quality manual (PDF)',pf2:'10–15 pages, A4, print-ready',
+    pf3:'Implementation guide included',pf4:'Stage 1 audit preparation',pf5:'Delivered to your inbox',
+    pde:'Our Approach',pdh:'A clear path to<br>your quality manual.',
+    pdi:'A simple, structured process designed for small businesses — without the complexity of a full QM consultancy engagement.',
+    pdl:'How it works',
+    pdn:'⚠ <strong>Important:</strong> The manual is a standard-compliant documentation foundation prepared for Stage 1 review. It does not replace professional ISO consulting and does not guarantee certification.',
+    pdch:'Ready to begin?',pdc:'Start the form →',
+    fqe:'Frequently asked',fqh:'Everything you should<br>know before ordering.',fqi:'Clear answers to the most common questions about AlignedDocs.',
+    fme:'Tell us about your business',fmh:'Your ISO 9001 quality manual.',
+    fms:'The more detail you provide, the more precisely your manual will reflect your business.',
+    fmsub:'Review & order →',
+    dsh:'Privacy Policy',
+    dsl:'Your data is treated with confidentiality and used solely to deliver the service you requested. This policy explains what we collect, why, on what legal basis, and your rights under the EU General Data Protection Regulation (GDPR).',
+    dsh1:'1. Controller',dsp1:'Responsible for the processing of personal data within the meaning of Art. 4(7) GDPR is:<br><br>Daniel Fernandes<br>AlignedDocs<br>Contact: team@aligneddocs.com',
+    dsh2:'2. Data we collect',dsp2:'We collect only the information you actively provide through our order form: company details (name, industry, size, location), quality policy and objectives, process descriptions, contact person, and the email address to which we deliver the manual. We do not use tracking cookies, do not maintain user accounts, and do not run third-party analytics on this site.',
+    dsh3:'3. Purpose & legal basis',dsp3:'We process your data exclusively to fulfil your order and deliver the requested ISO 9001 quality manual. The legal basis is Art. 6(1)(b) GDPR — performance of a contract you have entered into with us. The email address is also used to contact you about your order, based on the same legal basis.',
+    dsh4:'4. Service providers & third countries',dsp4:'To produce your manual, your form data is processed by service providers acting on our instructions (Art. 28 GDPR processors). This includes our workflow infrastructure and an AI language model provider used to draft the content of your manual based on your inputs. The AI provider may be located outside the European Economic Area, including the United States. Transfers to third countries are protected by appropriate safeguards under Chapter V GDPR, such as the EU–U.S. Data Privacy Framework and EU Standard Contractual Clauses where applicable. We do not authorise these providers to use your data for their own purposes or for model training.',
+    dsh5:'5. Storage & retention',dsp5:'Your form data is retained for as long as needed to fulfil your order and to meet legal retention obligations (e.g. tax law, typically up to 10 years for invoicing data under German Commercial Code §257 HGB). Free-text content describing your business is deleted shortly after delivery once you have confirmed receipt of your manual, unless you ask us to keep it for revision purposes.',
+    dsh6:'6. Your rights',dsp6:'Under the GDPR, you have the right to access your data (Art. 15), have it corrected (Art. 16) or deleted (Art. 17), restrict its processing (Art. 18), object to processing (Art. 21), and request data portability (Art. 20). To exercise any of these rights, contact us at team@aligneddocs.com. You also have the right to lodge a complaint with a supervisory authority, in particular in the EU Member State where you live, work, or where you believe an infringement occurred.',
+    dsh7:'7. Data security',dsp7:'We use industry-standard technical and organisational measures to protect your data, including TLS encryption in transit and access controls on stored data. Access to your information is limited to what is necessary to deliver your manual.',
+    dsh8:'8. Changes to this policy',dsp8:'We may update this privacy policy to reflect changes in our service, legal requirements, or processor relationships. The current version is always available at this URL. Last updated: May 2026.',
+    dsn:'This is a self-drafted policy intended as a starting point. For productive use in your jurisdiction, a qualified data protection lawyer should review and adapt it to your specific operational details.',
+    imph:'Imprint',impl:'Information in accordance with § 5 TMG (German Telemedia Act) and Art. 14 ODR Regulation.',
+    imph1:'Provider',impp1:'Daniel Fernandes<br>AlignedDocs<br>Contact: team@aligneddocs.com',
+    imph2:'Responsible for content',impp2:'Daniel Fernandes (address as above), responsible according to § 18 (2) MStV.',
+    imph3:'EU dispute resolution',impp3:'The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" style="color:var(--gold);text-decoration:underline" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. We are not obligated and not willing to participate in dispute resolution proceedings before a consumer arbitration board.',
+    imph4:'Liability for content',impp4:'As a service provider, we are responsible for our own content on these pages under general laws (§ 7(1) TMG). Under §§ 8–10 TMG, we are not obligated to monitor transmitted or stored third-party information. Obligations to remove or block the use of information under general laws remain unaffected.',
+    ftf:'FAQ',ftd:'Privacy',fti:'Imprint',
+    'rv-badge':'Please review your information',
+    'rv-h':'Summary.',
+    'rv-sub':'Please review your answers carefully before placing your order.',
+    'rv-email-t':'Confirm your email address',
+    'rv-email-sub':'Please enter your email address again. We will deliver your manual to this address.',
+    'rv-email-l1':'Email entered ✓',
+    'rv-email-l2':'Confirm email *',
+    'rv-email-err-txt':'The email addresses do not match.',
+    'rv-back-txt':'Back & edit',
+    'rv-hint':'Your entries will be preserved.',
+    'rv-submit-txt':'Place paid order →'
+  },
+  de:{ns:'ISO 9001:2015',nh:'Start',np:'Produkt',nf:'FAQ',nfm:'Bestellen',nc:'Loslegen',
+    he:'ISO 9001:2015 · Qualitätsdokumentation',
+    hh:'Ihr individuelles<br>ISO 9001 Qualitätshandbuch —<br><em>direkt in Ihr Postfach.</em>',
+    hd:'Ein strukturiertes, normnahes ISO 9001:2015 Qualitätshandbuch für kleine Unternehmen in Europa. Druckfertiges PDF, vorbereitet für die Stage 1 Begutachtung — ohne Berater-Preisschild.',
+    hc1:'Handbuch bestellen →',hc2:'So funktioniert es',
+    sl1:'Konzipiert für',sl2:'Seiten PDF',sl3:'Individuell',sn1:'KMU',
+    ch1:'Stage 1 vorbereitet',ch2:'Auf Ihr Unternehmen zugeschnitten',
+    dfn:'ISO9001_QualityManual.pdf',dwm:'AlignedDocs',dh:'ISO 9001 Qualitätshandbuch',dc:'Muster GmbH · 2026',
+    ds1:'1. Unternehmenskontext',ds2:'2. Qualitätspolitik',ds3:'3. Prozessbeschreibung',
+    dst:'Normnah · Audit-bereite Grundlage',
+    fe:'Warum AlignedDocs',fh:'Dokumentation, die wirklich passt.',
+    fi:'Kein überdimensioniertes QM-System. Kein teurer Berater. Ein sauberes, normnahes Handbuch — erstellt direkt aus Ihren Unternehmensangaben.',
+    f1t:'Normnahe Struktur',f1p:'Orientiert an ISO 9001:2015 — klar, nachvollziehbar, vorbereitet für die Stage 1 Begutachtung.',
+    f2t:'Für kleine Unternehmen',f2p:'Konzipiert für Teams mit 1–20 Mitarbeitenden in ganz Europa. Kein Ballast, keine Konzern-Komplexität.',
+    f3t:'Auf Ihre Abläufe zugeschnitten',f3p:'Spiegelt Ihre echten Prozesse, Ihr Team, Ihre Branche wider — keine generische Vorlage.',
+    pre:'Preis',prh:'Einmalig.<br>Kein Abo.',pro:'einmalig',
+    prd:'Sie zahlen einmal und erhalten Ihr individuelles ISO 9001 Qualitätshandbuch als druckfertiges PDF.',
+    prn:'zzgl. MwSt. · Keine Folgekosten',prc:'Jetzt bestellen →',pri:'Im Lieferumfang',
+    pf1:'Individuelles ISO 9001:2015 Qualitätshandbuch (PDF)',pf2:'10–15 Seiten, A4, druckfertig',
+    pf3:'Implementation Guide enthalten',pf4:'Vorbereitung Stage 1 Audit',pf5:'Lieferung direkt in Ihr Postfach',
+    pde:'Unser Ansatz',pdh:'Ein klarer Weg zu<br>Ihrem Qualitätshandbuch.',
+    pdi:'Ein einfacher, strukturierter Prozess für kleine Unternehmen — ohne die Komplexität einer vollen QM-Beratung.',
+    pdl:'So funktioniert es',
+    pdn:'⚠ <strong>Wichtig:</strong> Das Handbuch ist eine normnahe Dokumentationsgrundlage, vorbereitet für die Stage 1 Begutachtung. Es ersetzt keine professionelle ISO-Beratung und garantiert keine Zertifizierung.',
+    pdch:'Bereit anzufangen?',pdc:'Formular starten →',
+    fqe:'Häufig gefragt',fqh:'Was Sie wissen<br>sollten.',fqi:'Klare Antworten auf die häufigsten Fragen zu AlignedDocs.',
+    fme:'Erzählen Sie uns von Ihrem Unternehmen',fmh:'Ihr ISO 9001 Qualitätshandbuch.',
+    fms:'Je detaillierter Ihre Angaben, desto präziser spiegelt Ihr Handbuch Ihr Unternehmen wider.',
+    fmsub:'Prüfen & bestellen →',
+    dsh:'Datenschutzerklärung',
+    dsl:'Ihre Daten werden vertraulich behandelt und ausschließlich zur Erbringung der von Ihnen angefragten Leistung verwendet. Diese Erklärung beschreibt, was wir erheben, warum, auf welcher Rechtsgrundlage, und welche Rechte Sie nach der EU-Datenschutz-Grundverordnung (DSGVO) haben.',
+    dsh1:'1. Verantwortlicher',dsp1:'Verantwortlich für die Verarbeitung personenbezogener Daten im Sinne von Art. 4 Abs. 7 DSGVO ist:<br><br>Daniel Fernandes<br>AlignedDocs<br>Kontakt: team@aligneddocs.com',
+    dsh2:'2. Welche Daten wir erheben',dsp2:'Wir erheben ausschließlich die Daten, die Sie aktiv über unser Bestellformular angeben: Unternehmensdaten (Name, Branche, Größe, Standort), Qualitätspolitik und Qualitätsziele, Prozessbeschreibungen, Ansprechpartner sowie die E-Mail-Adresse, an die wir das Handbuch ausliefern. Wir setzen keine Tracking-Cookies ein, führen keine Nutzerkonten und betreiben kein Drittanbieter-Analytics auf dieser Seite.',
+    dsh3:'3. Zweck & Rechtsgrundlage',dsp3:'Wir verarbeiten Ihre Daten ausschließlich zur Erfüllung Ihrer Bestellung und zur Auslieferung des angefragten ISO 9001 Qualitätshandbuchs. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO — Erfüllung eines Vertrags, dessen Vertragspartei Sie sind. Die E-Mail-Adresse dient außerdem der Kontaktaufnahme bezüglich Ihrer Bestellung auf derselben Rechtsgrundlage.',
+    dsh4:'4. Dienstleister & Drittländer',dsp4:'Zur Erstellung Ihres Handbuchs werden Ihre Formulardaten an weisungsgebundene Dienstleister übermittelt (Auftragsverarbeiter nach Art. 28 DSGVO). Dazu zählen unsere Workflow-Infrastruktur und ein Anbieter eines KI-Sprachmodells, das auf Basis Ihrer Eingaben den Entwurf Ihres Handbuchs erstellt. Der KI-Anbieter kann seinen Sitz außerhalb des Europäischen Wirtschaftsraums haben, einschließlich der USA. Übermittlungen in Drittländer werden durch geeignete Garantien nach Kapitel V DSGVO abgesichert, insbesondere durch das EU-US Data Privacy Framework und gegebenenfalls EU-Standardvertragsklauseln. Wir gestatten diesen Dienstleistern nicht, Ihre Daten für eigene Zwecke oder zum Modelltraining zu nutzen.',
+    dsh5:'5. Speicherdauer',dsp5:'Ihre Formulardaten werden so lange aufbewahrt, wie es zur Erfüllung Ihrer Bestellung und zur Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist (z. B. steuerrechtliche Pflichten von bis zu 10 Jahren für Rechnungsdaten gemäß § 257 HGB). Frei formulierte Inhalte zu Ihrem Unternehmen werden kurz nach der Auslieferung gelöscht, sobald Sie den Erhalt Ihres Handbuchs bestätigt haben.',
+    dsh6:'6. Ihre Rechte',dsp6:'Nach der DSGVO haben Sie das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Widerspruch gegen die Verarbeitung (Art. 21) und Datenübertragbarkeit (Art. 20). Zur Geltendmachung dieser Rechte wenden Sie sich an team@aligneddocs.com. Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren.',
+    dsh7:'7. Datensicherheit',dsp7:'Wir verwenden branchenübliche technische und organisatorische Maßnahmen zum Schutz Ihrer Daten, einschließlich TLS-Verschlüsselung bei der Übertragung und Zugriffskontrollen für gespeicherte Daten.',
+    dsh8:'8. Änderungen dieser Erklärung',dsp8:'Wir können diese Datenschutzerklärung anpassen, um Änderungen unseres Angebots, rechtlicher Anforderungen oder Auftragsverarbeiter-Beziehungen abzubilden. Die jeweils aktuelle Version ist stets unter dieser URL abrufbar. Letzte Aktualisierung: Mai 2026.',
+    dsn:'Dies ist eine selbst verfasste Datenschutzerklärung als Ausgangsbasis. Für den produktiven Einsatz sollte ein qualifizierter Datenschutzanwalt sie prüfen.',
+    imph:'Impressum',impl:'Angaben gemäß § 5 TMG und Art. 14 ODR-Verordnung.',
+    imph1:'Anbieter',impp1:'Daniel Fernandes<br>AlignedDocs<br>Kontakt: team@aligneddocs.com',
+    imph2:'Verantwortlich für den Inhalt',impp2:'Daniel Fernandes (Anschrift wie oben), verantwortlich nach § 18 Abs. 2 MStV.',
+    imph3:'EU-Streitschlichtung',impp3:'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" style="color:var(--gold);text-decoration:underline" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+    imph4:'Haftung für Inhalte',impp4:'Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.',
+    ftf:'FAQ',ftd:'Datenschutz',fti:'Impressum',
+    'rv-badge':'Bitte prüfen Sie Ihre Angaben',
+    'rv-h':'Zusammenfassung.',
+    'rv-sub':'Bitte prüfen Sie Ihre Angaben sorgfältig, bevor Sie Ihre Bestellung abschicken.',
+    'rv-email-t':'E-Mail-Adresse bestätigen',
+    'rv-email-sub':'Bitte geben Sie Ihre E-Mail-Adresse erneut ein. An diese Adresse senden wir Ihr Handbuch.',
+    'rv-email-l1':'Eingegebene E-Mail ✓',
+    'rv-email-l2':'E-Mail bestätigen *',
+    'rv-email-err-txt':'Die E-Mail-Adressen stimmen nicht überein.',
+    'rv-back-txt':'Zurück & bearbeiten',
+    'rv-hint':'Ihre Eingaben bleiben erhalten.',
+    'rv-submit-txt':'Kostenpflichtig bestellen →'
+  }
+};
+
+const PIPE={
+  en:[
+    {ic:'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',t:'You share',s:'A short structured form\nabout your business'},
+    {ic:'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',t:'We tailor',s:'Your manual is drafted\nfrom your inputs'},
+    {ic:'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',t:'We review',s:'Structure and consistency\nare verified'},
+    {ic:'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',t:'You receive',s:'Print-ready PDF\nto your inbox'},
+  ],
+  de:[
+    {ic:'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',t:'Sie teilen',s:'Ein kurzes strukturiertes\nFormular zu Ihrem Unternehmen'},
+    {ic:'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',t:'Wir gestalten',s:'Ihr Handbuch wird auf\nBasis Ihrer Angaben erstellt'},
+    {ic:'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',t:'Wir prüfen',s:'Struktur und Konsistenz\nwerden verifiziert'},
+    {ic:'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',t:'Sie erhalten',s:'Druckfertiges PDF\nin Ihrem Postfach'},
+  ]
+};
+
+const FAQ={
+  en:[
+    {q:'Is the manual compliant with ISO 9001:2015?',a:'The structure follows ISO 9001:2015. It is a standard-compliant documentation foundation prepared for Stage 1 review — not a certification in itself.'},
+    {q:'Can I become certified with this manual?',a:'No. AlignedDocs provides the documentation foundation. Certification requires an accredited auditor and a recognised certification body.'},
+    {q:'What do I need to complete the form?',a:'About 15 minutes and basic information about your business: industry, processes, and quality objectives. No prior ISO knowledge is required.'},
+    {q:'How and when do I receive my manual?',a:'After your order is placed, your manual is prepared and reviewed before being delivered as a PDF to the email address you provide. We work as promptly as quality allows.'},
+    {q:'Does AlignedDocs replace an ISO consultant?',a:'No. AlignedDocs is a documentation tool. It does not replace professional consulting, an internal auditor, or a certification body.'},
+    {q:'Who is AlignedDocs designed for?',a:'Small and medium-sized businesses across Europe (typically 1–20 employees) that need structured ISO 9001 documentation as a starting foundation.'},
+    {q:'Is my business data secure?',a:'Yes. Data is transmitted over encrypted connections, processed only to deliver your manual, and not used for any other purpose. See our privacy policy for full details.'},
+  ],
+  de:[
+    {q:'Ist das Handbuch normnah nach ISO 9001:2015?',a:'Die Struktur folgt ISO 9001:2015. Es ist eine normnahe Dokumentationsgrundlage, vorbereitet für die Stage 1 Begutachtung — keine Zertifizierung an sich.'},
+    {q:'Kann ich mich damit zertifizieren lassen?',a:'Nein. AlignedDocs liefert die Dokumentationsgrundlage. Eine Zertifizierung erfordert einen akkreditierten Auditor und eine anerkannte Zertifizierungsstelle.'},
+    {q:'Was brauche ich, um das Formular auszufüllen?',a:'Etwa 15 Minuten und grundlegende Informationen zu Ihrem Unternehmen: Branche, Prozesse, Qualitätsziele. Kein ISO-Vorwissen erforderlich.'},
+    {q:'Wie und wann erhalte ich mein Handbuch?',a:'Nach Bestellung wird Ihr Handbuch erstellt und geprüft, bevor es als PDF an die angegebene E-Mail-Adresse gesendet wird. Wir arbeiten so zügig, wie es die Qualität zulässt.'},
+    {q:'Ersetzt AlignedDocs einen ISO-Berater?',a:'Nein. AlignedDocs ist ein Dokumentations-Werkzeug. Es ersetzt keine professionelle Beratung, keinen internen Auditor und keine Zertifizierungsstelle.'},
+    {q:'Für wen ist AlignedDocs geeignet?',a:'Kleine und mittlere Unternehmen in Europa (typischerweise 1–20 Mitarbeitende), die eine strukturierte ISO 9001 Dokumentation als Ausgangsbasis benötigen.'},
+    {q:'Sind meine Unternehmensdaten sicher?',a:'Ja. Daten werden verschlüsselt übertragen, ausschließlich zur Erstellung Ihres Handbuchs verarbeitet und nicht für andere Zwecke verwendet. Details in der Datenschutzerklärung.'},
+  ]
+};
+
+const FORM={
+  de:[
+    {t:'1. Unternehmen & Kontext',s:'Grundlegende Informationen zu Ihrem Unternehmen',f:[
+      {l:'Unternehmensname',id:'fn',ph:'z.B. Müller GmbH',tp:'input',r:true},
+      {l:'Branche / Sektor',id:'fbr',ph:'z.B. Maschinenbau, IT-Dienstleistungen',tp:'input',r:true},
+      {l:'Anzahl Mitarbeitende',id:'fma',ph:'z.B. 12',tp:'input',r:true},
+      {l:'Gründungsjahr',id:'fyr',ph:'z.B. 2015',tp:'input',r:false},
+      {l:'Hauptprodukte / Dienstleistungen',id:'fprod',ph:'Was bieten Sie an?',tp:'ta',r:true,full:true},
+      {l:'Hauptstandort',id:'floc',ph:'Stadt, Land',tp:'input',r:true},
+    ]},
+    {t:'2. Qualitätspolitik & Ziele',s:'Was Qualität für Ihr Unternehmen bedeutet',f:[
+      {l:'Qualitätsleitbild',id:'fqlb',ph:'z.B. Wir streben nach höchster Kundenzufriedenheit...',tp:'ta',r:true,full:true},
+      {l:'Qualitätsziele (2–3)',id:'fqzl',ph:'z.B. Reklamationsquote < 2%, Liefertreue > 95%',tp:'ta',r:true,full:true},
+    ]},
+    {t:'3. Kernprozesse',s:'Die wichtigsten Abläufe in Ihrem Unternehmen',f:[
+      {l:'Kernprozess 1',id:'fp1',ph:'z.B. Auftragsannahme → Produktion → Auslieferung',tp:'ta',r:true,full:true},
+      {l:'Kernprozess 2 (optional)',id:'fp2',ph:'z.B. Kundenreklamation → Analyse → Maßnahme',tp:'ta',r:false,full:true},
+      {l:'Kernprozess 3 (optional)',id:'fp3',ph:'z.B. Lieferantenauswahl → Bewertung → Freigabe',tp:'ta',r:false,full:true},
+    ]},
+    {t:'4. Verantwortlichkeiten',s:'Wer ist für Qualität zuständig?',f:[
+      {l:'Qualitätsverantwortliche(r)',id:'fqv',ph:'Name und Funktion',tp:'input',r:true},
+      {l:'Geschäftsführung',id:'fgf',ph:'Name und Funktion',tp:'input',r:true},
+    ]},
+    {t:'5. Kontakt & Lieferung',s:'Wohin senden wir Ihr Handbuch?',f:[
+      {l:'E-Mail-Adresse',id:'femail',ph:'ihre@email.de',tp:'input',r:true},
+      {l:'Ansprechpartner',id:'fap',ph:'Ihr Name',tp:'input',r:true},
+    ]},
+  ],
+  en:[
+    {t:'1. Company & Context',s:'Basic information about your company',f:[
+      {l:'Company name',id:'fn',ph:'e.g. Smith Ltd.',tp:'input',r:true},
+      {l:'Industry / Sector',id:'fbr',ph:'e.g. Engineering, IT services',tp:'input',r:true},
+      {l:'Employees',id:'fma',ph:'e.g. 12',tp:'input',r:true},
+      {l:'Founded',id:'fyr',ph:'e.g. 2015',tp:'input',r:false},
+      {l:'Main products / services',id:'fprod',ph:'What do you offer?',tp:'ta',r:true,full:true},
+      {l:'Main location',id:'floc',ph:'City, Country',tp:'input',r:true},
+    ]},
+    {t:'2. Quality Policy & Objectives',s:'What quality means for your company',f:[
+      {l:'Quality mission',id:'fqlb',ph:'e.g. We strive for the highest customer satisfaction...',tp:'ta',r:true,full:true},
+      {l:'Quality objectives (2–3)',id:'fqzl',ph:'e.g. Complaint rate < 2%, on-time delivery > 95%',tp:'ta',r:true,full:true},
+    ]},
+    {t:'3. Core Processes',s:'The most important workflows in your company',f:[
+      {l:'Core process 1',id:'fp1',ph:'e.g. Order intake → Production → Delivery',tp:'ta',r:true,full:true},
+      {l:'Core process 2 (optional)',id:'fp2',ph:'e.g. Complaint → Analysis → Action',tp:'ta',r:false,full:true},
+      {l:'Core process 3 (optional)',id:'fp3',ph:'e.g. Supplier selection → Evaluation → Approval',tp:'ta',r:false,full:true},
+    ]},
+    {t:'4. Responsibilities',s:'Who is responsible for quality?',f:[
+      {l:'Quality manager',id:'fqv',ph:'Name and role',tp:'input',r:true},
+      {l:'Management',id:'fgf',ph:'Name and role',tp:'input',r:true},
+    ]},
+    {t:'5. Contact & Delivery',s:'Where should we send your handbook?',f:[
+      {l:'Email address',id:'femail',ph:'your@email.com',tp:'input',r:true},
+      {l:'Contact person',id:'fap',ph:'Your name',tp:'input',r:true},
+    ]},
+  ]
+};
+
+let CL='en';
+let formBuilt=false;
+let wzStep=0;
+
+/* ── Save/restore form values ── */
+function saveFormValues(){
+  const vals={};
+  ['de','en'].forEach(lang=>FORM[lang].forEach(sec=>sec.f.forEach(f=>{
+    const el=document.getElementById(f.id);
+    if(el&&el.value) vals[f.id]=el.value;
+  })));
+  return vals;
+}
+function restoreFormValues(vals){
+  if(!vals)return;
+  Object.entries(vals).forEach(([id,val])=>{const el=document.getElementById(id);if(el)el.value=val;});
+}
+
+function go(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(p==='faq') buildFAQ();
+  if(p==='prod') buildPipe();
+  if(p==='form'&&!formBuilt){buildForm();formBuilt=true;}
+  setTimeout(initReveal,80);
+}
+
+function setL(l){
+  const savedVals=formBuilt?saveFormValues():null;
+  const savedStep=wzStep;
+  CL=l;
+  document.documentElement.lang=l;
+  document.getElementById('ld').classList.toggle('on',l==='de');
+  document.getElementById('le').classList.toggle('on',l==='en');
+  applyT();buildFAQ();buildPipe();
+  formBuilt=false;buildForm();formBuilt=true;
+  if(savedVals)restoreFormValues(savedVals);
+  showPanel(savedStep);
+  updateTexts();
+}
+
+function applyT(){
+  const d=T[CL];
+  for(const[k,v]of Object.entries(d)){const e=document.getElementById(k);if(e)e.innerHTML=v;}
+  document.querySelectorAll('.wz-back-lbl').forEach(el=>el.textContent=CL==='de'?'Zurück':'Back');
+  document.querySelectorAll('.wz-next-lbl').forEach(el=>el.textContent=CL==='de'?'Weiter':'Next');
+  document.querySelectorAll('.wz-submit-lbl').forEach(el=>el.textContent=CL==='de'?'Prüfen & Bestellen':'Review & Order');
+  updateThemeTip();
+}
+
+function buildPipe(){
+  const c=document.getElementById('pipe');if(!c)return;
+  const steps=PIPE[CL];
+  c.innerHTML=steps.map((s,i)=>`
+    <div class="pipe-step">
+      <div class="pipe-node">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" width="20" height="20"><path d="${s.ic}"/></svg>
+      </div>
+      <div class="pipe-tit">${s.t}</div>
+      <div class="pipe-sub">${s.s.replace(/\n/g,'<br>')}</div>
+    </div>
+    ${i<steps.length-1?`<div class="pipe-con"><div class="con-line"><span class="con-arrow">›</span></div></div>`:''}
+  `).join('');
+}
+
+function buildFAQ(){
+  const c=document.getElementById('faq-list');if(!c)return;
+  c.innerHTML=FAQ[CL].map((f,i)=>`
+    <div class="faq-it" id="fi${i}">
+      <div class="faq-q" onclick="tFAQ(${i})">
+        <span>${f.q}</span>
+        <div class="faq-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M7 2v10M2 7h10"/></svg></div>
+      </div>
+      <div class="faq-a">${f.a}</div>
+    </div>
+  `).join('');
+}
+
+function tFAQ(i){document.getElementById('fi'+i).classList.toggle('open');}
+
+// Tooltip hints per field id
+const TIPS={
+  fn:{de:'Der offizielle Name Ihres Unternehmens, wie er im Handelsregister eingetragen ist.',en:'The official name of your company as registered.'},
+  fbr:{de:'Ihre Branche hilft dabei, branchenspezifische Formulierungen im Handbuch zu verwenden.',en:'Your industry helps use sector-specific wording in the handbook.'},
+  fma:{de:'Die Anzahl der Mitarbeitenden beeinflusst den Umfang des QM-Systems.',en:'The number of employees influences the scope of the QM system.'},
+  fprod:{de:'Beschreiben Sie kurz, was Sie anbieten – Produkte, Dienstleistungen oder beides.',en:'Briefly describe what you offer – products, services or both.'},
+  fqlb:{de:'Ihr Qualitätsleitbild ist die Grundlage Ihrer Qualitätspolitik nach ISO 9001 Kap. 5.2.',en:'Your quality mission is the foundation of your quality policy per ISO 9001 ch. 5.2.'},
+  fqzl:{de:'Messbare Qualitätsziele sind Pflicht nach ISO 9001 Kap. 6.2. Z.B. Reklamationsquote < 2%.',en:'Measurable quality objectives are required per ISO 9001 ch. 6.2. E.g. complaint rate < 2%.'},
+  fp1:{de:'Beschreiben Sie Ihren wichtigsten Kernprozess von Anfang bis Ende, z.B. Auftragsannahme → Produktion → Lieferung.',en:'Describe your most important core process from start to finish.'},
+  femail:{de:'An diese E-Mail-Adresse senden wir Ihr fertiges ISO-Handbuch als PDF.',en:'We will send your finished ISO handbook as PDF to this email address.'},
+};
+
+function buildForm(){
+  const c=document.getElementById('form-body');if(!c)return;
+  const secs=FORM[CL];
+  wzStep=0;
+
+  // Build wizard progress
+  const progressHTML=`
+    <div class="wizard-progress">
+      <div class="wizard-steps-row">
+        ${secs.map((s,i)=>`
+          <div class="wz-step">
+            <div class="wz-dot${i===0?' active':''}" id="wzdot${i}" onclick="jumpStep(${i})">${i+1}</div>
+            ${i<secs.length-1?`<div class="wz-line" id="wzline${i}"></div>`:''}
+          </div>
+        `).join('')}
+      </div>
+      <div class="wizard-bar-track"><div class="wizard-bar-fill" id="wzbar" style="width:${100/secs.length}%"></div></div>
+      <div class="wizard-label" id="wzlabel"></div>
+    </div>`;
+
+  // Build all section panels
+  const sectionsHTML=secs.map((sec,si)=>`
+    <div class="form-blk${si===0?' wz-active':''}" id="wzpanel${si}">
+      <div class="form-blk-t">${sec.t}</div>
+      <div class="form-blk-s">${sec.s}</div>
+      <div class="form-grid${sec.f.every(x=>x.full)?' full':''}">
+        ${sec.f.map(f=>`
+          <div class="form-fld${f.full?' form-grid full':''}">
+            <label class="form-lbl">
+              ${f.l}${f.r?'<em>*</em>':''}
+              ${TIPS[f.id]?`
+                <div class="tooltip-wrap">
+                  <button class="tooltip-btn" type="button">?</button>
+                  <div class="tooltip-box">${TIPS[f.id][CL]||''}</div>
+                </div>`:''}
+            </label>
+            ${f.tp==='ta'
+              ?`<textarea class="form-ta" id="${f.id}" placeholder="${f.ph}" rows="3"></textarea>`
+              :`<input class="form-inp" id="${f.id}" placeholder="${f.ph}" type="${f.id==='femail'?'email':'text'}">`
+            }
+          </div>
+        `).join('')}
+      </div>
+      <div class="wizard-nav">
+        ${si>0?`<button class="btn btn-ghost" type="button" onclick="wzPrev()">← ${CL==='de'?'Zurück':'Back'}</button>`:'<div></div>'}
+        ${si<secs.length-1
+          ?`<button class="btn btn-gold" type="button" onclick="wzNext()">${CL==='de'?'Weiter':'Next'} →</button>`
+          :`<button class="btn btn-gold" type="button" onclick="sub()">${CL==='de'?'Prüfen & Bestellen':'Review & Order'} →</button>`
+        }
+      </div>
+    </div>
+  `).join('');
+
+  c.innerHTML=progressHTML+sectionsHTML;
+  updateWizard();
+}
+
+function updateWizard(){
+  const secs=FORM[CL];
+  const total=secs.length;
+  // Update dots & lines
+  secs.forEach((_,i)=>{
+    const dot=document.getElementById('wzdot'+i);
+    const line=document.getElementById('wzline'+i);
+    if(dot){
+      dot.classList.remove('active','done');
+      if(i<wzStep) dot.classList.add('done');
+      else if(i===wzStep) dot.classList.add('active');
+    }
+    if(line){
+      line.classList.toggle('done',i<wzStep);
+    }
+  });
+  // Update bar
+  const bar=document.getElementById('wzbar');
+  if(bar) bar.style.width=`${((wzStep+1)/total)*100}%`;
+  // Update label
+  const lbl=document.getElementById('wzlabel');
+  if(lbl){
+    const cur=secs[wzStep];
+    lbl.innerHTML=CL==='de'
+      ?`Schritt <strong>${wzStep+1} von ${total}</strong> – ${cur.t}`
+      :`Step <strong>${wzStep+1} of ${total}</strong> – ${cur.t}`;
+  }
+}
+
+function showPanel(idx){
+  document.querySelectorAll('[id^="wzpanel"]').forEach(p=>p.classList.remove('wz-active'));
+  const panel=document.getElementById('wzpanel'+idx);
+  if(panel){ panel.classList.add('wz-active'); panel.scrollIntoView({behavior:'smooth',block:'start'}); }
+  wzStep=idx;
+  updateWizard();
+}
+
+function wzNext(){
+  // Validate current step required fields
+  const sec=FORM[CL][wzStep];
+  let firstErr=null;
+  sec.f.forEach(f=>{
+    if(f.r){
+      const el=document.getElementById(f.id);
+      if(el&&!el.value.trim()){
+        el.classList.add('field-error-highlight');
+        if(!firstErr) firstErr=el;
+      } else if(el){
+        el.classList.remove('field-error-highlight');
+      }
+    }
+  });
+  if(firstErr){ firstErr.scrollIntoView({behavior:'smooth',block:'center'}); firstErr.focus(); return; }
+  showPanel(wzStep+1);
+}
+
+function wzPrev(){ showPanel(wzStep-1); }
+
+function jumpStep(i){
+  // Only allow jumping to completed steps
+  if(i<=wzStep) showPanel(i);
+}
+
+function toggleEmailVis(){
+  const inp=document.getElementById('rv-email-show');
+  const iconShow=document.getElementById('eye-icon-show');
+  const iconHide=document.getElementById('eye-icon-hide');
+  if(!inp) return;
+  if(inp.type==='password'){
+    inp.type='text';
+    iconShow.style.display='none';
+    iconHide.style.display='block';
+  } else {
+    inp.type='password';
+    iconShow.style.display='block';
+    iconHide.style.display='none';
+  }
+}
+
+function sub(){
+  // Validate last step required fields
+  const sec=FORM[CL][wzStep];
+  let firstErr=null;
+  sec.f.forEach(f=>{
+    if(f.r){
+      const el=document.getElementById(f.id);
+      if(el&&!el.value.trim()){
+        el.classList.add('field-error-highlight');
+        if(!firstErr) firstErr=el;
+      } else if(el){
+        el.classList.remove('field-error-highlight');
+      }
+    }
+  });
+  if(firstErr){ firstErr.scrollIntoView({behavior:'smooth',block:'center'}); firstErr.focus(); return; }
+  buildReview();
+  go('review');
+}
+
+function buildReview(){
+  const secs = FORM[CL];
+  const labels = {
+    de:{ empty:'(keine Angabe)' },
+    en:{ empty:'(not provided)' }
+  };
+  const empty = labels[CL].empty;
+
+  const container = document.getElementById('review-sections');
+  container.innerHTML = secs.map(sec => `
+    <div class="review-blk">
+      <div class="review-blk-t">${sec.t}</div>
+      ${sec.f.map(f => {
+        const el = document.getElementById(f.id);
+        const val = el ? el.value.trim() : '';
+        return `
+          <div class="review-row">
+            <div class="review-label">${f.l}</div>
+            <div class="review-val${val ? '' : ' empty'}">${val ? val.replace(/\n/g,'<br>') : empty}</div>
+          </div>`;
+      }).join('')}
+    </div>
+  `).join('');
+
+  // Populate email field
+  const emailEl = document.getElementById('femail');
+  const emailShow = document.getElementById('rv-email-show');
+  if(emailEl && emailShow){
+    emailShow.value = emailEl.value;
+  }
+  // Reset confirm field
+  const confirm = document.getElementById('rv-email-confirm');
+  if(confirm) { confirm.value = ''; confirm.classList.remove('err','ok'); }
+  const errMsg = document.getElementById('rv-email-err');
+  if(errMsg) errMsg.classList.remove('show');
+  const blk = document.getElementById('email-confirm-blk');
+  if(blk) blk.classList.remove('error');
+}
+
+function checkEmail(){
+  const emailShow = document.getElementById('rv-email-show');
+  const confirm = document.getElementById('rv-email-confirm');
+  const errMsg = document.getElementById('rv-email-err');
+  const blk = document.getElementById('email-confirm-blk');
+  if(!confirm.value){
+    confirm.classList.remove('err','ok');
+    errMsg.classList.remove('show');
+    blk.classList.remove('error');
+    return;
+  }
+  const match = emailShow.value.trim().toLowerCase() === confirm.value.trim().toLowerCase();
+  confirm.classList.toggle('err', !match);
+  confirm.classList.toggle('ok', match);
+  errMsg.classList.toggle('show', !match);
+  blk.classList.toggle('error', !match);
+}
+
+function backToForm(){
+  go('form');
+  setTimeout(()=>showPanel(wzStep),50);
+}
+
+function finalSubmit(){
+  const emailShow=document.getElementById('rv-email-show');
+  const confirm=document.getElementById('rv-email-confirm');
+  const errMsg=document.getElementById('rv-email-err');
+  const blk=document.getElementById('email-confirm-blk');
+  if(!confirm.value.trim()){confirm.classList.add('err');errMsg.classList.add('show');blk.classList.add('error');confirm.focus();return;}
+  const match=emailShow.value.trim().toLowerCase()===confirm.value.trim().toLowerCase();
+  if(!match){confirm.classList.add('err');errMsg.classList.add('show');blk.classList.add('error');confirm.focus();return;}
+  alert(CL==='de'
+    ?'✓ Vielen Dank! Ihre Bestellung ist eingegangen. Ihr ISO 9001 Qualitätshandbuch wird erstellt und an '+emailShow.value+' gesendet, sobald es bereit ist.'
+    :'✓ Thank you! Your order has been received. Your ISO 9001 quality manual will be prepared and delivered to '+emailShow.value+' as soon as it is ready.'
+  );
+}
+
+function initReveal(){
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+
+/* ── THEME TOGGLE ── */
+function toggleTheme(){
+  const isLight=document.documentElement.getAttribute('data-theme')==='light';
+  applyTheme(isLight?'dark':'light');
+  localStorage.setItem('ad-theme',isLight?'dark':'light');
+}
+function applyTheme(t){
+  if(t==='light'){
+    document.documentElement.setAttribute('data-theme','light');
+    document.getElementById('theme-icon-moon').style.display='none';
+    document.getElementById('theme-icon-sun').style.display='block';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#F8F6F1');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    document.getElementById('theme-icon-moon').style.display='block';
+    document.getElementById('theme-icon-sun').style.display='none';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#080A0F');
+  }
+  updateThemeTip();
+}
+function updateThemeTip(){
+  const tip=document.getElementById('theme-tip');
+  if(!tip)return;
+  const isLight=document.documentElement.getAttribute('data-theme')==='light';
+  tip.textContent=CL==='de'
+    ?(isLight?'Dark Mode':'Light Mode')
+    :(isLight?'Switch to Dark Mode':'Switch to Light Mode');
+}
+(function(){
+  const saved=localStorage.getItem('ad-theme');
+  if(saved){applyTheme(saved);return;}
+  if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)applyTheme('light');
+})();
+
+/* ── EXIT INTENT ── */
+let exitShown=false,exitCooldown=false;
+document.addEventListener('mouseleave',e=>{
+  if(e.clientY<=0&&!exitShown&&!exitCooldown){exitShown=true;document.getElementById('exit-overlay').classList.add('show');}
+});
+let mobileExitTimer;
+function resetMobileExitTimer(){
+  clearTimeout(mobileExitTimer);
+  mobileExitTimer=setTimeout(()=>{
+    if(!exitShown&&!exitCooldown){exitShown=true;document.getElementById('exit-overlay').classList.add('show');}
+  },45000);
+}
+['touchstart','touchend','scroll'].forEach(ev=>document.addEventListener(ev,resetMobileExitTimer,{passive:true}));
+resetMobileExitTimer();
+function closeExit(){
+  document.getElementById('exit-overlay').classList.remove('show');
+  exitCooldown=true;setTimeout(()=>{exitCooldown=false;exitShown=false;},120000);
+}
+async function submitExit(){
+  const name=document.getElementById('ex-name').value.trim();
+  const email=document.getElementById('ex-email').value.trim();
+  const msg=document.getElementById('ex-msg').value.trim();
+  const err=document.getElementById('ex-err');
+  if(!email||!msg){err.classList.add('show');return;}
+  err.classList.remove('show');
+  const btn=document.querySelector('#ex-form-wrap .btn-gold');
+  if(btn){btn.style.opacity='.6';btn.style.pointerEvents='none';}
+  try{
+    await fetch('YOUR_N8N_CONTACT_WEBHOOK_URL',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name,email,message:msg,source:'exit-intent',lang:CL})
+    });
+  }catch(e){}
+  document.getElementById('ex-form-wrap').style.display='none';
+  document.getElementById('ex-success-email').textContent=email;
+  document.getElementById('ex-success').style.display='block';
+  setTimeout(closeExit,4000);
+}
+
+/* ── SELF-CHECK + EXIT + THEME TRANSLATIONS ── */
+function updateTexts(){
+  // Self-check
+  const sc={en:{t:'Self-Check',b:'Please review your entries above. If any field seems incomplete or unclear, we will contact you before creating your manual. You can always go back and edit.'},
+             de:{t:'Selbstcheck',b:'Bitte prüfen Sie Ihre Angaben oben. Sollte ein Feld unvollständig oder unklar sein, melden wir uns vor der Erstellung Ihres Handbuchs bei Ihnen. Sie können jederzeit zurückgehen und bearbeiten.'}};
+  const el_t=document.getElementById('sc-title');const el_b=document.getElementById('sc-body');
+  if(el_t)el_t.textContent=sc[CL].t;if(el_b)el_b.textContent=sc[CL].b;
+  // Exit popup
+  const ex={en:{eye:'Questions',h:'Have a question before ordering?',sub:"Send us a message — we'll get back to you.",
+               send:'Send message →',cancel:'Not now',err:'Please fill in all required fields.',
+               s1:"Thank you! We'll reply to",s2:'shortly.'},
+            de:{eye:'Fragen',h:'Haben Sie eine Frage vor der Bestellung?',sub:'Schreiben Sie uns — wir melden uns bei Ihnen.',
+               send:'Nachricht senden →',cancel:'Nicht jetzt',err:'Bitte alle Pflichtfelder ausfüllen.',
+               s1:'Vielen Dank! Wir antworten an',s2:'in Kürze.'}};
+  const d=ex[CL];
+  const ids={'ex-eye':'eye','ex-h':'h','ex-sub':'sub','ex-send-txt':'send','ex-cancel-txt':'cancel','ex-err-txt':'err','ex-success-txt':'s1','ex-success-txt2':'s2'};
+  Object.entries(ids).forEach(([id,key])=>{const el=document.getElementById(id);if(el)el.textContent=d[key];});
+  const phs={en:{n:'Your name',e:'Your email *',m:'Your question *'},de:{n:'Ihr Name',e:'Ihre E-Mail *',m:'Ihre Frage *'}};
+  const p=phs[CL];
+  const n=document.getElementById('ex-name');const em=document.getElementById('ex-email');const m=document.getElementById('ex-msg');
+  if(n)n.placeholder=p.n;if(em)em.placeholder=p.e;if(m)m.placeholder=p.m;
+  // Theme tip
+  updateThemeTip();
+}
+
+/* ── INIT ── */
+applyT();buildFAQ();buildForm();formBuilt=true;buildPipe();initReveal();updateTexts();
+</script>
+</body>
+</html>

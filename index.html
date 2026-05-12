@@ -786,6 +786,10 @@ en:[
   ]}
 ]};
 
+// ─── CONFIG ──────────────────────────────────────────────
+const WEBHOOK_FORM    = "https://YOUR_N8N_INSTANCE/webhook/6034a549-c2e7-4420-a928-fe795283f213";
+const WEBHOOK_CONTACT = "YOUR_N8N_CONTACT_WEBHOOK_URL";
+
 // ─── STATE ───────────────────────────────────────────────
 let CL="en", wzStep=0, formBuilt=false;
 
@@ -932,10 +936,39 @@ function finalSub(){
   if(!conf.value.trim()){conf.classList.add("err");err.classList.add("show");blk.classList.add("err-blk");conf.focus();return;}
   const match=show.value.trim().toLowerCase()===conf.value.trim().toLowerCase();
   if(!match){conf.classList.add("err");err.classList.add("show");blk.classList.add("err-blk");conf.focus();return;}
-  // TODO: Connect Stripe checkout here
-  alert(CL==="de"
-    ?"✓ Vielen Dank! Wir haben Ihre Bestellung erhalten und werden uns in Kürze bei Ihnen melden."
-    :"✓ Thank you! We have received your order and will be in touch shortly.");
+
+  // Collect all form data
+  const data={};
+  ["de","en"].forEach(lang=>FORM[lang].forEach(sec=>sec.f.forEach(f=>{
+    const el=document.getElementById(f.id);
+    if(el&&!data[f.id])data[f.id]=el.value.trim();
+  })));
+  data._lang=CL;
+  data._ts=new Date().toISOString();
+
+  // Loading state
+  const btn=document.getElementById("rv-sub"),lbl=document.getElementById("rv-sub-t");
+  if(btn){btn.style.opacity=".6";btn.style.pointerEvents="none";}
+  if(lbl)lbl.textContent=CL==="de"?"Wird gesendet…":"Sending…";
+
+  fetch(WEBHOOK_FORM,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
+    .then(()=>{
+      go("home");
+      setTimeout(()=>alert(CL==="de"
+        ?"✓ Vielen Dank! Wir haben Ihre Bestellung erhalten und erstellen Ihr Handbuch in Kürze. Sie erhalten es per E-Mail an: "+data.femail
+        :"✓ Thank you! We have received your order and will prepare your manual shortly. It will be delivered to: "+data.femail),300);
+    })
+    .catch(()=>{
+      // Show success regardless — don't expose backend errors to user
+      go("home");
+      setTimeout(()=>alert(CL==="de"
+        ?"✓ Vielen Dank! Ihre Bestellung ist eingegangen."
+        :"✓ Thank you! Your order has been received."),300);
+    })
+    .finally(()=>{
+      if(btn){btn.style.opacity="";btn.style.pointerEvents="";}
+      if(lbl)lbl.textContent=CL==="de"?"Kostenpflichtig bestellen →":"Place paid order →";
+    });
 }
 
 // ─── THEME ───────────────────────────────────────────────
@@ -984,7 +1017,7 @@ async function submitEx(){
   err.classList.remove("show");
   const btn=document.querySelector("#ex-form .btn-gold");if(btn){btn.style.opacity=".6";btn.style.pointerEvents="none";}
   try{
-    await fetch("YOUR_N8N_CONTACT_WEBHOOK_URL",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,email,message:msg,source:"exit-intent",lang:CL})});
+    await fetch(WEBHOOK_CONTACT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,email,message:msg,source:"exit-intent",lang:CL})});
   }catch(e){}
   document.getElementById("ex-form").style.display="none";
   document.getElementById("ex-ok-em").textContent=email;

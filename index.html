@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- v3.1 — 14.05.2026 — Hotfix: Webhook-URL, Exit-Intent restriction (form step 2+), Order-ID, Email-confirm persistence, honest error handling, FAQ language wording -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -60,7 +61,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .page{display:none;position:relative;z-index:1}
 .page.active{display:block;animation:pgIn .4s var(--ease)}
 @keyframes pgIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-/* NAV */
 .nav{position:sticky;top:0;z-index:200;padding:0 1.25rem;background:rgba(8,10,15,.93);backdrop-filter:blur(24px) saturate(160%);border-bottom:1px solid var(--bdr)}
 .nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:.5rem}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0}
@@ -82,13 +82,11 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .theme-tip{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid var(--gold-b);border-radius:6px;padding:5px 10px;font-size:11px;color:var(--gold);white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s;z-index:300;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 .theme-tip::before{content:'';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-bottom-color:var(--gold-b)}
 .theme-wrap:hover .theme-tip{opacity:1}
-/* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:var(--r8);font-size:14px;font-weight:400;font-family:'Outfit',sans-serif;cursor:pointer;border:none;transition:all var(--spd) var(--ease);text-decoration:none;letter-spacing:.02em}
 .btn-gold{background:linear-gradient(135deg,var(--gold) 0%,#A8782A 100%);color:var(--bg);font-weight:500;box-shadow:0 4px 20px rgba(201,168,76,.22)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,.38)}
 .btn-ghost{background:rgba(143,160,184,.05);color:var(--silv);border:1px solid var(--bdr)}
 .btn-ghost:hover{background:rgba(143,160,184,.09);color:var(--tx);transform:translateY(-2px)}
-/* LAYOUT */
 .sec{max-width:1180px;margin:0 auto;padding:5rem 2.5rem;position:relative;z-index:1}
 .sep{max-width:1180px;margin:0 auto;height:1px;background:linear-gradient(90deg,transparent,var(--bdr),transparent)}
 .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
@@ -99,7 +97,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .sec-intro{font-size:16px;font-weight:300;color:var(--tb);line-height:1.75;max-width:580px;margin-bottom:3rem}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.vis{opacity:1;transform:translateY(0)}
-/* HERO */
 .hero{max-width:1180px;margin:0 auto;padding:6rem 2.5rem 5rem;display:grid;grid-template-columns:1.1fr .9fr;gap:5rem;align-items:center;position:relative}
 .hero::before{content:'';position:absolute;top:0;left:-20%;right:-20%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-b),transparent)}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,66px);font-weight:300;line-height:1.1;letter-spacing:-.025em;color:var(--tx);margin-bottom:1.5rem}
@@ -112,7 +109,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .stat:last-child{border-right:none}
 .stat-n{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--gold);display:block;line-height:1}
 .stat-l{font-size:11px;font-weight:300;color:var(--tm);letter-spacing:.04em;margin-top:4px;display:block}
-/* DOC MOCKUP */
 .hero-vis{position:relative}
 .chip{position:absolute;background:var(--bg3);border:1px solid var(--bdr);border-radius:40px;padding:9px 16px;display:flex;align-items:center;gap:9px;font-size:12px;font-weight:300;color:var(--silv);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.4)}
 .cd{width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -140,7 +136,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .doc-st{margin-top:1.25rem;padding:10px 14px;background:rgba(201,168,76,.05);border:1px solid var(--gold-b);border-radius:var(--r8);display:flex;align-items:center;gap:10px;font-size:12px;color:var(--gold);font-weight:300}
 .pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:pls 2s ease infinite}
 @keyframes pls{0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.4)}50%{box-shadow:0 0 0 6px rgba(201,168,76,0)}}
-/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:var(--r22);overflow:hidden}
 .fc{background:var(--bg2);padding:2.5rem 2rem;transition:background var(--spd);position:relative;overflow:hidden}
 .fc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-b),transparent);opacity:0;transition:opacity var(--spd)}
@@ -148,7 +143,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .fc-ico{width:48px;height:48px;border:1px solid var(--gold-b);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;background:var(--gold-dim)}
 .fc h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--tx);margin-bottom:.75rem}
 .fc p{font-size:14px;font-weight:300;color:var(--tb);line-height:1.7}
-/* PIPELINE */
 .pipe-wrap{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--r22);padding:2.5rem;margin-top:3rem;position:relative;overflow:hidden}
 .pipe-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .pipe-lbl{font-size:10px;font-weight:300;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:10px}
@@ -162,7 +156,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .pc{width:36px;flex-shrink:0;display:flex;align-items:flex-start;padding-top:26px}
 .pc-line{flex:1;height:1px;background:linear-gradient(90deg,var(--gold-b),rgba(201,168,76,.08));position:relative}
 .pc-arr{font-size:14px;color:var(--gold);position:absolute;right:-5px;top:-8px}
-/* PRICING */
 .price-bg{background:var(--bg2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);position:relative;z-index:1;overflow:hidden}
 .price-bg::before{content:'';position:absolute;top:-40%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 70%);pointer-events:none}
 .price-in{max-width:1180px;margin:0 auto;padding:5rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
@@ -174,7 +167,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .pf{display:flex;align-items:center;gap:14px;padding:1rem 2rem;border-bottom:1px solid rgba(143,160,184,.05);font-size:14px;font-weight:300;color:var(--tb);transition:background var(--spd)}
 .pf:last-child{border-bottom:none}.pf:hover{background:rgba(201,168,76,.025)}
 .pf-ck{width:22px;height:22px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-b);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-/* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:2px}
 .fi{background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--r8);overflow:hidden;transition:border-color var(--spd)}
 .fi:hover{border-color:rgba(201,168,76,.13)}.fi.open{border-color:var(--gold-b)}
@@ -183,8 +175,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .fi.open .fi-ico{background:var(--gold);border-color:var(--gold);transform:rotate(45deg)}
 .fi.open .fi-ico svg path{stroke:var(--bg)}
 .fa{max-height:0;overflow:hidden;padding:0 1.75rem;font-size:14px;font-weight:300;color:var(--tb);line-height:1.75;transition:max-height .4s var(--ease),padding .4s var(--ease)}
-.fi.open .fa{max-height:220px;padding:0 1.75rem 1.4rem}
-/* FORM */
+.fi.open .fa{max-height:240px;padding:0 1.75rem 1.4rem}
 .form-wrap{max-width:860px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
 .wz-prog{margin-bottom:2.5rem}
 .wz-row{display:flex;align-items:center;margin-bottom:1rem}
@@ -221,7 +212,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .inp.err,.ta.err{border-color:rgba(239,68,68,.6)!important;background:rgba(239,68,68,.05)!important;box-shadow:0 0 0 3px rgba(239,68,68,.1)!important}
 .ta{resize:vertical;min-height:90px;line-height:1.65}
 .wz-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0 0;margin-top:.5rem}
-/* REVIEW */
 .rv-wrap{max-width:860px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
 .rv-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(201,168,76,.08);border:1px solid var(--gold-b);border-radius:99px;font-size:11px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .rv-blk{background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--r22);padding:2.25rem;margin-bottom:1.5rem}
@@ -257,7 +247,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .rv-acts{display:flex;justify-content:space-between;align-items:center;padding:2rem 0 1rem;flex-wrap:wrap;gap:1rem}
 .rv-hint{font-size:13px;font-weight:300;color:var(--tm);margin-top:.5rem}
 .f-err{border-color:rgba(239,68,68,.6)!important;background:rgba(239,68,68,.04)!important;box-shadow:0 0 0 3px rgba(239,68,68,.09)!important}
-/* EXIT POPUP */
 .ex-ov{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);z-index:500;display:none;align-items:center;justify-content:center;padding:1.5rem}
 .ex-ov.show{display:flex;animation:pgIn .3s var(--ease)}
 .ex-box{background:var(--bg2);border:1px solid var(--gold-b);border-radius:var(--r22);padding:2.5rem;max-width:440px;width:100%;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.45)}
@@ -278,7 +267,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .ex-ok-ico{font-size:32px;margin-bottom:.75rem}
 .ex-ok p{font-size:14px;font-weight:300;color:var(--tb);line-height:1.65}
 .ex-ok strong{color:var(--gold);font-weight:400}
-/* PROSE (DS/IMP) */
 .prose{max-width:780px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
 .prose h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);font-weight:300;color:var(--tx);letter-spacing:-.03em;margin-bottom:.5rem}
 .prose .lead{font-size:16px;font-weight:300;color:var(--tb);margin-bottom:3rem;line-height:1.75}
@@ -286,14 +274,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .prose p{font-size:15px;font-weight:300;color:var(--tb);line-height:1.8;margin-bottom:1rem}
 .prose a{color:var(--gold);text-decoration:underline}
 .notice{background:rgba(201,168,76,.05);border:1px solid var(--gold-b);border-radius:var(--r8);padding:1.25rem 1.5rem;font-size:13px;font-weight:300;color:var(--silv);line-height:1.65;margin-top:2.5rem}
-/* FOOTER */
 .footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:2.5rem;position:relative;z-index:1}
 .footer-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-brand{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--tm)}
 .footer-links{display:flex;gap:2rem}
 .footer-links a{font-size:13px;font-weight:300;color:var(--tm);text-decoration:none;cursor:pointer;transition:color var(--spd)}
 .footer-links a:hover{color:var(--silv)}
-/* RESPONSIVE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.25rem 2.5rem}
   .hero-vis .chip{display:none}
@@ -358,7 +344,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </nav>
 
-<!-- HOME -->
 <div class="page active" id="page-home">
   <div class="hero">
     <div>
@@ -394,7 +379,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
     </div>
   </div>
   <div class="sep"></div>
-  <!-- FEATURES -->
   <div class="sec reveal">
     <div class="eyebrow"><div class="eye-line eye-line-s"></div><span class="eye-txt" id="f-eye">Why AlignedDocs</span></div>
     <h2 class="sec-h" id="f-h">Documentation that fits your business.</h2>
@@ -406,7 +390,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
     </div>
   </div>
   <div class="sep"></div>
-  <!-- PRICING -->
   <div class="price-bg">
     <div class="price-in">
       <div>
@@ -432,7 +415,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- PRODUCT -->
 <div class="page" id="page-prod">
   <div class="sec">
     <div class="eyebrow"><div class="eye-line eye-line-s"></div><span class="eye-txt" id="pd-eye">How it works</span></div>
@@ -451,7 +433,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- FAQ -->
 <div class="page" id="page-faq">
   <div class="sec">
     <div class="eyebrow"><div class="eye-line eye-line-s"></div><span class="eye-txt" id="fq-eye">Frequently asked</span></div>
@@ -461,7 +442,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- FORM -->
 <div class="page" id="page-form">
   <div class="form-wrap">
     <div class="eyebrow" style="margin-bottom:.75rem"><div class="eye-line eye-line-s"></div><span class="eye-txt" id="fm-eye">Tell us about your business</span></div>
@@ -471,7 +451,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- REVIEW -->
 <div class="page" id="page-review">
   <div class="rv-wrap">
     <div class="rv-badge"><svg viewBox="0 0 16 16" fill="none" stroke="#C9A84C" stroke-width="1.5" width="12" height="12"><path d="M13.5 4.5l-7 7L3 8"/></svg><span id="rv-badge">Please review your information</span></div>
@@ -494,7 +473,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- PRIVACY -->
 <div class="page" id="page-ds">
   <div class="prose">
     <h1 id="ds-h">Privacy Policy</h1>
@@ -511,7 +489,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- IMPRINT -->
 <div class="page" id="page-imp">
   <div class="prose">
     <h1 id="imp-h">Imprint</h1>
@@ -523,7 +500,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
-<!-- EXIT POPUP -->
 <div class="ex-ov" id="ex-ov">
   <div class="ex-box">
     <button class="ex-close" onclick="closeEx()" aria-label="Close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M2 2l10 10M12 2L2 12"/></svg></button>
@@ -558,7 +534,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 </footer>
 
 <script>
-// ─── DATA ────────────────────────────────────────────────
 const T={
 en:{
   "n-sub":"ISO 9001:2015","n-h":"Home","n-p":"Product","n-f":"FAQ","n-o":"Order","n-cta":"Get started",
@@ -696,7 +671,7 @@ en:[
   {q:"Does AlignedDocs replace an ISO consultant?",a:"No. AlignedDocs is a documentation tool. It does not replace professional consulting, an internal auditor, or a certification body."},
   {q:"Who is AlignedDocs designed for?",a:"Small and medium-sized businesses across Europe — typically 1–20 employees — that need structured ISO 9001 documentation as a starting foundation."},
   {q:"Is my business data secure?",a:"Yes. Data is transmitted over encrypted connections, processed only to deliver your manual, and never used for any other purpose. See our privacy policy for full details."},
-  {q:"What language will my manual be in?",a:"Your manual is generated in English by default. If you submit your form in German and request a German-language manual, please note this in your form."},
+  {q:"What language will my manual be in?",a:"Your manual is generated in the same language you use to fill in the form. Choose English at the top of the page for an English manual, German for a German manual."},
   {q:"Can I use this for multiple company locations?",a:"The manual covers one company scope as defined in your form. If you need coverage for multiple sites or entities, contact us before ordering."},
   {q:"What if I need to adapt my manual later?",a:"The PDF is delivered as a ready-to-use document. For adjustments or an updated version based on changed processes, contact us — we can discuss options."}
 ],
@@ -708,7 +683,7 @@ de:[
   {q:"Ersetzt AlignedDocs einen ISO-Berater?",a:"Nein. AlignedDocs ist ein Dokumentations-Werkzeug. Es ersetzt keine professionelle Beratung, keinen internen Auditor und keine Zertifizierungsstelle."},
   {q:"Für wen ist AlignedDocs geeignet?",a:"Kleine und mittlere Unternehmen in Europa — typischerweise 1–20 Mitarbeitende — die eine strukturierte ISO 9001 Dokumentation als Ausgangsbasis benötigen."},
   {q:"Sind meine Unternehmensdaten sicher?",a:"Ja. Daten werden verschlüsselt übertragen, ausschließlich zur Erstellung Ihres Handbuchs verarbeitet und nicht für andere Zwecke verwendet. Details in der Datenschutzerklärung."},
-  {q:"In welcher Sprache wird das Handbuch erstellt?",a:"Das Handbuch wird standardmäßig auf Englisch erstellt. Wenn Sie ein deutschsprachiges Handbuch wünschen, vermerken Sie dies bitte im Formular."},
+  {q:"In welcher Sprache wird das Handbuch erstellt?",a:"Ihr Handbuch wird in der Sprache erstellt, in der Sie das Formular ausfüllen. Wählen Sie oben auf der Seite Deutsch für ein deutsches Handbuch, Englisch für ein englisches."},
   {q:"Kann ich das Handbuch für mehrere Standorte nutzen?",a:"Das Handbuch deckt genau einen Unternehmensbereich ab, wie im Formular definiert. Für mehrere Standorte oder Einheiten kontaktieren Sie uns bitte vor der Bestellung."},
   {q:"Was, wenn ich das Handbuch später anpassen muss?",a:"Das PDF wird als fertiges Dokument geliefert. Für Anpassungen oder eine aktualisierte Version bei geänderten Prozessen kontaktieren Sie uns — wir besprechen gerne die Optionen."}
 ]};
@@ -787,11 +762,13 @@ en:[
 ]};
 
 // ─── CONFIG ──────────────────────────────────────────────
-const WEBHOOK_FORM    = "https://aligneddocs.app.n8n.cloud/webhook-test/6034a549-c2e7-4420-a928-fe795283f213";
+// FIX v3.1: webhook-test → webhook (production URL)
+const WEBHOOK_FORM    = "https://aligneddocs.app.n8n.cloud/webhook/6034a549-c2e7-4420-a928-fe795283f213";
 const WEBHOOK_CONTACT = "YOUR_N8N_CONTACT_WEBHOOK_URL";
+const SUPPORT_EMAIL   = "team@aligneddocs.com";
 
 // ─── STATE ───────────────────────────────────────────────
-let CL="en", wzStep=0, formBuilt=false;
+let CL="en", wzStep=0, formBuilt=false, lastEmail="";
 
 // ─── NAVIGATION ──────────────────────────────────────────
 function go(p){
@@ -802,6 +779,14 @@ function go(p){
   if(p==="prod")buildPipe();
   if(p==="form"&&!formBuilt){buildForm();formBuilt=true;}
   setTimeout(initReveal,80);
+}
+
+// FIX v3.1: helper to check if exit-intent should fire
+// Only on form-page when user is at step 2 or later (wzStep >= 1)
+function exitAllowed(){
+  const formPage=document.getElementById("page-form");
+  if(!formPage||!formPage.classList.contains("active"))return false;
+  return wzStep>=1;
 }
 
 // ─── LANGUAGE ────────────────────────────────────────────
@@ -911,9 +896,25 @@ function buildReview(){
   const em=document.getElementById("femail"),es=document.getElementById("em-show");
   if(em&&es)es.value=em.value;
   const conf=document.getElementById("em-conf");
-  if(conf){conf.value="";conf.classList.remove("err","ok");}
-  const err=document.getElementById("em-err");if(err)err.classList.remove("show");
-  document.getElementById("em-blk").classList.remove("err-blk");
+  // FIX v3.1: keep confirmation email if email field didn't change since last review
+  const currentEmail=em?em.value.trim().toLowerCase():"";
+  if(conf){
+    if(currentEmail!==lastEmail){
+      conf.value="";conf.classList.remove("err","ok");
+    }
+    lastEmail=currentEmail;
+  }
+  const err=document.getElementById("em-err");
+  // Re-validate match if confirm field still has content
+  if(conf&&conf.value){
+    const match=es.value.trim().toLowerCase()===conf.value.trim().toLowerCase();
+    conf.classList.toggle("err",!match);conf.classList.toggle("ok",match);
+    if(err)err.classList.toggle("show",!match);
+    document.getElementById("em-blk").classList.toggle("err-blk",!match);
+  }else{
+    if(err)err.classList.remove("show");
+    document.getElementById("em-blk").classList.remove("err-blk");
+  }
 }
 function toggleEye(){
   const i=document.getElementById("em-show"),s=document.getElementById("eye-s"),h=document.getElementById("eye-h");
@@ -930,6 +931,15 @@ function checkEm(){
   err.classList.toggle("show",!match);blk.classList.toggle("err-blk",!match);
 }
 function backToForm(){go("form");setTimeout(()=>showPanel(wzStep),50);}
+
+// FIX v3.1: generate readable Order-ID
+function makeOrderId(){
+  const d=new Date();
+  const ymd=d.getFullYear().toString()+(d.getMonth()+1).toString().padStart(2,"0")+d.getDate().toString().padStart(2,"0");
+  const rnd=Math.random().toString(36).slice(2,6).toUpperCase();
+  return"AD-"+ymd+"-"+rnd;
+}
+
 function finalSub(){
   const show=document.getElementById("em-show"),conf=document.getElementById("em-conf");
   const err=document.getElementById("em-err"),blk=document.getElementById("em-blk");
@@ -943,6 +953,8 @@ function finalSub(){
     const el=document.getElementById(f.id);
     if(el&&!data[f.id])data[f.id]=el.value.trim();
   })));
+  // FIX v3.1: Order-ID + timestamp
+  data._order_id=makeOrderId();
   data._lang=CL;
   data._ts=new Date().toISOString();
 
@@ -952,18 +964,20 @@ function finalSub(){
   if(lbl)lbl.textContent=CL==="de"?"Wird gesendet…":"Sending…";
 
   fetch(WEBHOOK_FORM,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
-    .then(()=>{
+    .then(r=>{
+      if(!r.ok)throw new Error("HTTP "+r.status);
+      // SUCCESS: navigate home, show order confirmation with Order-ID
       go("home");
       setTimeout(()=>alert(CL==="de"
-        ?"✓ Vielen Dank! Wir haben Ihre Bestellung erhalten und erstellen Ihr Handbuch in Kürze. Sie erhalten es per E-Mail an: "+data.femail
-        :"✓ Thank you! We have received your order and will prepare your manual shortly. It will be delivered to: "+data.femail),300);
+        ?"✓ Vielen Dank!\n\nIhre Bestell-Nummer: "+data._order_id+"\n\nWir haben Ihre Bestellung erhalten und senden Ihr Handbuch in Kürze an:\n"+data.femail+"\n\nFalls Sie binnen 10 Minuten keine Bestätigungs-E-Mail erhalten, kontaktieren Sie uns unter "+SUPPORT_EMAIL+" mit Bezug auf Ihre Bestell-Nummer."
+        :"✓ Thank you!\n\nYour order reference: "+data._order_id+"\n\nWe have received your order and will deliver your manual shortly to:\n"+data.femail+"\n\nIf you do not receive a confirmation email within 10 minutes, please contact us at "+SUPPORT_EMAIL+" with your order reference."),300);
     })
-    .catch(()=>{
-      // Show success regardless — don't expose backend errors to user
-      go("home");
+    .catch(e=>{
+      // FIX v3.1: HONEST error handling — do NOT pretend success
+      console.error("Order submission failed:",e);
       setTimeout(()=>alert(CL==="de"
-        ?"✓ Vielen Dank! Ihre Bestellung ist eingegangen."
-        :"✓ Thank you! Your order has been received."),300);
+        ?"⚠ Ihre Bestellung konnte nicht übermittelt werden.\n\nReferenz: "+data._order_id+"\n\nBitte kontaktieren Sie uns direkt unter "+SUPPORT_EMAIL+" mit dieser Referenz und Ihrer E-Mail-Adresse ("+data.femail+"), damit wir Ihre Bestellung manuell bearbeiten können."
+        :"⚠ Your order could not be submitted.\n\nReference: "+data._order_id+"\n\nPlease contact us directly at "+SUPPORT_EMAIL+" with this reference and your email address ("+data.femail+") so we can process your order manually."),300);
     })
     .finally(()=>{
       if(btn){btn.style.opacity="";btn.style.pointerEvents="";}
@@ -1002,9 +1016,10 @@ function updateThemeTip(){
 })();
 
 // ─── EXIT INTENT ─────────────────────────────────────────
+// FIX v3.1: only fire on form page when at step 2+ (wzStep >= 1)
 let exShown=false,exCool=false;
-document.addEventListener("mouseleave",e=>{if(e.clientY<=0&&!exShown&&!exCool){exShown=true;document.getElementById("ex-ov").classList.add("show");}});
-let mTimer;function resetMT(){clearTimeout(mTimer);mTimer=setTimeout(()=>{if(!exShown&&!exCool){exShown=true;document.getElementById("ex-ov").classList.add("show");}},45000);}
+document.addEventListener("mouseleave",e=>{if(e.clientY<=0&&!exShown&&!exCool&&exitAllowed()){exShown=true;document.getElementById("ex-ov").classList.add("show");}});
+let mTimer;function resetMT(){clearTimeout(mTimer);mTimer=setTimeout(()=>{if(!exShown&&!exCool&&exitAllowed()){exShown=true;document.getElementById("ex-ov").classList.add("show");}},45000);}
 ["touchstart","touchend","scroll"].forEach(ev=>document.addEventListener(ev,resetMT,{passive:true}));
 resetMT();
 function closeEx(){document.getElementById("ex-ov").classList.remove("show");exCool=true;setTimeout(()=>{exCool=false;exShown=false;},120000);}
@@ -1016,9 +1031,29 @@ async function submitEx(){
   if(!email||!msg){err.classList.add("show");return;}
   err.classList.remove("show");
   const btn=document.querySelector("#ex-form .btn-gold");if(btn){btn.style.opacity=".6";btn.style.pointerEvents="none";}
+  // FIX v3.1: if webhook is still placeholder, be honest and show mailto fallback
+  if(WEBHOOK_CONTACT.startsWith("YOUR_")){
+    if(btn){btn.style.opacity="";btn.style.pointerEvents="";}
+    const mailto="mailto:"+SUPPORT_EMAIL+"?subject="+encodeURIComponent("AlignedDocs question from "+(name||"website visitor"))+"&body="+encodeURIComponent("From: "+(name||"")+" <"+email+">\n\n"+msg);
+    if(confirm(CL==="de"
+      ?"Unser Kontaktformular ist gerade nicht verfügbar.\n\nMöchten Sie Ihre Nachricht stattdessen direkt per E-Mail an "+SUPPORT_EMAIL+" senden?"
+      :"Our contact form is currently unavailable.\n\nWould you like to send your message directly to "+SUPPORT_EMAIL+" instead?")){
+      window.location.href=mailto;
+    }
+    return;
+  }
+  let ok=false;
   try{
-    await fetch(WEBHOOK_CONTACT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,email,message:msg,source:"exit-intent",lang:CL})});
-  }catch(e){}
+    const r=await fetch(WEBHOOK_CONTACT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,email,message:msg,source:"exit-intent",lang:CL})});
+    ok=r.ok;
+  }catch(e){ok=false;}
+  if(btn){btn.style.opacity="";btn.style.pointerEvents="";}
+  if(!ok){
+    alert(CL==="de"
+      ?"⚠ Ihre Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an "+SUPPORT_EMAIL+"."
+      :"⚠ Your message could not be sent. Please write to us directly at "+SUPPORT_EMAIL+".");
+    return;
+  }
   document.getElementById("ex-form").style.display="none";
   document.getElementById("ex-ok-em").textContent=email;
   document.getElementById("ex-ok").style.display="block";

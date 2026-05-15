@@ -310,6 +310,260 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   .rv-acts{flex-direction:column-reverse}
   .btn-nav{padding:7px 10px;font-size:11px}
 }
+
+/* ── Document Language Switch (Review) ─────────────────────────── */
+.doc-lang-box{margin:2rem 0 1.5rem;padding:1.25rem 1.5rem;border:1px solid var(--bdr);border-radius:12px;background:var(--bg2)}
+.doc-lang-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:.4rem;font-weight:500}
+.doc-lang-sub{font-size:13px;color:var(--tb);font-weight:300;margin-bottom:1rem}
+.doc-lang-switch{display:inline-flex;gap:0;border:1px solid var(--bdr);border-radius:8px;overflow:hidden;background:var(--bg3)}
+.dl-opt{padding:9px 22px;background:transparent;border:none;color:var(--tm);font-size:13px;font-weight:400;cursor:pointer;transition:all var(--spd);letter-spacing:.02em}
+.dl-opt:hover{color:var(--tx)}
+.dl-opt.active{background:var(--gld);color:#0a0a0a;font-weight:500}
+
+/* ── Legal Checkboxes (B2B + AGB) ───────────────────────────── */
+.legal-box{margin:1.5rem 0;display:flex;flex-direction:column;gap:.85rem}
+.legal-chk{display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;font-size:14px;color:var(--tb);font-weight:300;line-height:1.5}
+.legal-chk input[type=checkbox]{position:absolute;opacity:0;width:0;height:0}
+.legal-chk-mark{display:inline-block;flex-shrink:0;width:18px;height:18px;border:1.5px solid var(--bdr);border-radius:4px;margin-top:1px;position:relative;transition:all var(--spd);background:var(--bg2)}
+.legal-chk input[type=checkbox]:checked + .legal-chk-mark{background:var(--gld);border-color:var(--gld)}
+.legal-chk input[type=checkbox]:checked + .legal-chk-mark::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #0a0a0a;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.legal-chk-txt{padding-top:0}
+
+/* ── Submit-Fehler-Hinweis ─────────────────────────────────── */
+.submit-err{display:none;margin:1.25rem 0;padding:.9rem 1.1rem;border:1px solid rgba(231,76,60,.3);border-radius:8px;background:rgba(231,76,60,.07);font-size:13px;color:var(--tb);align-items:flex-start;gap:.6rem}
+.submit-err.show{display:flex}
+.submit-err-ico{flex-shrink:0;font-size:14px;color:#e74c3c}
+.submit-err-txt{font-weight:300;line-height:1.5}
+
+/* ── Sample-PDF-Link Hover ──────────────────────────────────── */
+.sample-link:hover{border-color:var(--silv)!important;color:var(--tx)!important;transform:translateY(-1px)}
+
+/* ── Zeitvergleich-Sektion ───────────────────────────────────── */
+.time-section{
+  background:var(--bg);
+  border-top:1px solid var(--bdr);
+  position:relative;
+  z-index:1;
+}
+.time-section-in{
+  max-width:1180px;
+  margin:0 auto;
+  padding:6rem 2.5rem 5rem;
+}
+
+/* ── Hero-Statement der Zeitersparnis ────────────────────── */
+.savings-hero{
+  text-align:center;
+  margin-bottom:5rem;
+  padding:2rem 2rem 3rem;
+  position:relative;
+}
+.savings-hero::before{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);
+  pointer-events:none;
+  z-index:0;
+}
+.savings-eyebrow{
+  font-size:11px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--gld);
+  font-weight:500;
+  margin-bottom:1.25rem;
+  position:relative;
+}
+.savings-num-wrap{
+  display:inline-flex;
+  align-items:baseline;
+  gap:1rem;
+  position:relative;
+  margin-bottom:1rem;
+}
+.savings-number{
+  font-family:'Cormorant Garamond',serif;
+  font-size:140px;
+  font-weight:300;
+  line-height:1;
+  letter-spacing:-.04em;
+  background:linear-gradient(180deg,var(--silv) 0%,var(--gld) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  display:inline-block;
+}
+.savings-percent{
+  font-size:80px;
+  letter-spacing:-.02em;
+}
+.savings-number-unit{
+  font-family:'Outfit',sans-serif;
+  font-size:22px;
+  font-weight:300;
+  color:var(--gld);
+  letter-spacing:.04em;
+}
+.savings-headline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;
+  font-weight:300;
+  letter-spacing:-.02em;
+  color:var(--tx);
+  position:relative;
+  margin-bottom:.75rem;
+}
+.savings-sub{
+  font-size:15px;
+  color:var(--tb);
+  font-weight:300;
+  position:relative;
+  max-width:560px;
+  margin:0 auto;
+  line-height:1.65;
+}
+.savings-sub strong{
+  color:var(--gld);
+  font-weight:500;
+}
+
+/* ── Zeitvergleich-Balken ────────────────────────────── */
+.time-compare{
+  display:flex;
+  flex-direction:column;
+  gap:2.5rem;
+  margin-top:2rem;
+}
+.tc-row{
+  display:grid;
+  grid-template-columns:240px 1fr 130px;
+  align-items:center;
+  gap:2rem;
+  padding:1rem 0;
+  position:relative;
+  opacity:.82;
+  transition:opacity .4s ease;
+}
+.tc-row.featured{opacity:1}
+.tc-row:hover{opacity:1}
+.tc-label{display:flex;flex-direction:column;gap:.25rem}
+.tc-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-weight:400;
+  color:var(--tx);
+  letter-spacing:-.01em;
+}
+.tc-method{
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--tm);
+  font-weight:400;
+}
+.tc-bar-wrap{
+  position:relative;
+  height:36px;
+  background:rgba(255,255,255,.025);
+  border-radius:4px;
+  overflow:hidden;
+}
+.tc-bar{
+  height:100%;
+  border-radius:4px;
+  transition:all 1.2s cubic-bezier(.2,.7,.2,1);
+  position:relative;
+}
+.tc-bar.diy{
+  background:linear-gradient(90deg,rgba(168,166,161,.18),rgba(168,166,161,.05));
+  width:50%;
+}
+.tc-bar.ad{
+  background:linear-gradient(90deg,var(--gld),var(--silv));
+  width:3%;
+  min-width:42px;
+  box-shadow:0 0 24px rgba(201,168,76,.45), 0 0 60px rgba(201,168,76,.18);
+}
+.tc-bar.ad::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);
+  animation:shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer{
+  0%{left:-60%}
+  100%{left:160%}
+}
+.tc-bar.ber{
+  background:linear-gradient(90deg,rgba(168,166,161,.18),rgba(168,166,161,.05));
+  width:100%;
+}
+.tc-time{
+  text-align:right;
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;
+  font-weight:400;
+  color:var(--tx);
+  letter-spacing:-.01em;
+  white-space:nowrap;
+}
+.tc-time.gold{
+  color:var(--gld);
+  font-size:30px;
+  font-weight:500;
+}
+.tc-time small{
+  display:block;
+  font-family:'Outfit',sans-serif;
+  font-size:10px;
+  font-weight:300;
+  color:var(--tm);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-top:2px;
+}
+.tc-time.gold small{color:var(--silv)}
+.tc-row.featured::before{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:-1.5rem;
+  width:3px;
+  height:55%;
+  background:var(--gld);
+  transform:translateY(-50%);
+  border-radius:2px;
+  box-shadow:0 0 12px rgba(201,168,76,.5);
+}
+@media (max-width:760px){
+  .time-section-in{padding:3rem 1.25rem}
+  .savings-number{font-size:90px}
+  .savings-percent{font-size:54px}
+  .savings-number-unit{font-size:16px}
+  .savings-headline{font-size:26px}
+  .savings-sub{font-size:14px}
+  .tc-row{
+    grid-template-columns:1fr;
+    gap:.75rem;
+  }
+  .tc-time{text-align:left}
+  .tc-row.featured::before{display:none}
+}
+
+/* ── Trust Signals ──────────────────────────────────────────── */
+.trust-row{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--bdr)}
+.trust-itm{display:flex;align-items:center;gap:.5rem;font-size:12px;color:var(--tm);font-weight:300;letter-spacing:.04em}
+.trust-itm svg{flex-shrink:0;color:var(--gld);opacity:.7}
+
 </style>
 </head>
 <body>
@@ -368,7 +622,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
         <div class="doc-bd">
           <div class="doc-wm" id="h-wm">AlignedDocs</div>
           <div class="doc-h" id="h-dh">ISO 9001 Quality Manual</div>
-          <div class="doc-co" id="h-dc">Sample Ltd. · 2026</div>
+          <div class="doc-co" id="h-dc">Keller Design Studio · 2026</div>
           <div class="doc-sr"><div class="doc-sl" id="h-d1">1. Organizational Context</div><div class="bars"><div class="bar b90"></div><div class="bar b70"></div><div class="bar b55"></div></div></div>
           <div class="doc-sr"><div class="doc-sl" id="h-d2">2. Quality Policy</div><div class="bars"><div class="bar b80"></div><div class="bar b90"></div></div></div>
           <div class="doc-sr"><div class="doc-sl" id="h-d3">3. Process Description</div><div class="bars"><div class="bar b70"></div><div class="bar b55"></div></div></div>
@@ -390,6 +644,80 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
     </div>
   </div>
   <div class="sep"></div>
+
+<!-- ── Zeitersparnis: DIY vs AlignedDocs vs Berater ── -->
+<section class="time-section">
+  <div class="time-section-in">
+
+    <!-- HERO: Zeitersparnis-Statement -->
+    <div class="savings-hero">
+      <div class="savings-eyebrow" id="sv-eb">YOUR TIME SAVED</div>
+      <div class="savings-num-wrap">
+        <span class="savings-number">97<span class="savings-percent">%</span></span>
+        <span class="savings-number-unit" id="sv-unit">faster than DIY</span>
+      </div>
+      <h2 class="savings-headline" id="sv-h">30 minutes instead of 20 hours.</h2>
+      <p class="savings-sub" id="sv-s">A DIY template costs you <strong>20 to 40 hours</strong> of your own work. With us, it's <strong>30 minutes</strong> of form — we handle the rest.</p>
+    </div>
+
+    <!-- Belege: 3 Reihen mit Balken -->
+    <div class="time-compare">
+
+      <div class="tc-row">
+        <div class="tc-label">
+          <div class="tc-name" id="tc-n1">DIY Template</div>
+          <div class="tc-method" id="tc-m1">SELF-MADE</div>
+        </div>
+        <div class="tc-bar-wrap">
+          <div class="tc-bar diy"></div>
+        </div>
+        <div class="tc-time"><span id="tc-t1">20–40 h</span><small id="tc-s1">YOUR EFFORT</small></div>
+      </div>
+
+      <div class="tc-row featured">
+        <div class="tc-label">
+          <div class="tc-name" id="tc-n2">AlignedDocs</div>
+          <div class="tc-method" style="color:var(--gld)" id="tc-m2">STRUCTURED PROCESS</div>
+        </div>
+        <div class="tc-bar-wrap">
+          <div class="tc-bar ad"></div>
+        </div>
+        <div class="tc-time gold"><span id="tc-t2">30 min</span><small id="tc-s2">FORM</small></div>
+      </div>
+
+      <div class="tc-row">
+        <div class="tc-label">
+          <div class="tc-name" id="tc-n3">Classic Consultancy</div>
+          <div class="tc-method" id="tc-m3">CONSULTANT-LED</div>
+        </div>
+        <div class="tc-bar-wrap">
+          <div class="tc-bar ber"></div>
+        </div>
+        <div class="tc-time"><span id="tc-t3">4–8 wk.</span><small id="tc-s3">SUPPORT</small></div>
+      </div>
+
+    </div>
+
+    <!-- Trust-Row -->
+    <div class="trust-row">
+      <div class="trust-itm">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M8 1l5 2v5c0 3-2 5-5 7-3-2-5-4-5-7V3l5-2z"/></svg>
+        <span id="tr-1">GDPR-compliant</span>
+      </div>
+      <div class="trust-itm">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><circle cx="8" cy="8" r="7"/><path d="M3 8h10M8 1c2 2 3 4 3 7s-1 5-3 7c-2-2-3-4-3-7s1-5 3-7z"/></svg>
+        <span id="tr-2">Hosted in EU</span>
+      </div>
+      <div class="trust-itm">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 5h10v8H3z"/><path d="M3 5l5 4 5-4"/></svg>
+        <span id="tr-3">team@aligneddocs.com</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
   <div class="price-bg">
     <div class="price-in">
       <div>
@@ -398,6 +726,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
         <p id="pr-d" style="font-size:15px;font-weight:300;color:var(--tb);line-height:1.75;margin-bottom:.75rem">Pay once and receive your tailored ISO 9001 Foundation Package as a print-ready PDF.</p>
         <div class="price-amt">€ 179 <span id="pr-o">one-time</span></div>
         <div class="price-note" id="pr-n">excl. VAT · No recurring costs</div>
+        <a href="sample-handbuch.pdf" target="_blank" rel="noopener" id="pr-sample" class="sample-link" style="display:inline-flex;align-items:center;gap:8px;margin-top:1rem;font-size:13px;color:var(--silv);text-decoration:none;border:1px solid var(--bdr);padding:10px 16px;border-radius:8px;transition:all .25s ease"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 2h7l3 3v9H3V2zM10 2v3h3"/></svg><span id="pr-sample-t">View sample PDF (Brenner Sanitär GmbH)</span></a>
         <button class="btn btn-gold" onclick="go('form')" id="pr-c">Order now →</button>
       </div>
       <div class="price-card">
@@ -466,9 +795,45 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
         <div class="em-fw"><label class="em-lbl" id="em-l2">Confirm email <em>*</em></label><input class="em-inp" id="em-conf" type="email" oninput="checkEm()"><div class="err-msg" id="em-err"><div class="err-dot"></div><span id="em-err-t">The email addresses do not match.</span></div></div>
       </div>
     </div>
+    <!-- Dokumentensprache-Switch -->
+    <div class="doc-lang-box" id="doc-lang-box">
+      <div class="doc-lang-lbl" id="dl-lbl">Document language</div>
+      <div class="doc-lang-sub" id="dl-sub">Independent from the website language above.</div>
+      <div class="doc-lang-switch">
+        <button type="button" class="dl-opt active" data-lang="en" onclick="setDocLang('en')" id="dl-en">English</button>
+        <button type="button" class="dl-opt" data-lang="de" onclick="setDocLang('de')" id="dl-de">Deutsch</button>
+      </div>
+    </div>
+
+    <!-- B2B + AGB Checkboxes -->
+    <div class="legal-box" id="legal-box">
+      <label class="legal-chk" for="chk-b2b">
+        <input type="checkbox" id="chk-b2b" onchange="updateSubmitState()">
+        <span class="legal-chk-mark"></span>
+        <span class="legal-chk-txt" id="chk-b2b-t">I confirm that I am ordering for a company or as a self-employed person (B2B, not as a consumer).</span>
+      </label>
+      <label class="legal-chk" for="chk-agb">
+        <input type="checkbox" id="chk-agb" onchange="updateSubmitState()">
+        <span class="legal-chk-mark"></span>
+        <span class="legal-chk-txt" id="chk-agb-t">I accept the <a onclick="go('agb')" style="color:var(--silv);text-decoration:underline;cursor:pointer">Terms &amp; Conditions</a> and the <a onclick="go('ds')" style="color:var(--silv);text-decoration:underline;cursor:pointer">Privacy Policy</a>.</span>
+      </label>
+    </div>
+
+    <!-- Honeypot (versteckt für Bots) -->
+    <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+      <label for="hp-website">Website</label>
+      <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <!-- Submit-Fehler-Hinweis -->
+    <div class="submit-err" id="submit-err">
+      <div class="submit-err-ico">⚠</div>
+      <div class="submit-err-txt" id="submit-err-txt">Submission failed. Please try again — your entries are preserved while this tab is open.</div>
+    </div>
+
     <div class="rv-acts">
       <div><button class="btn btn-ghost" onclick="backToForm()" id="rv-back"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M10 3L5 8l5 5"/></svg><span id="rv-back-t">Back & edit</span></button><div class="rv-hint" id="rv-hint">Your entries will be preserved.</div></div>
-      <button class="btn btn-gold" onclick="finalSub()" id="rv-sub" style="padding:15px 36px;font-size:15px"><span id="rv-sub-t">Place paid order →</span></button>
+      <button class="btn btn-gold" onclick="finalSub()" id="rv-sub" disabled style="padding:15px 36px;font-size:15px;opacity:.5;pointer-events:none"><span id="rv-sub-t">Place paid order →</span></button>
     </div>
   </div>
 </div>
@@ -522,11 +887,54 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   </div>
 </div>
 
+<div class="page" id="page-agb">
+  <div class="prose">
+    <h1 id="agb-h">Allgemeine Geschäftsbedingungen (AGB)</h1>
+    <p class="lead" id="agb-l">B2B-Geschäftsbedingungen für AlignedDocs.</p>
+
+    <h2 id="agb-h1">1. Geltungsbereich</h2>
+    <p id="agb-p1">Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen AlignedDocs (Daniel Fernandes, Einzelunternehmer) und Unternehmen im Sinne des § 14 BGB. Verbraucher i.S.d. § 13 BGB sind ausdrücklich ausgeschlossen. Mit der Bestellung bestätigen Sie, dass Sie für ein Unternehmen oder als Selbstständiger handeln.</p>
+
+    <h2 id="agb-h2">2. Vertragsgegenstand</h2>
+    <p id="agb-p2">AlignedDocs erstellt auf Basis Ihrer Formulareingaben ein individuelles ISO 9001:2015 Qualitätsmanagement-Handbuch („Foundation Stage 1") als druckfertige PDF-Datei. Es handelt sich um individuell erstellte digitale Inhalte. Eine Zertifizierung durch AlignedDocs erfolgt nicht; das Handbuch dient als Vorbereitungsgrundlage für ein externes Audit.</p>
+
+    <h2 id="agb-h3">3. Vertragsschluss</h2>
+    <p id="agb-p3">Mit dem Absenden des ausgefüllten Bestellformulars geben Sie ein verbindliches Angebot ab. Der Vertrag kommt zustande, sobald Sie eine Auftragsbestätigung per E-Mail erhalten.</p>
+
+    <h2 id="agb-h4">4. Leistungsumfang</h2>
+    <p id="agb-p4">Geliefert wird eine PDF-Datei mit den im Formular abgefragten Inhalten, strukturiert nach ISO 9001:2015 Foundation Stage 1. Der Umfang beträgt typischerweise 15–20 Seiten. Die Lieferung erfolgt per E-Mail an die im Formular angegebene Adresse.</p>
+
+    <h2 id="agb-h5">5. Lieferzeit</h2>
+    <p id="agb-p5">Die Lieferung erfolgt in der Regel innerhalb von bis zu 24 Stunden nach Zahlungseingang. Bei verzögerter Lieferung werden Sie umgehend informiert.</p>
+
+    <h2 id="agb-h6">6. Preise und Zahlung</h2>
+    <p id="agb-p6">Der Preis beträgt €179 (einmalig), zzgl. gesetzlicher Umsatzsteuer, sofern anwendbar. Die Zahlung erfolgt nach Bestellbestätigung per gesonderter Zahlungsanweisung. Lieferung erfolgt nach vollständigem Zahlungseingang.</p>
+
+    <h2 id="agb-h7">7. Mängelhaftung</h2>
+    <p id="agb-p7">Bei sachlichen Fehlern (z.B. falsche Firmenangaben, offensichtliche Inkonsistenzen mit Ihren Eingaben) erhalten Sie eine kostenlose Nachbesserung. Melden Sie sich per E-Mail an team@aligneddocs.com unter Angabe Ihrer Bestell-Nummer. Sollten Sie mit dem Ergebnis grundsätzlich nicht zufrieden sein, melden Sie sich – wir finden eine Lösung. Im Übrigen gilt die gesetzliche Gewährleistung für Unternehmer.</p>
+
+    <h2 id="agb-h8">8. Haftungsbeschränkung</h2>
+    <p id="agb-p8">AlignedDocs haftet ausschließlich für Schäden aus Vorsatz oder grober Fahrlässigkeit. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit gesetzlich zulässig. Die Haftung ist in jedem Fall auf den Auftragswert beschränkt. Für mittelbare Schäden, Folgeschäden und entgangenen Gewinn wird nicht gehaftet. Diese Haftungsbeschränkung gilt nicht bei Verletzung von Leben, Körper oder Gesundheit.</p>
+
+    <h2 id="agb-h9">9. Nutzungsrechte</h2>
+    <p id="agb-p9">Sie erhalten ein zeitlich und räumlich unbeschränktes, nicht-exklusives Nutzungsrecht am gelieferten Handbuch für Ihre internen Geschäftszwecke. Eine Weitergabe, Vervielfältigung oder Veröffentlichung an Dritte (außer im Rahmen Ihres internen Auditprozesses) bedarf unserer schriftlichen Zustimmung.</p>
+
+    <h2 id="agb-h10">10. Datenschutz</h2>
+    <p id="agb-p10">Die Verarbeitung Ihrer Daten erfolgt gemäß unserer <a onclick="go('ds')" style="color:var(--silv);cursor:pointer">Datenschutzerklärung</a>. Wir verarbeiten Ihre Eingaben ausschließlich zur Erstellung Ihres Handbuchs.</p>
+
+    <h2 id="agb-h11">11. Schlussbestimmungen</h2>
+    <p id="agb-p11">Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertrag ist Böblingen, sofern Sie Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen sind. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+
+    <p id="agb-stand" style="margin-top:2rem;font-size:13px;color:var(--tm)">Stand: 15.05.2026</p>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="footer-in">
     <div class="footer-brand">AlignedDocs © 2026</div>
     <div class="footer-links">
       <a onclick="go('faq')" id="ft-f">FAQ</a>
+      <a onclick="go('agb')" id="ft-a">Terms</a>
       <a onclick="go('ds')" id="ft-d">Privacy</a>
       <a onclick="go('imp')" id="ft-i">Imprint</a>
     </div>
@@ -544,7 +952,7 @@ en:{
   "h-c1":"Get my manual →","h-c2":"How it works",
   "h-s1l":"Built for","h-s2l":"Pages PDF","h-s3l":"Tailored","h-s1n":"SME",
   "h-c1t":"Stage 1 ready","h-c2t":"Tailored to your business",
-  "h-fn":"ISO9001_QualityManual.pdf","h-wm":"AlignedDocs","h-dh":"ISO 9001 Quality Manual","h-dc":"Sample Ltd. · 2026",
+  "h-fn":"ISO9001_QualityManual.pdf","h-wm":"AlignedDocs","h-dh":"ISO 9001 Quality Manual","h-dc":"Keller Design Studio · 2026",
   "h-d1":"1. Organizational Context","h-d2":"2. Quality Policy","h-d3":"3. Process Description",
   "h-st":"Standard-compliant · Audit-ready foundation",
   "f-eye":"Why AlignedDocs","f-h":"Documentation that fits your business.",
@@ -581,7 +989,32 @@ en:{
   "imp-h2":"Responsible for content","imp-p2":"Daniel Fernandes (address as above), responsible according to § 18 (2) MStV.",
   "imp-h3":"EU dispute resolution","imp-p3":"The European Commission provides an online dispute resolution platform: <a href=\"https://ec.europa.eu/consumers/odr\" target=\"_blank\" rel=\"noopener\">https://ec.europa.eu/consumers/odr</a>. We are not obligated to participate.",
   "imp-h4":"Liability for content","imp-p4":"As a service provider, we are responsible for our own content under § 7(1) TMG.",
-  "ft-f":"FAQ","ft-d":"Privacy","ft-i":"Imprint",
+  "ft-f":"FAQ","ft-a":"Terms","ft-d":"Privacy","ft-i":"Imprint",
+  "pr-sample-t":"View sample PDF (Brenner Sanitär GmbH)",
+  "sv-eb":"YOUR TIME SAVED","sv-unit":"faster than DIY",
+  "sv-h":"30 minutes instead of 20 hours.",
+  "sv-s":"A DIY template costs you <strong>20 to 40 hours</strong> of your own work. With us, it's <strong>30 minutes</strong> of form — we handle the rest.",
+  "tc-n1":"DIY Template","tc-m1":"SELF-MADE","tc-t1":"20–40 h","tc-s1":"YOUR EFFORT",
+  "tc-n2":"AlignedDocs","tc-m2":"STRUCTURED PROCESS","tc-t2":"30 min","tc-s2":"FORM",
+  "tc-n3":"Classic Consultancy","tc-m3":"CONSULTANT-LED","tc-t3":"4–8 wk.","tc-s3":"SUPPORT",
+  "tr-1":"GDPR-compliant","tr-2":"Hosted in EU","tr-3":"team@aligneddocs.com",
+  "dl-lbl":"Document language","dl-sub":"Independent from the website language above.","dl-en":"English","dl-de":"Deutsch",
+  "chk-b2b-t":"I confirm that I am ordering for a company or as a self-employed person (B2B, not as a consumer).",
+  "chk-agb-t":"I accept the <a onclick=\"go(\'agb\')\" style=\"color:var(--silv);text-decoration:underline;cursor:pointer\">Terms &amp; Conditions</a> and the <a onclick=\"go(\'ds\')\" style=\"color:var(--silv);text-decoration:underline;cursor:pointer\">Privacy Policy</a>.",
+  "submit-err-txt":"Submission failed. Please try again — your entries are preserved while this tab is open.",
+  "agb-h":"Terms and Conditions","agb-l":"B2B terms of business for AlignedDocs.",
+  "agb-h1":"1. Scope","agb-p1":"These Terms and Conditions apply to all contracts between AlignedDocs (Daniel Fernandes, sole proprietor) and businesses within the meaning of § 14 BGB (German Civil Code). Consumers within the meaning of § 13 BGB are explicitly excluded. By placing an order you confirm that you act as a business or self-employed person.",
+  "agb-h2":"2. Subject of the contract","agb-p2":"AlignedDocs creates an individual ISO 9001:2015 Quality Management Manual (\"Foundation Stage 1\") based on your form inputs, delivered as a print-ready PDF. The deliverable consists of individually created digital content. AlignedDocs does not issue any certification; the manual serves as preparation material for an external audit.",
+  "agb-h3":"3. Conclusion of contract","agb-p3":"By submitting the completed order form you make a binding offer. The contract is concluded once you receive an order confirmation by email.",
+  "agb-h4":"4. Scope of services","agb-p4":"The deliverable is a PDF file containing the content collected via the form, structured according to ISO 9001:2015 Foundation Stage 1. Typical length is 15–20 pages. Delivery is by email to the address provided in the form.",
+  "agb-h5":"5. Delivery time","agb-p5":"Delivery typically occurs within up to 24 hours after receipt of payment. In case of delays you will be informed promptly.",
+  "agb-h6":"6. Prices and payment","agb-p6":"The price is €179 (one-time), plus statutory VAT where applicable. Payment is processed after order confirmation via a separate payment instruction. Delivery occurs after full payment receipt.",
+  "agb-h7":"7. Warranty","agb-p7":"For factual errors (e.g. incorrect company information, obvious inconsistencies with your input), you receive a free correction. Contact team@aligneddocs.com with your order reference. If you are fundamentally dissatisfied, contact us and we will find a solution. Otherwise, statutory warranty for businesses applies.",
+  "agb-h8":"8. Limitation of liability","agb-p8":"AlignedDocs is liable only for damages arising from intent or gross negligence. Liability for slight negligence is excluded to the extent permitted by law. Liability is in any case limited to the order value. No liability for indirect damages, consequential damages or lost profits. This limitation does not apply to injury to life, body or health.",
+  "agb-h9":"9. Rights of use","agb-p9":"You receive an unlimited (in time and geography), non-exclusive right to use the delivered manual for your internal business purposes. Transferring, copying or publishing to third parties (except as part of your internal audit process) requires our written consent.",
+  "agb-h10":"10. Data protection","agb-p10":"Your data is processed according to our <a onclick=\"go(\'ds\')\" style=\"color:var(--silv);cursor:pointer\">Privacy Policy</a>. We process your input exclusively to create your manual.",
+  "agb-h11":"11. Final provisions","agb-p11":"German law applies, excluding the UN Convention on Contracts for the International Sale of Goods. Place of jurisdiction for all disputes from this contract is Böblingen, provided you are a merchant, legal entity under public law or special fund under public law. Should individual provisions be invalid, the validity of the remaining provisions remains unaffected.",
+  "agb-stand":"As of: 15.05.2026",
   "rv-badge":"Please review your information","rv-h":"Summary.","rv-s":"Please review your answers carefully before placing your order.",
   "em-t":"Confirm your email address","em-sub":"Enter your email address again — we will deliver your manual here.",
   "em-l1":"Email entered ✓","em-l2":"Confirm email *","em-err-t":"The email addresses do not match.",
@@ -637,7 +1070,32 @@ de:{
   "imp-h2":"Verantwortlich für den Inhalt","imp-p2":"Daniel Fernandes (Anschrift wie oben), verantwortlich nach § 18 Abs. 2 MStV.",
   "imp-h3":"EU-Streitschlichtung","imp-p3":"Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href=\"https://ec.europa.eu/consumers/odr\" target=\"_blank\" rel=\"noopener\">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht zur Teilnahme verpflichtet.",
   "imp-h4":"Haftung für Inhalte","imp-p4":"Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte verantwortlich.",
-  "ft-f":"FAQ","ft-d":"Datenschutz","ft-i":"Impressum",
+  "ft-f":"FAQ","ft-a":"AGB","ft-d":"Datenschutz","ft-i":"Impressum",
+  "pr-sample-t":"Beispiel-PDF ansehen (Brenner Sanitär GmbH)",
+  "sv-eb":"IHR ZEITGEWINN","sv-unit":"schneller als DIY",
+  "sv-h":"30 Minuten statt 20 Stunden.",
+  "sv-s":"Eine DIY-Vorlage kostet Sie <strong>20 bis 40 Stunden</strong> Eigenarbeit. Bei uns sind es <strong>30 Minuten</strong> Formular — den Rest übernehmen wir.",
+  "tc-n1":"DIY-Vorlage","tc-m1":"SELBST ERSTELLT","tc-t1":"20–40 h","tc-s1":"EIGENARBEIT",
+  "tc-n2":"AlignedDocs","tc-m2":"STRUKTURGEFÜHRT","tc-t2":"30 Min.","tc-s2":"FORMULAR",
+  "tc-n3":"Klassische Beratung","tc-m3":"BERATERGESTÜTZT","tc-t3":"4–8 Wo.","tc-s3":"BEGLEITUNG",
+  "tr-1":"DSGVO-konform","tr-2":"Hosted in EU","tr-3":"team@aligneddocs.com",
+  "dl-lbl":"Dokumentensprache","dl-sub":"Unabhängig von der Webseiten-Sprache oben.","dl-en":"English","dl-de":"Deutsch",
+  "chk-b2b-t":"Ich bestätige, dass ich für ein Unternehmen oder als Selbstständiger bestelle (B2B, kein Privatkauf).",
+  "chk-agb-t":"Ich akzeptiere die <a onclick=\"go(\'agb\')\" style=\"color:var(--silv);text-decoration:underline;cursor:pointer\">AGB</a> und die <a onclick=\"go(\'ds\')\" style=\"color:var(--silv);text-decoration:underline;cursor:pointer\">Datenschutzerklärung</a>.",
+  "submit-err-txt":"Senden fehlgeschlagen. Bitte erneut absenden — Ihre Eingaben bleiben gespeichert, solange dieser Tab offen ist.",
+  "agb-h":"Allgemeine Geschäftsbedingungen (AGB)","agb-l":"B2B-Geschäftsbedingungen für AlignedDocs.",
+  "agb-h1":"1. Geltungsbereich","agb-p1":"Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen AlignedDocs (Daniel Fernandes, Einzelunternehmer) und Unternehmen im Sinne des § 14 BGB. Verbraucher i.S.d. § 13 BGB sind ausdrücklich ausgeschlossen. Mit der Bestellung bestätigen Sie, dass Sie für ein Unternehmen oder als Selbstständiger handeln.",
+  "agb-h2":"2. Vertragsgegenstand","agb-p2":"AlignedDocs erstellt auf Basis Ihrer Formulareingaben ein individuelles ISO 9001:2015 Qualitätsmanagement-Handbuch (\"Foundation Stage 1\") als druckfertige PDF-Datei. Es handelt sich um individuell erstellte digitale Inhalte. Eine Zertifizierung durch AlignedDocs erfolgt nicht; das Handbuch dient als Vorbereitungsgrundlage für ein externes Audit.",
+  "agb-h3":"3. Vertragsschluss","agb-p3":"Mit dem Absenden des ausgefüllten Bestellformulars geben Sie ein verbindliches Angebot ab. Der Vertrag kommt zustande, sobald Sie eine Auftragsbestätigung per E-Mail erhalten.",
+  "agb-h4":"4. Leistungsumfang","agb-p4":"Geliefert wird eine PDF-Datei mit den im Formular abgefragten Inhalten, strukturiert nach ISO 9001:2015 Foundation Stage 1. Der Umfang beträgt typischerweise 15–20 Seiten. Die Lieferung erfolgt per E-Mail an die im Formular angegebene Adresse.",
+  "agb-h5":"5. Lieferzeit","agb-p5":"Die Lieferung erfolgt in der Regel innerhalb von bis zu 24 Stunden nach Zahlungseingang. Bei verzögerter Lieferung werden Sie umgehend informiert.",
+  "agb-h6":"6. Preise und Zahlung","agb-p6":"Der Preis beträgt €179 (einmalig), zzgl. gesetzlicher Umsatzsteuer, sofern anwendbar. Die Zahlung erfolgt nach Bestellbestätigung per gesonderter Zahlungsanweisung. Lieferung erfolgt nach vollständigem Zahlungseingang.",
+  "agb-h7":"7. Mängelhaftung","agb-p7":"Bei sachlichen Fehlern (z.B. falsche Firmenangaben, offensichtliche Inkonsistenzen mit Ihren Eingaben) erhalten Sie eine kostenlose Nachbesserung. Melden Sie sich per E-Mail an team@aligneddocs.com unter Angabe Ihrer Bestell-Nummer. Sollten Sie mit dem Ergebnis grundsätzlich nicht zufrieden sein, melden Sie sich – wir finden eine Lösung. Im Übrigen gilt die gesetzliche Gewährleistung für Unternehmer.",
+  "agb-h8":"8. Haftungsbeschränkung","agb-p8":"AlignedDocs haftet ausschließlich für Schäden aus Vorsatz oder grober Fahrlässigkeit. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit gesetzlich zulässig. Die Haftung ist in jedem Fall auf den Auftragswert beschränkt. Für mittelbare Schäden, Folgeschäden und entgangenen Gewinn wird nicht gehaftet. Diese Haftungsbeschränkung gilt nicht bei Verletzung von Leben, Körper oder Gesundheit.",
+  "agb-h9":"9. Nutzungsrechte","agb-p9":"Sie erhalten ein zeitlich und räumlich unbeschränktes, nicht-exklusives Nutzungsrecht am gelieferten Handbuch für Ihre internen Geschäftszwecke. Eine Weitergabe, Vervielfältigung oder Veröffentlichung an Dritte (außer im Rahmen Ihres internen Auditprozesses) bedarf unserer schriftlichen Zustimmung.",
+  "agb-h10":"10. Datenschutz","agb-p10":"Die Verarbeitung Ihrer Daten erfolgt gemäß unserer <a onclick=\"go(\'ds\')\" style=\"color:var(--silv);cursor:pointer\">Datenschutzerklärung</a>. Wir verarbeiten Ihre Eingaben ausschließlich zur Erstellung Ihres Handbuchs.",
+  "agb-h11":"11. Schlussbestimmungen","agb-p11":"Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertrag ist Böblingen, sofern Sie Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen sind. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+  "agb-stand":"Stand: 15.05.2026",
   "rv-badge":"Bitte prüfen Sie Ihre Angaben","rv-h":"Zusammenfassung.","rv-s":"Bitte prüfen Sie Ihre Angaben sorgfältig, bevor Sie Ihre Bestellung abschicken.",
   "em-t":"E-Mail-Adresse bestätigen","em-sub":"Geben Sie Ihre E-Mail-Adresse erneut ein — an diese Adresse senden wir Ihr Handbuch.",
   "em-l1":"Eingegebene E-Mail ✓","em-l2":"E-Mail bestätigen *","em-err-t":"Die E-Mail-Adressen stimmen nicht überein.",
@@ -671,7 +1129,7 @@ en:[
   {q:"Does AlignedDocs replace an ISO consultant?",a:"No. AlignedDocs is a documentation tool. It does not replace professional consulting, an internal auditor, or a certification body."},
   {q:"Who is AlignedDocs designed for?",a:"Small and medium-sized businesses across Europe — typically 1–20 employees — that need structured ISO 9001 documentation as a starting foundation."},
   {q:"Is my business data secure?",a:"Yes. Data is transmitted over encrypted connections, processed only to deliver your manual, and never used for any other purpose. See our privacy policy for full details."},
-  {q:"What language will my manual be in?",a:"Your manual is generated in the same language you use to fill in the form. Choose English at the top of the page for an English manual, German for a German manual."},
+  {q:"What language will my manual be in?",a:"Your manual is generated in the language you selected. By default it matches the website language, but you can switch the document language independently at the final review step."},
   {q:"Can I use this for multiple company locations?",a:"The manual covers one company scope as defined in your form. If you need coverage for multiple sites or entities, contact us before ordering."},
   {q:"What if I need to adapt my manual later?",a:"The PDF is delivered as a ready-to-use document. For adjustments or an updated version based on changed processes, contact us — we can discuss options."}
 ],
@@ -683,7 +1141,7 @@ de:[
   {q:"Ersetzt AlignedDocs einen ISO-Berater?",a:"Nein. AlignedDocs ist ein Dokumentations-Werkzeug. Es ersetzt keine professionelle Beratung, keinen internen Auditor und keine Zertifizierungsstelle."},
   {q:"Für wen ist AlignedDocs geeignet?",a:"Kleine und mittlere Unternehmen in Europa — typischerweise 1–20 Mitarbeitende — die eine strukturierte ISO 9001 Dokumentation als Ausgangsbasis benötigen."},
   {q:"Sind meine Unternehmensdaten sicher?",a:"Ja. Daten werden verschlüsselt übertragen, ausschließlich zur Erstellung Ihres Handbuchs verarbeitet und nicht für andere Zwecke verwendet. Details in der Datenschutzerklärung."},
-  {q:"In welcher Sprache wird das Handbuch erstellt?",a:"Ihr Handbuch wird in der Sprache erstellt, in der Sie das Formular ausfüllen. Wählen Sie oben auf der Seite Deutsch für ein deutsches Handbuch, Englisch für ein englisches."},
+  {q:"In welcher Sprache wird das Handbuch erstellt?",a:"Ihr Handbuch wird in der von Ihnen gewählten Sprache erstellt. Standardmäßig entspricht sie der Webseiten-Sprache, Sie können die Dokumentensprache aber im finalen Review-Schritt separat festlegen."},
   {q:"Kann ich das Handbuch für mehrere Standorte nutzen?",a:"Das Handbuch deckt genau einen Unternehmensbereich ab, wie im Formular definiert. Für mehrere Standorte oder Einheiten kontaktieren Sie uns bitte vor der Bestellung."},
   {q:"Was, wenn ich das Handbuch später anpassen muss?",a:"Das PDF wird als fertiges Dokument geliefert. Für Anpassungen oder eine aktualisierte Version bei geänderten Prozessen kontaktieren Sie uns — wir besprechen gerne die Optionen."}
 ]};
@@ -764,13 +1222,29 @@ en:[
 // ─── CONFIG ──────────────────────────────────────────────
 // FIX v3.1: webhook-test → webhook (production URL)
 const WEBHOOK_FORM    = "https://aligneddocs.app.n8n.cloud/webhook/6034a549-c2e7-4420-a928-fe795283f213";
-const WEBHOOK_CONTACT = "YOUR_N8N_CONTACT_WEBHOOK_URL";
+const WEBHOOK_CONTACT = "https://aligneddocs.app.n8n.cloud/webhook/contact";
+const SUPPORT_EMAIL_FALLBACK = "team@aligneddocs.com";
 const SUPPORT_EMAIL   = "team@aligneddocs.com";
 
 // ─── STATE ───────────────────────────────────────────────
 let CL="en", wzStep=0, formBuilt=false, lastEmail="";
 
 // ─── NAVIGATION ──────────────────────────────────────────
+let DOC_LANG = "en"; // Default; wird in init() auf CL gesetzt
+function setDocLang(lang){
+  DOC_LANG = lang;
+  document.querySelectorAll(".dl-opt").forEach(b=>b.classList.toggle("active", b.dataset.lang===lang));
+}
+function updateSubmitState(){
+  const b2b = document.getElementById("chk-b2b");
+  const agb = document.getElementById("chk-agb");
+  const btn = document.getElementById("rv-sub");
+  if(!b2b || !agb || !btn) return;
+  const ok = b2b.checked && agb.checked;
+  btn.disabled = !ok;
+  btn.style.opacity = ok ? "" : ".5";
+  btn.style.pointerEvents = ok ? "" : "none";
+}
 function go(p){
   document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
   document.getElementById("page-"+p).classList.add("active");
@@ -795,6 +1269,9 @@ function restoreVals(v){if(!v)return;Object.entries(v).forEach(([id,val])=>{cons
 function setL(l){
   const sv=formBuilt?saveVals():null, ss=wzStep;
   CL=l;document.documentElement.lang=l;
+  // Sync Doc-Language switch default to UI language (purely visual)
+  DOC_LANG=l;
+  document.querySelectorAll(".dl-opt").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
   document.getElementById("lb-e").classList.toggle("on",l==="en");
   document.getElementById("lb-d").classList.toggle("on",l==="de");
   applyT();buildFAQ();buildPipe();
@@ -953,10 +1430,21 @@ function finalSub(){
     const el=document.getElementById(f.id);
     if(el&&!data[f.id])data[f.id]=el.value.trim();
   })));
+  // Honeypot-Check (Bot-Detection)
+  const hp = document.getElementById("hp-website");
+  if(hp && hp.value.trim() !== ""){
+    // Bot erkannt — still beenden, kein Hinweis (Bot soll denken alles ok)
+    console.log("[honeypot] bot attempt blocked");
+    return;
+  }
+
   // FIX v3.1: Order-ID + timestamp
   data._order_id=makeOrderId();
   data._lang=CL;
+  data._doc_lang=DOC_LANG; // separat: Dokumenten-Sprache
   data._ts=new Date().toISOString();
+  data._b2b_confirmed=true; // Checkbox war ja Voraussetzung
+  data._terms_accepted=true;
 
   // Loading state
   const btn=document.getElementById("rv-sub"),lbl=document.getElementById("rv-sub-t");
@@ -973,11 +1461,17 @@ function finalSub(){
         :"✓ Thank you!\n\nYour order reference: "+data._order_id+"\n\nWe have received your order and will deliver your manual shortly to:\n"+data.femail+"\n\nIf you do not receive a confirmation email within 10 minutes, please contact us at "+SUPPORT_EMAIL+" with your order reference."),300);
     })
     .catch(e=>{
-      // FIX v3.1: HONEST error handling — do NOT pretend success
+      // Show inline error hint above submit button
       console.error("Order submission failed:",e);
-      setTimeout(()=>alert(CL==="de"
-        ?"⚠ Ihre Bestellung konnte nicht übermittelt werden.\n\nReferenz: "+data._order_id+"\n\nBitte kontaktieren Sie uns direkt unter "+SUPPORT_EMAIL+" mit dieser Referenz und Ihrer E-Mail-Adresse ("+data.femail+"), damit wir Ihre Bestellung manuell bearbeiten können."
-        :"⚠ Your order could not be submitted.\n\nReference: "+data._order_id+"\n\nPlease contact us directly at "+SUPPORT_EMAIL+" with this reference and your email address ("+data.femail+") so we can process your order manually."),300);
+      const errBox=document.getElementById("submit-err");
+      const errTxt=document.getElementById("submit-err-txt");
+      if(errBox && errTxt){
+        errTxt.textContent = CL==="de"
+          ? "Senden fehlgeschlagen. Bitte erneut absenden — Ihre Eingaben bleiben gespeichert, solange dieser Tab offen ist."
+          : "Submission failed. Please try again — your entries are preserved while this tab is open.";
+        errBox.classList.add("show");
+        errBox.scrollIntoView({behavior:"smooth",block:"center"});
+      }
     })
     .finally(()=>{
       if(btn){btn.style.opacity="";btn.style.pointerEvents="";}

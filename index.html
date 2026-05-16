@@ -315,18 +315,106 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .doc-lang-box{margin:2rem 0 1.5rem;padding:1.25rem 1.5rem;border:1px solid var(--bdr);border-radius:12px;background:var(--bg2)}
 .doc-lang-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:.4rem;font-weight:500}
 .doc-lang-sub{font-size:13px;color:var(--tb);font-weight:300;margin-bottom:1rem}
-.doc-lang-switch{display:inline-flex;gap:0;border:1px solid var(--bdr);border-radius:8px;overflow:hidden;background:var(--bg3)}
-.dl-opt{padding:9px 22px;background:transparent;border:none;color:var(--tm);font-size:13px;font-weight:400;cursor:pointer;transition:all var(--spd);letter-spacing:.02em}
+.doc-lang-switch{
+  display:inline-flex;
+  position:relative;
+  border:1px solid var(--bdr);
+  border-radius:10px;
+  background:var(--bg3);
+  padding:4px;
+  gap:0;
+}
+.doc-lang-switch::before{
+  content:'';
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:calc(50% - 4px);
+  height:calc(100% - 8px);
+  background:linear-gradient(135deg, var(--gld), var(--silv));
+  border-radius:6px;
+  transition:transform .45s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 4px 12px rgba(201,168,76,.35), 0 0 24px rgba(201,168,76,.15);
+  z-index:0;
+}
+.doc-lang-switch::after{
+  content:'';
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:calc(50% - 4px);
+  height:calc(100% - 8px);
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+  border-radius:6px;
+  transition:transform .45s cubic-bezier(.4,0,.2,1);
+  z-index:1;
+  animation:dl-shimmer 2.8s ease-in-out infinite;
+  background-size:200% 100%;
+}
+@keyframes dl-shimmer{
+  0%,100%{background-position:200% 0}
+  50%{background-position:-200% 0}
+}
+.doc-lang-switch.de-active::before,
+.doc-lang-switch.de-active::after{
+  transform:translateX(100%);
+}
+.dl-opt{
+  position:relative;
+  z-index:2;
+  padding:10px 28px;
+  background:transparent;
+  border:none;
+  color:var(--tm);
+  font-size:13px;
+  font-weight:400;
+  cursor:pointer;
+  transition:color .35s ease;
+  letter-spacing:.02em;
+  min-width:90px;
+}
 .dl-opt:hover{color:var(--tx)}
-.dl-opt.active{background:var(--gld);color:#0a0a0a;font-weight:500}
+.dl-opt.active{
+  color:#0a0a0a;
+  font-weight:500;
+}
 
 /* ── Legal Checkboxes (B2B + AGB) ───────────────────────────── */
 .legal-box{margin:1.5rem 0;display:flex;flex-direction:column;gap:.85rem}
 .legal-chk{display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;font-size:14px;color:var(--tb);font-weight:300;line-height:1.5}
 .legal-chk input[type=checkbox]{position:absolute;opacity:0;width:0;height:0}
-.legal-chk-mark{display:inline-block;flex-shrink:0;width:18px;height:18px;border:1.5px solid var(--bdr);border-radius:4px;margin-top:1px;position:relative;transition:all var(--spd);background:var(--bg2)}
-.legal-chk input[type=checkbox]:checked + .legal-chk-mark{background:var(--gld);border-color:var(--gld)}
-.legal-chk input[type=checkbox]:checked + .legal-chk-mark::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #0a0a0a;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.legal-chk-mark{
+  display:inline-block;
+  flex-shrink:0;
+  width:20px;
+  height:20px;
+  border:1.5px solid var(--silv);
+  border-radius:5px;
+  margin-top:0;
+  position:relative;
+  transition:all var(--spd);
+  background:transparent;
+}
+.legal-chk:hover .legal-chk-mark{
+  border-color:var(--gld);
+  box-shadow:0 0 0 3px rgba(201,168,76,.08);
+}
+.legal-chk input[type=checkbox]:checked + .legal-chk-mark{
+  background:var(--gld);
+  border-color:var(--gld);
+  box-shadow:0 0 12px rgba(201,168,76,.4);
+}
+.legal-chk input[type=checkbox]:checked + .legal-chk-mark::after{
+  content:'';
+  position:absolute;
+  left:6px;
+  top:2px;
+  width:5px;
+  height:10px;
+  border:solid #0a0a0a;
+  border-width:0 2.5px 2.5px 0;
+  transform:rotate(45deg);
+}
 .legal-chk-txt{padding-top:0}
 
 /* ── Submit-Fehler-Hinweis ─────────────────────────────────── */
@@ -338,7 +426,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 /* ── Sample-PDF-Link Hover ──────────────────────────────────── */
 .sample-link:hover{border-color:var(--silv)!important;color:var(--tx)!important;transform:translateY(-1px)}
 
-/* ── Zeitvergleich-Sektion ───────────────────────────────────── */
+/* ── Zeitvergleich-Sektion (Time-Compare) ─────────────── */
 .time-section{
   background:var(--bg);
   border-top:1px solid var(--bdr);
@@ -351,11 +439,11 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   padding:6rem 2.5rem 5rem;
 }
 
-/* ── Hero-Statement der Zeitersparnis ────────────────────── */
+/* ── HERO Zeitersparnis ──────────────────────────────── */
 .savings-hero{
   text-align:center;
   margin-bottom:5rem;
-  padding:2rem 2rem 3rem;
+  padding:3rem 2rem;
   position:relative;
 }
 .savings-hero::before{
@@ -364,8 +452,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  width:600px;
-  height:600px;
+  width:500px;
+  height:500px;
   background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);
   pointer-events:none;
   z-index:0;
@@ -376,15 +464,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   text-transform:uppercase;
   color:var(--gld);
   font-weight:500;
-  margin-bottom:1.25rem;
+  margin-bottom:1rem;
   position:relative;
 }
 .savings-num-wrap{
-  display:inline-flex;
-  align-items:baseline;
-  gap:1rem;
   position:relative;
-  margin-bottom:1rem;
+  display:inline-block;
+  margin-bottom:.5rem;
 }
 .savings-number{
   font-family:'Cormorant Garamond',serif;
@@ -392,22 +478,19 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   font-weight:300;
   line-height:1;
   letter-spacing:-.04em;
-  background:linear-gradient(180deg,var(--silv) 0%,var(--gld) 100%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
+  color:#C9A84C !important;
+  position:relative;
   display:inline-block;
-}
-.savings-percent{
-  font-size:80px;
-  letter-spacing:-.02em;
+  text-shadow:0 0 40px rgba(201,168,76,.35), 0 0 80px rgba(201,168,76,.15);
 }
 .savings-number-unit{
   font-family:'Outfit',sans-serif;
-  font-size:22px;
+  font-size:24px;
   font-weight:300;
-  color:var(--gld);
+  color:#C9A84C !important;
   letter-spacing:.04em;
+  margin-left:8px;
+  position:relative;
 }
 .savings-headline{
   font-family:'Cormorant Garamond',serif;
@@ -428,8 +511,9 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   line-height:1.65;
 }
 .savings-sub strong{
-  color:var(--gld);
+  color:#C9A84C !important;
   font-weight:500;
+  text-shadow:0 0 18px rgba(201,168,76,.3);
 }
 
 /* ── Zeitvergleich-Balken ────────────────────────────── */
@@ -446,7 +530,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   gap:2rem;
   padding:1rem 0;
   position:relative;
-  opacity:.82;
+  opacity:.85;
   transition:opacity .4s ease;
 }
 .tc-row.featured{opacity:1}
@@ -469,7 +553,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .tc-bar-wrap{
   position:relative;
   height:36px;
-  background:rgba(255,255,255,.025);
+  background:rgba(255,255,255,.06);
   border-radius:4px;
   overflow:hidden;
 }
@@ -480,11 +564,11 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   position:relative;
 }
 .tc-bar.diy{
-  background:linear-gradient(90deg,rgba(168,166,161,.18),rgba(168,166,161,.05));
+  background:linear-gradient(90deg,rgba(168,166,161,.58),rgba(168,166,161,.32));
   width:50%;
 }
 .tc-bar.ad{
-  background:linear-gradient(90deg,var(--gld),var(--silv));
+  background:linear-gradient(90deg,rgba(168,166,161,.58),rgba(168,166,161,.32));
   width:3%;
   min-width:42px;
   box-shadow:0 0 24px rgba(201,168,76,.45), 0 0 60px rgba(201,168,76,.18);
@@ -504,7 +588,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   100%{left:160%}
 }
 .tc-bar.ber{
-  background:linear-gradient(90deg,rgba(168,166,161,.18),rgba(168,166,161,.05));
+  background:linear-gradient(90deg,rgba(168,166,161,.58),rgba(168,166,161,.32));
   width:100%;
 }
 .tc-time{
@@ -544,12 +628,80 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   border-radius:2px;
   box-shadow:0 0 12px rgba(201,168,76,.5);
 }
+
+/* ── DARK MODE Highlights (Gold + Glow Enterprise) ──── */
+.sv-hl{
+  color:#C9A84C !important;
+  font-weight:400;
+  text-shadow:0 0 24px rgba(201,168,76,.35), 0 0 60px rgba(201,168,76,.12);
+}
+/* (this rule moved up to main block) */
+.savings-number-unit{
+  text-shadow:0 0 18px rgba(201,168,76,.25);
+}
+
+/* ── LIGHT MODE Anpassungen für Time-Sektion ─────────── */
+[data-theme="light"] .tc-bar-wrap{
+  background:rgba(0,0,0,.10);
+}
+[data-theme="light"] .tc-bar.diy,
+[data-theme="light"] .tc-bar.ber,
+[data-theme="light"] .tc-bar.ad{
+  background:linear-gradient(90deg,rgba(40,38,34,.55),rgba(40,38,34,.32));
+  box-shadow:none;
+}
+[data-theme="light"] .tc-bar.ad{
+  box-shadow:0 0 14px rgba(156,129,56,.35);
+}
+[data-theme="light"] .tc-bar.ad::after{
+  background:linear-gradient(90deg,transparent,rgba(201,168,76,.55),transparent);
+}
+/* Light Mode: 30 min (gold) - mit subtilem Glow, kein Text-Shadow zu intensiv */
+[data-theme="light"] .tc-time.gold{
+  color:#9c8138;  /* dunkleres Gold für besseren Kontrast auf hellem Bg */
+  font-weight:600;
+}
+[data-theme="light"] .tc-time.gold small{
+  color:#a8916a;
+}
+/* Light Mode: Fettgedrucktes in der Sub-Zeile */
+[data-theme="light"] .savings-sub strong,
+[data-theme="light"] .sv-hl{
+  color:#9c8138 !important;
+  font-weight:600;
+  text-shadow:none;
+}
+[data-theme="light"] .savings-number{
+  color:#9c8138 !important;
+}
+[data-theme="light"] .savings-number-unit{
+  color:#9c8138 !important;
+}
+/* Light Mode: Featured-Akzent links */
+[data-theme="light"] .tc-row.featured::before{
+  background:#9c8138;
+  box-shadow:0 0 12px rgba(156,129,56,.4);
+}
+/* Light Mode: Method-Label STRUCTURED PROCESS in Gold */
+[data-theme="light"] .tc-method[style*="--gld"]{
+  color:#9c8138 !important;
+}
+/* Light Mode: Savings Hero gold */
+[data-theme="light"] .savings-eyebrow{
+  color:#9c8138;
+}
+[data-theme="light"] .savings-number{
+  color:#9c8138;
+  text-shadow:0 2px 30px rgba(156,129,56,.2);
+}
+[data-theme="light"] .savings-number-unit{
+  color:#9c8138;
+}
+
 @media (max-width:760px){
   .time-section-in{padding:3rem 1.25rem}
-  .savings-number{font-size:90px}
-  .savings-percent{font-size:54px}
-  .savings-number-unit{font-size:16px}
-  .savings-headline{font-size:26px}
+  .savings-number{font-size:100px}
+  .savings-headline{font-size:28px}
   .savings-sub{font-size:14px}
   .tc-row{
     grid-template-columns:1fr;
@@ -652,11 +804,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
     <!-- HERO: Zeitersparnis-Statement -->
     <div class="savings-hero">
       <div class="savings-eyebrow" id="sv-eb">YOUR TIME SAVED</div>
-      <div class="savings-num-wrap">
-        <span class="savings-number">97<span class="savings-percent">%</span></span>
-        <span class="savings-number-unit" id="sv-unit">faster than DIY</span>
-      </div>
-      <h2 class="savings-headline" id="sv-h">30 minutes instead of 20 hours.</h2>
+      <div class="savings-num-wrap"><span class="savings-number">97%</span><span class="savings-number-unit" id="sv-unit">faster than DIY</span></div>
+      <h2 class="savings-headline" id="sv-h"><span class="sv-hl">30 minutes</span> instead of <span class="sv-hl">20 hours</span>.</h2>
       <p class="savings-sub" id="sv-s">A DIY template costs you <strong>20 to 40 hours</strong> of your own work. With us, it's <strong>30 minutes</strong> of form — we handle the rest.</p>
     </div>
 
@@ -992,7 +1141,7 @@ en:{
   "ft-f":"FAQ","ft-a":"Terms","ft-d":"Privacy","ft-i":"Imprint",
   "pr-sample-t":"View sample PDF (Brenner Sanitär GmbH)",
   "sv-eb":"YOUR TIME SAVED","sv-unit":"faster than DIY",
-  "sv-h":"30 minutes instead of 20 hours.",
+  "sv-h":"<span class=\"sv-hl\">30 minutes</span> instead of <span class=\"sv-hl\">20 hours</span>.",
   "sv-s":"A DIY template costs you <strong>20 to 40 hours</strong> of your own work. With us, it's <strong>30 minutes</strong> of form — we handle the rest.",
   "tc-n1":"DIY Template","tc-m1":"SELF-MADE","tc-t1":"20–40 h","tc-s1":"YOUR EFFORT",
   "tc-n2":"AlignedDocs","tc-m2":"STRUCTURED PROCESS","tc-t2":"30 min","tc-s2":"FORM",
@@ -1073,7 +1222,7 @@ de:{
   "ft-f":"FAQ","ft-a":"AGB","ft-d":"Datenschutz","ft-i":"Impressum",
   "pr-sample-t":"Beispiel-PDF ansehen (Brenner Sanitär GmbH)",
   "sv-eb":"IHR ZEITGEWINN","sv-unit":"schneller als DIY",
-  "sv-h":"30 Minuten statt 20 Stunden.",
+  "sv-h":"<span class=\"sv-hl\">30 Minuten</span> statt <span class=\"sv-hl\">20 Stunden</span>.",
   "sv-s":"Eine DIY-Vorlage kostet Sie <strong>20 bis 40 Stunden</strong> Eigenarbeit. Bei uns sind es <strong>30 Minuten</strong> Formular — den Rest übernehmen wir.",
   "tc-n1":"DIY-Vorlage","tc-m1":"SELBST ERSTELLT","tc-t1":"20–40 h","tc-s1":"EIGENARBEIT",
   "tc-n2":"AlignedDocs","tc-m2":"STRUKTURGEFÜHRT","tc-t2":"30 Min.","tc-s2":"FORMULAR",
@@ -1234,6 +1383,9 @@ let DOC_LANG = "en"; // Default; wird in init() auf CL gesetzt
 function setDocLang(lang){
   DOC_LANG = lang;
   document.querySelectorAll(".dl-opt").forEach(b=>b.classList.toggle("active", b.dataset.lang===lang));
+  // Move slider via class
+  const sw = document.querySelector(".doc-lang-switch");
+  if(sw) sw.classList.toggle("de-active", lang==="de");
 }
 function updateSubmitState(){
   const b2b = document.getElementById("chk-b2b");
@@ -1272,6 +1424,8 @@ function setL(l){
   // Sync Doc-Language switch default to UI language (purely visual)
   DOC_LANG=l;
   document.querySelectorAll(".dl-opt").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
+  const _sw = document.querySelector(".doc-lang-switch");
+  if(_sw) _sw.classList.toggle("de-active", l==="de");
   document.getElementById("lb-e").classList.toggle("on",l==="en");
   document.getElementById("lb-d").classList.toggle("on",l==="de");
   applyT();buildFAQ();buildPipe();

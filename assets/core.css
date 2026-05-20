@@ -1156,3 +1156,24 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 [data-theme="light"] .cmp-table th.cmp-featured,
 [data-theme="light"] .cmp-table .cmp-good{color:#A8782A}
 [data-theme="light"] .pl-end{background:radial-gradient(ellipse 60% 100% at 50% 0%,rgba(168,120,42,.06),transparent 70%)}
+
+/* ── Samples-Landing: "Was drin ist"-Liste ── */
+.sl-inside{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem;
+}
+.sl-in-item{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem;
+  background:var(--bg3);border:1px solid var(--bdr);border-radius:12px;
+  font-size:15px;font-weight:300;color:var(--tx);transition:border-color var(--spd),transform var(--spd);
+}
+.sl-in-item:hover{border-color:var(--gold-b);transform:translateY(-2px)}
+.sl-in-num{
+  font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--gold);
+  flex:none;width:32px;
+}
+.sl-vs-table{min-width:420px}
+@media (max-width:640px){
+  .sl-inside{grid-template-columns:1fr}
+}
+[data-theme="light"] .sl-in-item{background:#FFFDF8;border-color:rgba(168,120,42,.15)}
+[data-theme="light"] .sl-in-num{color:#A8782A}

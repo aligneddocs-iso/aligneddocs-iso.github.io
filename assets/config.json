@@ -1,0 +1,30 @@
+{
+  "webhooks": {
+    "form": "https://aligneddocs.app.n8n.cloud/webhook/6034a549-c2e7-4420-a928-fe795283f213",
+    "contact": "https://aligneddocs.app.n8n.cloud/webhook/contact"
+  },
+  "support": {
+    "email": "team@aligneddocs.com",
+    "address_placeholder": "Address — please complete before go-live"
+  },
+  "samples": {
+    "de": "/sample/iso-9001-sample-de.pdf",
+    "en": "/sample/iso-9001-sample-en.pdf"
+  },
+  "pages": {
+    "home":    "/",
+    "product": "/product/",
+    "faq":     "/faq/",
+    "order":   "/order/",
+    "samples": "/samples/",
+    "about":   "/about/",
+    "privacy": "/legal/privacy/",
+    "terms":   "/legal/terms/",
+    "imprint": "/legal/imprint/"
+  },
+  "site": {
+    "url": "https://aligneddocs.com",
+    "name": "AlignedDocs",
+    "version": "v2-multipage-2026-05-20"
+  }
+}

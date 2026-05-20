@@ -124,9 +124,33 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .pn:hover{border-color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.18);transform:translateY(-3px)}
 .pt{font-size:12px;font-weight:400;color:var(--tx);margin-bottom:4px}
 .pb{font-size:11px;font-weight:300;color:var(--tm);line-height:1.5}
-.pc{width:36px;flex-shrink:0;display:flex;align-items:flex-start;padding-top:26px}
-.pc-line{flex:1;height:1px;background:linear-gradient(90deg,var(--gold-b),rgba(201,168,76,.25));position:relative}
-.pc-arr{font-size:13px;color:var(--gold);position:absolute;right:-3px;top:50%;transform:translateY(-50%);line-height:1}
+.pc{width:64px;flex-shrink:0;display:flex;align-items:flex-start;padding-top:24px}
+.pc-line{
+  flex:1;height:2px;border-radius:2px;position:relative;overflow:visible;
+  background:linear-gradient(90deg,rgba(201,168,76,.15),rgba(201,168,76,.55));
+}
+/* wandernder Glanz (Wisch nach rechts) */
+.pc-line::before{
+  content:'';position:absolute;top:0;left:0;height:100%;width:40%;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--gold-l),transparent);
+  animation:pcSweep 2.4s cubic-bezier(.45,0,.55,1) infinite;
+}
+/* echte Pfeilspitze am Ende */
+.pc-arr{
+  position:absolute;right:-2px;top:50%;width:8px;height:8px;
+  border-top:2px solid var(--gold);border-right:2px solid var(--gold);
+  transform:translateY(-50%) rotate(45deg);font-size:0;line-height:0;
+  border-top-right-radius:1px;
+}
+@keyframes pcSweep{
+  0%{left:-40%;opacity:0}
+  20%{opacity:1}
+  80%{opacity:1}
+  100%{left:100%;opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .pc-line::before{animation:none;opacity:0}
+}
 .price-bg{background:var(--bg2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);position:relative;z-index:1;overflow:hidden}
 .price-bg::before{content:'';position:absolute;top:-40%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 70%);pointer-events:none}
 .price-in{max-width:1180px;margin:0 auto;padding:5rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}

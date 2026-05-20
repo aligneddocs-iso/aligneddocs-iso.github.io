@@ -1050,3 +1050,85 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
   0%,100%{opacity:1;text-shadow:0 0 0 rgba(168,120,42,0)}
   50%{opacity:.65;text-shadow:0 0 10px rgba(168,120,42,.6)}
 }
+
+/* ════════════════════════════════════════════════════════════
+   PRODUCT SEO-LANDING — Hero, Vergleichstabelle, End-CTA
+   ════════════════════════════════════════════════════════════ */
+.pl-hero{
+  max-width:880px;margin:0 auto;padding:5rem 2.5rem 3rem;text-align:center;position:relative;z-index:1;
+}
+.pl-hero-h{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,52px);font-weight:300;
+  color:var(--tx);letter-spacing:-.02em;line-height:1.1;margin:1rem 0 1.5rem;
+}
+.pl-hero-h em{font-style:italic;color:var(--gold-l)}
+.pl-hero-sub{
+  font-size:17px;font-weight:300;color:var(--tb);line-height:1.7;max-width:680px;margin:0 auto 2rem;
+}
+.pl-hero-act{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.pl-hero .eyebrow{justify-content:center}
+
+.pl-cards{margin-top:2.5rem}
+
+/* Vergleichstabelle */
+.cmp-wrap{margin-top:2.5rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cmp-table{
+  width:100%;border-collapse:separate;border-spacing:0;min-width:560px;
+  font-size:14px;
+}
+.cmp-table th,.cmp-table td{
+  padding:1rem 1.25rem;text-align:center;border-bottom:1px solid var(--bdr);
+}
+.cmp-table thead th{
+  font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--tx);
+  border-bottom:1px solid var(--gold-b);
+}
+.cmp-table .cmp-rl{
+  text-align:left;color:var(--tb);font-weight:400;
+}
+.cmp-table td{color:var(--tm);font-weight:300}
+/* Featured-Spalte (AlignedDocs) hervorheben */
+.cmp-table th.cmp-featured{
+  color:var(--gold-l);position:relative;
+}
+.cmp-table .cmp-featured{
+  background:var(--gold-dim);
+}
+.cmp-table thead th.cmp-featured{
+  border-top-left-radius:10px;border-top-right-radius:10px;
+  border-bottom:1px solid var(--gold-b);
+}
+.cmp-table tbody tr:last-child .cmp-featured{
+  border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-bottom:none;
+}
+.cmp-table .cmp-good{color:var(--gold-l);font-weight:400}
+
+/* End-CTA */
+.pl-end{
+  position:relative;z-index:1;padding:4.5rem 2rem 5rem;text-align:center;
+  background:radial-gradient(ellipse 60% 100% at 50% 0%,var(--gold-dim),transparent 70%);
+}
+.pl-end-in{max-width:640px;margin:0 auto}
+.pl-end-h{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,42px);font-weight:300;
+  color:var(--tx);margin-bottom:1rem;letter-spacing:-.01em;
+}
+.pl-end-p{font-size:16px;font-weight:300;color:var(--tb);line-height:1.7;margin-bottom:2rem}
+.pl-end-act{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Mini-FAQ auf Produktseite: gleiche Optik wie FAQ-Seite (nutzt .fi/.fq/.fa) */
+.pl-faq{margin-top:2rem;max-width:760px}
+
+@media (max-width:640px){
+  .pl-hero{padding:3rem 1.25rem 2rem}
+  .pl-hero-act .btn,.pl-end-act .btn{width:100%;justify-content:center}
+  .cmp-table{font-size:13px}
+  .cmp-table th,.cmp-table td{padding:.75rem .6rem}
+}
+
+/* Light-Mode Anpassungen */
+[data-theme="light"] .pl-hero-h em{color:#A8782A}
+[data-theme="light"] .cmp-table .cmp-featured{background:rgba(168,120,42,.07)}
+[data-theme="light"] .cmp-table th.cmp-featured,
+[data-theme="light"] .cmp-table .cmp-good{color:#A8782A}
+[data-theme="light"] .pl-end{background:radial-gradient(ellipse 60% 100% at 50% 0%,rgba(168,120,42,.06),transparent 70%)}

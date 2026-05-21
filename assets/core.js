@@ -372,6 +372,9 @@
         bindExitIntent();
         initReveal();
         // Hook page-level initialiser if defined (e.g. form.js sets it)
+        // Mark core as ready so late-loading page scripts can self-trigger
+        // even if they registered onCoreReady AFTER this point (cold-cache race).
+        window.AD.coreReady = true;
         if (typeof window.onCoreReady === "function") {
           try { window.onCoreReady(); } catch (e) { console.error("[core] onCoreReady hook failed:", e); }
         }

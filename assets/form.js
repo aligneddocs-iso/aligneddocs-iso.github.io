@@ -611,7 +611,10 @@
   }
 
   // ─── BOOTSTRAP (called by core.js after core data is ready) ────────
+  var coreInitDone = false;
   window.onCoreReady = function () {
+    if (coreInitDone) return;   // guard against double invocation
+    coreInitDone = true;
     CL = (window.AD && window.AD.getLang) ? window.AD.getLang() : "en";
     T = (window.AD && window.AD.getT) ? window.AD.getT() : null;
     CONFIG = (window.AD && window.AD.getConfig) ? window.AD.getConfig() : null;
@@ -665,4 +668,13 @@
       console.error("[form] failed to load form.json:", err);
     });
   };
+
+  // ─── COLD-CACHE RACE FIX ──────────────────────────────────────────
+  // If core.js already finished its bootstrap BEFORE this script assigned
+  // window.onCoreReady above, the original call was a no-op and the form
+  // would never build (the "loads only on the second visit" bug).
+  // Detect that case via the AD.coreReady flag and self-trigger now.
+  if (window.AD && window.AD.coreReady === true) {
+    window.onCoreReady();
+  }
 })();

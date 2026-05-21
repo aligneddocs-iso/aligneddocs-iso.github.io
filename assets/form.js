@@ -518,6 +518,7 @@
       body: JSON.stringify(payload)
     }).then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
+      clearDraft();
       showConfirmation(orderId, data.femail);
     }).catch(function (e) {
       console.error("[finalSub] order submission failed:", e);
@@ -590,6 +591,25 @@
     showPanel(step);
   };
 
+  // ─── DRAFT PERSISTENCE (survive navigation away from /order) ──────
+  var DRAFT_KEY = "ad-form-draft-v1";
+  function saveDraft() {
+    if (!built) return;
+    try {
+      var draft = { v: collectAllValues(), step: wzStep, ts: Date.now() };
+      sessionStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+    } catch (e) {}
+  }
+  function loadDraft() {
+    try {
+      var raw = sessionStorage.getItem(DRAFT_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  function clearDraft() {
+    try { sessionStorage.removeItem(DRAFT_KEY); } catch (e) {}
+  }
+
   // ─── BOOTSTRAP (called by core.js after core data is ready) ────────
   window.onCoreReady = function () {
     CL = (window.AD && window.AD.getLang) ? window.AD.getLang() : "en";
@@ -622,6 +642,25 @@
       // wire eye toggle
       var eyeb = document.querySelector(".eye-btn"); if (eyeb) eyeb.addEventListener("click", toggleEye);
       setDocLang(CL);
+
+      // ─── restore draft if user navigated away and came back ─────────
+      var draft = loadDraft();
+      if (draft && draft.v) {
+        restoreVals(draft.v);
+        if (typeof draft.step === "number" && draft.step >= 0) {
+          wzStep = draft.step;
+          showPanel(wzStep);
+        }
+      }
+
+      // ─── autosave: on any input + before leaving the page ───────────
+      var fc = $("form-body") || document;
+      if (fc && fc.addEventListener) {
+        fc.addEventListener("input", saveDraft);
+        fc.addEventListener("change", saveDraft);
+      }
+      window.addEventListener("beforeunload", saveDraft);
+      window.addEventListener("pagehide", saveDraft);
     }).catch(function (err) {
       console.error("[form] failed to load form.json:", err);
     });

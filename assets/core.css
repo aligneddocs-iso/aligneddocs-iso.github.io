@@ -760,6 +760,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .sc-flag-row{display:flex;align-items:center;gap:.5rem}
 .sc-flag-row .sc-loc{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--tm);font-weight:300}
 .sc-btns{display:flex;gap:.6rem;margin-top:auto;flex-wrap:wrap}
+.sc-locales{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:auto}
+.sc-locale-col{display:flex;flex-direction:column;gap:.6rem}
+.sc-loc-h{display:flex;align-items:center;gap:.4rem;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--tm);font-weight:400}
+.sc-loc-h .sc-loc-flag{font-size:14px;line-height:1}
+.sc-btn-soon{opacity:.45;pointer-events:none;position:relative}
+@media(max-width:520px){.sc-locales{grid-template-columns:1fr;gap:1rem}}
 .sc-btn{display:inline-flex;align-items:center;gap:.45rem;font-size:13px;color:var(--gold-l);font-weight:400;letter-spacing:.02em;text-decoration:none;padding:.5rem .85rem;border:1px solid var(--bdr);border-radius:8px;background:var(--gold-dim);transition:all var(--spd)}
 .sc-btn:hover{border-color:var(--gold-b);background:var(--bg3)}
 .sc-btn svg{transition:transform var(--spd)}

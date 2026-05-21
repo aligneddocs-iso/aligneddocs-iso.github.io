@@ -753,7 +753,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .locale-opt:not(:last-child){border-right:1px solid var(--bdr)}
 
 /* ── Sample-Cards (samples-Übersichtsseite) ───────────────── */
-.sample-groups{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem}
+.sample-groups{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem;align-items:stretch}
 .sample-group{display:flex;flex-direction:column;gap:1rem}
 .sg-label{display:flex;align-items:center;gap:.6rem;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--tm);font-weight:400;padding-bottom:.5rem;border-bottom:1px solid var(--bdr)}
 .sg-label .sg-flag{font-size:18px;line-height:1}
@@ -771,7 +771,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .sc-btn svg{transition:transform var(--spd)}
 .sc-btn:hover svg{transform:translateX(3px)}
 @media(max-width:720px){.sample-groups{grid-template-columns:1fr;gap:2rem}}
-.sample-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.sample-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;flex:1;align-items:stretch}
 .sample-card{padding:1.75rem;background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--r14);transition:all var(--spd);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:1rem}
 .sample-card:hover{border-color:var(--gold-b);background:var(--bg3);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.18)}
 .sample-card .sc-flag{font-size:24px;line-height:1}

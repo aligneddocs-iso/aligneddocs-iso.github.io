@@ -32,6 +32,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 /* Multipage v2: jede Seite ist eine eigene HTML-Datei, daher immer sichtbar */
 .page{display:block;position:relative;z-index:1;animation:pgIn .4s var(--ease)}
 @keyframes pgIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+#header-mount{position:sticky;top:0;z-index:200}
 .nav{position:sticky;top:0;z-index:200;padding:0 1.25rem;background:rgba(8,10,15,.93);backdrop-filter:blur(24px) saturate(160%);border-bottom:1px solid var(--bdr)}
 .nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:.5rem}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0}

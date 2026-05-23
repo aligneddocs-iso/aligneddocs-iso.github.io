@@ -119,7 +119,8 @@
     var c = $("faq-list");
     if (!c || !FAQ) return;
     var data = FAQ[CL] || FAQ.en;
-    c.innerHTML = data.map(function (f, i) {
+    var dict = (T && (T[CL] || T.en)) || {};
+    function itemHtml(f, i) {
       return '<div class="fi" id="fi' + i + '">' +
         '<div class="fq" data-faq-idx="' + i + '">' +
         '<span>' + escHtml(f.q) + '</span>' +
@@ -127,7 +128,24 @@
         '</div>' +
         '<div class="fa">' + f.a + '</div>' +
         '</div>';
-    }).join("");
+    }
+    // Gruppen-Rendering, wenn jedes Item ein "group" hat; sonst flache Liste (abwärtskompatibel)
+    var hasGroups = data.length > 0 && data.every(function (f) { return f.group; });
+    if (hasGroups) {
+      var order = [];
+      data.forEach(function (f) { if (order.indexOf(f.group) === -1) order.push(f.group); });
+      var html = "";
+      order.forEach(function (g) {
+        var label = dict["faq-grp-" + g] || "";
+        if (label) html += '<div class="faq-grp-h">' + escHtml(label) + '</div>';
+        data.forEach(function (f, i) {
+          if (f.group === g) html += itemHtml(f, i);
+        });
+      });
+      c.innerHTML = html;
+    } else {
+      c.innerHTML = data.map(itemHtml).join("");
+    }
     // delegate click
     c.querySelectorAll(".fq").forEach(function (el) {
       el.addEventListener("click", function () {

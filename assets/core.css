@@ -1196,3 +1196,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 }
 [data-theme="light"] .sl-in-item{background:#FFFDF8;border-color:rgba(168,120,42,.15)}
 [data-theme="light"] .sl-in-num{color:#A8782A}
+
+/* ── FAQ Themengruppen-Überschrift (additiv, Multipage v2) ── */
+.faq-grp-h{font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:2rem 0 .85rem;padding-bottom:.5rem;border-bottom:1px solid var(--gold-b)}
+.faq-grp-h:first-child{margin-top:0}

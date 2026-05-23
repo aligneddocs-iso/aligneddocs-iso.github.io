@@ -349,7 +349,12 @@
     "sl-end-p": "Your own ISO 9001 quality manual, built from your business and delivered within up to 3 working days. Explore the full offer or order directly.",
     "sl-end-c1": "Order your manual →",
     "sl-end-c2": "Explore the homepage",
-    "pr-kleinunt": "No VAT charged (small-business scheme, §19 German VAT Act)"
+    "pr-kleinunt": "No VAT charged (small-business scheme, §19 German VAT Act)",
+    "faq-grp-start": "Getting started",
+    "faq-grp-diy": "Doing it yourself",
+    "faq-grp-product": "What you receive",
+    "faq-grp-fit": "Is it right for me?",
+    "faq-grp-trust": "After you order"
   },
   "de": {
     "n-sub": "ISO 9001:2015",
@@ -701,6 +706,11 @@
     "sl-end-p": "Ihr eigenes ISO 9001 Qualitätshandbuch, aufgebaut aus Ihrem Unternehmen und geliefert innerhalb von bis zu 3 Werktagen. Entdecken Sie das ganze Angebot oder bestellen Sie direkt.",
     "sl-end-c1": "Handbuch bestellen →",
     "sl-end-c2": "Zur Startseite",
-    "pr-kleinunt": "Kein Umsatzsteuerausweis (Kleinunternehmer gem. §19 UStG)"
+    "pr-kleinunt": "Kein Umsatzsteuerausweis (Kleinunternehmer gem. §19 UStG)",
+    "faq-grp-start": "Erste Schritte",
+    "faq-grp-diy": "Selbst gemacht",
+    "faq-grp-product": "Was Sie erhalten",
+    "faq-grp-fit": "Passt das zu mir?",
+    "faq-grp-trust": "Nach Ihrer Bestellung"
   }
 }

@@ -786,8 +786,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 
 /* ── About-Sections ───────────────────────────────────────── */
 /* ── About (Multipage v2, aufgewertet) ── */
-.about-wrap{max-width:760px;margin:0 auto;padding:0 1.5rem}
-.about-block{padding:2.75rem 0;border-bottom:1px solid var(--bdr)}
+.about-wrap{max-width:760px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
+.about-block{padding:2.75rem 0;border-bottom:1px solid var(--bdr);position:relative;z-index:1}
 .about-block:last-of-type{border-bottom:none}
 .about-block p{font-size:15px;color:var(--tb);font-weight:300;line-height:1.78;margin-bottom:1rem}
 .about-block p:last-child{margin-bottom:0}

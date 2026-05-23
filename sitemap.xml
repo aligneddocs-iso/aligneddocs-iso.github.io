@@ -35,4 +35,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/de/iso-9001-handbuch-handwerk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/en/iso-9001-manual-it-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/de/iso-9001-handbuch-it-dienstleister/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/en/iso-9001-manual-cleaning-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/de/iso-9001-handbuch-gebaeudereinigung/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/en/iso-9001-manual-metalworking/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aligneddocs.com/blog/de/iso-9001-handbuch-metallbau/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

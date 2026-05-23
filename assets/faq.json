@@ -43,6 +43,38 @@
     {
       "q": "What if I need to adapt my manual later?",
       "a": "The PDF is delivered as a ready-to-use document. For adjustments or an updated version based on changed processes, contact us — we can discuss options."
+    },
+    {
+      "q": "Do I need any ISO knowledge to order?",
+      "a": "No. You don't need to know the standard or any ISO terminology. The form asks in plain language about your business — your processes, your team, your goals. We translate that into a standard-compliant structure for you."
+    },
+    {
+      "q": "What does an ISO 9001 quality manual cost?",
+      "a": "€179, one-time. No subscription, no hidden fees, no recurring costs. As a small business under §19 of the German VAT Act, we do not charge VAT — so €179 is the final price you pay."
+    },
+    {
+      "q": "What's the difference between this and a free template?",
+      "a": "A free template hands you dozens of blank placeholders and leaves the hard part to you — guessing what an auditor wants to see. Your manual arrives already written around your real business. Minutes of form instead of hours of guesswork."
+    },
+    {
+      "q": "Why is this cheaper than hiring a consultant?",
+      "a": "A consultant bills for hours. We've structured the documentation step into a guided form, so you pay for the result, not the time. For the documentation foundation, that's the difference between €179 and a four-figure consulting invoice."
+    },
+    {
+      "q": "What happens if my auditor requests changes?",
+      "a": "That's normal in any audit. Send us what the auditor flagged and we'll work through a correction round with you — see our satisfaction note below. The manual is built to give your auditor the structure they expect from the start."
+    },
+    {
+      "q": "What if I'm not satisfied with the result?",
+      "a": "Tell us. One revision round is included — if something is factually off or doesn't reflect your business, we correct it. We want you to receive a document you can actually use, not just a file in your inbox."
+    },
+    {
+      "q": "What if I have questions after ordering?",
+      "a": "Just email team@aligneddocs.com with your order reference. A real person reads every message. If we ever spot something unclear in your order, we reach out before creating your manual — not after."
+    },
+    {
+      "q": "Does this work outside Germany?",
+      "a": "Yes. ISO 9001:2015 is an international standard, and your manual is built around it regardless of where your business operates. You can also choose German, British or American English for the document."
     }
   ],
   "de": [
@@ -89,6 +121,38 @@
     {
       "q": "Was, wenn ich das Handbuch später anpassen muss?",
       "a": "Das PDF wird als fertiges Dokument geliefert. Für Anpassungen oder eine aktualisierte Version bei geänderten Prozessen kontaktieren Sie uns — wir besprechen gerne die Optionen."
+    },
+    {
+      "q": "Brauche ich ISO-Vorwissen, um zu bestellen?",
+      "a": "Nein. Sie müssen weder die Norm noch ISO-Fachbegriffe kennen. Das Formular fragt in klarer Sprache nach Ihrem Unternehmen — Ihren Abläufen, Ihrem Team, Ihren Zielen. Die normgerechte Struktur erstellen wir daraus für Sie."
+    },
+    {
+      "q": "Was kostet ein ISO 9001 Qualitätshandbuch?",
+      "a": "179 €, einmalig. Kein Abo, keine versteckten Gebühren, keine Folgekosten. Als Kleinunternehmer gemäß §19 UStG weisen wir keine Umsatzsteuer aus — die 179 € sind der Endpreis, den Sie zahlen."
+    },
+    {
+      "q": "Was ist der Unterschied zu einer kostenlosen Vorlage?",
+      "a": "Eine kostenlose Vorlage gibt Ihnen Dutzende leere Platzhalter und überlässt Ihnen den schweren Teil — zu erraten, was ein Auditor sehen will. Ihr Handbuch kommt bereits fertig formuliert, rund um Ihr echtes Unternehmen. Minuten Formular statt Stunden Rätselraten."
+    },
+    {
+      "q": "Warum ist das günstiger als ein Berater?",
+      "a": "Ein Berater rechnet nach Stunden ab. Wir haben den Dokumentations-Schritt in ein geführtes Formular gegossen — Sie zahlen für das Ergebnis, nicht für die Zeit. Für die Dokumentations-Grundlage ist das der Unterschied zwischen 179 € und einer vierstelligen Beraterrechnung."
+    },
+    {
+      "q": "Was passiert, wenn mein Auditor Änderungen verlangt?",
+      "a": "Das ist in jedem Audit normal. Schicken Sie uns, was der Auditor bemängelt hat, und wir gehen eine Korrekturrunde mit Ihnen durch — siehe Zufriedenheits-Hinweis unten. Das Handbuch ist so aufgebaut, dass Ihr Auditor von Anfang an die erwartete Struktur vorfindet."
+    },
+    {
+      "q": "Was, wenn ich mit dem Ergebnis nicht zufrieden bin?",
+      "a": "Sagen Sie uns Bescheid. Eine Überarbeitungsrunde ist inklusive — wenn etwas sachlich falsch ist oder Ihr Unternehmen nicht widerspiegelt, korrigieren wir es. Sie sollen ein Dokument erhalten, das Sie wirklich nutzen können, nicht nur eine Datei im Postfach."
+    },
+    {
+      "q": "Was, wenn ich nach der Bestellung Fragen habe?",
+      "a": "Schreiben Sie einfach an team@aligneddocs.com mit Ihrer Bestellnummer. Jede Nachricht liest ein echter Mensch. Falls uns in Ihrer Bestellung etwas unklar ist, melden wir uns bei Ihnen — bevor wir Ihr Handbuch erstellen, nicht danach."
+    },
+    {
+      "q": "Funktioniert das auch außerhalb Deutschlands?",
+      "a": "Ja. ISO 9001:2015 ist eine internationale Norm, und Ihr Handbuch wird darauf aufgebaut — unabhängig davon, wo Ihr Unternehmen tätig ist. Sie können das Dokument außerdem auf Deutsch, britischem oder amerikanischem Englisch erhalten."
     }
   ]
 }

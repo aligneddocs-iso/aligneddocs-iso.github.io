@@ -44,7 +44,7 @@
     "pr-h": "One-time.<br>No subscription.",
     "pr-o": "one-time",
     "pr-d": "Pay once and receive your tailored ISO 9001 Foundation Package as a print-ready PDF.",
-    "pr-n": "excl. VAT · No recurring costs",
+    "pr-n": "Final price · No recurring costs",
     "pr-c": "Order now →",
     "pr-i": "What's included",
     "pr-sample-t": "View sample manual (PDF)",
@@ -218,7 +218,7 @@
     "agb-h5": "5. Delivery time",
     "agb-p5": "Delivery typically occurs within up to 3 working days after receipt of payment. In case of delays you will be informed promptly.",
     "agb-h6": "6. Prices and payment",
-    "agb-p6": "The price is €179 (one-time), plus statutory VAT where applicable. Payment is processed after order confirmation via a separate payment instruction. Delivery occurs after full payment receipt.",
+    "agb-p6": "The price is €179 (one-time) and is a final price. As a small business under §19 of the German VAT Act (Kleinunternehmerregelung), no value-added tax is charged or shown. Payment is processed after order confirmation via a separate payment instruction. Delivery occurs after full payment receipt.",
     "agb-h7": "7. Warranty",
     "agb-p7": "For factual errors (e.g. incorrect company information, obvious inconsistencies with your input), you receive a free correction. Contact team@aligneddocs.com with your order reference. If you are fundamentally dissatisfied, contact us and we will find a solution. Otherwise, statutory warranty for businesses applies.",
     "agb-h8": "8. Limitation of liability",
@@ -348,7 +348,8 @@
     "sl-end-h": "Like what you see?",
     "sl-end-p": "Your own ISO 9001 quality manual, built from your business and delivered within up to 3 working days. Explore the full offer or order directly.",
     "sl-end-c1": "Order your manual →",
-    "sl-end-c2": "Explore the homepage"
+    "sl-end-c2": "Explore the homepage",
+    "pr-kleinunt": "No VAT charged (small-business scheme, §19 German VAT Act)"
   },
   "de": {
     "n-sub": "ISO 9001:2015",
@@ -395,7 +396,7 @@
     "pr-h": "Einmalig.<br>Kein Abo.",
     "pr-o": "einmalig",
     "pr-d": "Sie zahlen einmal und erhalten Ihr individuelles ISO 9001 Foundation Package als druckfertiges PDF.",
-    "pr-n": "zzgl. MwSt. · Keine Folgekosten",
+    "pr-n": "Endpreis · Keine Folgekosten",
     "pr-c": "Jetzt bestellen →",
     "pr-i": "Im Lieferumfang",
     "pr-sample-t": "Beispiel-Handbuch ansehen (PDF)",
@@ -569,7 +570,7 @@
     "agb-h5": "5. Lieferzeit",
     "agb-p5": "Die Lieferung erfolgt in der Regel innerhalb von bis zu 3 Werktagen nach Zahlungseingang. Bei verzögerter Lieferung werden Sie umgehend informiert.",
     "agb-h6": "6. Preise und Zahlung",
-    "agb-p6": "Der Preis beträgt €179 (einmalig), zzgl. gesetzlicher Umsatzsteuer, sofern anwendbar. Die Zahlung erfolgt nach Bestellbestätigung per gesonderter Zahlungsanweisung. Lieferung erfolgt nach vollständigem Zahlungseingang.",
+    "agb-p6": "Der Preis beträgt 179 € (einmalig) und ist ein Endpreis. Als Kleinunternehmer gemäß § 19 UStG wird keine Umsatzsteuer berechnet oder ausgewiesen. Die Zahlung erfolgt nach Bestellbestätigung per gesonderter Zahlungsanweisung. Die Lieferung erfolgt nach vollständigem Zahlungseingang.",
     "agb-h7": "7. Mängelhaftung",
     "agb-p7": "Bei sachlichen Fehlern (z.B. falsche Firmenangaben, offensichtliche Inkonsistenzen mit Ihren Eingaben) erhalten Sie eine kostenlose Nachbesserung. Melden Sie sich per E-Mail an team@aligneddocs.com unter Angabe Ihrer Bestell-Nummer. Sollten Sie mit dem Ergebnis grundsätzlich nicht zufrieden sein, melden Sie sich – wir finden eine Lösung. Im Übrigen gilt die gesetzliche Gewährleistung für Unternehmer.",
     "agb-h8": "8. Haftungsbeschränkung",
@@ -699,6 +700,7 @@
     "sl-end-h": "Gefällt Ihnen, was Sie sehen?",
     "sl-end-p": "Ihr eigenes ISO 9001 Qualitätshandbuch, aufgebaut aus Ihrem Unternehmen und geliefert innerhalb von bis zu 3 Werktagen. Entdecken Sie das ganze Angebot oder bestellen Sie direkt.",
     "sl-end-c1": "Handbuch bestellen →",
-    "sl-end-c2": "Zur Startseite"
+    "sl-end-c2": "Zur Startseite",
+    "pr-kleinunt": "Kein Umsatzsteuerausweis (Kleinunternehmer gem. §19 UStG)"
   }
 }

@@ -188,5 +188,6 @@
 <div id="footer-mount"></div>
 <script>(function(){"use strict";var U="page.i18n.json",L=null;function m(){if(!L||!window.AD||!window.AD.getT)return false;var T=window.AD.getT();if(!T)return false;["en","de"].forEach(function(l){if(!L[l])return;T[l]=T[l]||{};Object.keys(L[l]).forEach(function(k){T[l][k]=L[l][k]});});return true;}function a(){if(m()&&window.AD&&window.AD.applyT){window.AD.applyT();w();}}function w(){var x=document.getElementById("lp-faq-list");if(!x||x.getAttribute("data-wired"))return;x.setAttribute("data-wired","1");x.addEventListener("click",function(e){var q=e.target.closest("[data-faq-toggle]");if(!q)return;var i=q.closest(".fi");if(i)i.classList.toggle("open");});}fetch(U,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(d){L=d;if(window.AD&&window.AD.coreReady)a();}).catch(function(){});var pr=window.onCoreReady;window.onCoreReady=function(){if(typeof pr==="function"){try{pr();}catch(e){}}a();};var pl=window.onLangChange;window.onLangChange=function(l){if(typeof pl==="function"){try{pl(l);}catch(e){}}if(m()&&window.AD&&window.AD.applyT)window.AD.applyT();w();};})();</script>
 <script src="/assets/core.js"></script>
+<script src="/assets/analytics.js"></script>
 </body>
 </html>

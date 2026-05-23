@@ -785,15 +785,33 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .sample-card:hover .sc-cta svg{transform:translateX(3px)}
 
 /* ── About-Sections ───────────────────────────────────────── */
-.about-section{max-width:760px;margin:0 auto;padding:0 1.5rem}
-.about-section .about-block{padding:2rem 0;border-bottom:1px solid var(--bdr)}
-.about-section .about-block:last-child{border-bottom:none}
-.about-section h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--tx);margin-bottom:1rem;letter-spacing:-.01em}
-.about-section p{font-size:15px;color:var(--tb);font-weight:300;line-height:1.75;margin-bottom:1rem}
-.about-section p:last-child{margin-bottom:0}
-.about-section .about-meta{font-size:13px;color:var(--tm);font-weight:300;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--bdr);letter-spacing:.02em}
-.about-section .about-anchor{color:var(--gold-l);text-decoration:none;border-bottom:1px solid var(--gold-b);transition:border-color var(--spd)}
-.about-section .about-anchor:hover{border-color:var(--gold)}
+/* ── About (Multipage v2, aufgewertet) ── */
+.about-wrap{max-width:760px;margin:0 auto;padding:0 1.5rem}
+.about-block{padding:2.75rem 0;border-bottom:1px solid var(--bdr)}
+.about-block:last-of-type{border-bottom:none}
+.about-block p{font-size:15px;color:var(--tb);font-weight:300;line-height:1.78;margin-bottom:1rem}
+.about-block p:last-child{margin-bottom:0}
+/* Gruppen-Eyebrow mit Nummer */
+.ab-grp-eye{display:flex;align-items:center;gap:14px;margin-bottom:1.5rem;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--tx);letter-spacing:-.01em}
+.ab-grp-num{font-family:'Outfit',sans-serif;font-size:12px;font-weight:400;letter-spacing:.12em;color:var(--gold);border:1px solid var(--gold-b);border-radius:6px;padding:5px 9px;background:var(--gold-dim);flex-shrink:0}
+/* Zitat-Block (der 4.000-€-Moment) */
+.ab-quote{position:relative;padding:1.5rem 1.75rem;margin-bottom:1.5rem;background:var(--bg2);border-left:2px solid var(--gold);border-radius:0 10px 10px 0}
+.ab-quote-mark{position:absolute;top:.1rem;left:.6rem;font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1;color:var(--gold-b)}
+.ab-quote p{margin:0;padding-left:1.5rem;font-style:italic;color:var(--tx);font-size:15.5px}
+/* Versprechen als Karten-Liste */
+.ab-promises{display:flex;flex-direction:column;gap:1rem}
+.ab-promise{display:flex;gap:14px;align-items:flex-start;padding:1.25rem 1.4rem;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;transition:border-color var(--spd),background var(--spd)}
+.ab-promise:hover{border-color:var(--gold-b);background:var(--bg3)}
+.ab-promise-ck{width:30px;height:30px;flex-shrink:0;border:1px solid var(--gold-b);border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold-dim);margin-top:2px}
+.ab-promise p{margin:0;color:var(--tb);font-size:14.5px;line-height:1.7}
+/* "Was es nicht ist" */
+.ab-not-lead{font-size:15px;color:var(--tm);font-weight:300;line-height:1.78;margin-bottom:1.75rem}
+.ab-statement{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;font-style:italic;color:var(--gold-l);letter-spacing:-.01em;line-height:1.4}
+/* Signatur + CTA */
+.about-meta{font-size:13px;color:var(--tm);font-weight:300;margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--bdr);letter-spacing:.02em}
+.about-anchor{color:var(--gold-l);text-decoration:none;border-bottom:1px solid var(--gold-b);transition:border-color var(--spd)}
+.about-anchor:hover{border-color:var(--gold)}
+.about-cta{text-align:center;padding:2.5rem 1.5rem 1rem;position:relative;z-index:1}
 
 /* ── Footer-Cols (mehrspaltiger Footer) ───────────────────── */
 .footer-cols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2rem;padding:3rem 1.5rem 2rem;max-width:1180px;margin:0 auto}

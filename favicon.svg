@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AlignedDocs">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#13233F"/><stop offset="1" stop-color="#0B1628"/></linearGradient></defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <path d="M150 110 H290 L362 182 V402 H150 Z" fill="#D4AF54"/>
+  <path d="M290 110 L362 182 H290 Z" fill="#B8932F"/>
+  <path d="M196 256 L242 304 L322 212" fill="none" stroke="#0B1628" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

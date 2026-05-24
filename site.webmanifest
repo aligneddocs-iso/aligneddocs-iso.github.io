@@ -1,7 +1,7 @@
 {
   "name": "AlignedDocs",
   "short_name": "AlignedDocs",
-  "description": "AI-built, audit-ready ISO 9001 manuals in minutes.",
+  "description": "Professional, audit-ready ISO 9001 manuals in under 48 hours.",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },

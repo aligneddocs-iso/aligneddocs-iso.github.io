@@ -353,7 +353,8 @@
     "faq-grp-diy": "Doing it yourself",
     "faq-grp-product": "What you receive",
     "faq-grp-fit": "Is it right for me?",
-    "faq-grp-trust": "After you order"
+    "faq-grp-trust": "After you order",
+    "pay-label": "Secure payment"
   },
   "de": {
     "n-sub": "ISO 9001:2015",
@@ -709,6 +710,7 @@
     "faq-grp-diy": "Selbst gemacht",
     "faq-grp-product": "Was Sie erhalten",
     "faq-grp-fit": "Passt das zu mir?",
-    "faq-grp-trust": "Nach Ihrer Bestellung"
+    "faq-grp-trust": "Nach Ihrer Bestellung",
+    "pay-label": "Sichere Zahlung"
   }
 }

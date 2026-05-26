@@ -1239,3 +1239,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .pay-tip-list{min-width:max-content;max-width:240px;white-space:normal;text-align:center;line-height:1.5;padding:8px 12px}
 .pay-tip-h{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:3px}
 .pay-more:hover .pay-tip-list{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── Enterprise scrollbar for form textareas ── */
+.ta{scrollbar-width:thin;scrollbar-color:var(--silv-d) transparent}
+.ta::-webkit-scrollbar{width:10px}
+.ta::-webkit-scrollbar-track{background:transparent;border-radius:8px}
+.ta::-webkit-scrollbar-thumb{background:var(--silv-d);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+.ta::-webkit-scrollbar-thumb:hover{background:var(--gold-b);background-clip:padding-box}

@@ -206,7 +206,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .inp::placeholder,.ta::placeholder{color:var(--tm)}
 .inp:focus,.ta:focus{border-color:var(--gold-b);background:rgba(201,168,76,.035);box-shadow:0 0 0 3px rgba(201,168,76,.06)}
 .inp.err,.ta.err{border-color:rgba(239,68,68,.6)!important;background:rgba(239,68,68,.05)!important;box-shadow:0 0 0 3px rgba(239,68,68,.1)!important}
-.ta{resize:vertical;min-height:90px;line-height:1.65}
+.ta{resize:vertical;min-height:90px;line-height:1.65;max-width:100%}
 .wz-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0 0;margin-top:.5rem}
 .rv-wrap{max-width:860px;margin:0 auto;padding:4rem 2.5rem;position:relative;z-index:1}
 .rv-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(201,168,76,.08);border:1px solid var(--gold-b);border-radius:99px;font-size:11px;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
@@ -719,10 +719,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 
 /* ── KPI-Struktur (Formular: Qualitätsziele strukturiert) ──── */
 .kpi-grid{display:flex;flex-direction:column;gap:.75rem;margin-top:.5rem}
-.kpi-row{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:.5rem;align-items:end;padding:.75rem;background:var(--gold-dim);border:1px solid var(--bdr);border-radius:var(--r8)}
-.kpi-row .kpi-cell{display:flex;flex-direction:column;gap:.25rem}
+.kpi-row{display:grid;grid-template-columns:2fr .7fr .7fr .9fr;gap:.5rem;align-items:end;padding:.75rem;background:var(--gold-dim);border:1px solid var(--bdr);border-radius:var(--r8)}
+.kpi-row .kpi-cell{display:flex;flex-direction:column;gap:.25rem;min-width:0}
 .kpi-row .kpi-cell-label{font-size:11px;color:var(--tm);font-weight:300;letter-spacing:.04em;text-transform:uppercase}
-.kpi-row .kpi-input{padding:.5rem .7rem;background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px;font-weight:300;transition:border-color var(--spd)}
+.kpi-row .kpi-input{width:100%;min-width:0;box-sizing:border-box;padding:.5rem .7rem;background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px;font-weight:300;transition:border-color var(--spd)}
 .kpi-row .kpi-input:focus{outline:none;border-color:var(--gold-b)}
 .kpi-head{display:flex;align-items:center;justify-content:space-between;margin-top:.5rem;font-size:12px;color:var(--tm);font-weight:300;letter-spacing:.04em}
 @media (max-width:680px){

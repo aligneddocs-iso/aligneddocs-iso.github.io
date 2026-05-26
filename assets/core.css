@@ -1246,3 +1246,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .ta::-webkit-scrollbar-track{background:transparent;border-radius:8px}
 .ta::-webkit-scrollbar-thumb{background:var(--silv-d);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
 .ta::-webkit-scrollbar-thumb:hover{background:var(--gold-b);background-clip:padding-box}
+
+/* ── PRODUCT footer column: links in 2 sub-columns, heading full width ── */
+.footer-col-product{display:grid;grid-template-columns:1fr 1fr;column-gap:1.5rem;row-gap:0;align-content:start}
+.footer-col-product h4{grid-column:1/-1}
+@media (max-width:520px){
+  .footer-col-product{grid-template-columns:1fr}
+}

@@ -360,7 +360,8 @@
     "pay-tip-google": "Google Pay",
     "pay-tip-klarna": "Klarna",
     "pay-more-h": "Also available",
-    "pay-more-list": "Amazon Pay · Link · Revolut Pay · Bancontact · BLIK · EPS"
+    "pay-more-list": "Amazon Pay · Link · Revolut Pay · Bancontact · BLIK · EPS",
+    "pr-cur": "Pay in your local currency at checkout"
   },
   "de": {
     "n-sub": "ISO 9001:2015",
@@ -723,6 +724,7 @@
     "pay-tip-google": "Google Pay",
     "pay-tip-klarna": "Klarna",
     "pay-more-h": "Ebenfalls möglich",
-    "pay-more-list": "Amazon Pay · Link · Revolut Pay · Bancontact · BLIK · EPS"
+    "pay-more-list": "Amazon Pay · Link · Revolut Pay · Bancontact · BLIK · EPS",
+    "pr-cur": "Im Checkout in Ihrer Landeswährung zahlbar"
   }
 }

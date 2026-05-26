@@ -354,7 +354,13 @@
     "faq-grp-product": "What you receive",
     "faq-grp-fit": "Is it right for me?",
     "faq-grp-trust": "After you order",
-    "pay-label": "Secure payment"
+    "pay-label": "Secure payment",
+    "pay-tip-card": "Card",
+    "pay-tip-apple": "Apple Pay",
+    "pay-tip-google": "Google Pay",
+    "pay-tip-klarna": "Klarna",
+    "pay-more-h": "Also available",
+    "pay-more-list": "Amazon Pay · Link · Revolut Pay · Bancontact · BLIK · EPS"
   },
   "de": {
     "n-sub": "ISO 9001:2015",
@@ -711,6 +717,12 @@
     "faq-grp-product": "Was Sie erhalten",
     "faq-grp-fit": "Passt das zu mir?",
     "faq-grp-trust": "Nach Ihrer Bestellung",
-    "pay-label": "Sichere Zahlung"
+    "pay-label": "Sichere Zahlung",
+    "pay-tip-card": "Karte",
+    "pay-tip-apple": "Apple Pay",
+    "pay-tip-google": "Google Pay",
+    "pay-tip-klarna": "Klarna",
+    "pay-more-h": "Ebenfalls möglich",
+    "pay-more-list": "Amazon Pay · Link · Revolut Pay · Bancontact · BLIK · EPS"
   }
 }

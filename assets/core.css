@@ -1225,3 +1225,17 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tb);line-h
 .pay-icons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .pay-ic{color:var(--tm);opacity:.65;display:inline-flex;transition:transform var(--spd) var(--ease),opacity var(--spd) var(--ease),color var(--spd) var(--ease),filter var(--spd) var(--ease)}
 .pay-ic:hover{color:var(--gold);opacity:1;transform:translateY(-3px);filter:drop-shadow(0 4px 10px var(--gold-b))}
+
+/* ── Payment icon hover tooltip (enterprise look) ── */
+.pay-ic{position:relative}
+.pay-tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);background:var(--bg3);border:1px solid var(--gold-b);border-radius:6px;padding:5px 10px;font-size:11px;color:var(--gold);white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:300;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.pay-tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(--gold-b)}
+.pay-ic:hover .pay-tip{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── "+N more" payment chip (enterprise) ── */
+.pay-more{position:relative;display:inline-flex;align-items:center;justify-content:center;width:36px;height:24px;border:1px solid var(--bdr);border-radius:5px;color:var(--tm);cursor:default;opacity:.65;transition:transform var(--spd) var(--ease),opacity var(--spd) var(--ease),color var(--spd) var(--ease),border-color var(--spd) var(--ease),filter var(--spd) var(--ease)}
+.pay-more-txt{font-size:11px;font-weight:500;letter-spacing:.02em}
+.pay-more:hover{color:var(--gold);border-color:var(--gold-b);opacity:1;transform:translateY(-3px);filter:drop-shadow(0 4px 10px var(--gold-b))}
+.pay-tip-list{min-width:max-content;max-width:240px;white-space:normal;text-align:center;line-height:1.5;padding:8px 12px}
+.pay-tip-h{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:3px}
+.pay-more:hover .pay-tip-list{opacity:1;transform:translateX(-50%) translateY(0)}

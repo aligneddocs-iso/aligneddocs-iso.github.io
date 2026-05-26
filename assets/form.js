@@ -519,6 +519,17 @@
     }).then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       clearDraft();
+      // Conversion-Tracking: nur bei erfolgreichem Submit (HTTP 2xx)
+      try {
+        if (window.AD && typeof window.AD.track === "function") {
+          window.AD.track("order_submitted", {
+            order_id: orderId,
+            doc_lang: DOC_LANG,
+            value: 179,
+            currency: "EUR"
+          });
+        }
+      } catch (te) { console.error("[finalSub] tracking failed:", te); }
       showConfirmation(orderId, data.femail);
     }).catch(function (e) {
       console.error("[finalSub] order submission failed:", e);

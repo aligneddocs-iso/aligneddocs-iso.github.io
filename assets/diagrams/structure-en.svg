@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" width="820" height="470">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0E1320"/><stop offset="1" stop-color="#161D2E"/>
+</linearGradient>
+<linearGradient id="goldbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#C9A84C"/><stop offset="1" stop-color="#E4CE8F"/>
+</linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.0" r="1">
+<stop offset="0" stop-color="#C9A84C" stop-opacity="0.10"/><stop offset="0.6" stop-color="#C9A84C" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect x="1" y="1" width="818" height="468" rx="18" fill="url(#bg)" stroke="#C9A84C" stroke-opacity="0.35" stroke-width="1.5"/>
+<rect x="1" y="1" width="818" height="468" rx="18" fill="url(#glow)"/>
+<text x="40" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#EDEAE2">The 6 building blocks of your manual</text>
+<text x="40" y="82" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA4B4">Every chapter generated from your real business — to ISO 9001:2015</text>
+<rect x="40" y="112" width="240" height="132" rx="12" fill="#0E1320" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1.5"/>
+<text x="60" y="162" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#C9A84C" opacity="0.85">01</text>
+<text x="60" y="194" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Context &amp; scope</text>
+<text x="60" y="214" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">Clause 4</text>
+<rect x="298" y="112" width="240" height="132" rx="12" fill="#0E1320" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1.5"/>
+<text x="318" y="162" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#C9A84C" opacity="0.85">02</text>
+<text x="318" y="194" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Quality policy &amp;</text>
+<text x="318" y="214" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">objectives</text>
+<text x="318" y="234" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">Clause 5–6</text>
+<rect x="556" y="112" width="240" height="132" rx="12" fill="#0E1320" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1.5"/>
+<text x="576" y="162" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#C9A84C" opacity="0.85">03</text>
+<text x="576" y="194" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Core processes</text>
+<text x="576" y="214" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">Clause 8</text>
+<rect x="40" y="262" width="240" height="132" rx="12" fill="#0E1320" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1.5"/>
+<text x="60" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#C9A84C" opacity="0.85">04</text>
+<text x="60" y="344" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Roles &amp;</text>
+<text x="60" y="364" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">responsibilities</text>
+<text x="60" y="384" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">Clause 5.3</text>
+<rect x="298" y="262" width="240" height="132" rx="12" fill="#0E1320" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1.5"/>
+<text x="318" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#C9A84C" opacity="0.85">05</text>
+<text x="318" y="344" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Risks &amp;</text>
+<text x="318" y="364" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">opportunities</text>
+<text x="318" y="384" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">Clause 6.1</text>
+<rect x="556" y="262" width="240" height="132" rx="12" fill="#0E1320" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1.5"/>
+<text x="576" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#C9A84C" opacity="0.85">06</text>
+<text x="576" y="344" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Print-ready PDF</text>
+<text x="576" y="364" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">15–20 pages</text>
+<text x="40" y="442" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#E4CE8F" font-style="italic">Structured for your Stage 1 review — delivered within 48 hours.</text>
+</svg>

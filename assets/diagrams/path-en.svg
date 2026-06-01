@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" role="img" width="820" height="500">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0E1320"/><stop offset="1" stop-color="#161D2E"/>
+</linearGradient>
+<linearGradient id="goldbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#C9A84C"/><stop offset="1" stop-color="#E4CE8F"/>
+</linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.0" r="1">
+<stop offset="0" stop-color="#C9A84C" stop-opacity="0.10"/><stop offset="0.6" stop-color="#C9A84C" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect x="1" y="1" width="818" height="498" rx="18" fill="url(#bg)" stroke="#C9A84C" stroke-opacity="0.35" stroke-width="1.5"/>
+<rect x="1" y="1" width="818" height="498" rx="18" fill="url(#glow)"/>
+<text x="40" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="29" fill="#EDEAE2">The ISO 9001 path — without a consultant</text>
+<text x="40" y="82" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA4B4">Five stages a small business can own in-house</text>
+<line x1="64" y1="126" x2="64" y2="390" stroke="#C9A84C" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="2 6"/>
+<circle cx="64" cy="126" r="18" fill="#0E1320" stroke="#C9A84C" stroke-width="2"/>
+<text x="64" y="131" font-family="Georgia, 'Times New Roman', serif" font-size="17" fill="#C9A84C" text-anchor="middle">1</text>
+<text x="104" y="124" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#EDEAE2" font-weight="500">Document your processes</text>
+<text x="104" y="146" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA4B4">AlignedDocs builds your manual — €179</text>
+<circle cx="64" cy="192" r="18" fill="#0E1320" stroke="#C9A84C" stroke-width="2"/>
+<text x="64" y="197" font-family="Georgia, 'Times New Roman', serif" font-size="17" fill="#C9A84C" text-anchor="middle">2</text>
+<text x="104" y="190" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#EDEAE2" font-weight="500">Internal audit</text>
+<text x="104" y="212" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA4B4">One review by a trained staff member</text>
+<circle cx="64" cy="258" r="18" fill="#0E1320" stroke="#C9A84C" stroke-width="2"/>
+<text x="64" y="263" font-family="Georgia, 'Times New Roman', serif" font-size="17" fill="#C9A84C" text-anchor="middle">3</text>
+<text x="104" y="256" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#EDEAE2" font-weight="500">Management review</text>
+<text x="104" y="278" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA4B4">Record decisions and objectives</text>
+<line x1="104" y1="291" x2="780" y2="291" stroke="#2A3346" stroke-width="1" stroke-dasharray="4 4"/>
+<circle cx="64" cy="324" r="18" fill="#0E1320" stroke="#E4CE8F" stroke-width="2"/>
+<text x="64" y="329" font-family="Georgia, 'Times New Roman', serif" font-size="17" fill="#E4CE8F" text-anchor="middle">4</text>
+<text x="104" y="322" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#EDEAE2" font-weight="500">Stage 1 — documentation review</text>
+<text x="104" y="344" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA4B4">The auditor checks your manual</text>
+<circle cx="64" cy="390" r="18" fill="#0E1320" stroke="#E4CE8F" stroke-width="2"/>
+<text x="64" y="395" font-family="Georgia, 'Times New Roman', serif" font-size="17" fill="#E4CE8F" text-anchor="middle">5</text>
+<text x="104" y="388" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#EDEAE2" font-weight="500">Stage 2 — certification audit</text>
+<text x="104" y="410" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9AA4B4">On-site assessment → certificate</text>
+<line x1="40" y1="438" x2="780" y2="438" stroke="#2A3346" stroke-width="1"/>
+<text x="40" y="468" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#E4CE8F" font-style="italic">No consultant required at any stage. Only stages 4–5 involve an accredited body.</text>
+</svg>

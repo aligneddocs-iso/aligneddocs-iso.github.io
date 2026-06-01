@@ -93,7 +93,14 @@
     "bl-h4": "Common pitfalls when a trade business documents its QMS",
     "bl-p4a": "Three traps recur. First, copying a manufacturing QMS full of factory terminology — calibration of measuring equipment, production line controls — that has nothing to do with a fit-out or groundworks business. Second, ignoring the supply chain: if much of your delivery depends on labour-only subbies and material suppliers, and your manual does not say how you control them, it does not describe your real risk. Third, an idealised inspection regime that no site actually follows, which collapses the moment an assessor talks to your team.",
     "bl-p4b": "For a small trade firm the honest target is a lean manual an assessor can follow and your site supervisors can actually use — a document that reflects how quality really gets controlled on your jobs, not an aspirational version that looks good on paper and falls apart on the first site visit.",
-    "bl-cta-note": "AlignedDocs builds your ISO 9001 quality manual from your real processes — enquiry to handover, site quality control, snagging, subcontractor and supplier management — as a print-ready Stage 1 foundation. It does not replace your certification assessor and does not guarantee certification."
+    "bl-cta-note": "AlignedDocs builds your ISO 9001 quality manual from your real processes — enquiry to handover, site quality control, snagging, subcontractor and supplier management — as a print-ready Stage 1 foundation. It does not replace your certification assessor and does not guarantee certification.",
+    "bl-byline": "By <a href=\"/about/\">Daniel Gomes Fernandes</a> · Published <time datetime=\"2026-02-03\">3 February 2026</time> · Updated <time datetime=\"2026-06-01\">1 June 2026</time>",
+    "qf1": "€179 one-time — no subscription",
+    "qf2": "Delivered within 48 hours",
+    "qf3": "15–20 page A4 PDF",
+    "qf4": "Built to ISO 9001:2015",
+    "bl-figcap": "The six chapters of an AlignedDocs ISO 9001 manual, mapped to the clauses of the standard.",
+    "bl-source": "Source: <a href=\"https://www.iso.org/iso-9001-quality-management.html\" target=\"_blank\" rel=\"noopener\">ISO — ISO 9001:2015 Quality management</a>. Figures reflect typical 2026 UK/EU market rates for small businesses."
   },
   "de": {
     "lp-eye": "ISO 9001 · Handwerk & Bau",
@@ -189,6 +196,13 @@
     "bl-h4": "Typische Fallstricke, wenn ein Handwerksbetrieb sein QMS dokumentiert",
     "bl-p4a": "Drei Fallen wiederholen sich. Erstens das Kopieren eines Fertigungs-QMS voller Fabrik-Terminologie — Kalibrierung von Messmitteln, Fertigungslinienlenkung — die mit einem Ausbau- oder Tiefbaubetrieb nichts zu tun hat. Zweitens das Ignorieren der Lieferkette: Wenn ein Großteil Ihrer Leistung von Nachunternehmern und Materiallieferanten abhängt und Ihr Handbuch nicht sagt, wie Sie diese kontrollieren, beschreibt es nicht Ihr echtes Risiko. Drittens ein idealisiertes Prüfregime, dem keine Baustelle tatsächlich folgt und das zusammenbricht, sobald ein Auditor mit Ihrem Team spricht.",
     "bl-p4b": "Für einen kleinen Handwerksbetrieb ist das ehrliche Ziel ein schlankes Handbuch, dem ein Auditor folgen kann und das Ihre Bauleiter tatsächlich nutzen können — ein Dokument, das abbildet, wie Qualität auf Ihren Baustellen wirklich gelenkt wird, nicht eine Wunschversion, die auf Papier gut aussieht und beim ersten Baustellenbesuch auseinanderfällt.",
-    "bl-cta-note": "AlignedDocs erstellt Ihr ISO 9001 Qualitätshandbuch aus Ihren echten Prozessen — Anfrage bis Übergabe, Baustellenqualität, Mängelmanagement, Nachunternehmer- und Lieferantensteuerung — als druckfertige Stufe-1-Grundlage. Es ersetzt nicht Ihren Zertifizierungsauditor und garantiert keine Zertifizierung."
+    "bl-cta-note": "AlignedDocs erstellt Ihr ISO 9001 Qualitätshandbuch aus Ihren echten Prozessen — Anfrage bis Übergabe, Baustellenqualität, Mängelmanagement, Nachunternehmer- und Lieferantensteuerung — als druckfertige Stufe-1-Grundlage. Es ersetzt nicht Ihren Zertifizierungsauditor und garantiert keine Zertifizierung.",
+    "bl-byline": "Von <a href=\"/about/\">Daniel Gomes Fernandes</a> · Veröffentlicht <time datetime=\"2026-02-03\">3. Februar 2026</time> · Aktualisiert <time datetime=\"2026-06-01\">1. Juni 2026</time>",
+    "qf1": "Einmalig 179 € — kein Abo",
+    "qf2": "Lieferung in 48 Stunden",
+    "qf3": "15–20 Seiten A4 PDF",
+    "qf4": "Nach ISO 9001:2015",
+    "bl-figcap": "Die sechs Kapitel eines AlignedDocs ISO-9001-Handbuchs, den Kapiteln der Norm zugeordnet.",
+    "bl-source": "Quelle: <a href=\"https://www.iso.org/iso-9001-quality-management.html\" target=\"_blank\" rel=\"noopener\">ISO — ISO 9001:2015 Qualitätsmanagement</a>. Angaben entsprechen typischen Marktpreisen 2026 für Kleinunternehmen in DE/EU."
   }
 }

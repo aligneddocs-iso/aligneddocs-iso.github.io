@@ -93,7 +93,14 @@
     "bl-h4": "Warum Geschwindigkeit zählt",
     "bl-p4a": "Wenn ein Kunde ISO 9001 fordert, läuft meist eine Frist. Wochenlange Beraterprojekte passen selten in dieses Zeitfenster. Eine schnelle, normkonforme Grundlage verschafft Ihnen den Spielraum, den Zertifizierungsprozess in Ruhe zu Ende zu bringen.",
     "bl-p4b": "Genau dafür ist AlignedDocs gebaut: 30 Minuten Ihrer Zeit, 48 Stunden bis zum druckfertigen Handbuch.",
-    "bl-cta-note": "Bereit? Ihr ISO 9001 Handbuch für Maschinenbau & Metall — 179 € einmalig, in 48 Stunden geliefert."
+    "bl-cta-note": "Bereit? Ihr ISO 9001 Handbuch für Maschinenbau & Metall — 179 € einmalig, in 48 Stunden geliefert.",
+    "bl-byline": "Von <a href=\"/about/\">Daniel Gomes Fernandes</a> · Veröffentlicht <time datetime=\"2026-02-10\">10. Februar 2026</time> · Aktualisiert <time datetime=\"2026-06-01\">1. Juni 2026</time>",
+    "qf1": "Einmalig 179 € — kein Abo",
+    "qf2": "Lieferung in 48 Stunden",
+    "qf3": "15–20 Seiten A4 PDF",
+    "qf4": "Nach ISO 9001:2015",
+    "bl-figcap": "Die sechs Kapitel eines AlignedDocs ISO-9001-Handbuchs, den Kapiteln der Norm zugeordnet.",
+    "bl-source": "Quelle: <a href=\"https://www.iso.org/iso-9001-quality-management.html\" target=\"_blank\" rel=\"noopener\">ISO — ISO 9001:2015 Qualitätsmanagement</a>. Angaben entsprechen typischen Marktpreisen 2026 für Kleinunternehmen in DE/EU."
   },
   "en": {
     "lp-eye": "ISO 9001 · Engineering & Manufacturing",
@@ -189,6 +196,13 @@
     "bl-h4": "Why speed matters",
     "bl-p4a": "When a customer demands ISO 9001, there is usually a deadline running. Multi-week consultant projects rarely fit that window. A fast, standard-compliant foundation gives you the room to complete the certification process without panic.",
     "bl-p4b": "That is exactly what AlignedDocs is built for: 30 minutes of your time, 48 hours to a print-ready manual.",
-    "bl-cta-note": "Ready? Your ISO 9001 manual for engineering & manufacturing — €179 one-time, delivered within 48 hours."
+    "bl-cta-note": "Ready? Your ISO 9001 manual for engineering & manufacturing — €179 one-time, delivered within 48 hours.",
+    "bl-byline": "By <a href=\"/about/\">Daniel Gomes Fernandes</a> · Published <time datetime=\"2026-02-10\">10 February 2026</time> · Updated <time datetime=\"2026-06-01\">1 June 2026</time>",
+    "qf1": "€179 one-time — no subscription",
+    "qf2": "Delivered within 48 hours",
+    "qf3": "15–20 page A4 PDF",
+    "qf4": "Built to ISO 9001:2015",
+    "bl-figcap": "The six chapters of an AlignedDocs ISO 9001 manual, mapped to the clauses of the standard.",
+    "bl-source": "Source: <a href=\"https://www.iso.org/iso-9001-quality-management.html\" target=\"_blank\" rel=\"noopener\">ISO — ISO 9001:2015 Quality management</a>. Figures reflect typical 2026 UK/EU market rates for small businesses."
   }
 }

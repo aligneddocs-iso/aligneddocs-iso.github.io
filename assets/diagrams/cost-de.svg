@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" width="820" height="470">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0E1320"/><stop offset="1" stop-color="#161D2E"/>
+</linearGradient>
+<linearGradient id="goldbar" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#C9A84C"/><stop offset="1" stop-color="#E4CE8F"/>
+</linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.0" r="1">
+<stop offset="0" stop-color="#C9A84C" stop-opacity="0.10"/><stop offset="0.6" stop-color="#C9A84C" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect x="1" y="1" width="818" height="468" rx="18" fill="url(#bg)" stroke="#C9A84C" stroke-opacity="0.35" stroke-width="1.5"/>
+<rect x="1" y="1" width="818" height="468" rx="18" fill="url(#glow)"/>
+<text x="40" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#EDEAE2">Was ISO 9001 wirklich kostet</text>
+<text x="40" y="82" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#9AA4B4" letter-spacing="0.5">Kleinunternehmen, alle Angaben 2026</text>
+<line x1="250" y1="110" x2="250" y2="360" stroke="#2A3346" stroke-width="1"/>
+<text x="250" y="382" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4" text-anchor="middle">£0</text>
+<line x1="354" y1="110" x2="354" y2="360" stroke="#2A3346" stroke-width="1"/>
+<text x="354" y="382" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4" text-anchor="middle">£2k</text>
+<line x1="459" y1="110" x2="459" y2="360" stroke="#2A3346" stroke-width="1"/>
+<text x="459" y="382" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4" text-anchor="middle">£4k</text>
+<line x1="563" y1="110" x2="563" y2="360" stroke="#2A3346" stroke-width="1"/>
+<text x="563" y="382" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4" text-anchor="middle">£6k</text>
+<line x1="668" y1="110" x2="668" y2="360" stroke="#2A3346" stroke-width="1"/>
+<text x="668" y="382" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4" text-anchor="middle">£8k</text>
+<text x="720" y="404" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4" text-anchor="end">Kosten (£)</text>
+<text x="40" y="150" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Zertifizierungs-Audit</text>
+<text x="40" y="170" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">unvermeidbar</text>
+<rect x="328" y="132" width="183" height="30" rx="6" fill="url(#goldbar)" opacity="0.95"/>
+<text x="523" y="152" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#EDEAE2" font-weight="600" text-anchor="start">1.500–5.000 £</text>
+<text x="40" y="228" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">Berater</text>
+<text x="40" y="248" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">optional — die Mehrausgabe</text>
+<rect x="407" y="210" width="261" height="30" rx="6" fill="#C56B6B" opacity="0.95"/>
+<text x="680" y="230" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#EDEAE2" font-weight="600" text-anchor="start">3.000–8.000 £</text>
+<text x="40" y="306" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EDEAE2" font-weight="500">AlignedDocs Dokumentation</text>
+<text x="40" y="326" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9AA4B4">einmalig</text>
+<rect x="250" y="288" width="9" height="30" rx="6" fill="#E4CE8F" opacity="1"/>
+<circle cx="253" cy="303" r="7" fill="#E4CE8F"/>
+<text x="271" y="308" font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#EDEAE2" font-weight="600" text-anchor="start">179 €</text>
+<line x1="40" y1="408" x2="780" y2="408" stroke="#2A3346" stroke-width="1"/>
+<text x="40" y="438" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#E4CE8F" font-style="italic">Das Audit ist unvermeidbar. Der Berater ist der Posten, den die meisten zu viel zahlen.</text>
+</svg>

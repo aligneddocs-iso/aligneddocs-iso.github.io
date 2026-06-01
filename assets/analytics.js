@@ -9,19 +9,20 @@
 
   // ─── KONFIGURATION ────────────────────────────────────────────────
   var GA_ID = "G-YRW6P5X1G1";        // AlignedDocs Measurement ID
+  var UET_ID = "343253046";          // Microsoft Advertising (Bing) UET-Tag-ID
   var CONSENT_KEY = "ad-analytics-consent";
   var PRIVACY_URL = "/legal/privacy/";
 
   // ─── TEXTE (zweisprachig) ─────────────────────────────────────────
   var TXT = {
     de: {
-      msg: "Wir nutzen Google Analytics für anonyme Statistiken, um unsere Website zu verbessern. IP-Adressen werden anonymisiert.",
+      msg: "Wir nutzen Analyse- und Werbe-Dienste (Google Analytics, Microsoft Advertising) für anonyme Statistiken und zur Messung unserer Anzeigen. IP-Adressen werden anonymisiert.",
       accept: "Akzeptieren",
       decline: "Ablehnen",
       more: "Datenschutz"
     },
     en: {
-      msg: "We use Google Analytics for anonymous statistics to improve our website. IP addresses are anonymised.",
+      msg: "We use analytics and advertising services (Google Analytics, Microsoft Advertising) for anonymous statistics and ad measurement. IP addresses are anonymised.",
       accept: "Accept",
       decline: "Decline",
       more: "Privacy"
@@ -54,12 +55,37 @@
       allow_google_signals: false
     });
 
-    // Minimal-API für Event-Tracking (optional nutzbar)
+    // ─── Microsoft Advertising (Bing) UET-Basistag ──────────────────
+    // Lädt nur nach Consent, identische Logik wie GA4.
+    (function (w, d, t, r, u) {
+      var f, n, i;
+      w[u] = w[u] || [];
+      f = function () { var o = { ti: UET_ID, enableAutoSpaTracking: true }; o.q = w[u]; w[u] = new UET(o); w[u].push("pageLoad"); };
+      n = d.createElement(t); n.src = r; n.async = 1;
+      n.onload = n.onreadystatechange = function () {
+        var s = this.readyState;
+        if (s && s !== "loaded" && s !== "complete") return;
+        f(); n.onload = n.onreadystatechange = null;
+      };
+      i = d.getElementsByTagName(t)[0]; i.parentNode.insertBefore(n, i);
+    })(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+
+    // Minimal-API für Event-Tracking (meldet an GA4 UND Bing UET)
     window.AD = window.AD || {};
     window.AD.track = function (name, params) {
+      params = params || {};
+      // GA4
       if (typeof window.gtag === "function") {
-        window.gtag("event", name, params || {});
+        window.gtag("event", name, params);
       }
+      // Bing UET: order_submitted → Conversion-Ziel "order_submitted"
+      try {
+        window.uetq = window.uetq || [];
+        window.uetq.push("event", name, {
+          revenue_value: params.value || 0,
+          currency: params.currency || "EUR"
+        });
+      } catch (ue) { /* UET nicht geladen – still ignorieren */ }
     };
   }
 

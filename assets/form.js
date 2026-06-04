@@ -455,6 +455,13 @@
 
   // ─── ORDER ID + SUBMIT ────────────────────────────────────────────
   function makeOrderId() {
+    // Stufe-2 flow: if customer arrived via post-payment link (?order_id=AD-...),
+    // reuse that ID so payment <-> form <-> PDF stay linked. Otherwise generate fresh.
+    try {
+      var qp = new URLSearchParams(window.location.search);
+      var fromUrl = (qp.get("order_id") || "").trim();
+      if (/^AD-\d{8}-[A-Z0-9]{4}$/.test(fromUrl)) return fromUrl;
+    } catch (e) { /* fall through to fresh ID */ }
     var d = new Date();
     var ymd = d.getFullYear().toString()
       + (d.getMonth() + 1).toString().padStart(2, "0")

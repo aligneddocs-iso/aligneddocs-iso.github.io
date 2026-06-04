@@ -1,7 +1,8 @@
 {
   "webhooks": {
     "form": "https://aligneddocs.app.n8n.cloud/webhook/6034a549-c2e7-4420-a928-fe795283f213",
-    "contact": "https://aligneddocs.app.n8n.cloud/webhook/contact"
+    "contact": "https://aligneddocs.app.n8n.cloud/webhook/contact",
+    "intake": "https://aligneddocs.app.n8n.cloud/webhook/order-intake-7f3a9c21b8e4"
   },
   "support": {
     "email": "team@aligneddocs.com",
@@ -12,14 +13,14 @@
     "en": "/sample/iso-9001-sample-en.pdf"
   },
   "pages": {
-    "home":    "/",
+    "home": "/",
     "product": "/product/",
-    "faq":     "/faq/",
-    "order":   "/order/",
+    "faq": "/faq/",
+    "order": "/order/",
     "samples": "/samples/",
-    "about":   "/about/",
+    "about": "/about/",
     "privacy": "/legal/privacy/",
-    "terms":   "/legal/terms/",
+    "terms": "/legal/terms/",
     "imprint": "/legal/imprint/"
   },
   "site": {
